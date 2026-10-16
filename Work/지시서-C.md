@@ -29,13 +29,15 @@
 - 브랜치: `codex/W-20261016-011-midra-zenith` · 전용 워크트리 `../codex-c-w011`
 - 범위: Pulse 4K·Eikos 4K·Zenith 100·Zenith 200 네 제품의 공용 기술 해설, 검증기·상세 렌더러·테스트. Port Map 및 기존 VERIFIED 사양은 수정하지 않는다.
 - [x] 공식 공용 매뉴얼·모델별 데이터시트 규칙을 확인하고 모델별 적용 여부를 대조했다. Zenith 100·200은 Alta 4K 계열임을 확인했다.
-- [x] Midra Mixer·Matrix, Eikos Hard/Soft Edge, Alta 장비 전체 레이어 풀·화면 배분을 구분했다. 출력별 추가 자원 산식, HD Aux 레이어·4K/HD 혼합 비용은 미확인으로 기록했다.
+- [x] Work 독립 검토 수정 반영: 최대 화면 수일 때 화면당 레이어와 한 화면만 쓸 때 최대 레이어를 별도 열·카드로 표시했다. Zenith 100/200 화면별 배분 예와 최대 화면 수 구성의 Aux 수(각 1·2개)를 AM 43쪽에 맞췄다.
+- [x] 배경·전경 및 Aux 설명을 바로잡았다. 라이브 화면마다 배경 1개와 전경 1개가 있고 배경은 라이브 입력 또는 정지 이미지다. Midra 1080p Aux는 크기 조절 불가 레이어 1개, Alta Aux는 레이어 자원을 쓰지 않는다. 출력 경계 추가 비용과 4K/HD 혼합 비용만 미확인이다.
+- [x] 사용자 친화 용어, XDM 접힌 원문, Eikos 블렌딩 출처(MM 42쪽), 2×2 비교(Zenith 200은 4개 출력에 레이어 4/분할 8, Zenith 100은 PGM 출력 3개라 불가)를 반영했다. 4개 JSON의 `models` 구조도 일치시켰다.
 - [x] 네 제품 JSON에 계열 공유 `videoLayerPlan`과 제품별 결론 문장을 추가했다. XDM-WOS100 레이어 수는 RTCOM 원본에 없어 숫자 비교를 하지 않는다.
-- [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 6개 타깃 테스트를 추가했다.
-- [x] W-017 (`8845d808`)과 W-013 PR #582 (`0d7bd46a`) 병합 후 최신 `origin/main` 통합 및 파생 산출물 재생성을 마쳤다.
-- [x] 네 제품을 1280px·390px로 캡처했다. 모바일 `document.documentElement.scrollWidth`는 모두 390이며 레이어 영역 전체가 보인다. 캡처: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
-- [x] 직렬 전체 테스트 786건 중 785 통과·1 스킵·실패 0. 검색 인덱스·읽기용 카탈로그 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF).
-- [ ] PR·CI·Work 병합 순서 확인·병합·Pages 공개 확인.
+- [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 모델 구조·문구 검증을 갱신했다. 과거 스타일 되감기 함수와 캐시 버전 시험도 업데이트했다.
+- [x] W-017 (`8845d808`), #582 (`0d7bd46a`), #584 (`2f5c455b`), #585 (`2e4bc54c8d49f33d59273b5c5cb71e166752dd61`)를 포함한 최신 `origin/main`을 통합했다. `search-index`, readable catalog, public snapshot, 상세 정적 자산을 재생성했다. merge conflict는 파생 인덱스 재생성과 이력 되감기 함수를 병합해 해결했다.
+- [x] 네 제품의 1280px·390px 캡처를 다시 만들고 눈으로 확인했다. 390px `document.documentElement.scrollWidth`는 네 제품 모두 390이다. 1280px 캡처 파일과 390px 파일: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
+- [x] 최신 main 기준 직렬 전체 테스트 799건 중 798 통과·1 스킵·실패 0. 검색 인덱스 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF). PDF.js canvas/font 관련 환경 경고는 있으나 해당 검사와 테스트는 통과했다.
+- [ ] 변경 커밋·PR 갱신·CI 확인·Work 재검토 요청 대기. Work 승인 전 병합하지 않는다.
 - 근거표: `Work/기록/W-20261016-011-근거표.md` · Work 인계: `Work/기록/W-20261016-011-Work-인계.md`
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { beforeKiprogo2Mx395Product } from './w12005-kiprogo2-mx395-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const dir = new URL('../beta/site/detail/data/', import.meta.url);
 const read = slug => JSON.parse(readFileSync(new URL(`${slug}.json`, dir), 'utf8'));
@@ -30,7 +31,7 @@ test('urgent historical inverse restores approved fields only and rejects later 
     ['mx392-c', 'lead'], ['mx395', 'images'], ['tr315', 'specifications'],
     ['nx-1200', 'keyFacts'], ['nx-2200', 'portMap'], ['nx-3200', 'keyFacts'],
   ]) {
-    const current = read(slug);
+    const current = beforeW16015Group5Product(read(slug),slug);
     const inverse = beforeKiprogo2Mx395Product(current, slug);
     assert.notDeepEqual(inverse[field], current[field], `${slug}: approved change restored`);
     assert.deepEqual(inverse.io, current.io, `${slug}: unrelated I/O passes through`);

@@ -1,4 +1,5 @@
 ﻿import { readFileSync } from 'node:fs';
+import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import { beforeW13007HotelProduct, beforeW13007HotelRaw } from './w13007-hotel-history.mjs';
 import { beforeW13007WmfProduct, beforeW13007WmfRaw } from './w13007-wmf-history.mjs';
 import { beforeW13007BehhlGuideProduct, beforeW13007BehhlGuideRaw } from './w13007-behhl-guide-history.mjs';
@@ -27,6 +28,7 @@ export function beforeW12002Path(path,current){
 }
 
 export function beforeW12002Product(current,slug,{w011Undone=false}={}){
+  current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   if(!w011Undone)current=beforeW20261015_011Product(current,slug);
   current=beforeW20261015_008Product(current,slug);
   current=beforeW20261015_006Product(beforeW20261015_006LabelsProduct(current,slug),slug);
@@ -59,6 +61,7 @@ export function beforeW12002Product(current,slug,{w011Undone=false}={}){
 }
 
 export function beforeW12002Raw(raw,slug){
+  raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
   raw=beforeW20261015_011Raw(raw,slug);
   raw=beforeW20261015_008Raw(raw,slug);
   raw=beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(raw,slug),slug);

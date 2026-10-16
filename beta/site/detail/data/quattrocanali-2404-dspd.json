@@ -896,8 +896,7 @@
         "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 45,
         "x2": 140,
-        "y": 55,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 2,
@@ -905,8 +904,7 @@
         "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 400,
         "x2": 570,
-        "y": 28,
-        "side": "bottom"
+        "side": "top"
       },
       {
         "n": 3,
@@ -914,7 +912,6 @@
         "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
         "x1": 600,
         "x2": 710,
-        "y": 34,
         "side": "top"
       },
       {
@@ -923,7 +920,6 @@
         "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
         "x1": 600,
         "x2": 710,
-        "y": 70,
         "side": "bottom"
       },
       {
@@ -932,8 +928,7 @@
         "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 700,
         "x2": 753,
-        "y": 26,
-        "side": "bottom"
+        "side": "top"
       },
       {
         "n": 6,
@@ -941,8 +936,7 @@
         "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 795,
         "x2": 844,
-        "y": 72,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 7,
@@ -950,7 +944,6 @@
         "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 866,
         "x2": 907,
-        "y": 72,
         "side": "bottom"
       },
       {
@@ -959,7 +952,6 @@
         "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
         "x1": 850,
         "x2": 930,
-        "y": 26,
         "side": "top"
       }
     ],
@@ -967,6 +959,10 @@
       "file": "quattrocanali-2404-dspd-rear.webp",
       "width": 968,
       "height": 96
+    },
+    "crop": {
+      "top": 12,
+      "bottom": 10
     }
   }
 }

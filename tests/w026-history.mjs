@@ -1,5 +1,7 @@
 import {readFileSync} from 'node:fs';
 import {beforeW011VideoLayerProduct} from './w20261016-011-video-layer-history.mjs';
+import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
+import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import {beforeW16004Product,beforeW16004Raw} from './w16004-history.mjs';
 import {beforeW15012Product,beforeW15012Raw} from './w15012-black-background-history.mjs';
 import {createHash} from 'node:crypto';
@@ -25,6 +27,7 @@ const approved=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-ap
 export const w026Slugs=new Set(Object.keys(prior));
 export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}) {
   current=beforeW011VideoLayerProduct(current,slug);
+  current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   current=beforeW16004Product(current,slug);
   current=beforeW15012Product(current,slug);
   current=beforeLogitechW14001Product(current,slug);
@@ -33,6 +36,7 @@ export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}
   current=beforeW13001Product(beforeB13003Product(current,slug),slug);
   if(slug!=='ulxd4q'||current.portMap?.items?.length===13)current=beforeMx392Ulxd4qFollowupProduct(current,slug);
   if(!wordingAlreadyRestored)current=beforeW12002Product(current,slug);
+  current=beforeW12001Product(current,slug,{allowHistorical:true});
   current=beforeW06005Product(current,slug);
   current=beforeW06004Product(current,slug);
   current=beforeAmxW008Product(beforeJblW06001Product(beforeW06002Product(beforeW06003Product(current,slug),slug),slug),slug);
@@ -49,6 +53,7 @@ export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}
   return result;
 }
 export function beforeW026Raw(raw,slug) {
+  raw=beforeW20261016_015B4Raw(raw,slug,{allowHistorical:true});
   raw=beforeW16004Raw(raw,slug);
   raw=beforeW15012Raw(raw,slug);
   raw=beforeLogitechW14001Raw(raw,slug);
@@ -57,6 +62,7 @@ export function beforeW026Raw(raw,slug) {
   raw=beforeW13001Raw(beforeB13003Raw(raw,slug),slug);
   if(slug!=='ulxd4q'||JSON.parse(raw).portMap?.items?.length===13)raw=beforeMx392Ulxd4qFollowupRaw(raw,slug);
   raw=beforeW12002Raw(raw,slug);
+  raw=beforeW12001Raw(raw,slug,{allowHistorical:true});
   raw=beforeW06005Raw(raw,slug);
   raw=beforeW06004Raw(raw,slug);
   raw=beforeAmxW008Raw(beforeJblW06001Raw(beforeW06002Raw(beforeW06003Raw(raw,slug),slug),slug),slug);

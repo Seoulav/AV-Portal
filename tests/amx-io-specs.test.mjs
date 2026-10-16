@@ -1,3 +1,4 @@
+import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
@@ -15,8 +16,10 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026RawWithoutGroup5 = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => beforeW026RawWithoutGroup5(beforeW16015Group5Raw(value, slug), slug);
+const beforeW026ProductWithoutGroup5 = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => beforeW026ProductWithoutGroup5(beforeW16015Group5Product(value, slug), slug);
 
 import {beforeAmxW008Product} from './amx-w008-history.mjs';
 import {beforeKiprogo2Mx395Product} from './w12005-kiprogo2-mx395-history.mjs';
@@ -174,7 +177,7 @@ test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest
 
 test('AMX presentation fields and every other product JSON remain fixed', () => {
   for (const slug of slugs) {
-    const current = beforeHarmanW03014(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeKiprogo2Mx395Product(product(slug),slug),slug),slug),slug),slug),slug);
+    const current = beforeHarmanW03014(beforeAmxW008Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12002Product(beforeKiprogo2Mx395Product(beforeW16015Group5Product(product(slug),slug),slug),slug),slug),slug),slug),slug);
     const { specifications, io, sources, ...core } = current;
     assert.equal(sha(JSON.stringify(core)), evidence.products[slug].coreSha256, slug);
     assert.equal(current.keyFacts?.length ?? 0, 0, `${slug}: keyFacts deferred`);

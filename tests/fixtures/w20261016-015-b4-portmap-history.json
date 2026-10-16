@@ -1,0 +1,2228 @@
+{
+  "duecanali-1604-dsp": {
+    "priorFileSha256": "c147222693bef3eb25a3521046927fab7ed0c4b6c75d4df8572b2ccc124b399a",
+    "portMap": {
+      "image": "Diagram",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 150,
+          "x2": 345,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 950,
+          "x2": 1160,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1270,
+          "x2": 1390,
+          "y": 82,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1270,
+          "x2": 1390,
+          "y": 151,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1405,
+          "x2": 1470,
+          "y": 64,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1660,
+          "x2": 1735,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1760,
+          "x2": 1860,
+          "y": 65,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "duecanali-1604-dsp-diagram.webp",
+        "width": 2060,
+        "height": 210
+      }
+    },
+    "approvedLayoutSha256": "0a4e9b680bfdc8e1083bc14573bbf96ee4df56bf999940681039ce7853910ee2"
+  },
+  "duecanali-1604-dspd": {
+    "priorFileSha256": "02d45483be9fcea35216be30b8046b7cb7edaa382669a159de53b1861f0e6c75",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 45,
+          "x2": 140,
+          "y": 55,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 445,
+          "x2": 550,
+          "y": 28,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 610,
+          "x2": 687,
+          "y": 34,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 610,
+          "x2": 687,
+          "y": 70,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 702,
+          "x2": 748,
+          "y": 26,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 801,
+          "x2": 843,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Dante/AES67",
+          "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 869,
+          "x2": 908,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 846,
+          "x2": 917,
+          "y": 26,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "duecanali-1604-dspd-rear.webp",
+        "width": 967,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "dbfb0a8d4033840d03558b4c8a394c99fdd50de5f51ab948f482e8ec70ac2524"
+  },
+  "duecanali-804-dsp": {
+    "priorFileSha256": "77ba2d88a2641798c6afa590890a3a674e326381b1e15865fa3fee799092c3c8",
+    "portMap": {
+      "image": "Diagram",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 150,
+          "x2": 345,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 950,
+          "x2": 1160,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1270,
+          "x2": 1390,
+          "y": 82,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1270,
+          "x2": 1390,
+          "y": 151,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1405,
+          "x2": 1470,
+          "y": 64,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1660,
+          "x2": 1735,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1760,
+          "x2": 1860,
+          "y": 65,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "duecanali-804-dsp-diagram.webp",
+        "width": 2060,
+        "height": 210
+      }
+    },
+    "approvedLayoutSha256": "0a4e9b680bfdc8e1083bc14573bbf96ee4df56bf999940681039ce7853910ee2"
+  },
+  "duecanali-804-dspd": {
+    "priorFileSha256": "d25b54a6011a66570f40ade8217884b6c3fbd7f8504a927475d667a3488d8574",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 45,
+          "x2": 140,
+          "y": 55,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 445,
+          "x2": 550,
+          "y": 28,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 610,
+          "x2": 687,
+          "y": 34,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 610,
+          "x2": 687,
+          "y": 70,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 702,
+          "x2": 748,
+          "y": 26,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 801,
+          "x2": 843,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Dante/AES67",
+          "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 869,
+          "x2": 908,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 846,
+          "x2": 917,
+          "y": 26,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "duecanali-804-dspd-rear.webp",
+        "width": 967,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "dbfb0a8d4033840d03558b4c8a394c99fdd50de5f51ab948f482e8ec70ac2524"
+  },
+  "mezzo-322-a": {
+    "priorFileSha256": "d29809a61f8935d163c26e19647be8007396e1609fcfeb3f2284d392c4b71df6",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 35,
+          "x2": 119,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 189,
+          "x2": 242,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 1–2",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 252,
+          "x2": 306,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 316,
+          "x2": 332,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "라인 출력 1–2",
+          "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 335,
+          "x2": 394,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 447,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-322-a-rear.webp",
+        "width": 490,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "5da9cb4decb4a62a68121da25d1adc78bfbad4de025fa25d8de93d69e71cf28b"
+  },
+  "mezzo-322-ad": {
+    "priorFileSha256": "d2c55bf8478c5236d91eed1c7d0c2ec31993540c15a3c38006f473ffe8c72f6f",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 34,
+          "x2": 118,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 188,
+          "x2": 241,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 1–2",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 251,
+          "x2": 305,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 315,
+          "x2": 331,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "라인 출력 1–2",
+          "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 334,
+          "x2": 393,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 483,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "GPI 입력·상태 접점 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-322-ad-rear.webp",
+        "width": 488,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "5f7f770f5523626c52d4b81947f8325499dad5054186c3b5e4f9b60aa6c99e6b"
+  },
+  "mezzo-324-a": {
+    "priorFileSha256": "21375fa7fc9f066c669f678851b4d2748e6ad46d186e44a15990f8c32b0a10c8",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 35,
+          "x2": 119,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 136,
+          "x2": 242,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3–4",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 252,
+          "x2": 306,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 316,
+          "x2": 332,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 입력 1–2",
+          "desc": "아날로그 입력 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 336,
+          "x2": 392,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 447,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-324-a-rear.webp",
+        "width": 489,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "95a4d48dd2bc770b10e35f7eb4edaf81dfcf125a2efee44f2ac887f869e9cd03"
+  },
+  "mezzo-324-ad": {
+    "priorFileSha256": "83ab2b9d43315ae1b5eb145a7fdb4a290a1023b9f8825325866d3d3ce52c10d7",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 34,
+          "x2": 118,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 135,
+          "x2": 241,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3–4",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 251,
+          "x2": 305,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 315,
+          "x2": 331,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 입력 1–2",
+          "desc": "아날로그 입력 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 335,
+          "x2": 391,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 483,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-324-ad-rear.webp",
+        "width": 488,
+        "height": 93
+      }
+    },
+    "approvedLayoutSha256": "321594319ffe5dbf210269e40ffef1b40643be0b630c71dd505f63d08af41840"
+  },
+  "mezzo-602-a": {
+    "priorFileSha256": "27db308a15cf98fb685d8cf53c827c79acd176bc9932c7c2c2287d3b838bd1ab",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 36,
+          "x2": 120,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 190,
+          "x2": 243,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 1–2",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 253,
+          "x2": 307,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 317,
+          "x2": 333,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "라인 출력 1–2",
+          "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 336,
+          "x2": 395,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 447,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-602-a-rear.webp",
+        "width": 492,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "d5c84d550759a165787d760004af5c201fdf70203b274c47967dd47c7325cf46"
+  },
+  "mezzo-602-ad": {
+    "priorFileSha256": "6f55711395f6a08c9e8ed6de953fd5ea23797b8d2468179cfa9133d11370a81b",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 34,
+          "x2": 118,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–2",
+          "desc": "2채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 188,
+          "x2": 241,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 1–2",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 251,
+          "x2": 305,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 315,
+          "x2": 331,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "라인 출력 1–2",
+          "desc": "2채널 라인 레벨 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 334,
+          "x2": 393,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 483,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-602-ad-rear.webp",
+        "width": 487,
+        "height": 95
+      }
+    },
+    "approvedLayoutSha256": "5f7f770f5523626c52d4b81947f8325499dad5054186c3b5e4f9b60aa6c99e6b"
+  },
+  "mezzo-604-a": {
+    "priorFileSha256": "03d235830410731830108c6426d5d74a44cc12686c074281964674b9a16f5b06",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 35,
+          "x2": 119,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 136,
+          "x2": 242,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3–4",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 252,
+          "x2": 306,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 316,
+          "x2": 332,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 입력 1–2",
+          "desc": "아날로그 입력 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 336,
+          "x2": 392,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 447,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-604-a-rear.webp",
+        "width": 490,
+        "height": 97
+      }
+    },
+    "approvedLayoutSha256": "95a4d48dd2bc770b10e35f7eb4edaf81dfcf125a2efee44f2ac887f869e9cd03"
+  },
+  "mezzo-604-ad": {
+    "priorFileSha256": "3673497abb1c2da6d990a8ec0d6c71aff75a7a22cc9dc2548396297524156406",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC 전원 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 35,
+          "x2": 119,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 스피커 출력 · MEZZO Series User Guide 39쪽",
+          "x1": 136,
+          "x2": 242,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "아날로그 입력 3–4",
+          "desc": "밸런스 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 252,
+          "x2": 306,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "비밸런스 입력",
+          "desc": "3.5mm 아날로그 입력 · MEZZO Series User Guide 39쪽",
+          "x1": 316,
+          "x2": 332,
+          "y": 68,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "아날로그 입력 1–2",
+          "desc": "아날로그 입력 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 336,
+          "x2": 392,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "네트워크",
+          "desc": "제어/모니터링 · Dante/AES67 · MEZZO Series User Guide 39쪽",
+          "x1": 396,
+          "x2": 483,
+          "y": 25,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "GPIO",
+          "desc": "다목적 GPIO 단자대 · MEZZO Series User Guide 39쪽",
+          "x1": 403,
+          "x2": 483,
+          "y": 75,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "mezzo-604-ad-rear.webp",
+        "width": 490,
+        "height": 94
+      }
+    },
+    "approvedLayoutSha256": "935921e440a15fafbd959dd3bccb7b29d69d754301abe1cae5775134d869b8fc"
+  },
+  "mxcwapt-w": {
+    "priorFileSha256": "fad3507c021b190965a9c329b9d8eba00b8b45d09b94df4a76e274bf0cf85a1e",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "mxcwapt-w-rear.webp",
+        "width": 2000,
+        "height": 1182
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "아날로그 오디오 출력",
+          "desc": "3핀 수 XLR 출력",
+          "x1": 1039,
+          "x2": 1255,
+          "y": 972,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "11d9370413c6e77116de1561f54708b97a9909d107eb94c5f985886363a79698"
+  },
+  "qlxd4": {
+    "priorFileSha256": "7e992b4f3904cd1cc5ce2c47375b7c48d3681fd762884ca54f09290868ac6830",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "qlxd4-rear.webp",
+        "width": 2000,
+        "height": 517
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 1680,
+          "x2": 1820,
+          "y": 290,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 638,
+          "x2": 785,
+          "y": 290,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1100,
+          "x2": 1330,
+          "y": 300,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 1 · TRS",
+          "desc": "6.35mm TRS · 악기/보조 입력에 연결하는 임피던스 밸런스 출력",
+          "x1": 1380,
+          "x2": 1505,
+          "y": 418,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "출력 1 MIC/LINE",
+          "desc": "XLR 출력 레벨을 마이크 또는 라인으로 선택",
+          "x1": 960,
+          "x2": 1058,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · 수신기 네트워크 제어에 연결",
+          "x1": 340,
+          "x2": 508,
+          "y": 275,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "수신기 초기화",
+          "desc": "Reset · 수신기를 기본 설정으로 복원",
+          "x1": 550,
+          "x2": 570,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "DC 전원 입력",
+          "desc": "DC · 제공된 외부 전원공급장치 연결",
+          "x1": 226,
+          "x2": 290,
+          "y": 350,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "fc0de5df4c2a8931446281cebd8a3e8b7e903288e05a5935d0f391a781292477"
+  },
+  "quattrocanali-1204-dsp": {
+    "priorFileSha256": "200ccd525dd8b5ab34242e6233145bd26611ee5b4dafe6524913639ac4dc0ed4",
+    "portMap": {
+      "image": "Diagram",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 150,
+          "x2": 345,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 830,
+          "x2": 1170,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 82,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 151,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1510,
+          "x2": 1580,
+          "y": 64,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1710,
+          "x2": 1780,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1800,
+          "x2": 1950,
+          "y": 65,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-1204-dsp-diagram.webp",
+        "width": 2060,
+        "height": 210
+      }
+    },
+    "approvedLayoutSha256": "052010d35b2605c5c42cb06e3d06f100fb5447c70189084f5e6b3e254966b0a1"
+  },
+  "quattrocanali-1204-dspd": {
+    "priorFileSha256": "488612e718c140d3f56d0e68a46a9d2e51808bc27eb0743ac99acc93ffd2d948",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 45,
+          "x2": 140,
+          "y": 55,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 400,
+          "x2": 570,
+          "y": 28,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 34,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 70,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 700,
+          "x2": 753,
+          "y": 26,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 795,
+          "x2": 844,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Dante/AES67",
+          "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 866,
+          "x2": 907,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 850,
+          "x2": 930,
+          "y": 26,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-1204-dspd-rear.webp",
+        "width": 968,
+        "height": 96
+      }
+    },
+    "approvedLayoutSha256": "da437f442358a233ce1cfd8b981b1855d886d1a189f61e59007bf76de52099c1"
+  },
+  "quattrocanali-2404-dsp": {
+    "priorFileSha256": "3e81b3800c7fd027867cf64c9f15a1d434c8f1a63f34db6fd0c92a1dc5b52d94",
+    "portMap": {
+      "image": "Diagram",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 150,
+          "x2": 345,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 830,
+          "x2": 1170,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 82,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 151,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1510,
+          "x2": 1580,
+          "y": 64,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1710,
+          "x2": 1780,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1800,
+          "x2": 1950,
+          "y": 65,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-2404-dsp-diagram.webp",
+        "width": 2060,
+        "height": 210
+      }
+    },
+    "approvedLayoutSha256": "052010d35b2605c5c42cb06e3d06f100fb5447c70189084f5e6b3e254966b0a1"
+  },
+  "quattrocanali-2404-dspd": {
+    "priorFileSha256": "90c4919f62b805eb13fd831721766fdf423de84d75b4f50eb96235362e3d5264",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 45,
+          "x2": 140,
+          "y": 55,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 400,
+          "x2": 570,
+          "y": 28,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 34,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 70,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 700,
+          "x2": 753,
+          "y": 26,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 795,
+          "x2": 844,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Dante/AES67",
+          "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 866,
+          "x2": 907,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 850,
+          "x2": 930,
+          "y": 26,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-2404-dspd-rear.webp",
+        "width": 968,
+        "height": 96
+      }
+    },
+    "approvedLayoutSha256": "da437f442358a233ce1cfd8b981b1855d886d1a189f61e59007bf76de52099c1"
+  },
+  "quattrocanali-4804-dsp": {
+    "priorFileSha256": "9f1eeaf98696a9a48f574735ea3dff65b97a213c92a17385d1756b7755c5a998",
+    "portMap": {
+      "image": "Diagram",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 150,
+          "x2": 345,
+          "y": 120,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 830,
+          "x2": 1170,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 82,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 1240,
+          "x2": 1490,
+          "y": 151,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 ON/OFF 제어 단자 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1510,
+          "x2": 1580,
+          "y": 64,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1710,
+          "x2": 1780,
+          "y": 112,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 1800,
+          "x2": 1950,
+          "y": 65,
+          "side": "bottom"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-4804-dsp-diagram.webp",
+        "width": 2060,
+        "height": 210
+      }
+    },
+    "approvedLayoutSha256": "052010d35b2605c5c42cb06e3d06f100fb5447c70189084f5e6b3e254966b0a1"
+  },
+  "quattrocanali-4804-dspd": {
+    "priorFileSha256": "61c7f98a3f6303affc8e7bbb421e27d003fdb12feaa0267d3d486e04c88036e2",
+    "portMap": {
+      "image": "Rear",
+      "items": [
+        {
+          "n": 1,
+          "label": "AC 전원",
+          "desc": "IEC C20 전원 입력 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 45,
+          "x2": 140,
+          "y": 55,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "스피커 출력 1–4",
+          "desc": "4채널 출력 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 400,
+          "x2": 570,
+          "y": 28,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "BALANCED 입력",
+          "desc": "메인 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 34,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "LINE 입력",
+          "desc": "채널별 보조 아날로그 입력 · Duecanali + Quattrocanali User Guide 6쪽",
+          "x1": 600,
+          "x2": 710,
+          "y": 70,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "GPI/원격 제어",
+          "desc": "원격 제어 단자대 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 700,
+          "x2": 753,
+          "y": 26,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "ArmoníaPlus 원격 제어 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 795,
+          "x2": 844,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Dante/AES67",
+          "desc": "Dante/AES67 오디오 네트워크 RJ45 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 866,
+          "x2": 907,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "ALARM 접점",
+          "desc": "NO/NC 상태 경보 · Duecanali + Quattrocanali User Guide 6–7쪽",
+          "x1": 850,
+          "x2": 930,
+          "y": 26,
+          "side": "top"
+        }
+      ],
+      "measuredImage": {
+        "file": "quattrocanali-4804-dspd-rear.webp",
+        "width": 968,
+        "height": 96
+      }
+    },
+    "approvedLayoutSha256": "da437f442358a233ce1cfd8b981b1855d886d1a189f61e59007bf76de52099c1"
+  },
+  "slxd1-plus": {
+    "priorFileSha256": "dead0d286b8e692a99de0f19397487a4d3331fe6d839808529e763c47576760a",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "slxd1-plus-rear.webp",
+        "width": 679,
+        "height": 2000
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "TA4M 입력",
+          "desc": "마이크·악기 4핀 입력",
+          "y1": 1075,
+          "y2": 1139,
+          "side": "left"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "e83c681e8c4f4437367503322c3117d06ebfeb87b1ef5011e76f868571442f4d"
+  },
+  "slxd4-plus": {
+    "priorFileSha256": "8a9ca941c06b9772e89629d8080e6d0ac82a38bd4675a4f8a69a4bde201f0903",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "slxd4-plus-rear.webp",
+        "width": 2000,
+        "height": 1340
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 1720,
+          "x2": 1860,
+          "y": 1230,
+          "side": "bottom"
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 123,
+          "x2": 267,
+          "y": 1230,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1210,
+          "x2": 1390,
+          "y": 1010,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 1 · TRS",
+          "desc": "6.35mm TRS · 악기/보조 입력에 연결하는 임피던스 밸런스 출력",
+          "x1": 1503,
+          "x2": 1595,
+          "y": 1205,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · 수신기 네트워크 제어에 연결",
+          "x1": 554,
+          "x2": 701,
+          "y": 1090,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC 전원 입력",
+          "desc": "DC · 제공된 외부 전원공급장치 연결",
+          "x1": 385,
+          "x2": 475,
+          "y": 1190,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "478cb73bc9765cf120ab5fee66f00a6f1ca5ba3002e5354f5642d1063aaf5c9d"
+  },
+  "slxd4d-plus": {
+    "priorFileSha256": "7a9d4edf5631bf93a0520faa2bcadcaaeae0b209b45967c19bc4215f3630dfd5",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "slxd4d-plus-rear.webp",
+        "width": 2000,
+        "height": 1324
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 B 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 99,
+          "x2": 263,
+          "y": 1133,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 A 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 1670,
+          "x2": 1837,
+          "y": 1133,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "OUTPUT 1 · XLR/6.35 mm",
+          "desc": "채널 1 오디오 출력 2종",
+          "x1": 1190,
+          "x2": 1618,
+          "y": 1129,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "OUTPUT 2 · XLR/6.35 mm",
+          "desc": "채널 2 오디오 출력 2종",
+          "x1": 710,
+          "x2": 1145,
+          "y": 1129,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "LAN",
+          "desc": "제어 네트워크 RJ-45",
+          "x1": 514,
+          "x2": 678,
+          "y": 1136,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC 15V 입력",
+          "desc": "외부 전원 공급기 연결",
+          "x1": 352,
+          "x2": 470,
+          "y": 1127,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "81ce91cd5c511c8af044c3c269ee53cccf801de4182c4908db4faca1eb4e6c11"
+  },
+  "ua844-swb": {
+    "priorFileSha256": "b1c47d1b93f2087709f04a130ab4b9b4b5ef88f4f7cf94e10637e91ad115d600",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ua844swb-rear.webp",
+        "width": 2960,
+        "height": 600
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 B 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 657,
+          "x2": 778,
+          "y": 404,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 A 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 2728,
+          "x2": 2851,
+          "y": 404,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "RF OUTPUT B 1–4",
+          "desc": "수신기 RF 분배 출력 4개",
+          "x1": 1019,
+          "x2": 1702,
+          "y": 404,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "RF OUTPUT A 1–4",
+          "desc": "수신기 RF 분배 출력 4개",
+          "x1": 1807,
+          "x2": 2496,
+          "y": 404,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DC OUTPUT 1–4",
+          "desc": "수신기 전원 분배 출력 4개",
+          "x1": 237,
+          "x2": 601,
+          "y": 348,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "전원 입력",
+          "desc": "후면 power in 단자",
+          "x1": 136,
+          "x2": 244,
+          "y": 298,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "5d05d7b54642767bada1e84dcda76d64019237d783a2c97c19a79e13ae0f1abc"
+  },
+  "ua845uwb": {
+    "priorFileSha256": "845d2b2301f6442bab478fb427279ba9defa8a76c75e1789ec9e1d51dbeb07e9",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ua845uwb-rear.webp",
+        "width": 3140,
+        "height": 700
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 B 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 766,
+          "x2": 878,
+          "y": 491,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 A 입력",
+          "desc": "BNC RF 안테나 입력",
+          "x1": 2902,
+          "x2": 3016,
+          "y": 490,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "RF OUTPUT B 1–4",
+          "desc": "수신기 RF 분배 출력 4개",
+          "x1": 1151,
+          "x2": 1836,
+          "y": 495,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "RF OUTPUT A 1–4",
+          "desc": "수신기 RF 분배 출력 4개",
+          "x1": 1917,
+          "x2": 2588,
+          "y": 495,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "DC OUTPUT B ×2",
+          "desc": "B 구역의 수신기 전원 분배 출력 2개",
+          "x1": 874,
+          "x2": 1156,
+          "y": 384,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC OUTPUT A ×2",
+          "desc": "A 구역의 수신기 전원 분배 출력 2개",
+          "x1": 2080,
+          "x2": 2353,
+          "y": 384,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "AC 전원 입력",
+          "desc": "100–240V AC 입력",
+          "x1": 329,
+          "x2": 473,
+          "y": 427,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "4dacc0d63519fe7fc1ce39f47d03d38d90de9e0d8cf5bf992829ae4394a777e7"
+  },
+  "ua864a": {
+    "priorFileSha256": "a09d84f4e8ee0f4ff259a4ba204f3ffe31b4345704ef84c1f25e07003b0a5eaa",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ua864a-rear.webp",
+        "width": 2400,
+        "height": 2140
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "RF 출력 · 바이어스 전원",
+          "desc": "BNC · 같은 주파수 대역의 수신기/분배기에 연결, 동축으로 바이어스 전원 수신",
+          "x1": 1548,
+          "x2": 1662,
+          "y": 232,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "게인 선택",
+          "desc": "수신 환경에 맞춰 RF 신호의 감쇠·기본·증폭 설정 선택",
+          "x1": 1352,
+          "x2": 1510,
+          "y": 1958,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "e4140a8bd2535d6600397539e5921697c55cc080231c0ce076cd2c5501681e32"
+  },
+  "ulxd1": {
+    "priorFileSha256": "1ef5ec62545d532c6d6dd9328a8e7fcd078c2985ef5919a84dae395053bb301f",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ulxd1-rear.webp",
+        "width": 753,
+        "height": 2211
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "TA4M 입력",
+          "desc": "마이크·악기 4핀 입력",
+          "y1": 1240,
+          "y2": 1290,
+          "side": "left"
+        },
+        {
+          "n": 2,
+          "label": "SMA 안테나 출력",
+          "desc": "RF 송신 안테나 연결",
+          "y1": 1168,
+          "y2": 1275,
+          "side": "right"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "45a782d6deebb345866c04e3b620662525b953ab132fd07b5890fb2df0a99fcc"
+  },
+  "ulxd4": {
+    "priorFileSha256": "e07cc9ac0ff49e45796e241b122dbfc5e9c6aae46078197ffbd8581efaa06db2",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ulxd4-rear.webp",
+        "width": 2000,
+        "height": 490
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 1710,
+          "x2": 1850,
+          "y": 187,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 수신용 안테나 연결",
+          "x1": 148,
+          "x2": 290,
+          "y": 190,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1125,
+          "x2": 1340,
+          "y": 155,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 1 · TRS",
+          "desc": "6.35mm TRS · 믹서 등의 마이크/라인 입력에 연결하는 밸런스 출력",
+          "x1": 1410,
+          "x2": 1535,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "출력 1 MIC/LINE",
+          "desc": "XLR 출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+          "x1": 1020,
+          "x2": 1065,
+          "y": 385,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Ethernet 제어",
+          "desc": "RJ-45 · 수신기 네트워크 제어에 연결",
+          "x1": 545,
+          "x2": 715,
+          "y": 245,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "DC 전원 입력",
+          "desc": "DC · 제공된 외부 전원공급장치 연결",
+          "x1": 401,
+          "x2": 497,
+          "y": 365,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "9e25648260c51b9467bc944904e37a685d4e5286ad02138a8fcf5c5767c27559"
+  },
+  "ulxd4d": {
+    "priorFileSha256": "d8b9e568f386ed21196b77508abbe88481d16fce303824135fa31bafaefe349d",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ulxd4d-rear.webp",
+        "width": 2000,
+        "height": 291
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 1800,
+          "x2": 1878,
+          "y": 57,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 421,
+          "x2": 499,
+          "y": 57,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1560,
+          "x2": 1675,
+          "y": 145,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 2",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1362,
+          "x2": 1476,
+          "y": 145,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "캐스케이드 출력 A",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 A 신호 전달",
+          "x1": 1704,
+          "x2": 1777,
+          "y": 214,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "캐스케이드 출력 B",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 B 신호 전달",
+          "x1": 512,
+          "x2": 591,
+          "y": 214,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "출력 1 MIC/LINE",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+          "x1": 1524,
+          "x2": 1546,
+          "y": 204,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "출력 2 MIC/LINE",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+          "x1": 1324,
+          "x2": 1346,
+          "y": 204,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어 연결",
+          "x1": 1153,
+          "x2": 1238,
+          "y": 103,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 네트워크 모드에 맞춰 연결(이중화/스위치/분리)",
+          "x1": 1050,
+          "x2": 1135,
+          "y": 187,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원 연결",
+          "x1": 107,
+          "x2": 217,
+          "y": 223,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "a1ad50562a07753b551fa67957822a0ab858a5cee0f341b20c84a80b7a9c43d6"
+  },
+  "ulxd4q": {
+    "priorFileSha256": "a114d57c480ddf02a992385994f6fff244110d0e960768af4be71c65d1f48482",
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "ulxd4q-rear.webp",
+        "width": 2000,
+        "height": 264
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "안테나 입력 A",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 1800,
+          "x2": 1876,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "안테나 입력 B",
+          "desc": "BNC · 액티브 안테나용 12–13V DC(최대 150mA); 패시브 안테나는 바이어스 OFF.",
+          "x1": 427,
+          "x2": 500,
+          "y": 65,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "오디오 출력 1",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1565,
+          "x2": 1668,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "오디오 출력 2",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 1370,
+          "x2": 1471,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "오디오 출력 3",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 892,
+          "x2": 991,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "오디오 출력 4",
+          "desc": "밸런스 XLR · 믹서 등의 마이크/라인 입력에 연결",
+          "x1": 698,
+          "x2": 798,
+          "y": 150,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "캐스케이드 출력 A",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 A 신호 전달",
+          "x1": 1710,
+          "x2": 1777,
+          "y": 215,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "캐스케이드 출력 B",
+          "desc": "BNC · 같은 주파수 대역의 추가 수신기 1대에 안테나 B 신호 전달",
+          "x1": 522,
+          "x2": 590,
+          "y": 215,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "MIC/LINE 스위치 1–2",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+          "x1": 1330,
+          "x2": 1547,
+          "y": 201,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "MIC/LINE 스위치 3–4",
+          "desc": "출력 레벨 선택 · MIC 위치에서 30dB 감쇠",
+          "x1": 656,
+          "x2": 872,
+          "y": 201,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "Dante Primary",
+          "desc": "RJ-45 · Dante 오디오 및 Wireless Workbench 네트워크 제어 연결",
+          "x1": 1160,
+          "x2": 1240,
+          "y": 111,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "Dante Secondary",
+          "desc": "RJ-45 · 네트워크 모드에 맞춰 연결(이중화/스위치/분리)",
+          "x1": 1060,
+          "x2": 1138,
+          "y": 190,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "AC 전원 입력",
+          "desc": "IEC · 100–240V AC 전원 연결",
+          "x1": 129,
+          "x2": 204,
+          "y": 210,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approvedLayoutSha256": "a7d089ef7452ff7796b8e4eaf19891082e2f23c61ecbf535e506f89a2f2c52d5"
+  }
+}
