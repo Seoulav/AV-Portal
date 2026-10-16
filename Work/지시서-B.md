@@ -641,5 +641,6 @@
 - RS 카드형 지도는 입력 카드 종류별 1개, 출력 카드 열별 1개 외곽 괄호로 재배치. 카드 장착 수를 desc에 넣고 제어 단자는 하단 번호로 유지. Pulse/Eikos/Zenith의 중간 줄은 좌우 외곽 범위 괄호로 바꿔 다른 단자 행을 가로지르는 세로 지시선을 제거.
 - 수정 직전/수정 후 번호 원 수: RSalpha 9→8, RS1 12→10, RS2 13→10, RS3 15→10, RS4 16→10, RS5 18→10, RS6 19→10, Pulse 10→10, Eikos 10→10, Zenith 100 14→14, Zenith 200 16→16. Pulse/Eikos/Zenith는 표식 수 감축 대상이 아니며 짧은 가장자리 괄호로 오인 가능성을 줄임.
 - 11종 전후 760px·390px 좌우 66장과 RS6·Zenith 200·Crown DCi 4|600 목록 1280px 3장 캡처, 갤러리: Work/기록/W-20261016-014-analogway-preview/screenshots/index.html. RS6·Pulse·Zenith 대표 화면 및 390px를 검토; 번호와 카드 목록 유지, 비대상 Crown 목록 동일.
-- 집중 지도 테스트·되감기·기존 라벨 회귀 테스트 10/10 통과. `verify-pages`, search-index/readable-catalog `--check` 통과. 전체 테스트 831건 중 829 통과, 실패 1, 기존 skip 1; 유일한 실패는 `tests/rtcom-sync.test.mjs`의 Windows 임시 경로 `rename` EPERM으로 코드 단언 실패가 아니었다. #598 `849450c5`는 main에 병합됨. 현재 지도 수정·캡처를 다시 만드는 중이며, 그 뒤 준비된 변경을 커밋하고 최신 main을 통합한다.
+- 집중 지도 테스트·되감기·기존 라벨·#598 H5 검증 테스트 22/22 통과. `verify-pages`, search-index/readable-catalog `--check` 통과. 최신 main `0645b86c`에는 #598 `849450c58f2d2b591f8c74a24ff682543c95f11e`가 포함됨. W-014 중복 번호 동일 label·desc 허용을 유지하면서 `portMaps` 제조사 제한 해제·일반 role 고유성·Other 허용 조건도 보존. 전체 테스트 838건 중 837 통과·실패 0·기존 skip 1.
+- 최신 미리보기 69장 재생성: 11종 전후 760px·390px 좌우 66장 + RS6·Zenith 200·Crown DCi 4|600 번호 목록 1280px 3장. 다음은 통합 커밋/push 후 PR #597 필수 CI 확인; Work가 화면을 확인하고 병합 순서를 다시 결정할 때까지 병합하지 않는다.
 - #598 849450c5 병합 확인. 다음: 작업 커밋 → 최신 origin/main 통합, validMap의 portMaps 제조사 제한 해제·일반 제품 role 고유 검사·Other 허용과 W-014 같은 번호 허용 보존 → 전체 검사·캡처 확인 → PR #597 CI 초록 후 Work에 병합 순서 요청. 병합 금지.

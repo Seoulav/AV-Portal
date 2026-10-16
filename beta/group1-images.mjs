@@ -311,7 +311,8 @@ export const group1Images = {
   ],
   'rally-plus': [
     image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND'),
-      image('Diagram', 'rally-plus-diagram.webp', 'Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열')
+    image('Other', 'rally-plus-diagram.webp', 'Rally Plus 공식 설치 가이드의 원본 번호·설명선 포함 테이블/디스플레이 허브 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Other · 한국어 설치 가이드 24–25쪽 원본 도면 · 제조사 번호·설명선 포함'),
+    image('Diagram', 'rally-plus-port-panels.webp', 'Rally Plus 테이블 허브·디스플레이 허브 단자 그림만 발췌한 번호 지도 바탕', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '640x360', 'VERIFIED', 'Diagram · 한국어 설치 가이드 24–25쪽 원본 단자 그림을 자르기·배치만 한 정리본 · 원본 주석 도면은 Other')
   ],
   'rally-mic-pod': [
     image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
@@ -564,7 +565,8 @@ export const group1Images = {
   ],
   'novastar-h5': [
     image('Front', 'h5-front.webp', 'NovaStar H5 전면부(터치스크린 LCD)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1176', '2400x1176', 'VERIFIED'),
-    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED')
+    image('Rear', 'h5-rear.webp', 'NovaStar H5 후면부(카드 슬롯)', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '2400x1175', 'VERIFIED'),
+    image('Other', 'h5-control-panel.png', 'NovaStar H5 공식 후면 사진의 제어 단자 줄 확대', 'NovaStar', 'H5', 'https://www.novastar.tech/product/detail.html?catid=3&id=39', '2400x1175', '1600x216', 'VERIFIED', '공식 후면 사진의 제어 단자 줄 확대(자르기·배치만)')
   ],
   'h-preview-card-2xrj45-1xhdmi13': [
     image('Main', 'h-preview-card-2xrj45-1xhdmi13-main.webp', 'H_2xRJ45+1xHDMI1.3 프리뷰 카드 전면 커넥터', 'NovaStar', 'H_2xRJ45+1xHDMI1.3 Preview Card', 'https://en-website001.oss-us-east-1.aliyuncs.com/Specification/H2%20Video%20Wall%20Splicer%20Specifications-V1.17.0.pdf', '1126x117', '1126x117', 'VERIFIED')

@@ -1,0 +1,167 @@
+{
+  "layout": {
+    "portMap": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "h5-rear.webp",
+        "width": 2400,
+        "height": 1175
+      },
+      "items": [
+        {
+          "n": 1,
+          "side": "left",
+          "y1": 75,
+          "y2": 1045
+        },
+        {
+          "n": 3,
+          "side": "right",
+          "y1": 75,
+          "y2": 647
+        },
+        {
+          "n": 5,
+          "side": "right",
+          "y1": 666,
+          "y2": 750
+        },
+        {
+          "n": 12,
+          "side": "bottom",
+          "x1": 1495,
+          "x2": 1675
+        },
+        {
+          "n": 13,
+          "side": "bottom",
+          "x1": 1875,
+          "x2": 2055
+        }
+      ]
+    },
+    "portMaps": [
+      {
+        "image": "Rear",
+        "measuredImage": {
+          "file": "h5-rear.webp",
+          "width": 2400,
+          "height": 1175
+        },
+        "items": [
+          {
+            "n": 1,
+            "side": "left",
+            "y1": 75,
+            "y2": 1045
+          },
+          {
+            "n": 3,
+            "side": "right",
+            "y1": 75,
+            "y2": 647
+          },
+          {
+            "n": 5,
+            "side": "right",
+            "y1": 666,
+            "y2": 750
+          },
+          {
+            "n": 12,
+            "side": "bottom",
+            "x1": 1495,
+            "x2": 1675
+          },
+          {
+            "n": 13,
+            "side": "bottom",
+            "x1": 1875,
+            "x2": 2055
+          }
+        ]
+      },
+      {
+        "image": "Other",
+        "measuredImage": {
+          "file": "h5-control-panel.png",
+          "width": 1600,
+          "height": 216
+        },
+        "items": [
+          {
+            "n": 2,
+            "side": "top",
+            "x1": 84,
+            "x2": 226
+          },
+          {
+            "n": 4,
+            "side": "bottom",
+            "x1": 260,
+            "x2": 408
+          },
+          {
+            "n": 6,
+            "side": "bottom",
+            "x1": 416,
+            "x2": 604
+          },
+          {
+            "n": 7,
+            "side": "top",
+            "x1": 634,
+            "x2": 688
+          },
+          {
+            "n": 8,
+            "side": "top",
+            "x1": 738,
+            "x2": 796
+          },
+          {
+            "n": 9,
+            "side": "bottom",
+            "x1": 848,
+            "x2": 985
+          },
+          {
+            "n": 10,
+            "side": "bottom",
+            "x1": 1005,
+            "x2": 1142
+          },
+          {
+            "n": 11,
+            "side": "top",
+            "x1": 1230,
+            "x2": 1430
+          }
+        ]
+      }
+    ]
+  },
+  "panelImage": {
+    "role": "Other",
+    "file": "h5-control-panel.png",
+    "alt": "NovaStar H5 공식 후면 사진의 제어 단자 줄 확대",
+    "note": "공식 후면 사진의 제어 단자 줄 확대(자르기·배치만)",
+    "provider": "NovaStar",
+    "model": "H5",
+    "sourceUrl": "https://www.novastar.tech/product/detail.html?catid=3&id=39",
+    "officialSource": true,
+    "verificationStatus": "VERIFIED",
+    "originalSize": "2400x1175",
+    "resolution": "1600x216",
+    "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+  },
+  "sourcePhotoSha": "837d24d1812ddb56f19875405d8d4f93a9de420f42d12735e7f43a21a15c54c6",
+  "panelSha": "13e381a6c1ffc0f5d8c21142b58edf61cb189a9bb7d36d1aaf3352cb508a691b",
+  "crop": {
+    "x": 1305,
+    "y": 742,
+    "width": 800,
+    "height": 108,
+    "scale": 2
+  }
+}

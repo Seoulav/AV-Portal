@@ -1,3 +1,4 @@
+import {beforeH5PanelProduct} from './h5-panel-history.mjs';
 import {portMapSegments} from './portmap-segment-audit.mjs';
 import {beforeGroup6bW16015Product,beforeGroup6bW16015Raw,group6bGeometry,readBeforeGroup6bFileSync,readBeforeGroup6bFile} from './group6b-w16015-history.mjs';
 import test from 'node:test';
@@ -31,7 +32,7 @@ test('Group 6b work preserves all non-layout fields, marker meanings and source 
 });
 
 
-test('H5 remains unchanged pending separate panel design approved by Work 2026-10-16',()=>{assert.equal(sha(read('novastar-h5')),'054fb4810efc007ffeb6ddb7635c3d6010a2516ed5a2b7e71973c2bbe376f316');});
+test('Group 6b historical H5 stays unchanged after undoing the approved 2026-10-17 panel',()=>{assert.equal(sha(beforeH5PanelProduct(read('novastar-h5'),'novastar-h5')),'054fb4810efc007ffeb6ddb7635c3d6010a2516ed5a2b7e71973c2bbe376f316');});
 
 test('U-BRIDGE 3 retains the user-approved W-005 through W-007 layout',()=>{assert.equal(sha(read('u-bridge-3')),'f3cb59e4a4ba4db0d3f12c847bc3c8e5675982a5566bad7886e320bcf8c8abbf');});
 
