@@ -9,6 +9,7 @@ import { beforeW006Raw, beforeW006Product, w006Slugs } from './w006-history.mjs'
 import { beforeW12002Raw } from './w12002-wording-history.mjs';
 import { beforeW1010Catalog } from './w1010-history.mjs';
 import { beforeW13007HotelProduct } from './w13007-hotel-history.mjs';
+import { beforeW16015SamsungHotelPlacementProduct } from './w16015-samsung-hotel-placement-history.mjs';
 import { beforeW13007BehhlGuideProduct } from './w13007-behhl-guide-history.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -40,7 +41,7 @@ test('six U800F and six BEHX-H products retain model-specific official values', 
     assert.deepEqual(card.brandSort, { group: 'Hotel TV', order: 5, size: Number(slug.slice(2, 4)) });
     assert.equal(data.io.length, 13);
     assert.equal(data.io.find(row => row.connector === 'HDMI 입력').quantity, '3');
-    assert.equal(beforeW13007HotelProduct(beforeW13007BehhlGuideProduct(data,slug),slug).portMap, undefined);
+    assert.equal(beforeW13007HotelProduct(beforeW13007BehhlGuideProduct(beforeW16015SamsungHotelPlacementProduct(data,slug),slug),slug).portMap, undefined);
     assert.equal(spec(data, '소비전력(최대)').value, max);
     assert.equal(spec(data, '소비전력(일반/Typical)').value, typical);
     assert.equal(spec(data, '크기(스탠드 제외, 가로x높이x깊이)').value, size);
@@ -55,7 +56,7 @@ test('six U800F and six BEHX-H products retain model-specific official values', 
     assert.equal(data.model, slug.toUpperCase());
     assert.deepEqual(card.brandSort, { group: 'Business TV', order: 6, size: Number(slug.slice(2, 4)) });
     assert.equal(data.io.length, 6);
-    assert.equal(beforeW13007HotelProduct(beforeW13007BehhlGuideProduct(data,slug),slug).portMap, undefined);
+    assert.equal(beforeW13007HotelProduct(beforeW13007BehhlGuideProduct(beforeW16015SamsungHotelPlacementProduct(data,slug),slug),slug).portMap, undefined);
     assert.equal(spec(data, '소비전력 (Typical)').value, typical);
     assert.equal(spec(data, '소비전력 (On Mode)').value, on);
     assert.equal(spec(data, '크기(제품, 가로x높이x깊이)').value, size);

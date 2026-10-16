@@ -1,0 +1,602 @@
+{
+  "hg43u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg43u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "0d952b293caaaf7371a1cacd60e8e9d0d238993f8d74082cebbe0b06147574dd"
+    }
+  },
+  "hg50u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg50u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "6839c5071f9d310b7efb88cfc72e92b74f89cf3f8ca888cdaa24168c563e4bbf"
+    }
+  },
+  "hg55u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg55u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "51a1fabaf1d12dc758daf6009ceb39bce0367b62207c3d5a7093989e19c86c91"
+    }
+  },
+  "hg65u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg65u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "de33ca290f6c311f310287453ada93e3376b0fe13679e6e7f5689ec3674364c3"
+    }
+  },
+  "hg75u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg75u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "871474f279e19448dced8665301aaea48c01f253c7504bcecfa510df6bb9e91d"
+    }
+  },
+  "hg85u800fnfxkr": {
+    "portMap": {
+      "previous": {
+        "image": "Diagram",
+        "measuredImage": {
+          "file": "hg85u800fnfxkr-diagram.webp",
+          "width": 900,
+          "height": 1120
+        },
+        "items": [
+          {
+            "n": 1,
+            "label": "USB 1–2",
+            "desc": "USB 장치 연결 · 5V 0.5A 및 HDD 5V 1A",
+            "y1": 58,
+            "y2": 248,
+            "side": "left"
+          },
+          {
+            "n": 2,
+            "label": "HDMI 입력 1–3",
+            "desc": "HDMI 영상·음향 입력 · 3번은 eARC 지원",
+            "y1": 305,
+            "y2": 625,
+            "side": "left"
+          },
+          {
+            "n": 3,
+            "label": "LAN 입력",
+            "desc": "유선 네트워크 연결",
+            "y1": 665,
+            "y2": 727,
+            "side": "left"
+          },
+          {
+            "n": 4,
+            "label": "LAN 출력",
+            "desc": "유선 네트워크 브리지 출력",
+            "y1": 752,
+            "y2": 812,
+            "side": "left"
+          },
+          {
+            "n": 5,
+            "label": "안테나 입력 1–2",
+            "desc": "지상파/케이블 및 지상파 UHD 안테나 입력",
+            "y1": 907,
+            "y2": 1040,
+            "side": "left"
+          },
+          {
+            "n": 6,
+            "label": "DATA",
+            "desc": "호텔 STB/SBB 데이터 케이블 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 7,
+            "label": "EX-LINK",
+            "desc": "외부 제어용 RS-232C 젠더 연결",
+            "x1": 572,
+            "x2": 634,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 8,
+            "label": "옵티컬 출력",
+            "desc": "디지털 음성 광출력",
+            "x1": 709,
+            "x2": 770,
+            "y": 634,
+            "side": "top"
+          },
+          {
+            "n": 9,
+            "label": "VOL-CTRL",
+            "desc": "욕실 스피커 음량 조절 박스 연결",
+            "x1": 433,
+            "x2": 496,
+            "y": 764,
+            "side": "bottom"
+          },
+          {
+            "n": 10,
+            "label": "VARIABLE AUDIO OUT",
+            "desc": "욕실 스피커용 모노 가변 음성 출력",
+            "x1": 572,
+            "x2": 634,
+            "y": 764,
+            "side": "bottom"
+          }
+        ]
+      },
+      "approvedSha256": "53ff7f61ab20255d279150728372c3949d157d34c9f984c8b962068cccc4782f"
+    }
+  }
+}

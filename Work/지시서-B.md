@@ -586,3 +586,22 @@
 - 통합 후 검증: `node beta/build-search-index.mjs --check` 통과(704524 bytes), `node beta/verify-pages.mjs` 통과(285 제품·282 상세·515 이미지·163 업로드 PDF, 잠금 PDF 12건 유지), 직렬 전체 테스트 795건 중 794 통과·실패 0·기존 skip 1, `git diff --check origin/main...HEAD` 통과. 병렬 npm test에서 RTCOM 임시 rename EPERM 2건이 발생했으나 직렬 재실행은 통과.
 - PR 변경 범위는 Samsung 검토기록·예외기록·Samsung 전용 87장 화면 자료이며, 제품 JSON·사진·정면 환산 지도 및 다른 15종 제품 JSON diff 없음. 미리보기에는 데이터 수정이 없어 before 캡처만 수록.
 - 다음: 문서·기록·캡처 전용 PR을 열어 Work가 갤러리 `Work/기록/W-20261016-015-group6-preview/index.html`를 검토하도록 요청. 병합은 Work에게 순서를 확인받은 뒤 진행.
+
+## W-20261016-015 묶음 6 후속 — 호텔 TV 괄호 위치 교정 (2026-10-16)
+
+- #587은 병합 SHA `4daad18d98fc079ff8388ffa53b2247e42b7e223`로 이미 main에 반영됨. Work의 최신 피드백은 merge tool 실행 직후 도착했고, 이를 병합 승인으로 앞서 해석한 것은 Codex 오류. 후속 좌표 수정은 #587을 되돌리지 않고 최신 main에서 별도 PR로 제출.
+- 최신 main `4daad18d`에서 브랜치 `codex/W-20261016-015-samsung-hotel-adjustments` 생성.
+- hg43/50/55/65/75/85 U800F Diagram 이미지 SHA-256 전부 `af8c14cbb0c14bf888c135d153cf9fac500bc2fdcd9eca45740527be7c4f014b`로 동일 확인.
+- 6종 번호·라벨·설명·사진·I/O는 유지. 윗줄 6–8 괄호 중심 y=554, 아랫줄 9–10 y=859로 배치. 도면·렌더러는 수정하지 않음.
+- 예외 기록을 새 좌표 사유로 갱신. `beforeW16015SamsungHotelPlacementProduct` 되감기 fixture/test 연결 중.
+- hg55u800fnfxkr 전후 미리보기: `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html`; Edge headless 760px 상세 전체와 390px 좌·우 캡처 생성. 화면에서 위·아래 괄호 및 지시선이 잭·인쇄 라벨을 가리지 않는지 확인.
+- 상태: 수정·검증 진행 중. 전체 검사, CI 초록 확인 후 Work에 갤러리 경로와 6종 도면 일치 결과를 보내 재검토 요청. 병합은 새 Work 승인 전 보류.
+
+### W-20261016-015 묶음 6 후속 — 호텔 TV 좌표 교정 (2026-10-16)
+
+- #587은 기록 전용으로 이미 병합됨. 화면 JSON 변경은 새 PR 브랜치 `codex/W-20261016-015-group6-hoteltv`에서 별도로 진행.
+- hg43·50·55·65·75·85U800F의 Diagram 이미지 SHA-256이 모두 `af8c14cbb0c14bf888c135d153cf9fac500bc2fdcd9eca45740527be7c4f014b`로 동일함을 확인. 여섯 지도는 좌표만 조정: 6–8번 괄호 y=554(단자판 윗변 위), 9–10번 y=859(단자판 및 VOL-CTRL·VARIABLE 인쇄 띠 아래). 번호·이름·설명·I/O·사진·렌더러 변경 없음.
+- `Work/기록/W-20261016-015-예외.md`에서는 호텔 TV 항목만 새 배치 근거로 교체. 760px·390px 전후 비교: `Work/기록/W-20261016-015-samsung-hotel-fix-preview/index.html` (hg55 대표).
+- 새 사용자 공통 기준을 `AGENTS.md`에 추가하고 해당 배치 검사에 반영: 사진 안 수평 지시선은 사진 폭의 1/4 이하, 다른 번호·괄호·지시선과 6px 미만 간격으로 평행 통과 금지, 가운데 줄 단자는 가까운 위·아래 여백을 우선하고 안쪽 괄호+짧은 via+수직 연결을 우선 검토. 호텔 TV 지도에는 via 및 가운데 줄 단자가 없음.
+- 되감기 함수 방식으로 W-015 좌표 변경만 역전하는 fixture/helper/test 추가. 과거 W-007·W-002 역사 검사의 전체 해시 고정을 유지.
+- 상태: 수정·전체 검사 완료 대기 확인. #587 병합은 이미 완료되었으므로 이 브랜치 병합 전에는 PR CI와 Work 병합 순서를 다시 확인.

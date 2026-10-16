@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeW13007HotelProduct } from './w13007-hotel-history.mjs';
+import { beforeW16015SamsungHotelPlacementProduct } from './w16015-samsung-hotel-placement-history.mjs';
 
 const sizes = ['43', '50', '55', '65', '75', '85'];
 const root = new URL('../', import.meta.url);
@@ -34,12 +35,13 @@ test('six U800F hotel TVs use the applicable Korean manual diagram and ten physi
 test('hotel history inverse restores only approved map/image fields and exposes unrelated changes', () => {
   const slug='hg43u800fnfxkr';
   const current=JSON.parse(readFileSync(new URL(`beta/site/detail/data/${slug}.json`,root)));
-  const restored=beforeW13007HotelProduct(current,slug);
+  const prior=beforeW16015SamsungHotelPlacementProduct(current,slug);
+  const restored=beforeW13007HotelProduct(prior,slug);
   assert.equal(restored.portMap,undefined);
   assert.equal(restored.images.length,1);
   assert.equal(restored.imageStatuses.some(x=>x.role==='Diagram'),false);
   const bad=structuredClone(current);bad.portMap.items[0].y1++;
-  assert.throws(()=>beforeW13007HotelProduct(bad,slug),/unexpected W-007 portMap change/);
+  assert.throws(()=>beforeW16015SamsungHotelPlacementProduct(bad,slug),/unexpected W-015 Samsung hotel Port Map placement change/);
   const other=structuredClone(current);other.io[0].quantity='99';
-  assert.equal(beforeW13007HotelProduct(other,slug).io[0].quantity,'99');
+  assert.equal(beforeW13007HotelProduct(beforeW16015SamsungHotelPlacementProduct(other,slug),slug).io[0].quantity,'99');
 });
