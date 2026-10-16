@@ -661,3 +661,4 @@
 - 전체 순차 테스트: 858건 중 857 통과, 0 실패, 기존 skip 1. 신규/과거 되감기/변경 범위 테스트 17/17 통과.
 - Port Map lint: Zenith 2종 0 신호, Pulse/Eikos 각 1 `SHARED_WITH` 레이아웃 신호. 비주얼 24 PNG 전후 비교에서 다른 줄 단자·인쇄 라벨 관통 없음.
 - 미리보기: `Work/기록/W-20261016-015-midra-zenith-preview/index.html`. 구현·검증 완료, Work 화면 검토/PR 병합 순서 응답 대기.
+- Work 2026-10-17 검토 반영: Zenith 100 상단 단자 띠의 확대를 2.24배에서 원본 픽셀 1:1로 조정하고 패널을 1570×711로 재구성, 번호 8·9 좌표 재측정. 760px·390px 좌우 캡처 갱신: `Work/기록/W-20261016-015-midra-zenith-preview/screenshots/zenith-100-after-760.png` 및 좌·우 캡처. 사진 띠 사이 빈 흰 간격을 지나는 Zenith 100 10·11, Zenith 200 12(오디오)·13(Dante)의 수평선 1/4 폭 예외를 Work 승인(2026-10-17)대로 PR·예외 기록에 병기. 전체 테스트 858건(857 통과·0 실패·기존 skip 1), verify-pages·search/readable --check 통과. 변경 후 CI 재실행 대기.

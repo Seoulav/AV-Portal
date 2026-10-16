@@ -32,6 +32,12 @@ test('Midra/Zenith panels preserve a Rear overview and provide a complete Other 
   assert.equal(size.toString('hex',0,8),'89504e470d0a1a0a',slug);
   assert.equal(size.readUInt32BE(16),panel.measuredImage.width,slug);
   assert.equal(size.readUInt32BE(20),panel.measuredImage.height,slug);
+  if(slug==='zenith-100'){
+   assert.equal(panel.measuredImage.height,711,'Zenith 100 equal-scale strip composition height');
+   assert.deepEqual(panel.items.filter(item=>item.n===8||item.n===9).map(({n,x1,x2})=>({n,x1,x2})),[
+    {n:8,x1:908,x2:1172},{n:9,x1:1175,x2:1475}
+   ],'Zenith 100 top strip keeps source pixel scale and position');
+  }
   for(const map of product.portMaps){
    const geometry=portMapGeometry(map,map.measuredImage.width,map.measuredImage.height);
    for(const marker of geometry.markers) assert.ok(marker.cx+10<=geometry.image.x||marker.cx-10>=geometry.image.x+geometry.image.width||marker.cy+10<=geometry.photoTop||marker.cy-10>=geometry.photoBottom,`${slug} marker ${marker.item.n} overlaps photo`);
@@ -83,4 +89,3 @@ test('Midra/Zenith historical inverse rolls back only the approved maps and Othe
  assert.throws(()=>beforeW20261016_015MidraProduct(changed,'zenith-100'),/unexpected W-015 Midra\/Zenith Port Map layout/);
 });
 function baseProduct(current,base){const p=structuredClone(current);p.portMap=base.portMap;delete p.portMaps;p.images=base.images;p.imageStatuses=base.imageStatuses;return p;}
-\n

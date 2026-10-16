@@ -35,5 +35,3 @@ export function beforeW20261016_015MidraRaw(raw,slug){
  if(!slugs.has(slug))return raw;
  return bytes(beforeW20261016_015MidraProduct(JSON.parse(raw),slug));
 }
-
-\n

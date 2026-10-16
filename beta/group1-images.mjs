@@ -375,7 +375,7 @@ export const group1Images = {
   'zenith-100': [
     image('Front', 'zenith100-front.webp', "Analog Way Zenith 100 전면 이미지(전면에 모델명 'Zenith 100'/'ZEN100' 표기)", 'Analog Way', 'Zenith 100', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+100/High+Resolution+Pictures/zenith100-fav-web.png', '2362×699', '1800×510', 'VERIFIED'),
     image('Rear', 'zenith-100-rear.webp', 'Analog Way Zenith 100 후면 이미지', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1800×587', 'VERIFIED', 'Rear · 제조사 제품 이미지'),
-    image('Other', 'zenith-100-io-panel.png', 'Analog Way Zenith 100 후면 단자 확대 패널', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1570×728', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
+    image('Other', 'zenith-100-io-panel.png', 'Analog Way Zenith 100 후면 단자 확대 패널', 'Analog Way', 'Zenith 100', 'https://www.analogway.com/products/zenith-100', '2400×783', '1570×711', 'VERIFIED', '제조사 공식 후면 사진에서 연결부만 추출해 배열한 확대 패널')
   ],
   'zenith-200': [
     image('Front', 'zenith200-front.webp', "Analog Way Zenith 200 전면 이미지(전면에 모델명 'Zenith 200'/'ZEN200' 표기)", 'Analog Way', 'Zenith 200', 'https://dwn01.analogway.com/Site+Internet/Series/Alta+4k/Products/Zenith+200/High+Resolution+Pictures/zenith200-fav-web.png', '2362×764', '1800×533', 'VERIFIED'),

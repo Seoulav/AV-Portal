@@ -46,8 +46,8 @@
     }
   },
   "zenith-100": {
-    "portMapsSha256": "903bdd6fba30e6cf0ce63ca9a7a51f7c6ceda8edaa865d23bca51ada1ab8e03d",
-    "panelFileSha256": "25934b4462cff8a0c38109502e74335032c0268b60605a276a9833ec939f5f61",
+    "portMapsSha256": "a4e6ef4c937be883ad12d08a7a9570cc83644a2a42b1ea2d64a902ff80c77bd9",
+    "panelFileSha256": "0f776f0a1221da5091ce5504b9dc9488a48dfceb90ce7f00b0defbeda67be865",
     "otherImage": {
       "role": "Other",
       "file": "zenith-100-io-panel.png",
@@ -59,7 +59,7 @@
       "officialSource": true,
       "verificationStatus": "VERIFIED",
       "originalSize": "2400×783",
-      "resolution": "1570×728",
+      "resolution": "1570×711",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     "otherStatus": {
