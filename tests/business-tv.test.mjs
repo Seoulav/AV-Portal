@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_007DetailFile } from './w20261014-007-history.mjs';
 import { beforeW20261014_005Catalog, isW20261014_005DetailFile } from './w20261014-005-history.mjs';
@@ -35,7 +36,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const slug = 'lh43behhlbfxkr';
 
 test('BEHX-H products occupy the business-TV sort slot', () => {
-  const catalog = beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(read('beta/site/catalog.json')))));
+  const catalog = beforeW20261014_005Catalog(beforeW1010Catalog(beforeW1012Catalog(beforeW009Catalog(beforeW008Catalog(read('beta/site/catalog.json'))))));
   const card = catalog.find(item => item.slug === slug);
   assert.equal(catalog.length, 274);
   assert.deepEqual(catalog.filter(item => /^lh(?:43|50|55|65|75|85)behhlbfxkr$/.test(item.slug)).map(item => item.slug), [slug, 'lh50behhlbfxkr', 'lh55behhlbfxkr', 'lh65behhlbfxkr', 'lh75behhlbfxkr', 'lh85behhlbfxkr']);
@@ -79,7 +80,7 @@ test('business TV uses only exact-model Korean evidence and keeps unsupported co
 test('the existing 242 detail files and 249 catalog objects remain byte/value-identical', () => {
   const dir = new URL('beta/site/detail/data/', root);
   const w030 = new Set(['ie015a-e', 'ie020a-e', 'if015r-m']);
-  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW20261014_007DetailFile(file) && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file) && !isW20261014_007DetailFile(file)).sort();
+  const files = readdirSync(dir).filter(file => file.endsWith('.json') && !isW008DetailFile(file) && !isW20261014_007DetailFile(file) && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== `${slug}.json` && !isW029Name(file) && !w030.has(file.slice(0, -5)) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file) && !isW20261014_007DetailFile(file)).sort();
   assert.equal(files.length, 242);
   // Git stores LF; normalize Windows checkouts before comparing the unchanged originals.
   const detailDigests = files.map(file => [file, sha(beforeW024Raw(beforeMobileRs232Raw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(file, dir), 'utf8').replace(/\r\n/g, '\n'), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)), file.slice(0, -5)))]);
@@ -91,7 +92,7 @@ test('the existing 242 detail files and 249 catalog objects remain byte/value-id
           withoutW006Catalog(
             withoutW007Catalog(
               beforeW1012Catalog(
-                beforeW009Catalog(read('beta/site/catalog.json'))
+                beforeW009Catalog(beforeW008Catalog(read('beta/site/catalog.json')))
               )
             )
           )

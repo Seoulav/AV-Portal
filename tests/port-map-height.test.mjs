@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { isW009DetailFile } from './w009-history.mjs';
@@ -31,7 +32,7 @@ const root=new URL('../',import.meta.url);
 const baseline=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-014-baseline.json',root),'utf8'));
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const details=new URL('beta/site/detail/data/',root);
-const products=readdirSync(details).filter(file => file.endsWith('.json') && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
+const products=readdirSync(details).filter(file => file.endsWith('.json') && !isW008DetailFile(file) && !isW20261014_005DetailFile(file) && !isW004Name(file) && file !== 'lh43behhlbfxkr.json' && !isW029Name(file) && !isW030Name(file) && !isW006Name(file) && !isW007Name(file) && !isW06002Name(file) && !isW1010Name(file) && !isW1012Name(file) && !isW009DetailFile(file)).sort();
 const read=slug=>JSON.parse(readFileSync(new URL(`${slug}.json`,details),'utf8'));
 const size=product=>{
   const resolution=product.images.find(image=>image.role===product.portMap.image)?.resolution;

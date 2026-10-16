@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW16004Uploads } from './w16004-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { beforeW20261016_003Uploads, isW20261016_003Manual } from './w20261016-003-history.mjs';
@@ -86,7 +87,7 @@ test('PDF.js requests a new password after an incorrect attempt', async () => {
 
 test('all other posted PDFs, product JSON, and document links keep their prior bytes', () => {
   const manuals = new URL('manuals/', root);
-  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && name !== 'ross-ultrix-family-brochure-ko.pdf' && !isW033Manual(name) && !isW011Manual(name) && !isW13006Manual(name) && !isW13008Manual(name) && !isW009Manual(name) && !isW20261016_003Manual(name) && !isXdmCommandGuideManual(name) && !isPixelFitDocument(name) && !isW20261014_005Manual(name) && !['yamaha-dm3-data-sheet-en.pdf', 'yamaha-dm3-standard-data-sheet-en.pdf'].includes(name)).sort();
+  const files = readdirSync(manuals).filter(name => name.endsWith('.pdf') && name !== 'belkin-connect-air-specification-2650a8f7c667.pdf' && name !== 'ross-ultrix-family-brochure-ko.pdf' && !isW033Manual(name) && !isW011Manual(name) && !isW13006Manual(name) && !isW13008Manual(name) && !isW009Manual(name) && !isW20261016_003Manual(name) && !isXdmCommandGuideManual(name) && !isPixelFitDocument(name) && !isW20261014_005Manual(name) && !['yamaha-dm3-data-sheet-en.pdf', 'yamaha-dm3-standard-data-sheet-en.pdf'].includes(name)).sort();
   assert.equal(files.length, 56);
   const others = createHash('sha256');
   for (const name of files.filter(name => !targetSet.has(name)))
@@ -94,13 +95,13 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
   assert.equal(others.digest('hex'), '7d9e6ac1869ed1d4661a7e8232617894572f9953f60659888b98457cbca652a2');
 
   const details = new URL('detail/data/', root);
-  const names = readdirSync(details).filter(name => name.endsWith('.json') && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !isW20261014_005DetailFile(name)).sort();
+  const names = readdirSync(details).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !isW20261014_005DetailFile(name)).sort();
   assert.equal(names.length, 242);
   const productHash = createHash('sha256');
   for (const name of names)
     productHash.update(name).update(Buffer.from([0])).update(beforeW024Raw(beforeSamsungW04017Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(beforeW13005Raw(beforeW13005FollowupRaw(beforeW13005PhotoRaw(readFileSync(new URL(name, details), 'utf8').replace(/\r\n/g, '\n'), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)), name.slice(0, -5)));
   assert.equal(productHash.digest('hex'), '3d331d708f8d1603975f9ba85fcd3944de8f3e82c9a0cfe2a392a082d0169701');
-  const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
+  const manifest = beforeW008Manifest(JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8')));
   const uploadsBeforeNewDocs = beforeW009Uploads(beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
   const manifestWithoutCurrentLockLabels = JSON.stringify({ ...manifest, mirrors: beforeW032Mirrors(manifest.mirrors), uploads: withoutW029Uploads(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs))))) }, null, 2) + '\n';
   const withoutLockLabels = manifestWithoutCurrentLockLabels.replace(/^      "locked": true,\r?\n/gm, '');
@@ -108,7 +109,7 @@ test('all other posted PDFs, product JSON, and document links keep their prior b
 });
 
 test('the twelve uploads of the three encrypted files are marked locked, without changing other uploads', () => {
-  const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
+  const manifest = beforeW008Manifest(JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8')));
   const uploadsBeforeNewDocs = beforeW009Uploads(beforeW20261014_005Uploads(withoutPixelFitDocumentUpload(withoutXdmCommandGuideUpload(beforeW20261016_003Uploads(beforeW16004Uploads(manifest.uploads))))));
   assert.equal(beforeW033Uploads(withoutW006Uploads(withoutW13008Uploads(withoutW13010Uploads(uploadsBeforeNewDocs)))).length, 107);
   assert.equal(manifest.uploads.filter(entry => entry.locked === true).length, 12);
@@ -117,7 +118,7 @@ test('the twelve uploads of the three encrypted files are marked locked, without
 });
 
 test('uploaded locked documents carry their lock state to the detail action', () => {
-  const manifest = JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8'));
+  const manifest = beforeW008Manifest(JSON.parse(readFileSync(new URL('docs/manifest.json', root), 'utf8')));
   const documents = uploadedDocumentsFor('lh115qhfebgxkr', manifest);
   const locked = documents.find(item => item.action.file.endsWith('/samsung-lcd-signage-product-guide-ko.pdf'));
   const plain = documents.find(item => item.action.file.endsWith('/samsung-qpdx5k-qhfx-manual-ko.pdf'));

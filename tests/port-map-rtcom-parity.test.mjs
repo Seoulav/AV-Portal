@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { beforeW20261014_005Catalog, beforeW20261014_005DetailFiles, isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { beforeW12005Product } from './w12005-history.mjs';
@@ -67,7 +68,7 @@ test('side panel geometry keeps RTCOM left and right bracket paths available', (
 });
 
 test('all published maps retain supported crop and side placement without product data changes', async () => {
-  const files = beforeW20261014_005DetailFiles(await readdir('beta/site/detail/data')).filter(name => name.endsWith('.json'));
+  const files = beforeW20261014_005DetailFiles(await readdir('beta/site/detail/data')).filter(name => name.endsWith('.json') && !isW008DetailFile(name));
   const maps = [];
   const digest = createHash('sha256');
   for (const file of files.filter(file => !isW1010Name(file))) {

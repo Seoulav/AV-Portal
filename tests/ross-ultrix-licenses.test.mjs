@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
@@ -13,7 +14,7 @@ const loadDetail = slug => readFile(new URL(`beta/site/detail/data/${slug}.json`
 const spec = (product, name) => product.specifications.find(row => row.name === name);
 
 test('four existing Ross license rows gain detail slugs without growing the catalog', async () => {
-  const catalog =beforeW20261014_005Catalog(withoutW004Catalog(withoutW011Catalog(beforeW009Catalog(JSON.parse(await readFile(new URL('beta/site/catalog.json', root), 'utf8'))))));
+  const catalog =beforeW20261014_005Catalog(withoutW004Catalog(withoutW011Catalog(beforeW009Catalog(beforeW008Catalog(JSON.parse(await readFile(new URL('beta/site/catalog.json', root), 'utf8')))))));
   assert.equal(catalog.length, 273);
   for (const [index, slug] of slugs.entries()) {
     const rows = catalog.filter(item => item.slug === slug);

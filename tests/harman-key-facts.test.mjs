@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
 import { isW009DetailFile } from './w009-history.mjs';
@@ -82,7 +83,7 @@ test('32 JBL, BSS and AMX cards use exact verified product rows',()=>{
 });
 
 test('Crown 26 and all other 210 product JSON files remain unchanged',()=>{
-  const names=readdirSync(dir).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
+  const names=readdirSync(dir).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name)).sort();
   const otherNames=names.filter(name=>!targets.includes(name.slice(0,-5)));
   assert.equal(otherNames.length,210);
   const other=otherNames.map(name=>[name,beforeShureW04003(beforeBssW04004(beforeSamsungW04010(beforeBssAlignment(beforeW032Product(beforeW026Product(read(`beta/site/detail/data/${name}`), name.slice(0,-5)), name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5)),name.slice(0,-5))]);

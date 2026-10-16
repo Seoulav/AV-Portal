@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile, beforeW20261014_005Uploads } from './w20261014-005-history.mjs';
 import { isW009DetailFile } from './w009-history.mjs';
@@ -145,7 +146,7 @@ test('existing AMX specification values remain intact except documented conditio
 });
 
 test('15 unique SHA-checked PDFs are linked to their exact models in 28 manifest entries', () => {
-  const manifest = read('beta/site/docs/manifest.json');
+  const manifest = beforeW008Manifest(read('beta/site/docs/manifest.json'));
   const historicalUploads =beforeW20261014_005Uploads(beforeW04021Uploads(beforeWinstarW04016Uploads(manifest.uploads)));
   assert.ok(historicalUploads.length >= evidence.manifest.uploadCount + 28);
   assert.equal(sha(JSON.stringify(historicalUploads.slice(0, evidence.manifest.uploadCount))), evidence.manifest.uploadsSha256);
@@ -180,7 +181,7 @@ test('AMX presentation fields and every other product JSON remain fixed', () => 
   }
   const dir = new URL('beta/site/detail/data/', root);
   const hash = createHash('sha256');
-  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
+  for (const name of readdirSync(dir).filter(name => name.endsWith('.json') && !isW008DetailFile(name) && !isW20261014_005DetailFile(name) && !isW004Name(name) && name !== 'lh43behhlbfxkr.json' && !isW029Name(name) && !isW030Name(name) && !isW006Name(name) && !isW007Name(name) && !isW06002Name(name) && !isW1010Name(name) && !isW1012Name(name) && !isW009DetailFile(name) && !slugs.some(slug => name === `${slug}.json`)).sort()) {
     const slug = name.slice(0,-5);
     const raw = beforeHarmanW03014Raw(beforeBssW04004Raw(beforeSamsungW04010Raw(beforeBssAlignmentRaw(beforeW032Raw(beforeW026Raw(readFileSync(new URL(name, dir), 'utf8').replace(/\r\n/g, '\n'), slug), slug),slug),slug),slug),slug);
     const historical = crownW03009Slug(slug) ? beforeCrownW03009(beforeCrownW03013(JSON.parse(raw),slug),slug)

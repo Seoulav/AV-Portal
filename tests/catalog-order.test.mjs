@@ -1,3 +1,4 @@
+import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW20261014_005Catalog } from './w20261014-005-history.mjs';
 import { beforeW009Catalog } from './w009-history.mjs';
 import test from 'node:test';
@@ -7,7 +8,7 @@ import { filterCatalog } from '../beta/site/app.js';
 import { beforeW1010Catalog } from './w1010-history.mjs';
 import { withoutW004Catalog } from './w004-history.mjs';
 
-const catalog =beforeW20261014_005Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8')));
+const catalog =beforeW20261014_005Catalog(beforeW008Catalog(JSON.parse(await readFile(new URL('../beta/site/catalog.json', import.meta.url), 'utf8'))));
 const slugs = items => items.map(item => item.slug);
 const legacySort = (items, state) => [...items].filter(item =>
   item.kind === 'equipment' && (!state.brand || item.brand === state.brand)
