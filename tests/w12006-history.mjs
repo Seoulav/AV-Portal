@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeW16009Product, beforeW16009Raw } from './w16009-history.mjs';
 import { createHash } from 'node:crypto';
 import { beforeMxc420PhotoProduct, beforeMxc420PhotoRaw } from './mxc420-photo-history.mjs';
 import { beforeW141002004Product, beforeW141002004Raw } from './w141002-004-history.mjs';
@@ -11,7 +12,8 @@ const fixture=JSON.parse(readFileSync(new URL('../Work/기록/W-20261012-006-pri
 const hash=value=>createHash('sha256').update(JSON.stringify(value??null)).digest('hex');
 export const w12006Slugs=new Set(Object.keys(fixture));
 
-export function beforeW12006Product(current,slug){
+export function beforeW12006Product(current,slug,skipW16009=false){
+ if(!skipW16009)current=beforeW16009Product(current,slug);
  current=beforeW20261015_007Product(current,slug);
  current=beforeW20261015_002EpsonProduct(current,slug);
  current=beforeW141002004Product(current,slug);
@@ -30,8 +32,9 @@ export function beforeW12006Product(current,slug){
 }
 
 export function beforeW12006Raw(raw,slug){
+ raw=beforeW16009Raw(raw,slug);
  raw=beforeW141002004Raw(raw,slug);
  raw=beforeMxc420PhotoRaw(raw,slug);
  if(!fixture[slug])return raw;
- return JSON.stringify(beforeW12006Product(JSON.parse(raw),slug),null,2)+'\n';
+ return JSON.stringify(beforeW12006Product(JSON.parse(raw),slug,true),null,2)+'\n';
 }

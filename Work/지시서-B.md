@@ -534,11 +534,13 @@
 - Derived outputs regenerated; `--check`, `verify-pages`, and 390px Port Map preview passed. Non-Belkin PDF/manifest mirror changes: 0.
 
 
-### W-008 PR #571 review fixes
+### W-008 PR #571 review fixes and latest-main integration
 
-- PR #568 merged into main (merge commit 47a432d7).
-- Removed Belkin/AVC024-specific branches from the beta and prototype Port Map validators; shared role validation remains unchanged.
-- Data-only fit: duplicate the official image as a separate Front-role asset for Port Map, remove map.note, and carry its explanation in the image description. Main card image remains unchanged.
-- Added regression assertions for Front-role mapping, removed note, and rejection of a Main-role Port Map. Updated cache tokens in both apps and product models.
-- Added W-015 exception record at Work/??/W-20261016-015-??.md: diagonal integrated-cable photo, edge brackets ambiguous, leader lines cross connectors/cables: 0.
-- Focused regression checks: 14/14 passed; diff whitespace check passed. Full suite and Pages verification remain after latest-main integration and derived artifact regeneration.
+- PR #568 merged into main at `47a432d7` before W-008 integration.
+- Removed Belkin/AVC024-specific branches from the beta and prototype Port Map validators. The Belkin map now uses a separate Front-role photo copy; the product-specific `portMap.note` was removed, and the Korean image note explains that the mapped points are integrated cable plugs, not a chassis panel. Main card image remains unchanged.
+- Added regression assertions for Front-role mapping, the user-facing note, and rejection of a Main-role Port Map. Updated cache tokens in both apps and product models.
+- Recorded the approved Port Map layout exception in `Work/기록/W-20261016-015-예외.md`: diagonal cable-plug photo makes edge brackets ambiguous; marker leaders cross other connectors or cables 0 times.
+- Integrated current `origin/main`; regenerated snapshot, search index, and readable catalog. `search-index --check` and `verify-pages` passed: 285 equipment, 282 details, 515 reviewed product image assets, 156 uploaded PDFs; the 12 locked PDFs remain.
+- Focused W-008/W-009 regressions passed: 5/5. Full `npm.cmd test`: 756 tests, 755 passed, 0 failed, 1 skipped. `git diff --check` and `git diff --cached --check` passed before final staging.
+- Refreshed local previews: `Work/기록/W-20261016-008-preview/belkin-connect-air-detail-1280.png` (full detail and Signal Flow), `belkin-connect-air-detail-390.png`, `belkin-connect-air-airmedia-comparison-1280.png`, and the previously reviewed `belkin-connect-air-portmap-390.png`.
+- State: REVIEW; PR #571 requires updated branch push and green CI. After CI is green, ask Work to confirm merge order again with the 1280px detail and official comparison preview paths. Do not merge before that confirmation.

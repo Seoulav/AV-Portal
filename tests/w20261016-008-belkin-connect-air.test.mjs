@@ -45,6 +45,8 @@ test('Belkin Connect Air is registered in the approved conferencing presentation
   const frontMapImage = detail.images.find(image => image.role === 'Front');
   assert.ok(frontMapImage);
   assert.notEqual(frontMapImage.file, detail.images.find(image => image.role === 'Main').file);
+  assert.equal(frontMapImage.note, '기기 본체 단자판이 아닌 케이블 일체형 플러그 표시');
+  assert.doesNotMatch(frontMapImage.alt, /\?{2,}|\uFFFD/);
   assert.equal(detail.imageStatuses.find(image => image.role === 'Front').status, 'FOUND');
   assert.deepEqual(enhancementErrors(detail), []);
   assert.ok(enhancementErrors({ ...detail, portMap: { ...detail.portMap, image: 'Main' } }).includes('Invalid optional detail field: portMap'));

@@ -44,10 +44,10 @@
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     {
-      "role": "Diagram",
+      "role": "Other",
       "file": "pt-mz17k-diagram.webp",
       "alt": "PT-MZ17K PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 후면 단자 도면",
-      "note": "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인",
+      "note": "Diagram · Panasonic PT-MZ20K/MZ17K/MZ14K/MZ11K 한국어 사용설명서 DPQP1432ZC/X1 28쪽 연결 단자 · 모델 적용 확인 · 제조사 인쇄 번호가 있는 원본 도면으로 갤러리 보존",
       "provider": "Panasonic",
       "model": "PT-MZ17K",
       "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf",
@@ -55,6 +55,20 @@
       "verificationStatus": "VERIFIED",
       "originalSize": "890x494",
       "resolution": "890x494",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "pt-mz17k-clean-panels.png",
+      "alt": "PT-MZ17K 공식 한국어 설명서 28쪽 연결 단자판 번호 없는 재배치 이미지",
+      "note": "Diagram · DPQP1432ZC/X1 28쪽 원본 단자판만 크롭·재배치(단자 그림 변경 없음) · 적용 모델 PT-MZ20K/MZ17K/MZ14K/MZ11K",
+      "provider": "Panasonic",
+      "model": "PT-MZ17K",
+      "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "890×494(공식 도면)",
+      "resolution": "890×440",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -81,8 +95,8 @@
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
-      "sourceUrl": "https://eu.connect.panasonic.com/pl/en/projectors/pt-mz20-series/pt-mz17kl"
+      "status": "VERIFIED",
+      "sourceUrl": "https://eu.connect.panasonic.com/sites/default/files/media/document/2024-04/mz20k_manual_ko.pdf"
     },
     {
       "role": "Diagram",
@@ -468,99 +482,99 @@
   "portMap": {
     "image": "Diagram",
     "measuredImage": {
-      "file": "pt-mz17k-diagram.webp",
+      "file": "pt-mz17k-clean-panels.png",
       "width": 890,
-      "height": 494
+      "height": 440
     },
     "items": [
       {
         "n": 1,
         "label": "USB",
         "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 80,
-        "x2": 132,
-        "y": 0,
+        "x1": 142,
+        "x2": 194,
+        "y": 40,
         "side": "top"
       },
       {
         "n": 2,
         "label": "SDI IN",
         "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 145,
-        "x2": 233,
-        "y": 0,
+        "x1": 207,
+        "x2": 295,
+        "y": 40,
         "side": "top"
       },
       {
         "n": 3,
         "label": "HDMI IN 1–2",
         "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 253,
-        "x2": 490,
-        "y": 0,
+        "x1": 315,
+        "x2": 552,
+        "y": 40,
         "side": "top"
       },
       {
         "n": 4,
         "label": "DIGITAL LINK",
         "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 508,
-        "x2": 613,
-        "y": 0,
+        "x1": 570,
+        "x2": 675,
+        "y": 40,
         "side": "top"
       },
       {
         "n": 5,
         "label": "LAN",
         "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 620,
-        "x2": 720,
-        "y": 0,
+        "x1": 682,
+        "x2": 782,
+        "y": 40,
         "side": "top"
       },
       {
         "n": 6,
         "label": "DC OUT",
         "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 32,
-        "x2": 83,
-        "y": 494,
+        "x1": 94,
+        "x2": 145,
+        "y": 393,
         "side": "bottom"
       },
       {
         "n": 7,
         "label": "SERIAL/MULTI SYNC IN",
         "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 150,
-        "x2": 257,
-        "y": 494,
+        "x1": 212,
+        "x2": 319,
+        "y": 393,
         "side": "bottom"
       },
       {
         "n": 8,
         "label": "SERIAL/MULTI SYNC OUT",
         "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 307,
-        "x2": 421,
-        "y": 494,
+        "x1": 369,
+        "x2": 483,
+        "y": 393,
         "side": "bottom"
       },
       {
         "n": 9,
         "label": "REMOTE 1 IN",
         "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 477,
-        "x2": 586,
-        "y": 494,
+        "x1": 539,
+        "x2": 648,
+        "y": 393,
         "side": "bottom"
       },
       {
         "n": 10,
         "label": "REMOTE 2 IN/OUT",
         "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
-        "x1": 609,
-        "x2": 725,
-        "y": 494,
+        "x1": 671,
+        "x2": 787,
+        "y": 393,
         "side": "bottom"
       }
     ]
