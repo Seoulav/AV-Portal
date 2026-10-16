@@ -28,7 +28,15 @@ export function beforeW20261016_001View(view) {
   return result.replace(branch,'');
 }
 export function beforeW20261016_001Styles(css) {
+  const laterStart='\n/* W-20261016-011 shared Midra 4K / Alta 4K layer analysis. */';
+  const laterEnd='/* W-20261016-011 shared layer analysis end. */';
+  if(css.includes(laterStart)) {
+    const start=css.indexOf(laterStart), end=css.indexOf(laterEnd,start);
+    if(end<0) throw new Error('W-011 renderer style boundary changed');
+    css=css.slice(0,start)+css.slice(end+laterEnd.length);
+  }
   const addition='\n.inogeni-flow .inogeni-control-line { fill: none; stroke: #686580; stroke-width: 2; stroke-dasharray: 7 6; }\n';
-  if (!css.endsWith(addition)) throw new Error('W-001 renderer style changed');
-  return css.slice(0,-addition.length);
+  const normalized = css.trimEnd();
+  if (!normalized.endsWith(addition.trimEnd())) throw new Error('W-001 renderer style changed');
+  return normalized.slice(0,-addition.trimEnd().length);
 }

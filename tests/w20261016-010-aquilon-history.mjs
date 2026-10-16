@@ -1,10 +1,12 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW011VideoLayerProduct } from './w20261016-011-video-layer-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('../Work/기록/W-20261016-010-aquilon-prior-fields.json', import.meta.url), 'utf8'));
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW010AquilonProduct(current, slug) {
+  current = beforeW011VideoLayerProduct(current, slug);
   const record = fixture.products[slug];
   if (!record) return current;
   let result = current;
@@ -20,8 +22,9 @@ export function beforeW010AquilonProduct(current, slug) {
 }
 
 export function beforeW010AquilonRaw(raw, slug) {
-  if (!fixture.products[slug]) return raw;
-  return JSON.stringify(beforeW010AquilonProduct(JSON.parse(raw), slug), null, 2) + '\n';
+  const current = JSON.parse(raw);
+  const next = beforeW010AquilonProduct(current, slug);
+  return next === current ? raw : JSON.stringify(next, null, 2) + '\n';
 }
 
 export function beforeW010AquilonUploads(uploads) {

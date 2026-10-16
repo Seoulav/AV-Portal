@@ -1,0 +1,40 @@
+{
+  "products": {
+    "pulse-4k": {
+      "fields": {
+        "videoLayerPlan": {
+          "previousExists": false,
+          "approvedExists": true,
+          "approvedSha256": "b17dd0285498d761d87b9d2ae758788f251e1f525f824eb3dea34d692b7f8f6c"
+        }
+      }
+    },
+    "eikos-4k": {
+      "fields": {
+        "videoLayerPlan": {
+          "previousExists": false,
+          "approvedExists": true,
+          "approvedSha256": "6bd9e39017ff4b0793581be4c101c4682780f4457411649ce5e2e84826907085"
+        }
+      }
+    },
+    "zenith-100": {
+      "fields": {
+        "videoLayerPlan": {
+          "previousExists": false,
+          "approvedExists": true,
+          "approvedSha256": "88367d383b245ddc17fc75e69f3bb2bb61f28e18cec6bd9dac45b6fca4cb335e"
+        }
+      }
+    },
+    "zenith-200": {
+      "fields": {
+        "videoLayerPlan": {
+          "previousExists": false,
+          "approvedExists": true,
+          "approvedSha256": "4aab88f185e8bf60dc8eefc1ba18446c4c6d3da3b7b5271f0368055a09a53387"
+        }
+      }
+    }
+  }
+}

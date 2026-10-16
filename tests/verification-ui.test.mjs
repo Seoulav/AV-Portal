@@ -56,6 +56,8 @@ test('public pages display a version badge while detail assets retain their refr
   // The detail asset version advances when its presentation renderer changes.
   assert.match(detail, /styles\.css\?v=w20261016-013-portmap-loupe/);
   assert.match(detail, /app\.js\?v=w20261016-013-portmap-loupe/);
+  assert.match(publicDetail, /styles\.css\?v=w20261016-013-portmap-loupe/);
+  assert.match(publicDetail, /app\.js\?v=w20261016-013-portmap-loupe/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {

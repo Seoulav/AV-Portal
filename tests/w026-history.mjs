@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {beforeW011VideoLayerProduct} from './w20261016-011-video-layer-history.mjs';
 import { beforeW12001Product, beforeW12001Raw } from './w12001-history.mjs';
 import { beforeW20261016_015B4Product, beforeW20261016_015B4Raw } from './w20261016-015-b4-history.mjs';
 import {beforeW16004Product,beforeW16004Raw} from './w16004-history.mjs';
@@ -25,6 +26,7 @@ const prior=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-prior
 const approved=JSON.parse(readFileSync(new URL('../Work/기록/W-20261004-026-approved-fields.json',import.meta.url)));
 export const w026Slugs=new Set(Object.keys(prior));
 export function beforeW026Product(current,slug,{wordingAlreadyRestored=false}={}) {
+  current=beforeW011VideoLayerProduct(current,slug);
   current=beforeW20261016_015B4Product(current,slug,{allowHistorical:true});
   current=beforeW16004Product(current,slug);
   current=beforeW15012Product(current,slug);
@@ -64,6 +66,11 @@ export function beforeW026Raw(raw,slug) {
   raw=beforeW06005Raw(raw,slug);
   raw=beforeW06004Raw(raw,slug);
   raw=beforeAmxW008Raw(beforeJblW06001Raw(beforeW06002Raw(beforeW06003Raw(raw,slug),slug),slug),slug);
-  if(!w026Slugs.has(slug))return raw;
-  return JSON.stringify(beforeW026Product(JSON.parse(raw),slug,{wordingAlreadyRestored:true}),null,2)+'\n';
+  if(!w026Slugs.has(slug)) {
+    const product=JSON.parse(raw), withoutW011=beforeW011VideoLayerProduct(product,slug);
+    return withoutW011===product?raw:JSON.stringify(withoutW011,null,2)+'\n';
+  }
+  const product=beforeW026Product(JSON.parse(raw),slug,{wordingAlreadyRestored:true});
+  const withoutW011=beforeW011VideoLayerProduct(product,slug);
+  return withoutW011===product?JSON.stringify(product,null,2)+'\n':JSON.stringify(withoutW011,null,2)+'\n';
 }
