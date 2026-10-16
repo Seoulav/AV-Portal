@@ -10,8 +10,8 @@ const records=JSON.parse(fs.readFileSync(new URL('../Work/기록/W-20261016-015-
 const keys=['side','x1','x2','y','x','y1','y2','labelX','via'];
 const read=slug=>JSON.parse(fs.readFileSync(new URL('../beta/site/detail/data/'+slug+'.json',import.meta.url)));
 const sha=v=>createHash('sha256').update(Buffer.isBuffer(v)?v:JSON.stringify(v)).digest('hex');
-test('W-015 Group 6b 14 maps use edges or documented side routes, with numbers outside the photo',()=>{
- assert.equal(Object.keys(records).length,14);
+test('W-015 Group 6b 13 maps use edges or documented side routes, with numbers outside the photo',()=>{
+ assert.equal(Object.keys(records).length,13);
  for(const slug of Object.keys(records)){
   const p=read(slug),m=prepareEnhancements(p).portMap;assert.ok(m,slug);
   assert.deepEqual(m.items.filter(i=>Object.hasOwn(i,'y')).map(i=>i.n),records[slug].internalY,slug+' documented internal y');
@@ -32,6 +32,8 @@ test('Group 6b work preserves all non-layout fields, marker meanings and source 
 
 
 test('H5 remains unchanged pending separate panel design approved by Work 2026-10-16',()=>{assert.equal(sha(read('novastar-h5')),'054fb4810efc007ffeb6ddb7635c3d6010a2516ed5a2b7e71973c2bbe376f316');});
+
+test('U-BRIDGE 3 retains the user-approved W-005 through W-007 layout',()=>{assert.equal(sha(read('u-bridge-3')),'f3cb59e4a4ba4db0d3f12c847bc3c8e5675982a5566bad7886e320bcf8c8abbf');});
 
 test('Group 6b inverse checks every approved geometry and preserves unrelated current data',()=>{
  for(const [slug,r]of Object.entries(records)){
@@ -56,7 +58,7 @@ test('historical file adapter restores only target JSON and preserves buffers, t
   assert.deepEqual(readBeforeGroup6bFileSync(url),Buffer.from(expected));
   assert.equal(await readBeforeGroup6bFile(url,'utf8'),expected);
  }
- for(const relative of ['../beta/site/detail/data/novastar-h5.json','../beta/site/detail/images/h5-rear.webp']){
+ for(const relative of ['../beta/site/detail/data/u-bridge-3.json','../beta/site/detail/data/novastar-h5.json','../beta/site/detail/images/h5-rear.webp']){
   const url=new URL(relative,import.meta.url);assert.deepEqual(readBeforeGroup6bFileSync(url),fs.readFileSync(url));
  }
 });

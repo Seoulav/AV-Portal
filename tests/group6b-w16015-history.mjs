@@ -29,7 +29,7 @@ export function beforeGroup6bW16015Raw(raw,slug){
 }
 
 // Historical suites read the current files through this explicit adapter before
-// their older inverses. Only the 14 approved coordinate sets are restored;
+// their older inverses. Only the 13 approved coordinate sets are restored;
 // source images, descriptions, I/O and every other file remain current.
 function restoreFileBytes(file,bytes,options){
  const match=String(file).replaceAll('\\','/').match(/(?:^|\/)beta\/site\/detail\/data\/([^/]+)\.json$/);
