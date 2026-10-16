@@ -2,7 +2,7 @@
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
-- 상태: IN_PROGRESS
+- 상태: REVIEW (PR #576 열림, Work 병합 순서 확인 대기)
 - 명세: `Work/작업/W-20261016-010.md` · 인계서 `Work/기록/W-20261016-010-Codex-인계.md`
 - 명세 확인 기준: main `5932cf1c643ba6599fbdc9f89dc8816593778669`
 - 브랜치: `codex/W-20261016-010-aquilon-layers` · 전용 워크트리 `../codex-c-w010`
@@ -14,8 +14,12 @@
 - [x] Region Captive PiP는 RS1 데이터시트 3쪽 용어와 매뉴얼 83쪽 Screen region 설명을 분리 기록했고 절감 산식은 미확인으로 유지했다. 매뉴얼 101쪽 배경 비확대·축소 및 화면 출력별 4K60 소스 요구, RS2 이상 8링크 이하 화면의 VPU 분산 여부와 용량 1 HD PiP 비용 미확인을 추가했다.
 - [x] 7종 `layerPlan`, 검증기, 나란히 비교 렌더, 되감기 해시 검사를 수정했다. 제품별 4번째 빠른 문서의 데이터 기반 “브로슈어” 전환과 업로드 매니페스트 중복 방지는 유지했다.
   - [x] 사용자 제공 브로슈어를 원본 바이트로 `beta/site/manuals/analog-way-aquilon-brochure-april-2026.pdf`에 게시했다(5,271,507 bytes, SHA-256 `124c2fb363afec992027d02e7db14c7612666ad38ce69bbdab2fc276701f75ff`). 모델별 브로슈어 표는 7쪽이다. RS6 데이터시트는 2026-07-03 모델 자료와 같은 파일명·판으로 확인했고 제품 연결은 바꾸지 않았다.
-  - [ ] 최신 계산 반영 RS1·RS6 1280px·390px 캡처 재검토.
-  - [ ] 전체 `npm test`·`verify-pages`·검색 인덱스/읽기 카탈로그/스냅샷 재생성·PR/CI·Work 병합 순서·배포·공개 검증.
+  - [x] 최신 계산 반영 RS1·RS6 1280px·390px 캡처 재검토: `tmp/w010-preview/aquilon-rs1-1280.png`, `aquilon-rs1-390.png`, `aquilon-rs6-1280.png`, `aquilon-rs6-390.png`.
+  - [x] 전체 `npm.cmd test`: 769개 중 768 통과, 실패 0, 기존 skip 1. 선택 관련 시험 22/22 통과.
+  - [x] 최신 `origin/main` `2694ab2c2b99d6f0303aef51bcd1e72a229eed4d` 통합 후 search-index·readable catalog·public snapshot 재생성; `build-search-index --check`, `sync-rtcom --check`, `verify-pages` 통과(카탈로그 285, 상세 282, 사진 515, 업로드 PDF 163).
+  - [x] PR #576 갱신, 최종 Builder CI 통과(run 38886817492). 이후 #578까지 통합한 갱신 커밋 CI도 통과(run 38886817492 기준 최종 push는 `5aea7524`; 확인 결과 pass).
+  - [ ] Work에 #571 병합 후 현재 순서(#576 다음 병합 여부)를 미리보기 경로와 함께 문의함: https://github.com/Seoulav/AV-Portal/pull/576#issuecomment-6213450801. 답변 대기.
+  - [ ] 병합·Pages 배포·RS1/RS6 공개 화면 검증.
 
 ## W-20261015-005 — DCi 4|600DA 후면 사진 공용 좌표 재점검
 
