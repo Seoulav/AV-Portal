@@ -532,3 +532,13 @@
 
 - Full suite: 753 tests, 752 passed, 0 failed, 1 skipped.
 - Derived outputs regenerated; `--check`, `verify-pages`, and 390px Port Map preview passed. Non-Belkin PDF/manifest mirror changes: 0.
+
+
+### W-008 PR #571 review fixes
+
+- PR #568 merged into main (merge commit 47a432d7).
+- Removed Belkin/AVC024-specific branches from the beta and prototype Port Map validators; shared role validation remains unchanged.
+- Data-only fit: duplicate the official image as a separate Front-role asset for Port Map, remove map.note, and carry its explanation in the image description. Main card image remains unchanged.
+- Added regression assertions for Front-role mapping, removed note, and rejection of a Main-role Port Map. Updated cache tokens in both apps and product models.
+- Added W-015 exception record at Work/??/W-20261016-015-??.md: diagonal integrated-cable photo, edge brackets ambiguous, leader lines cross connectors/cables: 0.
+- Focused regression checks: 14/14 passed; diff whitespace check passed. Full suite and Pages verification remain after latest-main integration and derived artifact regeneration.

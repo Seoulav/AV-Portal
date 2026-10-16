@@ -2,6 +2,7 @@ import { beforeW008Catalog, beforeW008Manifest, beforeW008Snapshot } from './w20
 ﻿import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
 
 const json = async path => JSON.parse(await readFile(new URL(path, import.meta.url), 'utf8'));
 
@@ -37,10 +38,16 @@ test('Belkin Connect Air is registered in the approved conferencing presentation
     for (const evidence of node.evidence.filter(ref => ref.kind === 'io')) assert.ok(detail.io[evidence.index], `${node.id}: io[${evidence.index}]`);
   }
 
-  assert.equal(detail.portMap.image, 'Main');
+  assert.equal(detail.portMap.image, 'Front');
+  assert.equal(detail.portMap.note, undefined);
   assert.equal(detail.portMap.items.length, 3);
-  assert.match(detail.portMap.note, /케이블 일체형 플러그/);
   assert.deepEqual(detail.portMap.items.map(item => item.label).sort(), ['HDMI OUT', 'USB-A POWER', 'USB-C IN'].sort());
+  const frontMapImage = detail.images.find(image => image.role === 'Front');
+  assert.ok(frontMapImage);
+  assert.notEqual(frontMapImage.file, detail.images.find(image => image.role === 'Main').file);
+  assert.equal(detail.imageStatuses.find(image => image.role === 'Front').status, 'FOUND');
+  assert.deepEqual(enhancementErrors(detail), []);
+  assert.ok(enhancementErrors({ ...detail, portMap: { ...detail.portMap, image: 'Main' } }).includes('Invalid optional detail field: portMap'));
 });
 
 test('W-008 historical inverse removes only the Belkin catalog, mirror, and snapshot addition', async () => {

@@ -106,5 +106,5 @@ test('02 owns the fallback; 03 keeps only content and full io records remain in 
   assert.match(app, /\$\('#io-records'\)\.append\(\$\('#io-table-details'\)\)/);
   assert.match(app, /selectSection03Content\(enhancements\)/);
   assert.match(app, /product-detail-model\.mjs\?v=w20261012-008-amp-table/);
-  assert.match(model, /detail-enhancements\.mjs\?v=w20261016-008-belkin-connect-air/);
+  assert.match(model, /detail-enhancements\.mjs\?v=w20261016-008-portmap-data/);
 });

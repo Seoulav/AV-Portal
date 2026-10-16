@@ -27,6 +27,20 @@
       "originalSize": "700x700",
       "resolution": "700x700",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Front",
+      "file": "belkin-connect-air-front-map.jpg",
+      "alt": "Belkin Connect Air AVC024 official product photo used for Port Map; integrated cable plugs are visible, not a chassis connector panel",
+      "note": "Front role copy of the official product photo for Port Map; marks the visible integrated cable plugs, not a chassis connector panel.",
+      "provider": "Belkin",
+      "model": "AVC024",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "700x700",
+      "resolution": "700x700",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -37,8 +51,8 @@
     },
     {
       "role": "Front",
-      "status": "MISSING",
-      "reason": "본체 전·후면 패널이 없는 케이블 일체형 어댑터"
+      "status": "FOUND",
+      "sourceUrl": "https://www.belkin.com/dw/image/v2/BGBH_PRD/on/demandware.static/-/Sites-master-product-catalog-blk/default/dw79dff235/images/hi-res/4/4cf6650b2a12245b_AVC024-ConnectAir-Wireless-Display-Adapter-WEB-gallery-01.jpg?sfrm=png&sh=700&sm=fit&sw=700"
     },
     {
       "role": "Rear",
@@ -310,7 +324,7 @@
     "galleryFootNote": "Belkin 공식 제품 이미지"
   },
   "portMap": {
-    "image": "Main",
+    "image": "Front",
     "items": [
       {
         "n": 1,
@@ -339,8 +353,7 @@
         "y": 493,
         "side": "bottom"
       }
-    ],
-    "note": "케이블 일체형 플러그를 표시한 Port Map이며 본체 단자판이 아님."
+    ]
   },
   "signalFlow": {
     "type": "extender",
