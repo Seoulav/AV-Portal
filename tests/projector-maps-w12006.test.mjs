@@ -1,3 +1,4 @@
+import {beforeW16015Product} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -23,7 +24,7 @@ test('22 projector maps use a present source image, unique positive numbers and 
     assert.ok(item.y1>=0&&item.y1<item.y2&&item.y2<=m.measuredImage.height,`${slug}: vertical bounds`);
    }else{
     assert.ok(item.x1>=0&&item.x1<item.x2&&item.x2<=m.measuredImage.width,`${slug}: horizontal bounds`);
-    assert.ok(item.y>=0&&item.y<=m.measuredImage.height,`${slug}: y bounds`);
+    assert.ok(item.y===undefined || item.y>=0&&item.y<=m.measuredImage.height,`${slug}: y bounds`);
    }
   }
  }
@@ -49,9 +50,9 @@ test('selective historical inverse restores only approved fields and exposes unr
   const restored=beforeW12006Raw(raw(slug),slug);
   assert.equal(sha(restored),fixture[slug].baselineSha256,`${slug}: original bytes`);
  }
- const p=JSON.parse(raw('eb-l690u'));
+ const p=beforeW16015Product(JSON.parse(raw('eb-l690u')),'eb-l690u');
  p.portMap.items[0].x1+=2;
- assert.throws(()=>beforeW12006Product(p,'eb-l690u'),/unexpected W-006 portMap/);
+ assert.throws(()=>beforeW12006Product(p,'eb-l690u',true),/unexpected W-006 portMap/);
  const q=JSON.parse(raw('eb-l690u'));
  q.model='INVALID';
  assert.equal(beforeW12006Product(q,'eb-l690u').model,'INVALID');

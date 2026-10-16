@@ -1,0 +1,2494 @@
+{
+  "eb-l260f": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l260f-rear.webp",
+        "width": 486,
+        "height": 173
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · USB 연결",
+          "x1": 75,
+          "x2": 93,
+          "y": 31,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A",
+          "desc": "USB Type-A · USB 연결",
+          "x1": 101,
+          "x2": 120,
+          "y": 31,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 129,
+          "x2": 154,
+          "y": 32,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 245,
+          "x2": 267,
+          "y": 32,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 282,
+          "x2": 304,
+          "y": 32,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "Computer 1 입력",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+          "x1": 151,
+          "x2": 184,
+          "y": 79,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Computer 2 / Monitor Out",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 또는 출력",
+          "x1": 202,
+          "x2": 230,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Video 입력",
+          "desc": "RCA · 아날로그 비디오 입력",
+          "x1": 127,
+          "x2": 146,
+          "y": 68,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "오디오 입력",
+          "desc": "RCA · 아날로그 오디오 입력",
+          "x1": 127,
+          "x2": 146,
+          "y": 96,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "오디오 입력 1",
+          "desc": "스테레오 미니 · 오디오 입력",
+          "x1": 181,
+          "x2": 196,
+          "y": 104,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "오디오 입력 2",
+          "desc": "스테레오 미니 · 오디오 입력",
+          "x1": 209,
+          "x2": 224,
+          "y": 104,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 234,
+          "x2": 250,
+          "y": 104,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "89184d0d3c8dcbd23e54aaa5cc76ebd2a15383a9e5abba6be049ef8d7817add4",
+    "unchangedSha": "0100f5341158f6cccb2753c34fc78a1f867088843f842cd36ac4de54c070b781"
+  },
+  "eb-l530u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l530u-rear.webp",
+        "width": 650,
+        "height": 213
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB-A",
+          "desc": "USB Type-A · 주변 기기 연결",
+          "x1": 122,
+          "x2": 137,
+          "y": 37,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 서비스 연결",
+          "x1": 164,
+          "x2": 180,
+          "y": 37,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 204,
+          "x2": 230,
+          "y": 37,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "USB 전원 출력",
+          "desc": "USB Type-A · 전원 공급",
+          "x1": 237,
+          "x2": 250,
+          "y": 37,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 296,
+          "x2": 325,
+          "y": 38,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 354,
+          "x2": 379,
+          "y": 38,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 391,
+          "x2": 421,
+          "y": 37,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 426,
+          "x2": 456,
+          "y": 37,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "Computer 1 입력",
+          "desc": "D-Sub 15핀 · 아날로그 RGB 입력",
+          "x1": 280,
+          "x2": 293,
+          "y": 70,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "Computer 2 / Monitor Out",
+          "desc": "D-Sub 15핀 · 컴퓨터 입력 또는 모니터 출력",
+          "x1": 330,
+          "x2": 344,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "Audio 1 입력",
+          "desc": "스테레오 미니 · 오디오 입력",
+          "x1": 295,
+          "x2": 311,
+          "y": 103,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "Audio 2 입력",
+          "desc": "스테레오 미니 · 오디오 입력",
+          "x1": 347,
+          "x2": 363,
+          "y": 103,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 381,
+          "x2": 397,
+          "y": 103,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "1d86e3e780dec028f819b30882a6f56ac5708dc24962e207aefd2273a9087507",
+    "unchangedSha": "622d7099a9d6c7456d51caaf4c04d9c60d686766e65b3760ed5ead37b95f7c52"
+  },
+  "eb-l690u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l690u-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "ba030af14343fa33491e56bd57378ccf6d0c830dc32be3ed12f2f1a7896815ba",
+    "unchangedSha": "57a4b0512e4d69b3f6b62dab07ac71aecb994fd290c61b41ebd6dc6ea8d4a1cb"
+  },
+  "eb-l695se": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l695se-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "1363ca1d313cf21feff6e92a689e727be88344fc30306e2c0559eeeaa91edab2",
+    "unchangedSha": "9cbd748111bcb11bbaea32a4098aba3e66fb7c70a3fc2012f89d32f5cff582f4"
+  },
+  "eb-l790su": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l790su-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "2b3d82a5537638274a2292ee42fd3de97f15009df3712085121c74677ba655e8",
+    "unchangedSha": "15a3472cf4f097eb22c722fbd34159e0fe80dd049ac262d52b4beff35498eebd"
+  },
+  "eb-l790u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l790u-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "46f0c2ed0889997381c051d05b10781d2f0772532e9d8dbf53e87f1c5762fa52",
+    "unchangedSha": "10e752476618a56f7e6ec8e79d35620e8751e7d08f32f9cd6bd33bf57e935860"
+  },
+  "eb-l795se": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l795se-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "480fb9c232629fbf026b96bcc16900b8dc23fe3c0684cb08cb08b3b771d7d80f",
+    "unchangedSha": "c10b0eef46b442a9d8e3c6cf77ce2f1b87318bb0561e28fa37b3b101b74352ea"
+  },
+  "eb-l895e": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l895e-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 8,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 185,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "RS-232C",
+          "desc": "미니 D-Sub 9핀 · 컴퓨터에서 프로젝터 제어 · 한국어 사용자 설명서 Rev03 22·184쪽",
+          "x1": 634,
+          "x2": 700,
+          "y": 185,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "afc784c8e511fbaf55cf779cd855829656363db78ad99ea59851f26c538feaf3",
+    "unchangedSha": "4b7a5487a4f4202fe0f210aa61ce45af8c73fe9eb13a1d8d9d0883468187530c"
+  },
+  "eb-l895u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-l895u-rear.webp",
+        "width": 1199,
+        "height": 380
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 펌웨어 업데이트 및 설정 복사",
+          "x1": 188,
+          "x2": 219,
+          "y": 60,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "USB-A ×2",
+          "desc": "USB Type-A 2개 · 주변 기기 및 전원 연결",
+          "x1": 240,
+          "x2": 323,
+          "y": 61,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDMI 출력",
+          "desc": "HDMI 디지털 영상 출력",
+          "x1": 359,
+          "x2": 408,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1",
+          "desc": "HDMI 디지털 영상 입력 1",
+          "x1": 432,
+          "x2": 482,
+          "y": 54,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 입력 2",
+          "desc": "HDMI 디지털 영상 입력 2",
+          "x1": 504,
+          "x2": 556,
+          "y": 54,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 641,
+          "x2": 691,
+          "y": 62,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 724,
+          "x2": 770,
+          "y": 62,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 560,
+          "x2": 599,
+          "y": 139,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "529555db1b92274d4b81cf910b599644666b6d07755a6e87eb579f2f39b40203",
+    "unchangedSha": "04a6a92cdc9e559c5f45c30bbf1eb30fa58ec5d2b4f9de233f59c236a5a40a0a"
+  },
+  "eb-pq2213b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pq2213b-rear.webp",
+        "width": 922,
+        "height": 351
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 1 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 437,
+          "x2": 465,
+          "y": 66,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 2 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 483,
+          "x2": 511,
+          "y": 66,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDBaseT 입력",
+          "desc": "RJ-45 · HDBaseT 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 558,
+          "x2": 578,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "12G-SDI 입력",
+          "desc": "BNC · 12G-SDI 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 492,
+          "x2": 520,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 출력",
+          "desc": "HDMI Type A · 디지털 영상 출력(Deep Color/CEC).",
+          "x1": 392,
+          "x2": 421,
+          "y": 66,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "12G-SDI 출력",
+          "desc": "BNC · 12G-SDI 영상 출력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 539,
+          "x2": 565,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Audio Out",
+          "desc": "스테레오 미니 · 외부 오디오 장비로 출력",
+          "x1": 421,
+          "x2": 437,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크 연결.",
+          "x1": 590,
+          "x2": 620,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "USB-A · 왼쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 632,
+          "x2": 650,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "USB-A · 오른쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 653,
+          "x2": 672,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "Service USB",
+          "desc": "USB 서비스 연결 · 펌웨어 업데이트/OSD 설정 복사.",
+          "x1": 676,
+          "x2": 693,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "RS-232C",
+          "desc": "시리얼 제어 · 세부 배선/커넥터 사양은 확인 필요.",
+          "x1": 496,
+          "x2": 550,
+          "y": 142,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "Remote · 유선 리모컨",
+          "desc": "스테레오 미니잭 · 별매 리모컨 케이블 연결 · 연결 시 본체 리모컨 수신부 비활성",
+          "x1": 462,
+          "x2": 478,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 14,
+          "label": "AC 전원 입력",
+          "desc": "전원 케이블 연결 · 전압별 전원 조건은 제품 사양을 확인하세요.",
+          "x1": 679,
+          "x2": 729,
+          "y": 243,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "d5665a376ebf2d0008d0d805065e067f913090e6dc3a8282f3d2850f841b855e",
+    "unchangedSha": "b9b357ae4f8030668aee8d65b6093af21a44b4c5c2982c59577cfb385e03f867"
+  },
+  "eb-pq2216b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pq2216b-rear.webp",
+        "width": 922,
+        "height": 351
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 1 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 437,
+          "x2": 465,
+          "y": 66,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 2 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 483,
+          "x2": 511,
+          "y": 66,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDBaseT 입력",
+          "desc": "RJ-45 · HDBaseT 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 558,
+          "x2": 578,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "12G-SDI 입력",
+          "desc": "BNC · 12G-SDI 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 492,
+          "x2": 520,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 출력",
+          "desc": "HDMI Type A · 디지털 영상 출력(Deep Color/CEC).",
+          "x1": 392,
+          "x2": 421,
+          "y": 66,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "12G-SDI 출력",
+          "desc": "BNC · 12G-SDI 영상 출력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 539,
+          "x2": 565,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Audio Out",
+          "desc": "스테레오 미니 · 외부 오디오 장비로 출력",
+          "x1": 421,
+          "x2": 437,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크 연결.",
+          "x1": 590,
+          "x2": 620,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "USB-A · 왼쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 632,
+          "x2": 650,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "USB-A · 오른쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 653,
+          "x2": 672,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "Service USB",
+          "desc": "USB 서비스 연결 · 펌웨어 업데이트/OSD 설정 복사.",
+          "x1": 676,
+          "x2": 693,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 12,
+          "label": "RS-232C",
+          "desc": "시리얼 제어 · 세부 배선/커넥터 사양은 확인 필요.",
+          "x1": 496,
+          "x2": 550,
+          "y": 142,
+          "side": "bottom"
+        },
+        {
+          "n": 13,
+          "label": "Remote · 유선 리모컨",
+          "desc": "스테레오 미니잭 · 별매 리모컨 케이블 연결 · 연결 시 본체 리모컨 수신부 비활성",
+          "x1": 462,
+          "x2": 478,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 14,
+          "label": "AC 전원 입력",
+          "desc": "전원 케이블 연결 · 전압별 전원 조건은 제품 사양을 확인하세요.",
+          "x1": 679,
+          "x2": 729,
+          "y": 243,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "d2cb1c95609641a73d8966e23a61de9bc0a8f72952804d520009aec5d7a54ba4",
+    "unchangedSha": "82195c3ff49a0d71d5af91905df61a4f7d745a30eed3dfdaf996560a71b6d01c"
+  },
+  "eb-pq2220b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pq2220b-rear.webp",
+        "width": 922,
+        "height": 351
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "HDMI 1 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 437,
+          "x2": 465,
+          "y": 66,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDMI 2 입력",
+          "desc": "HDMI Type A · 디지털 영상 입력(Deep Color/CEC).",
+          "x1": 483,
+          "x2": 511,
+          "y": 66,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "HDBaseT 입력",
+          "desc": "RJ-45 · HDBaseT 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 548,
+          "x2": 578,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "12G-SDI 입력",
+          "desc": "BNC · 12G-SDI 영상 입력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 492,
+          "x2": 520,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "HDMI 출력",
+          "desc": "HDMI Type A · 디지털 영상 출력(Deep Color/CEC).",
+          "x1": 392,
+          "x2": 421,
+          "y": 66,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "12G-SDI 출력",
+          "desc": "BNC · 12G-SDI 영상 출력; 기존 글로벌 브로셔 기록 기준.",
+          "x1": 539,
+          "x2": 565,
+          "y": 39,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "Audio Out",
+          "desc": "스테레오 미니 · 외부 오디오 장비로 출력",
+          "x1": 421,
+          "x2": 437,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Remote · 유선 리모컨",
+          "desc": "스테레오 미니잭 · 별매 리모컨 케이블 연결 · 연결 시 본체 리모컨 수신부 비활성",
+          "x1": 462,
+          "x2": 478,
+          "y": 143,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크 연결.",
+          "x1": 590,
+          "x2": 620,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "USB-A · 왼쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 632,
+          "x2": 650,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 11,
+          "label": "USB-A · 오른쪽",
+          "desc": "주변 기기/업데이트/설정 복사/전원/콘텐츠 재생 용도는 적용 조건 확인.",
+          "x1": 653,
+          "x2": 672,
+          "y": 72,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "Service USB",
+          "desc": "USB 서비스 연결 · 펌웨어 업데이트/OSD 설정 복사.",
+          "x1": 676,
+          "x2": 693,
+          "y": 72,
+          "side": "top"
+        },
+        {
+          "n": 13,
+          "label": "RS-232C",
+          "desc": "시리얼 제어 · 세부 배선/커넥터 사양은 확인 필요.",
+          "x1": 496,
+          "x2": 550,
+          "y": 142,
+          "side": "bottom"
+        },
+        {
+          "n": 14,
+          "label": "AC 전원 입력",
+          "desc": "전원 케이블 연결 · 전압별 전원 조건은 제품 사양을 확인하세요.",
+          "x1": 679,
+          "x2": 729,
+          "y": 243,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "40b6cbccee558efd6df633d33708a7397e5d052499fbde5286f5eabe34c02817",
+    "unchangedSha": "8dc06ce9fcbbbd0a465e61fd1b13ed5c304dc04b477d474bd4fdbdb73e6c779e"
+  },
+  "eb-pu1008b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pu1008b-rear.webp",
+        "width": 604,
+        "height": 218
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 227,
+          "x2": 247,
+          "y": 31,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 261,
+          "x2": 278,
+          "y": 31,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "DVI-D 입력",
+          "desc": "DVI-D 디지털 영상 입력",
+          "x1": 293,
+          "x2": 326,
+          "y": 32,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력",
+          "desc": "HDMI 디지털 영상 입력",
+          "x1": 342,
+          "x2": 361,
+          "y": 32,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "USB-A",
+          "desc": "USB Type-A · USB 연결",
+          "x1": 374,
+          "x2": 390,
+          "y": 47,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 서비스 연결",
+          "x1": 397,
+          "x2": 410,
+          "y": 47,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "Computer 입력",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+          "x1": 293,
+          "x2": 321,
+          "y": 110,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 327,
+          "x2": 344,
+          "y": 80,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "30b4392af09e553f6705e8ecafd11d408f0b32ae84158a7349f9be93e6218ce2",
+    "unchangedSha": "b1e7c4cf12a54fb6c98f284aca8c4ba519b8fd3e3edd7b1db348fc015a39919c"
+  },
+  "eb-pu2010w-b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pu2010w-b-rear.webp",
+        "width": 604,
+        "height": 218
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 227,
+          "x2": 247,
+          "y": 31,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 261,
+          "x2": 278,
+          "y": 31,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "DVI-D 입력",
+          "desc": "DVI-D 디지털 영상 입력",
+          "x1": 293,
+          "x2": 326,
+          "y": 32,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력",
+          "desc": "HDMI 디지털 영상 입력",
+          "x1": 342,
+          "x2": 361,
+          "y": 32,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "USB-A",
+          "desc": "USB Type-A · USB 연결",
+          "x1": 374,
+          "x2": 390,
+          "y": 47,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 서비스 연결",
+          "x1": 397,
+          "x2": 410,
+          "y": 47,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "Computer 입력",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+          "x1": 293,
+          "x2": 321,
+          "y": 110,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 327,
+          "x2": 344,
+          "y": 80,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "SDI 입력",
+          "desc": "BNC · 디지털 영상 입력",
+          "x1": 420,
+          "x2": 438,
+          "y": 46,
+          "side": "top"
+        },
+        {
+          "n": 10,
+          "label": "SDI 출력",
+          "desc": "BNC · 디지털 영상 출력",
+          "x1": 442,
+          "x2": 462,
+          "y": 46,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "5b8eb4a803d22429b72a9721567d91b7c66ff96a63d86c711a38c3257fb3759d",
+    "unchangedSha": "11f1d9c29dc30a21b1b3f5227c7baa401e74c53a1b06e76d732efddaa94d9a14"
+  },
+  "eb-pu2213b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pu2213b-rear.webp",
+        "width": 546,
+        "height": 213
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 211,
+          "x2": 228,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 238,
+          "x2": 257,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "DVI-D 입력",
+          "desc": "DVI-D 디지털 영상 입력",
+          "x1": 264,
+          "x2": 295,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력",
+          "desc": "HDMI 디지털 영상 입력",
+          "x1": 307,
+          "x2": 326,
+          "y": 30,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 서비스 연결",
+          "x1": 331,
+          "x2": 341,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "USB-A",
+          "desc": "USB Type-A · 주변 기기 연결",
+          "x1": 343,
+          "x2": 357,
+          "y": 40,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SDI 입력",
+          "desc": "BNC · 디지털 영상 입력",
+          "x1": 369,
+          "x2": 385,
+          "y": 43,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "SDI 출력",
+          "desc": "BNC · 디지털 영상 출력",
+          "x1": 387,
+          "x2": 401,
+          "y": 43,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 267,
+          "x2": 285,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "Computer 입력",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+          "x1": 236,
+          "x2": 263,
+          "y": 108,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "f8d8f7a858fff01daf48c4894fc388d9c64368730433d79cb3d8026141df08ff",
+    "unchangedSha": "e980d52727cbcb6d5c29e1c8cd2b07776151e03c4888cd866d4575192e61ed58"
+  },
+  "eb-pu2216b": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "eb-pu2216b-rear.webp",
+        "width": 546,
+        "height": 213
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "LAN",
+          "desc": "RJ-45 · 유선 네트워크",
+          "x1": 211,
+          "x2": 228,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "HDBaseT 입력",
+          "desc": "HDBaseT 디지털 영상 입력",
+          "x1": 238,
+          "x2": 257,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "DVI-D 입력",
+          "desc": "DVI-D 디지털 영상 입력",
+          "x1": 264,
+          "x2": 295,
+          "y": 30,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력",
+          "desc": "HDMI 디지털 영상 입력",
+          "x1": 307,
+          "x2": 326,
+          "y": 30,
+          "side": "bottom"
+        },
+        {
+          "n": 5,
+          "label": "USB 서비스",
+          "desc": "USB Type-B · 서비스 연결",
+          "x1": 331,
+          "x2": 341,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "USB-A",
+          "desc": "USB Type-A · 주변 기기 연결",
+          "x1": 343,
+          "x2": 357,
+          "y": 40,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SDI 입력",
+          "desc": "BNC · 디지털 영상 입력",
+          "x1": 369,
+          "x2": 385,
+          "y": 43,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "SDI 출력",
+          "desc": "BNC · 디지털 영상 출력",
+          "x1": 387,
+          "x2": 401,
+          "y": 43,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "오디오 출력",
+          "desc": "스테레오 미니 · 오디오 출력",
+          "x1": 267,
+          "x2": 285,
+          "y": 80,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "Computer 입력",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력",
+          "x1": 236,
+          "x2": 263,
+          "y": 108,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "a2b0d05cfb6f09209e2dafb3d53692f7866e1fe07f1563010d17054fec018ca7",
+    "unchangedSha": "dc985e5c3b338450ddd6734073e566b70122ac0bec91bc4beb687b0ecb632651"
+  },
+  "pt-mz11k": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-mz11k-clean-panels.png",
+        "width": 890,
+        "height": 440
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB",
+          "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 142,
+          "x2": 194,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "SDI IN",
+          "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 207,
+          "x2": 295,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 315,
+          "x2": 552,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "DIGITAL LINK",
+          "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 570,
+          "x2": 675,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 682,
+          "x2": 782,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC OUT",
+          "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 94,
+          "x2": 145,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SERIAL/MULTI SYNC IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 212,
+          "x2": 319,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "SERIAL/MULTI SYNC OUT",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 369,
+          "x2": 483,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "REMOTE 1 IN",
+          "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 539,
+          "x2": 648,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "REMOTE 2 IN/OUT",
+          "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 671,
+          "x2": 787,
+          "y": 393,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "0495be7675f8421f11fdf835854cc67fac753df8d0f9eb8304a4160991d86c4d",
+    "unchangedSha": "55e3c7965f73e737934cff427545e14dc3a1bc3ca000608fcbce042af23c31c8"
+  },
+  "pt-mz14k": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-mz14k-clean-panels.png",
+        "width": 890,
+        "height": 440
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB",
+          "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 142,
+          "x2": 194,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "SDI IN",
+          "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 207,
+          "x2": 295,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 315,
+          "x2": 552,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "DIGITAL LINK",
+          "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 570,
+          "x2": 675,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 682,
+          "x2": 782,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC OUT",
+          "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 94,
+          "x2": 145,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SERIAL/MULTI SYNC IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 212,
+          "x2": 319,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "SERIAL/MULTI SYNC OUT",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 369,
+          "x2": 483,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "REMOTE 1 IN",
+          "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 539,
+          "x2": 648,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "REMOTE 2 IN/OUT",
+          "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 671,
+          "x2": 787,
+          "y": 393,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "b67d20639ad3261d1e61fb999ae76bc1b072514400fc3f3fcdff9fbd642edb25",
+    "unchangedSha": "9449b1246debf904b55fa1f96b5a8e47401983190940351901f94460d6e97136"
+  },
+  "pt-mz17k": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-mz17k-clean-panels.png",
+        "width": 890,
+        "height": 440
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB",
+          "desc": "USB Type-A · 메모리/무선 모듈 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 142,
+          "x2": 194,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "SDI IN",
+          "desc": "BNC · SDI 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 207,
+          "x2": 295,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 315,
+          "x2": 552,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "DIGITAL LINK",
+          "desc": "RJ-45 · DIGITAL LINK 영상 및 네트워크 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 570,
+          "x2": 675,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 682,
+          "x2": 782,
+          "y": 40,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DC OUT",
+          "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 94,
+          "x2": 145,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "SERIAL/MULTI SYNC IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 212,
+          "x2": 319,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "SERIAL/MULTI SYNC OUT",
+          "desc": "D-Sub 9핀 · RS-232C 제어 및 동기화 출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 369,
+          "x2": 483,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "REMOTE 1 IN",
+          "desc": "D-Sub 9핀 · 외부 원격 제어 입력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 539,
+          "x2": 648,
+          "y": 393,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "REMOTE 2 IN/OUT",
+          "desc": "M3 미니잭 · 원격 제어 입력/출력 · DPQP1432ZC/X1 한국어 사용설명서 28쪽",
+          "x1": 671,
+          "x2": 787,
+          "y": 393,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "9d5987941284e873612d3724551252a491ebeb966e30b6213edcc11efce5c630",
+    "unchangedSha": "7e1d37627560b37df756805492b37084e727b0c8e1651a354f9de55149e62c74"
+  },
+  "pt-mz882": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-mz882-diagram.webp",
+        "width": 1270,
+        "height": 730
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "COMPUTER IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 158,
+          "x2": 345,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "MONITOR OUT",
+          "desc": "D-Sub 15핀 · 모니터 영상 출력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 158,
+          "x2": 345,
+          "y": 340,
+          "side": "bottom"
+        },
+        {
+          "n": 3,
+          "label": "DC OUT",
+          "desc": "USB Type-A · 5 V/2 A 전원 공급 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 360,
+          "x2": 415,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI IN 1–3",
+          "desc": "HDMI 3개 · 디지털 영상 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 440,
+          "x2": 895,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 918,
+          "x2": 1025,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "DIGITAL LINK/LAN",
+          "desc": "RJ-45 · DIGITAL LINK/네트워크 연결 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 1050,
+          "x2": 1155,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "AUDIO IN",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "side": "bottom",
+          "x1": 160,
+          "x2": 220,
+          "y": 445
+        },
+        {
+          "n": 8,
+          "label": "AUDIO OUT",
+          "desc": "M3 스테레오 미니 · 오디오 출력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "side": "bottom",
+          "x1": 225,
+          "x2": 275,
+          "y": 530
+        },
+        {
+          "n": 9,
+          "label": "REMOTE 1 IN",
+          "desc": "M3 스테레오 미니 · 원격 제어 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 285,
+          "x2": 315,
+          "y": 450,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "REMOTE 2 IN",
+          "desc": "D-Sub 9핀 · 원격 제어 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 427,
+          "x2": 555,
+          "y": 455,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "SERIAL/MULTI SYNC IN",
+          "desc": "D-Sub 9핀 · 시리얼 제어/동기화 입력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 605,
+          "x2": 758,
+          "y": 455,
+          "side": "bottom"
+        },
+        {
+          "n": 12,
+          "label": "MULTI SYNC OUT",
+          "desc": "D-Sub 9핀 · 동기화 출력 · DPQP1564ZA/X1 한국어 사용설명서 27쪽",
+          "x1": 818,
+          "x2": 970,
+          "y": 455,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "5a03970d04cac800b2f33ee1873db76b3ae4771d49896178bba467bf3b79ef79",
+    "unchangedSha": "93f3317afc9b964602205788fa9e62aa91afc5c3e230d14a1e410335a01f6809"
+  },
+  "pt-vmz51": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-vmz51-diagram.webp",
+        "width": 1288,
+        "height": 700
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB (VIEWER/WIRELESS/DC OUT)",
+          "desc": "USB Type-A · 메모리/무선/전원 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 56,
+          "x2": 161,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "AUDIO IN 1",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "AUDIO IN 2",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 325,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "COMPUTER 1 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "COMPUTER 2 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 355,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 585,
+          "x2": 919,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 940,
+          "x2": 1060,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "DIGITAL LINK/LAN",
+          "desc": "RJ-45 · DIGITAL LINK/네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1105,
+          "x2": 1223,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "VARIABLE AUDIO OUT",
+          "desc": "M3 스테레오 미니 · 가변 오디오 출력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 914,
+          "x2": 982,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "SERIAL IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1025,
+          "x2": 1235,
+          "y": 395,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "49a2dadb4add2eb93ae7d1c6d2537b8e75ed9754c9be6cfa1d4bb116ef9a8380",
+    "unchangedSha": "c62e7d1ccd58cc4ecbecdc49f633924745ff6a38d3d2df6fe3c8a70b82fd2942"
+  },
+  "pt-vmz61": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-vmz61-diagram.webp",
+        "width": 1288,
+        "height": 700
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB (VIEWER/WIRELESS/DC OUT)",
+          "desc": "USB Type-A · 메모리/무선/전원 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 56,
+          "x2": 161,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "AUDIO IN 1",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "AUDIO IN 2",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 325,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "COMPUTER 1 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "COMPUTER 2 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 355,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 585,
+          "x2": 919,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 940,
+          "x2": 1060,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "DIGITAL LINK/LAN",
+          "desc": "RJ-45 · DIGITAL LINK/네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1105,
+          "x2": 1223,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "VARIABLE AUDIO OUT",
+          "desc": "M3 스테레오 미니 · 가변 오디오 출력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 914,
+          "x2": 982,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "SERIAL IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1025,
+          "x2": 1235,
+          "y": 395,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "c42b82b0b53f7b6b361e23cd857261a72c1438374ba60ce6af26e94a246940ad",
+    "unchangedSha": "026d4cae7fad31d67d2547fd7f61a1f7581e3715ab538c7dc4654308cf8c7ef6"
+  },
+  "pt-vmz71": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "pt-vmz71-diagram.webp",
+        "width": 1288,
+        "height": 700
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "USB (VIEWER/WIRELESS/DC OUT)",
+          "desc": "USB Type-A · 메모리/무선/전원 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 56,
+          "x2": 161,
+          "y": 210,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "AUDIO IN 1",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 230,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "AUDIO IN 2",
+          "desc": "M3 스테레오 미니 · 오디오 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 205,
+          "x2": 283,
+          "y": 325,
+          "side": "bottom"
+        },
+        {
+          "n": 4,
+          "label": "COMPUTER 1 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "COMPUTER 2 IN",
+          "desc": "D-Sub 15핀 · 아날로그 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 330,
+          "x2": 548,
+          "y": 355,
+          "side": "bottom"
+        },
+        {
+          "n": 6,
+          "label": "HDMI IN 1–2",
+          "desc": "HDMI 2개 · 디지털 영상 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 585,
+          "x2": 919,
+          "y": 220,
+          "side": "top"
+        },
+        {
+          "n": 7,
+          "label": "LAN",
+          "desc": "RJ-45 · 네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 940,
+          "x2": 1060,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 8,
+          "label": "DIGITAL LINK/LAN",
+          "desc": "RJ-45 · DIGITAL LINK/네트워크 연결 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1105,
+          "x2": 1223,
+          "y": 225,
+          "side": "top"
+        },
+        {
+          "n": 9,
+          "label": "VARIABLE AUDIO OUT",
+          "desc": "M3 스테레오 미니 · 가변 오디오 출력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 914,
+          "x2": 982,
+          "y": 390,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "SERIAL IN",
+          "desc": "D-Sub 9핀 · RS-232C 제어 입력 · DPQP1388ZD/X1 한국어 사용설명서 25쪽",
+          "x1": 1025,
+          "x2": 1235,
+          "y": 395,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "2641701c4339c85613d02bb25c154eb1088c118f135462406133d9b145f5f8e9",
+    "unchangedSha": "7b3a4334dbba6011029dd105534c43ae1846f753f5be3bd7f16f05df0ec4c384"
+  },
+  "x100pro-4u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "x100pro-4u-rear.webp",
+        "width": 1800,
+        "height": 761
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "입력 보드(선택형)",
+          "desc": "후면 왼쪽 녹색 INPUT 슬롯 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+          "x1": 185,
+          "x2": 820,
+          "y": 52,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "출력 보드(선택형)",
+          "desc": "후면 오른쪽 파란색 OUTPUT 슬롯 및 PORT 1–10 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+          "x1": 980,
+          "x2": 1615,
+          "y": 52,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "5f2842169629f8b1e30235888af01145003907600e8cae0a1aef50c53106ecdd",
+    "unchangedSha": "3c99e6d1a6b422530bc483c0f93f3197b5f49f35a477cf4d05f3a51546550bd6"
+  },
+  "x100pro-7u": {
+    "prior": {
+      "image": "Rear",
+      "measuredImage": {
+        "file": "x100pro-7u-rear.webp",
+        "width": 1800,
+        "height": 1132
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "입력 보드(선택형)",
+          "desc": "후면 왼쪽 녹색 INPUT 슬롯 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+          "x1": 175,
+          "x2": 820,
+          "y": 45,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "출력 보드(선택형)",
+          "desc": "후면 오른쪽 파란색 OUTPUT 슬롯 및 PORT 1–10 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
+          "x1": 980,
+          "x2": 1615,
+          "y": 45,
+          "side": "top"
+        }
+      ]
+    },
+    "approved": "76ef0e75c80bf0687160aabd9dc384fe3228ced7cc070552622b05692777c612",
+    "unchangedSha": "4e1b4d3f1fe6c83d22597ff7fd549568dfbe5c4e215f7af9a1ebf5309661bf93"
+  }
+}
