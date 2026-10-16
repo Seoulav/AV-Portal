@@ -35,7 +35,7 @@ test('Midra/Zenith panels preserve a Rear overview and provide a complete Other 
   if(slug==='zenith-100'){
    assert.equal(panel.measuredImage.height,711,'Zenith 100 equal-scale strip composition height');
    assert.deepEqual(panel.items.filter(item=>item.n===8||item.n===9).map(({n,x1,x2})=>({n,x1,x2})),[
-    {n:8,x1:908,x2:1172},{n:9,x1:1175,x2:1475}
+    {n:8,x1:869,x2:1123},{n:9,x1:1125,x2:1428}
    ],'Zenith 100 top strip keeps source pixel scale and position');
   }
   for(const map of product.portMaps){

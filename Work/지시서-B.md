@@ -662,3 +662,11 @@
 - Port Map lint: Zenith 2종 0 신호, Pulse/Eikos 각 1 `SHARED_WITH` 레이아웃 신호. 비주얼 24 PNG 전후 비교에서 다른 줄 단자·인쇄 라벨 관통 없음.
 - 미리보기: `Work/기록/W-20261016-015-midra-zenith-preview/index.html`. 구현·검증 완료, Work 화면 검토/PR 병합 순서 응답 대기.
 - Work 2026-10-17 검토 반영: Zenith 100 상단 단자 띠의 확대를 2.24배에서 원본 픽셀 1:1로 조정하고 패널을 1570×711로 재구성, 번호 8·9 좌표 재측정. 760px·390px 좌우 캡처 갱신: `Work/기록/W-20261016-015-midra-zenith-preview/screenshots/zenith-100-after-760.png` 및 좌·우 캡처. 사진 띠 사이 빈 흰 간격을 지나는 Zenith 100 10·11, Zenith 200 12(오디오)·13(Dante)의 수평선 1/4 폭 예외를 Work 승인(2026-10-17)대로 PR·예외 기록에 병기. 전체 테스트 858건(857 통과·0 실패·기존 skip 1), verify-pages·search/readable --check 통과. 수정 커밋 3f4ee249 CI run 38946031107 성공. 작업 기록 갱신 커밋의 CI 재실행 대기.
+### W-20261016-015 후속 긴급 교정 — Zenith 100 상단 단자판 (2026-10-17)
+
+- 공개 Other 패널에서 출력 OUT #3·4가 누락됐고, #9 괄호가 입력 #12·13을 가리키는 오류를 확인해 최신 main `59e70af1`에서 `codex/W-20261017-zenith100-panel-fix` 브랜치를 분기.
+- 공식 Rear 사진 상단 크롭을 원본 비율로 재구성해 IN #11–13 및 OUT #3·4를 모두 표시. Other #8·#9 괄호를 각각 전체 입력·출력 패널에 맞춰 재측정하고, Rear 지도도 동일한 소스 경계를 가리키도록 보정. 라벨·I/O·단자 사실·다른 제품은 변경하지 않음.
+- 검토용 3배 상단 확대 및 760px·390px 좌우 Other 화면, Rear 760px 캡처: `Work/기록/W-20261017-zenith100-hotfix-preview/index.html`. Pulse 4K·Eikos 4K·Zenith 200 패널은 재확대 확인에서 같은 누락·오인이 보이지 않음.
+- 집중 테스트·되감기 테스트 3/3 및 전체 직렬 테스트 860건(859 통과·0 실패·기존 skip 1) 통과. `verify-pages`(289 품목·286 상세·529 이미지·167 PDF), `search-index --check`, `git diff --check` 통과; snapshot·search-index·readable catalog 재생성. Pulse 4K·Eikos 4K·Zenith 200 공개 패널은 확대 재점검에서 같은 누락·오인 없음. PR CI 후 Work 검토 전 병합하지 않음.
+
+\n
