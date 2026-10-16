@@ -1,0 +1,182 @@
+{
+  "images": {
+    "prior": [
+      {
+        "role": "Main",
+        "file": "logitech-rally-plus-main.webp",
+        "alt": "Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지",
+        "note": "Main · 제조사 공식 이미지",
+        "provider": "Logitech",
+        "model": "Rally Plus",
+        "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png",
+        "officialSource": true,
+        "verificationStatus": "FOUND",
+        "originalSize": "3856×2160",
+        "resolution": "1400×331",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      },
+      {
+        "role": "Diagram",
+        "file": "rally-plus-diagram.webp",
+        "alt": "Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면",
+        "note": "Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열",
+        "provider": "Logitech",
+        "model": "Rally Plus",
+        "sourceUrl": "https://www.logitech.com/assets/65621/14/rally-system.pdf",
+        "officialSource": true,
+        "verificationStatus": "VERIFIED",
+        "originalSize": "780x1000",
+        "resolution": "780x1000",
+        "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+      }
+    ],
+    "approved": "e44e5bdd5c77d94bc4c74d61b149ce2444ee2bea7b457a29796ea4218a9dd0a6"
+  },
+  "imageStatuses": {
+    "prior": [
+      {
+        "role": "Main",
+        "status": "FOUND",
+        "sourceUrl": "https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png"
+      },
+      {
+        "role": "Front",
+        "status": "MISSING",
+        "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+      },
+      {
+        "role": "Rear",
+        "status": "MISSING",
+        "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+      },
+      {
+        "role": "Perspective",
+        "status": "MISSING",
+        "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+      },
+      {
+        "role": "Other",
+        "status": "REVIEW REQUIRED",
+        "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
+      },
+      {
+        "role": "Diagram",
+        "status": "VERIFIED",
+        "sourceUrl": "https://www.logitech.com/assets/65621/14/rally-system.pdf"
+      }
+    ],
+    "approved": "703f227caa9aa7cccf692fe456cbcc5048bbf0ea484c161a4efbf10e0426adee"
+  },
+  "portMap": {
+    "prior": {
+      "image": "Diagram",
+      "measuredImage": {
+        "file": "rally-plus-diagram.webp",
+        "width": 780,
+        "height": 1000
+      },
+      "items": [
+        {
+          "n": 1,
+          "label": "테이블 허브 전원",
+          "desc": "전원 입력 · 한국어 설치 가이드 24쪽",
+          "x1": 71,
+          "x2": 90,
+          "y": 317,
+          "side": "top"
+        },
+        {
+          "n": 2,
+          "label": "Mic Pod",
+          "desc": "마이크 팟 연결 · 한국어 설치 가이드 24쪽",
+          "x1": 108,
+          "x2": 129,
+          "y": 342,
+          "side": "top"
+        },
+        {
+          "n": 3,
+          "label": "Display Hub 연결",
+          "desc": "테이블 허브와 디스플레이 허브 연결 · 한국어 설치 가이드 24쪽",
+          "x1": 192,
+          "x2": 216,
+          "y": 375,
+          "side": "top"
+        },
+        {
+          "n": 4,
+          "label": "HDMI 입력 1–2",
+          "desc": "유선 콘텐츠 HDMI 입력 2개 · 한국어 설치 가이드 24쪽",
+          "x1": 239,
+          "x2": 329,
+          "y": 403,
+          "side": "top"
+        },
+        {
+          "n": 5,
+          "label": "회의실 컴퓨터 USB",
+          "desc": "테이블 허브 컴퓨터 연결 · 한국어 설치 가이드 24쪽",
+          "x1": 350,
+          "x2": 377,
+          "y": 425,
+          "side": "top"
+        },
+        {
+          "n": 6,
+          "label": "스피커 1–2",
+          "desc": "스피커 2대 연결 · 한국어 설치 가이드 25쪽",
+          "x1": 130,
+          "x2": 213,
+          "y": 761,
+          "side": "bottom"
+        },
+        {
+          "n": 7,
+          "label": "디스플레이 허브 전원",
+          "desc": "전원 입력 · 한국어 설치 가이드 25쪽",
+          "x1": 219,
+          "x2": 242,
+          "y": 798,
+          "side": "bottom"
+        },
+        {
+          "n": 8,
+          "label": "Table Hub 연결",
+          "desc": "디스플레이 허브와 테이블 허브 연결 · 한국어 설치 가이드 25쪽",
+          "x1": 265,
+          "x2": 289,
+          "y": 815,
+          "side": "bottom"
+        },
+        {
+          "n": 9,
+          "label": "HDMI 출력 1–2",
+          "desc": "디스플레이 HDMI 출력 2개 · 한국어 설치 가이드 25쪽",
+          "x1": 313,
+          "x2": 392,
+          "y": 848,
+          "side": "bottom"
+        },
+        {
+          "n": 10,
+          "label": "회의실 컴퓨터 USB",
+          "desc": "디스플레이 허브 컴퓨터 연결 · 한국어 설치 가이드 25쪽",
+          "x1": 416,
+          "x2": 442,
+          "y": 881,
+          "side": "bottom"
+        },
+        {
+          "n": 11,
+          "label": "Rally 카메라",
+          "desc": "카메라 연결 · 한국어 설치 가이드 25쪽",
+          "x1": 467,
+          "x2": 487,
+          "y": 897,
+          "side": "bottom"
+        }
+      ]
+    },
+    "approved": "fbc2101be738a033361a8f49cd00d4bcaf83cad98572167ece5166d97bbe39f4"
+  }
+}

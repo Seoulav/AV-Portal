@@ -1,3 +1,4 @@
+import {beforeW16015RallyProduct} from './w16015-rally-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -29,7 +30,7 @@ test('W-015 group 5 changes only 30 approved maps and preserves current non-map 
     afterY += current.portMap.items.filter(item=>item.y!==undefined).length;
   }
   assert.deepEqual([markers,beforeY,afterY],[171,170,2]);
-  for (const [slug, expected] of Object.entries(unchangedMaps)) assert.equal(hash(product(slug).portMap), expected, `${slug}: unsafe edge draft excluded`);
+  for (const [slug, expected] of Object.entries(unchangedMaps)) assert.equal(hash(beforeW16015RallyProduct(product(slug),slug).portMap), expected, `${slug}: unchanged at group 5 completion`);
 });
 
 test('W-015 group 5 inverse rejects marker drift and exposes unrelated current regressions', () => {
