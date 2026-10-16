@@ -32,7 +32,7 @@
 - [x] Midra Mixer·Matrix, Eikos Hard/Soft Edge, Alta 장비 전체 레이어 풀·화면 배분을 구분했다. 출력별 추가 자원 산식, HD Aux 레이어·4K/HD 혼합 비용은 미확인으로 기록했다.
 - [x] 네 제품 JSON에 계열 공유 `videoLayerPlan`과 제품별 결론 문장을 추가했다. XDM-WOS100 레이어 수는 RTCOM 원본에 없어 숫자 비교를 하지 않는다.
 - [x] 공용 상세 검증기·화면 렌더를 연결하고 선택적 되감기 SHA 검사와 6개 타깃 테스트를 추가했다.
-- [x] 최신 `origin/main` (`8845d808`, W-017) 통합 및 파생 산출물 재생성을 마쳤다.
+- [x] W-017 (`8845d808`)과 W-013 PR #582 (`0d7bd46a`) 병합 후 최신 `origin/main` 통합 및 파생 산출물 재생성을 마쳤다.
 - [x] 네 제품을 1280px·390px로 캡처했다. 모바일 `document.documentElement.scrollWidth`는 모두 390이며 레이어 영역 전체가 보인다. 캡처: `tmp/w011-preview/{pulse-4k,eikos-4k,zenith-100,zenith-200}-{1280,390}.png`.
 - [x] 직렬 전체 테스트 786건 중 785 통과·1 스킵·실패 0. 검색 인덱스·읽기용 카탈로그 `--check`, RTCOM `--check`, `verify-pages` 통과(285 장비·282 상세·515 이미지·163 PDF).
 - [ ] PR·CI·Work 병합 순서 확인·병합·Pages 공개 확인.
