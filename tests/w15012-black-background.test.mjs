@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW15012Product, beforeW15012ImageSha } from './w15012-black-background-history.mjs';
 import { beforeW20261016_003Product } from './w20261016-003-history.mjs';
+import { beforeW16009Product } from './w16009-history.mjs';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w15012-black-background-history.json', import.meta.url), 'utf8'));
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -12,7 +13,7 @@ const read = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/$
 test('W-012 historical inverse restores only approved photo fields and exposes other regressions', () => {
   assert.equal(Object.keys(fixture.products).length, 7);
   for (const [slug, record] of Object.entries(fixture.products)) {
-    const current = read(slug);
+    const current = beforeW16009Product(read(slug), slug);
     const core = structuredClone(current);
     delete core.images; delete core.imageStatuses;
     assert.equal(sha(JSON.stringify(beforeW20261016_003Product(core, slug))), record.priorCoreSha256, slug + ' protected fields');

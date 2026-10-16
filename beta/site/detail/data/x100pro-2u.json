@@ -43,6 +43,20 @@
       "originalSize": "2400×697",
       "resolution": "1800×523",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "x100pro-2u-cards.png",
+      "alt": "Colorlight X100 Pro-2U 후면 INPUT 및 OUTPUT 카드 영역 확대",
+      "note": "Diagram · 제조사 공식 후면 사진에서 카드 슬롯만 크롭·재배치 · 기존 Rear 전체 사진 병행 유지",
+      "provider": "Colorlight",
+      "model": "X100 Pro-2U",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111",
+      "officialSource": true,
+      "verificationStatus": "FOUND",
+      "originalSize": "1800×523(게시 후면 사진)",
+      "resolution": "1500×370",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
   "imageStatuses": [
@@ -69,6 +83,11 @@
     {
       "role": "Other",
       "status": "REVIEW REQUIRED",
+      "sourceUrl": "https://en.colorlightinside.com/product/download/111"
+    },
+    {
+      "role": "Diagram",
+      "status": "FOUND",
       "sourceUrl": "https://en.colorlightinside.com/product/download/111"
     }
   ],
@@ -265,30 +284,36 @@
     }
   ],
   "portMap": {
-    "image": "Rear",
+    "image": "Diagram",
     "measuredImage": {
-      "file": "x100pro-2u-rear.webp",
-      "width": 1800,
-      "height": 523
+      "file": "x100pro-2u-cards.png",
+      "width": 1500,
+      "height": 370
     },
     "items": [
       {
         "n": 1,
         "label": "입력 보드(선택형)",
         "desc": "후면 왼쪽 녹색 INPUT 슬롯 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
-        "x1": 275,
-        "x2": 910,
-        "y": 50,
-        "side": "top"
+        "side": "left",
+        "y1": 50,
+        "y2": 223
       },
       {
         "n": 2,
         "label": "출력 보드(선택형)",
-        "desc": "후면 오른쪽 파란색 OUTPUT 슬롯 및 PORT 1–10 묶음 · 보드 종류와 단자 구성은 장착 카드에 따라 달라짐",
-        "x1": 1035,
-        "x2": 1670,
-        "y": 50,
-        "side": "top"
+        "desc": "후면 오른쪽 파란 OUTPUT 카드 영역 3줄 · 장착 카드에 따라 단자 구성 변경",
+        "side": "right",
+        "y1": 50,
+        "y2": 318
+      },
+      {
+        "n": 3,
+        "label": "출력 보드(선택형)",
+        "desc": "후면 왼쪽 아래 파란 OUTPUT 카드 영역 1줄 · 장착 카드에 따라 단자 구성 변경",
+        "side": "left",
+        "y1": 235,
+        "y2": 318
       }
     ]
   },
