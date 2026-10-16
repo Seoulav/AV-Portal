@@ -223,7 +223,21 @@ export function prepareProductDetail(input, { compactFallback = true } = {}) {
   const io = input.io ?? [];
   const absentConnectors = io.filter(isAbsentConnector);
   const presentation = input.presentation ?? {};
+  const technicalDocument = documents.find(item => item.type === 'Technical Document' && item.status !== 'MISSING');
+  const brochure = documents.find(item => item.type === 'Brochure' && item.quickSlot === 'technical' && ['FOUND', 'VERIFIED', 'READY'].includes(item.status));
+  const usesBrochureSlot = !technicalDocument && Boolean(brochure);
+  const quickDocuments = QUICK_DOCUMENTS.map(([label, type, missingTitle]) => {
+    const useBrochure = type === 'Technical Document' && usesBrochureSlot;
+    const resource = useBrochure ? brochure : documents.find(item => item.type === type) ?? null;
+    return {
+      label: useBrochure ? '브로슈어' : label,
+      resource,
+      missingTitle: useBrochure ? '브로슈어 미확인' : missingTitle,
+      available: Boolean(resource && (resource.url || resource.file) && ['FOUND', 'VERIFIED', 'READY'].includes(resource.status))
+    };
+  });
   const coreTypes = new Set(['Official Product Page', ...QUICK_DOCUMENTS.map(([, type]) => type)]);
+  if (usesBrochureSlot) coreTypes.add('Brochure');
   const group = (items, key) => {
     const groups = new Map();
     for (const item of items) {
@@ -252,10 +266,7 @@ export function prepareProductDetail(input, { compactFallback = true } = {}) {
     missingDocuments: input.missingDocuments ?? [],
     presentation,
     officialPage: documents.find(item => item.type === 'Official Product Page' && item.url && item.status !== 'MISSING') ?? null,
-    quickDocuments: QUICK_DOCUMENTS.map(([label, type, missingTitle]) => {
-      const resource = documents.find(item => item.type === type) ?? null;
-      return { label, resource, missingTitle, available: Boolean(resource?.url && ['FOUND', 'VERIFIED', 'READY'].includes(resource.status)) };
-    }),
+    quickDocuments,
     additionalDocuments: documents.filter(item => !coreTypes.has(item.type)),
     specificationGroups,
     keySpecifications: selectKeySpecifications(specificationGroups, 10, compactFallback),

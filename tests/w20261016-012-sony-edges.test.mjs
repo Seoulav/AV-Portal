@@ -1,4 +1,5 @@
 import {beforeW20261016_017Product} from './w20261016-017-history.mjs';
+import {beforeW16015Product} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
@@ -23,9 +24,10 @@ test('cropped edge markers remain visible without y, while invalid explicit y is
 test('all existing public maps keep their validation result, including maps without crop',()=>{
  const results={};
  for(const file of readdirSync(new URL('../beta/site/detail/data/',import.meta.url)).filter(f=>f.endsWith('.json'))){
-  const slug=file.slice(0,-5),p=beforeW20261016_017Product(read(slug),slug);if(!p.portMap)continue;
+  const slug=file.slice(0,-5),p=beforeW16015Product(beforeW20261016_017Product(read(slug),slug),slug);if(!p.portMap)continue;
   // W-008 introduced this new map separately; its dedicated test covers it.
   if(slug==='belkin-connect-air')continue;
+
   // Isolate the validator change from the separately approved Sony coordinate changes.
   if(fixture.products[slug])p.portMap=structuredClone(fixture.products[slug].priorPortMap);
   results[slug]={accepted:!!prepareEnhancements(p).portMap,errors:enhancementErrors(p).filter(e=>e.includes('portMap')),crop:!!p.portMap.crop};

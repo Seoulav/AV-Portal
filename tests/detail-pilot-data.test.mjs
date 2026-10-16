@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -6,6 +7,7 @@ import { beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12002Product } from './w12002-wording-history.mjs';
 import { enhancementErrors, prepareEnhancements } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { beforeCrownW03009 } from './crown-w03009-history.mjs';
+import { beforeW010AquilonProduct } from './w20261016-010-aquilon-history.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const proof = read('Work/기록/W-20261001-001-pilot-evidence.json');
@@ -46,7 +48,7 @@ for (const [slug, baseline] of Object.entries(proof.products)) {
         assert.ok(Number(match[1]) <= evidence.pageCount);
       }
     }
-    const original = beforeCrownW03009(beforeW12002Product(p,slug), slug);
+    const original = beforeCrownW03009(beforeW12002Product(beforeW010AquilonProduct(p, slug),slug), slug);
     optional.forEach(key => delete original[key]);
     for (const change of portProof.quantityChanges.filter(c => c.product === slug)) {
       assert.equal(change.previous, '');
@@ -80,7 +82,7 @@ test('pilot map coordinates remain tied to measured images and evidence; only fo
   assert.deepEqual(portProof.quantityChanges.map(c=>[c.product,c.ioIndex,c.previous,c.next]), [
     ['ulxd4d',0,'','2'], ['ulxd4d',2,'','2'], ['ulxd4d',3,'','2'], ['dci-4-600da',1,'','2']]);
   for (const [slug, proof] of Object.entries(portProof.products)) {
-    const p = beforeW12001Product(beforeW12002Product(read(`beta/site/detail/data/${slug}.json`),slug), slug);
+    const p = beforeW12001Product(beforeW12002Product(beforeW16015Product(read(`beta/site/detail/data/${slug}.json`),slug),slug), slug);
     const image = p.images.find(i=>i.role==='Rear');
     assert.equal(image.file, proof.image.file);
     assert.equal(createHash('sha256').update(readFileSync(new URL('../beta/site/detail/images/'+image.file, import.meta.url))).digest('hex'), proof.image.sha256);

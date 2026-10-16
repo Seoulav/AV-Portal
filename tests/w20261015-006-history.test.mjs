@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW20261015_006Product, beforeW20261015_006Raw } from './w20261015-006-history.mjs';
 import { beforeW20261015_006LabelsProduct, beforeW20261015_006LabelsRaw } from './w20261015-006-labels-history.mjs';
+import { beforeW010AquilonProduct, beforeW010AquilonRaw } from './w20261016-010-aquilon-history.mjs';
 
 const expected = {
   'aquilon-rsalpha': 'a1e3611332bc7b1fd5ae4127a94f5fb9e54b9e21bb5de468fc4c80e955501024',
@@ -23,11 +24,11 @@ const sha = raw => createHash('sha256').update(raw).digest('hex');
 test('eleven Analog Way selective inverses restore exact prior product bytes', () => {
   for (const [slug, priorHash] of Object.entries(expected)) {
     const raw = readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8');
-    assert.equal(sha(beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(raw, slug), slug)), priorHash, slug);
+    assert.equal(sha(beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(beforeW010AquilonRaw(raw, slug), slug), slug)), priorHash, slug);
     const product = JSON.parse(raw);
     product.overview += ' independent later edit';
-    assert.match(beforeW20261015_006Product(beforeW20261015_006LabelsProduct(product, slug), slug).overview, /independent later edit/);
+    assert.match(beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(product, slug), slug), slug).overview, /independent later edit/);
     product.portMap.items[0].x2--;
-    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(product, slug), slug), /approved marker offsets changed|approved Analog Way map changed/);
+    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(product, slug), slug), slug), /approved marker offsets changed|approved Analog Way map changed/);
   }
 });

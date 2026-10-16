@@ -1,3 +1,4 @@
+import {beforeW16015Product,beforeW16015Raw} from './w16015-group1-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -9,7 +10,7 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 
 test('Epson PQ HDMI 2 markers span the same visible connector in the shared rear photograph', () => {
   const slugs = ['eb-pq2213b', 'eb-pq2216b', 'eb-pq2220b'];
-  const rows = slugs.map(read);
+  const rows = slugs.map(slug => beforeW16015Product(read(slug),slug));
   const imageHashes = rows.map(product => sha(readFileSync(new URL(`images/${product.portMap.measuredImage.file}`, root))));
   assert.equal(new Set(imageHashes).size, 1);
   for (const product of rows) {

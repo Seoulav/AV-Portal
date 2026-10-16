@@ -157,6 +157,37 @@ function validComparison(comparison) {
     texts(comparison.columns) && comparison.columns.length > 1 && Array.isArray(comparison.rows) && comparison.rows.length > 0 &&
     comparison.rows.every(row => texts(row) && row.length === comparison.columns.length);
 }
+export function validLayerPlan(plan, product) {
+  if (!record(plan) || !keys(plan, ['type', 'title', 'currentSlug', 'models', 'sourceTypes', 'example', 'background', 'xdmComparison', 'notes', 'evidence']) ||
+      plan.type !== 'aquilon' || !shortText(plan.title) || !identifier(plan.currentSlug)) return false;
+  const model = row => record(row) && keys(row, ['slug', 'model', 'inputs4k', 'outputConnectors4k', 'programOutputs4k', 'screens2x2', 'mixingLayers4kPerScreen', 'splitLayers2kPerScreen', 'mixingLayers4k', 'splitLayers2k', 'vpus']) &&
+    identifier(row.slug) && shortText(row.model) && ['inputs4k', 'outputConnectors4k', 'programOutputs4k', 'screens2x2', 'mixingLayers4kPerScreen', 'splitLayers2kPerScreen', 'mixingLayers4k', 'splitLayers2k', 'vpus'].every(key => Number.isInteger(row[key]) && row[key] > 0) &&
+    row.screens2x2 === row.programOutputs4k / 4 && row.mixingLayers4kPerScreen === 4 && row.splitLayers2kPerScreen === 8 &&
+    row.mixingLayers4k === row.screens2x2 * row.mixingLayers4kPerScreen && row.splitLayers2k === row.screens2x2 * row.splitLayers2kPerScreen && row.vpus === row.screens2x2;
+  const example = plan.example, background = plan.background, comparison = plan.xdmComparison, evidence = plan.evidence;
+  if (!list(plan.models, 7, model, 7) || new Set(plan.models.map(row => row.slug)).size !== 7) return false;
+  const current = plan.models.find(row => row.slug === plan.currentSlug);
+  if (!current || current.model !== product.model) return false;
+  if (!texts(plan.sourceTypes) || plan.sourceTypes.length < 3 || !record(example) ||
+      !keys(example, ['title', 'outputs', 'outputCapacity', 'outputLinks', 'sourceLinksPerVpu', 'layerCapacity', 'layerLinksPerMixer', 'mixingLayersPerScreen', 'splitLayersPerScreen', 'vpusForScreen']) ||
+      !shortText(example.title) || !Number.isInteger(example.outputs) || example.outputs !== 4 || example.outputCapacity !== 2 ||
+      example.outputLinks !== example.outputs * example.outputCapacity || example.outputLinks !== 8 || example.sourceLinksPerVpu !== 8 ||
+      example.layerCapacity !== 2 || example.layerLinksPerMixer !== 2 || example.mixingLayersPerScreen !== 4 ||
+      example.splitLayersPerScreen !== 8 || example.vpusForScreen !== 1) return false;
+  if (!record(background) || !keys(background, ['setsPerScreen', 'noLayerScreenResources']) || background.setsPerScreen !== 8 || background.noLayerScreenResources !== 0) return false;
+  if (!record(comparison) || !keys(comparison, ['xdmWos100']) || !record(comparison.xdmWos100) ||
+      !keys(comparison.xdmWos100, ['outputPorts', 'allPortsSameScreenWithLayers', 'sourceCondition']) ||
+      comparison.xdmWos100.outputPorts !== 4 || comparison.xdmWos100.allPortsSameScreenWithLayers !== true || !shortText(comparison.xdmWos100.sourceCondition)) return false;
+  if (!list(plan.notes, 12, shortText, 4) || !plan.notes.some(note => note.includes('좌우로 밀어')) ||
+      !plan.notes.some(note => note.includes('PiP로 링크가 절약되지 않습니다')) ||
+      !plan.notes.some(note => note.includes('용량 1(HD) PiP') && note.includes('미확인')) ||
+      !plan.notes.some(note => note.includes('8개 이하 출력 링크') && note.includes('미확인')) ||
+      !record(evidence) || !keys(evidence, ['manualPages', 'brochurePage', 'programOutputsManualPage', 'outputConnectorsBrochurePage', 'rs1DatasheetPage', 'rtcomSource']) ||
+      !list(evidence.manualPages, 18, page => Number.isInteger(page) && page > 0, 8) || !evidence.manualPages.includes(68) || !evidence.manualPages.includes(69) ||
+      !evidence.manualPages.includes(79) || !evidence.manualPages.includes(101) || evidence.brochurePage !== 7 ||
+      evidence.programOutputsManualPage !== 71 || evidence.outputConnectorsBrochurePage !== 7 || evidence.rs1DatasheetPage !== 3 || !shortText(evidence.rtcomSource)) return false;
+  return true;
+}
 function validSetting(s) {
   if (!record(s) || !text(s.title)) return false;
   if (s.kind === 'modes') return keys(s, ['kind', 'title', 'items', 'comparison']) && Array.isArray(s.items) && s.items.length > 0 && s.items.every(i => record(i) && keys(i, ['name', 'summary', 'detail']) && text(i.name) && text(i.summary) && (i.detail === undefined || typeof i.detail === 'string')) && (s.comparison === undefined || validComparison(s.comparison));
@@ -173,6 +204,7 @@ function validity(product) {
       product.portMaps.every(map => validMap(map, product)) &&
       JSON.stringify(product.portMap) === JSON.stringify(product.portMaps[0]),
     signalFlow: validFlow(product.signalFlow, product),
+    layerPlan: validLayerPlan(product.layerPlan, product),
     settings: Array.isArray(product.settings) && product.settings.length <= 2 && product.settings.every(validSetting)
   };
 }
@@ -188,6 +220,7 @@ export function prepareEnhancements(product) {
     portMap: valid.portMap ? product.portMap : null,
     portMaps: valid.portMaps ? product.portMaps : [],
     signalFlow: valid.signalFlow ? product.signalFlow : null,
+    layerPlan: valid.layerPlan ? product.layerPlan : null,
     settings: valid.settings ? product.settings : []
   };
 }
