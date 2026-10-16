@@ -190,3 +190,5 @@
 - PR #591 CI38906096427 성공 후 Work 시각 검토. U-BRIDGE 3을 제외한13종 승인. 사용자 승인 배치(W-005~007)의 PC HOST/DEVICE 큰 머리글을 유지하도록 main 원본 복원.
 - 최종 완료 범위 **13종95표식**, 내부 y87→4. H5 13표식 후속 설계 보류, U-BRIDGE 3 11표식 유지. 테스트의 승인좌표 목록·예외·점검표·미리보기에서도 제외.
 - Work 승인 순서: Samsung 호텔 TV → #591 → Epson. 전체검사·CI 초록 확인 뒤 재질문 없이 병합 → Pages → 공개 대표3종(KI PRO GO2/Ultritouch 2 HR/Carbonite Ultra) 760px·390px 좌우 확인 → 보고 → W-018.
+
+- U-BRIDGE 복원 후 main137e010a(#589 Samsung 호텔 TV) 통합. 검색 인덱스 충돌은 재생성으로 해결. 최종 전체 **812건 /811 pass /0 fail /기존skip1**(67.1초), 신규·변경 회귀7건 통과. verify-pages285제품/282상세/515사진/163PDF 및 검색인덱스704524bytes check 통과. 13종95표식, 원본유지2종, 갤러리84PNG 링크 모두 정상. 최종 HEAD CI 확인 뒤 승인된 병합을 실행한다.
