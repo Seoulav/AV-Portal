@@ -35,7 +35,7 @@ function validMap(map, product) {
   return record(map) && keys(map, rtcom
     ? ['image', 'imageFile', 'items', 'measuredImage', 'crop', 'title', 'note', 'basis', 'displayWidth']
     : ['image', 'items', 'measuredImage', 'crop']) &&
-    (rtcom ? ['Main', 'Front', 'Rear', 'Other', 'Perspective', 'Diagram'] : ['Front', 'Rear', 'Diagram']).includes(map.image) &&
+    (rtcom ? ['Main', 'Front', 'Rear', 'Other', 'Perspective', 'Diagram'] : ['Front', 'Rear', 'Diagram', 'Other']).includes(map.image) &&
     (!rtcom || (text(map.imageFile) && typeof map.title !== 'number' &&
       (map.displayWidth === undefined || Number.isFinite(map.displayWidth) && map.displayWidth > 0))) &&
     size && (map.crop === undefined || (record(map.crop) && keys(map.crop, ['top','bottom']) && Number.isFinite(map.crop.top) && Number.isFinite(map.crop.bottom) && map.crop.top >= 0 && map.crop.bottom >= 0 && map.crop.top + map.crop.bottom < size[1] && map.items?.every(i => i.side === 'left' || i.side === 'right'
@@ -252,9 +252,10 @@ function validity(product) {
     lead: typeof product.lead === 'string', subtitle: typeof product.subtitle === 'string',
     keyFacts: Array.isArray(product.keyFacts) && product.keyFacts.length <= 4 && product.keyFacts.every(validFact),
     portMap: validMap(product.portMap, product),
-    portMaps: product.manufacturer === 'RTCOM' && Array.isArray(product.portMaps) &&
+    portMaps: Array.isArray(product.portMaps) &&
       product.portMaps.length > 0 && product.portMaps.length <= 8 &&
       product.portMaps.every(map => validMap(map, product)) &&
+      (product.manufacturer === 'RTCOM' || new Set(product.portMaps.map(map => map.image)).size === product.portMaps.length) &&
       JSON.stringify(product.portMap) === JSON.stringify(product.portMaps[0]),
     signalFlow: validFlow(product.signalFlow, product),
     layerPlan: validLayerPlan(product.layerPlan, product),
