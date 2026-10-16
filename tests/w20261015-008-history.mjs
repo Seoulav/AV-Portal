@@ -1,3 +1,4 @@
+import { beforeW20261016_012Product, beforeW20261016_012Raw } from './w20261016-012-history.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 
@@ -12,6 +13,7 @@ const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('
 // Every other field remains visible to those historical assertions.
 export function beforeW20261015_008Product(product, slug) {
   if (!approved[slug] || product.portMap === undefined) return product;
+  product = beforeW20261016_012Product(product, slug);
   assert.equal(sha(product.portMap), approved[slug], `${slug}: approved Sony map changed`);
   const prior = structuredClone(product);
   delete prior.portMap;
@@ -20,5 +22,6 @@ export function beforeW20261015_008Product(product, slug) {
 
 export function beforeW20261015_008Raw(raw, slug) {
   if (!approved[slug]) return raw;
+  raw = beforeW20261016_012Raw(raw, slug);
   return JSON.stringify(beforeW20261015_008Product(JSON.parse(raw), slug), null, 2) + '\n';
 }
