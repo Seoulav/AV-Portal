@@ -31,10 +31,10 @@
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     },
     {
-      "role": "Diagram",
+      "role": "Other",
       "file": "rally-plus-diagram.webp",
-      "alt": "Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면",
-      "note": "Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열",
+      "alt": "Rally Plus 공식 설치 가이드의 원본 번호·설명선 포함 테이블/디스플레이 허브 도면",
+      "note": "Other · 한국어 설치 가이드 24–25쪽 원본 도면 · 제조사 번호·설명선 포함",
       "provider": "Logitech",
       "model": "Rally Plus",
       "sourceUrl": "https://www.logitech.com/assets/65621/14/rally-system.pdf",
@@ -42,6 +42,20 @@
       "verificationStatus": "VERIFIED",
       "originalSize": "780x1000",
       "resolution": "780x1000",
+      "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
+    },
+    {
+      "role": "Diagram",
+      "file": "rally-plus-port-panels.webp",
+      "alt": "Rally Plus 테이블 허브·디스플레이 허브 단자 그림만 발췌한 번호 지도 바탕",
+      "note": "Diagram · 한국어 설치 가이드 24–25쪽 원본 단자 그림을 자르기·배치만 한 정리본 · 원본 주석 도면은 Other",
+      "provider": "Logitech",
+      "model": "Rally Plus",
+      "sourceUrl": "https://www.logitech.com/assets/65621/14/rally-system.pdf",
+      "officialSource": true,
+      "verificationStatus": "VERIFIED",
+      "originalSize": "780x1000",
+      "resolution": "640x360",
       "publicationStatus": "사용자 게시 승인 · 공식 출처 기록"
     }
   ],
@@ -68,7 +82,7 @@
     },
     {
       "role": "Other",
-      "status": "REVIEW REQUIRED",
+      "status": "VERIFIED",
       "sourceUrl": "https://www.logitech.com/en-us/products/video-conferencing/room-solutions/rally-ultra-hd-conferencecam.html"
     },
     {
@@ -468,110 +482,103 @@
   "portMap": {
     "image": "Diagram",
     "measuredImage": {
-      "file": "rally-plus-diagram.webp",
-      "width": 780,
-      "height": 1000
+      "file": "rally-plus-port-panels.webp",
+      "width": 640,
+      "height": 360
     },
     "items": [
       {
         "n": 1,
         "label": "테이블 허브 전원",
         "desc": "전원 입력 · 한국어 설치 가이드 24쪽",
-        "x1": 71,
-        "x2": 90,
-        "y": 317,
+        "x1": 191,
+        "x2": 210,
         "side": "top"
       },
       {
         "n": 2,
         "label": "Mic Pod",
         "desc": "마이크 팟 연결 · 한국어 설치 가이드 24쪽",
-        "x1": 108,
-        "x2": 129,
-        "y": 342,
+        "x1": 225,
+        "x2": 249,
         "side": "top"
       },
       {
         "n": 3,
         "label": "Display Hub 연결",
         "desc": "테이블 허브와 디스플레이 허브 연결 · 한국어 설치 가이드 24쪽",
-        "x1": 192,
-        "x2": 216,
-        "y": 375,
+        "x1": 302,
+        "x2": 345,
         "side": "top"
       },
       {
         "n": 4,
         "label": "HDMI 입력 1–2",
         "desc": "유선 콘텐츠 HDMI 입력 2개 · 한국어 설치 가이드 24쪽",
-        "x1": 239,
-        "x2": 329,
-        "y": 403,
+        "x1": 356,
+        "x2": 456,
         "side": "top"
       },
       {
         "n": 5,
         "label": "회의실 컴퓨터 USB",
         "desc": "테이블 허브 컴퓨터 연결 · 한국어 설치 가이드 24쪽",
-        "x1": 350,
-        "x2": 377,
-        "y": 425,
+        "x1": 466,
+        "x2": 501,
         "side": "top"
       },
       {
         "n": 6,
         "label": "스피커 1–2",
         "desc": "스피커 2대 연결 · 한국어 설치 가이드 25쪽",
-        "x1": 130,
-        "x2": 213,
-        "y": 761,
+        "x1": 190,
+        "x2": 274,
         "side": "bottom"
       },
       {
         "n": 7,
         "label": "디스플레이 허브 전원",
         "desc": "전원 입력 · 한국어 설치 가이드 25쪽",
-        "x1": 219,
-        "x2": 242,
-        "y": 798,
+        "x1": 280,
+        "x2": 309,
         "side": "bottom"
       },
       {
         "n": 8,
         "label": "Table Hub 연결",
         "desc": "디스플레이 허브와 테이블 허브 연결 · 한국어 설치 가이드 25쪽",
-        "x1": 265,
-        "x2": 289,
-        "y": 815,
+        "x1": 317,
+        "x2": 356,
         "side": "bottom"
       },
       {
         "n": 9,
         "label": "HDMI 출력 1–2",
         "desc": "디스플레이 HDMI 출력 2개 · 한국어 설치 가이드 25쪽",
-        "x1": 313,
-        "x2": 392,
-        "y": 848,
+        "x1": 368,
+        "x2": 462,
         "side": "bottom"
       },
       {
         "n": 10,
         "label": "회의실 컴퓨터 USB",
         "desc": "디스플레이 허브 컴퓨터 연결 · 한국어 설치 가이드 25쪽",
-        "x1": 416,
-        "x2": 442,
-        "y": 881,
+        "x1": 472,
+        "x2": 508,
         "side": "bottom"
       },
       {
         "n": 11,
         "label": "Rally 카메라",
         "desc": "카메라 연결 · 한국어 설치 가이드 25쪽",
-        "x1": 467,
-        "x2": 487,
-        "y": 897,
+        "x1": 516,
+        "x2": 547,
         "side": "bottom"
       }
-    ]
+    ],
+    "crop": {
+      "top": 110,
+      "bottom": 80
+    }
   }
 }

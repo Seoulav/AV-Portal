@@ -1,3 +1,4 @@
+import {beforeW16015RallyProduct} from './w16015-rally-history.mjs';
 // W-015 group6b: compare this historical task with the approved later layout rewound.
 import {readBeforeGroup6bFileSync as readFileSync} from './group6b-w16015-history.mjs';
 import {beforeW20261016_017Product} from './w20261016-017-history.mjs';
@@ -28,7 +29,7 @@ test('cropped edge markers remain visible without y, while invalid explicit y is
 test('all existing public maps keep their validation result, including maps without crop',()=>{
  const results={};
  for(const file of readdirSync(new URL('../beta/site/detail/data/',import.meta.url)).filter(f=>f.endsWith('.json'))){
-  const slug=file.slice(0,-5),p=beforeW16015Product(beforeW20261016_017Product(beforeW20261016_015B4Product(beforeW16015Group5Product(read(slug),slug),slug,{allowHistorical:true}),slug),slug);if(!p.portMap)continue;
+  const slug=file.slice(0,-5),p=beforeW16015Product(beforeW20261016_017Product(beforeW20261016_015B4Product(beforeW16015Group5Product(beforeW16015RallyProduct(read(slug),slug),slug),slug,{allowHistorical:true}),slug),slug);if(!p.portMap)continue;
   // W-008 introduced this new map separately; its dedicated test covers it.
   if(slug==='belkin-connect-air')continue;
 

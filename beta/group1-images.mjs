@@ -311,7 +311,8 @@ export const group1Images = {
   ],
   'rally-plus': [
     image('Main', 'logitech-rally-plus-main.webp', 'Logitech Rally Plus 전체 구성(카메라·스피커 2·마이크 팟 2) 이미지', 'Logitech', 'Rally Plus', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally/buy/2026/gallery/rally-plus-front-angle-gallery-1.png', '3856×2160', '1400×331', 'FOUND'),
-      image('Diagram', 'rally-plus-diagram.webp', 'Rally Plus 테이블 허브와 디스플레이 허브 공식 설치 가이드 단자 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Diagram · Rally Plus 한국어 설치 가이드 24–25쪽 · 두 허브를 한 그림에 배열')
+    image('Other', 'rally-plus-diagram.webp', 'Rally Plus 공식 설치 가이드의 원본 번호·설명선 포함 테이블/디스플레이 허브 도면', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '780x1000', 'VERIFIED', 'Other · 한국어 설치 가이드 24–25쪽 원본 도면 · 제조사 번호·설명선 포함'),
+    image('Diagram', 'rally-plus-port-panels.webp', 'Rally Plus 테이블 허브·디스플레이 허브 단자 그림만 발췌한 번호 지도 바탕', 'Logitech', 'Rally Plus', 'https://www.logitech.com/assets/65621/14/rally-system.pdf', '780x1000', '640x360', 'VERIFIED', 'Diagram · 한국어 설치 가이드 24–25쪽 원본 단자 그림을 자르기·배치만 한 정리본 · 원본 주석 도면은 Other')
   ],
   'rally-mic-pod': [
     image('Perspective', 'logitech-rally-mic-pod-perspective.webp', 'Logitech Rally Mic Pod 원근 이미지', 'Logitech', 'Rally Mic Pod', 'https://resource.logitech.com/content/dam/logitech/en/products/video-conferencing/rally-mic-pod/gallery/mic-pod-gallery-graphite-1.png', '1600×1200', '1400×822', 'FOUND'),
