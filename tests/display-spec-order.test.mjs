@@ -1,3 +1,4 @@
+import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
 import { isW20261014_005DetailFile } from './w20261014-005-history.mjs';
@@ -16,8 +17,10 @@ import {beforeW12002Product} from './w12002-wording-history.mjs';
 import {beforeLogitechW14001Product} from './logitech-w14001-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026RawWithoutGroup5 = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => beforeW026RawWithoutGroup5(beforeW16015Group5Raw(value, slug), slug);
+const beforeW026ProductWithoutGroup5 = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => beforeW026ProductWithoutGroup5(beforeW16015Group5Product(value, slug), slug);
 
 import { beforeW032Raw } from './w032-history.mjs';
 import { isW029Name } from './w029-history.mjs';
@@ -35,7 +38,7 @@ import {beforeBssAlignmentRaw} from './bss-alignment-history.mjs';
 const root=new URL('../',import.meta.url);
 const folder=new URL('beta/site/detail/data/',root);
 const evidence=JSON.parse(readFileSync(new URL('Work/기록/W-20261004-013-evidence.json',root),'utf8'));
-const read=slug=>beforeSamsungW04011(beforeW12002Product(beforeW12005Product(beforeLogitechW14001Product(JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug),slug),slug);
+const read=slug=>beforeSamsungW04011(beforeW12002Product(beforeW12005Product(beforeLogitechW14001Product(beforeW16015Group5Product(JSON.parse(readFileSync(new URL(`${slug}.json`,folder),'utf8')),slug),slug),slug),slug),slug);
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const normalized=text=>text.replace(/\r\n/g,'\n');
 const physicalSize=name=>/^크기\([^)]*가로x높이x깊이\)$/.test(name);

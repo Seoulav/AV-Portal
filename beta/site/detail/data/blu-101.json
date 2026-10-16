@@ -442,7 +442,6 @@
         "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
         "x1": 3638,
         "x2": 4050,
-        "y": 295,
         "side": "bottom"
       },
       {
@@ -451,8 +450,7 @@
         "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
         "x1": 3207,
         "x2": 3618,
-        "y": 295,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 3,
@@ -460,7 +458,6 @@
         "desc": "Phoenix/Combicon · Mic/Line 입력 4채널",
         "x1": 2778,
         "x2": 3187,
-        "y": 295,
         "side": "bottom"
       },
       {
@@ -469,8 +466,7 @@
         "desc": "Phoenix/Combicon · 라인 출력 4채널",
         "x1": 2327,
         "x2": 2737,
-        "y": 295,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 5,
@@ -478,7 +474,6 @@
         "desc": "Phoenix/Combicon · 라인 출력 4채널",
         "x1": 1897,
         "x2": 2306,
-        "y": 295,
         "side": "bottom"
       },
       {
@@ -487,7 +482,6 @@
         "desc": "RJ-45 · BLU link 오디오 버스 입력",
         "x1": 1190,
         "x2": 1360,
-        "y": 176,
         "side": "top"
       },
       {
@@ -496,7 +490,6 @@
         "desc": "RJ-45 · BLU link 오디오 버스 출력",
         "x1": 1190,
         "x2": 1360,
-        "y": 295,
         "side": "bottom"
       },
       {
@@ -505,7 +498,6 @@
         "desc": "RJ-45 · HiQnet 제어 네트워크",
         "x1": 940,
         "x2": 1110,
-        "y": 295,
         "side": "bottom"
       },
       {
@@ -514,8 +506,7 @@
         "desc": "직렬 제어 단자 · 커넥터 형상은 후면 사진 기준",
         "x1": 690,
         "x2": 900,
-        "y": 295,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 10,
@@ -523,7 +514,6 @@
         "desc": "Phoenix/Combicon · 제어 입력 12개",
         "x1": 1420,
         "x2": 1810,
-        "y": 176,
         "side": "top"
       },
       {
@@ -532,10 +522,13 @@
         "desc": "Phoenix/Combicon · 로직 출력 6개",
         "x1": 1420,
         "x2": 1810,
-        "y": 295,
         "side": "bottom"
       }
-    ]
+    ],
+    "crop": {
+      "top": 135,
+      "bottom": 70
+    }
   },
   "signalFlow": {
     "type": "audio-dsp",

@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { prepareEnhancements } from '../beta/site/detail/detail-enhancements.mjs';
 import { beforeAverW12009Product } from './aver-w12009-history.mjs';
+import {beforeW16015Group5Product} from './w16015-group5-history.mjs';
 
 const detail = slug => JSON.parse(readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8'));
 const cameraPorts = ['LAN/PoE+', 'RS-232', 'RS-422', 'USB 3.0 출력', '오디오 입력', 'HDMI 출력', '3G-SDI 출력', 'DC 12V 입력'];
@@ -35,7 +36,7 @@ test('replacement pixels are exact and each model has its own same-content files
 });
 
 test('historical inverse keeps all unrelated current fields visible', () => {
-  const product = detail('tr335');
+  const product = beforeW16015Group5Product(detail('tr335'), 'tr335');
   const changedModel = structuredClone(product);
   changedModel.model = 'INVALID';
   assert.equal(beforeAverW12009Product(changedModel, 'tr335').model, 'INVALID');

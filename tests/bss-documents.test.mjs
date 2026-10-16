@@ -1,3 +1,4 @@
+import {beforeW16015Group5Raw, beforeW16015Group5Product} from './w16015-group5-history.mjs';
 import { beforeW008Catalog, beforeW008Manifest, isW008DetailFile } from './w20261016-008-history.mjs';
 import { beforeW16004Uploads } from './w16004-history.mjs';
 import {beforeJblW15010Raw,beforeJblW15010Product} from './jbl-w15010-history.mjs';
@@ -16,8 +17,10 @@ import {beforeW026Raw as priorbeforeW026Raw, beforeW026Product as priorbeforeW02
 import {beforeW12002Product,beforeW12002Raw} from './w12002-wording-history.mjs';
 import { beforeW12001Raw, beforeW12001Product } from './w12001-history.mjs';
 import { beforeW12001IdentityRaw, beforeW12001IdentityProduct } from './w12001-identity-history.mjs';
-const beforeW026Raw = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
-const beforeW026Product = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026RawWithoutGroup5 = (value, slug) => priorbeforeW026Raw(beforeW12001Raw(beforeW12001IdentityRaw(beforeW12005Raw(beforeW013Raw(beforeJblW15010Raw(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Raw = (value, slug) => beforeW026RawWithoutGroup5(beforeW16015Group5Raw(value, slug), slug);
+const beforeW026ProductWithoutGroup5 = (value, slug) => priorbeforeW026Product(beforeW12001Product(beforeW12001IdentityProduct(beforeW12005Product(beforeW013Product(beforeJblW15010Product(value, slug), slug), slug), slug), slug), slug);
+const beforeW026Product = (value, slug) => beforeW026ProductWithoutGroup5(beforeW16015Group5Product(value, slug), slug);
 
 import { beforeW032Mirrors, beforeW032Raw } from './w032-history.mjs';
 import { isW029Name, withoutW029Uploads } from './w029-history.mjs';
@@ -143,7 +146,7 @@ test('only documented BSS condition moves and BLU-160 weight normalization chang
 
 test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain unchanged',()=>{
   for(const slug of slugs){
-    const current=beforeW013Product(beforeHarmanW03014(beforeBssW04004(beforeBssAlignment(beforeW12002Product(product(slug),slug),slug),slug),slug),slug),before=evidence.products[slug];
+    const current=beforeW013Product(beforeHarmanW03014(beforeBssW04004(beforeBssAlignment(beforeW12002Product(beforeW16015Group5Product(product(slug),slug),slug),slug),slug),slug),slug),before=evidence.products[slug];
     const {specifications,sources,...core}=current;
     assert.equal(sha(JSON.stringify(core)),before.coreSha256,`${slug}: protected fields`);
     assert.equal(sha(JSON.stringify(current.io)),before.ioSha256,`${slug}: I/O`);
@@ -152,7 +155,7 @@ test('BSS I/O, BLU-50v2 map, key facts, mirrors, and every non-BSS JSON remain u
     if(!changed.includes(slug)){
       assert.equal(sha(JSON.stringify(specifications)),before.specificationsSha256,`${slug}: specs unchanged`);
       assert.equal(sha(JSON.stringify(sources)),before.sourcesSha256,`${slug}: sources unchanged`);
-      assert.equal(sha(beforeHarmanW03014Raw(beforeBssW04004Raw(beforeBssAlignmentRaw(beforeW12002Raw(beforeW013Raw(bytes(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug),slug)),before.fileSha256,`${slug}: full JSON bytes`);
+      assert.equal(sha(beforeHarmanW03014Raw(beforeBssW04004Raw(beforeBssAlignmentRaw(beforeW12002Raw(beforeW013Raw(beforeW16015Group5Raw(bytes(`beta/site/detail/data/${slug}.json`).toString('utf8').replace(/\r\n/g,'\n'),slug),slug),slug),slug),slug),slug)),before.fileSha256,`${slug}: full JSON bytes`);
     }else{
       assert.equal(specifications.length,before.beforeSpecifications.length,`${slug}: spec row count`);
       assert.equal(sources.length,before.beforeSources.length+evidence.inventory.documents.filter(doc=>doc.slug===slug).length,`${slug}: sources`);

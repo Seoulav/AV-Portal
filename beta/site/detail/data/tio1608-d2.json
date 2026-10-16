@@ -329,8 +329,7 @@
         "desc": "etherCON/RJ-45 · Dante 네트워크의 주 연결",
         "x1": 744,
         "x2": 793,
-        "y": 147,
-        "side": "top"
+        "side": "bottom"
       },
       {
         "n": 2,
@@ -338,7 +337,6 @@
         "desc": "etherCON/RJ-45 · Dante 네트워크의 보조 연결",
         "x1": 811,
         "x2": 860,
-        "y": 147,
         "side": "bottom"
       },
       {
@@ -347,9 +345,12 @@
         "desc": "IEC · 전원 코드 연결",
         "x1": 56,
         "x2": 111,
-        "y": 110,
-        "side": "bottom"
+        "side": "top"
       }
-    ]
+    ],
+    "crop": {
+      "top": 75,
+      "bottom": 30
+    }
   }
 }
