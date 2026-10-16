@@ -567,3 +567,22 @@
 - `node beta/build-search-index.mjs --check` 통과(704524 bytes); `node beta/verify-pages.mjs` 통과(285 제품, 282 상세, 515 검토 이미지, 163 업로드 PDF); 전체 테스트에서 잠긴 PDF 12건 유지; `git diff --check HEAD` 통과.
 - 이력 회귀 조정: B4 대상의 과거 `portMap`을 최신 Sony 검증 집계 전에 복원. W-001 이력 대상이 아닌 제품은 Raw/객체 identity 그대로 통과. UA864A 과거 검사는 W-017 가장자리 배치 규칙에 맞춰 정리.
 - 기준 main 통합 후 재검증까지 완료. 다음: 의도한 파일만 커밋·PR, CI 초록 확인, Work에 비교 갤러리 경로와 함께 병합 순서 요청. Work 승인 전 병합 금지.
+
+## W-20261016-015 묶음 4 완료 보고 (2026-10-16)
+
+- PR [#584](https://github.com/Seoulav/AV-Portal/pull/584) 병합 완료, merge SHA `2f5c455b14c36d897713ba8f61253f21e2f042bf`.
+- Builder CI run `38896972094` 성공. 최신 main `0d7bd46a` 재확인 후 snapshot·search-index·readable catalog를 재생성했고 산출물 diff 없음. `search-index --check`, `verify-pages` (285 제품·282 상세·515 검토 이미지·163 업로드 PDF), diff check 통과.
+- Pages 배포 성공: run `38897841229`.
+- 공개 비시각 확인: ULXD1·ULXD4Q·Duecanali 1604 DSP·Mezzo 604 A 상세 및 JSON HTTP 200, Port Map 항목 수 각각 2·13·7·7. CUA에 브라우저 표면이 없어 배포 화면의 760px·390px 캡처는 생성하지 못함. Work가 PR 미리보기 묶음을 직접 검토·승인한 기록은 PR 전 캡처다.
+
+## W-20261016-015 묶음 6 — Samsung 29종 검토 (2026-10-16)
+
+- 명세: `Work/작업/W-20261016-015.md` (blob SHA `21b225881d17dd095f53299dfd5593983ca3ef37`); 보완 기준: `Work/작업/W-20261016-016.md` (blob SHA `18c067fe507d4776a7cb942b9c3eba96d81a0d4a`). 브랜치 `codex/W-20261016-015-group6`, 전용 worktree `codex-b-group6`.
+- 범위는 Samsung 29종만. JBL·Ross Video·NovaStar·INOGENI·Lumantek·VS ENT·AJA·SurgeX JSON은 이 브랜치에서 수정하지 않음. Samsung JSON 29개도 이번 시각 검토로 변경하지 않음. 번호·이름·설명·I/O·사진 및 정면 환산 지도(front points) 전부 보존.
+- Samsung 29종 검토 화면 87장 생성(760px 전체 29, 390px 좌우 각 29). 미리보기 갤러리: `Work/기록/W-20261016-015-group6-preview/index.html`. 시각 검토에서 단자 몸체나 인쇄 라벨을 가리는 번호·괄호·지시선 없음.
+- 내부 y는 6개 호텔 TV 모델의 5개씩(총 30개). 두 패널 도면에서 상단 3개/하단 2개 단자를 각 행 높이에 정렬하며, 지시선은 빈 도면 여백으로만 통과. 좌우 경로는 다른 단자를 가로지르므로 현재 배치 유지 사유를 `Work/기록/W-20261016-015-예외.md`에 모델별 기록.
+- `py -3 scripts/portmap-audit.py --manufacturer Samsung --lint-only`: 29개 지도, 25 신호. 상세 lint에서 모두 동일 도면 형제 모델 간 `SHARED_WITH`; 좌표 오류·겹침 코드는 없음.
+- 최신 `origin/main` `8ca862e3fa0b5ffa45a810652ab9e0a3624ff2d5` 통합 완료(merge `fd4ce0f4`). 충돌한 예외 문서는 main 묶음 5 기록과 Samsung 묶음 6 기록을 모두 보존. `build-search-index`, `build-readable-catalog`, `update-snapshot` 재생성 후 파생 diff 없음.
+- 통합 후 검증: `node beta/build-search-index.mjs --check` 통과(704524 bytes), `node beta/verify-pages.mjs` 통과(285 제품·282 상세·515 이미지·163 업로드 PDF, 잠금 PDF 12건 유지), 직렬 전체 테스트 795건 중 794 통과·실패 0·기존 skip 1, `git diff --check origin/main...HEAD` 통과. 병렬 npm test에서 RTCOM 임시 rename EPERM 2건이 발생했으나 직렬 재실행은 통과.
+- PR 변경 범위는 Samsung 검토기록·예외기록·Samsung 전용 87장 화면 자료이며, 제품 JSON·사진·정면 환산 지도 및 다른 15종 제품 JSON diff 없음. 미리보기에는 데이터 수정이 없어 before 캡처만 수록.
+- 다음: 문서·기록·캡처 전용 PR을 열어 Work가 갤러리 `Work/기록/W-20261016-015-group6-preview/index.html`를 검토하도록 요청. 병합은 Work에게 순서를 확인받은 뒤 진행.
