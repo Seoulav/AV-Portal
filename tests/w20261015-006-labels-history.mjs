@@ -13,8 +13,8 @@ const approved = {
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 // Undo only this follow-up's six label offsets before the W-006 map hash gate.
-export function beforeW20261015_006LabelsProduct(product, slug) {
-  product = beforeW014AnalogWayProduct(product, slug);
+export function beforeW20261015_006LabelsProduct(product, slug, { w002Undone = false } = {}) {
+  product = beforeW014AnalogWayProduct(product, slug, { w002Undone });
   if (!approved[slug] || product.portMap === undefined) return product;
   assert.equal(sha(product.portMap), approved[slug], `${slug}: approved marker offsets changed`);
   const prior = structuredClone(product);
@@ -25,7 +25,7 @@ export function beforeW20261015_006LabelsProduct(product, slug) {
   return prior;
 }
 
-export function beforeW20261015_006LabelsRaw(raw, slug) {
+export function beforeW20261015_006LabelsRaw(raw, slug, options = {}) {
   if (!approved[slug]) return raw;
-  return JSON.stringify(beforeW20261015_006LabelsProduct(JSON.parse(raw), slug), null, 2) + '\n';
+  return JSON.stringify(beforeW20261015_006LabelsProduct(JSON.parse(raw), slug, options), null, 2) + '\n';
 }

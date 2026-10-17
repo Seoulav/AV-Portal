@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { enhancementErrors } from '../prototype/brc-am7/detail-enhancements.mjs';
 import { portMapGeometry } from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import { portMapSegments } from './portmap-segment-audit.mjs';
+import { beforeW20261017_002Product, w20261017_002Fixture } from './w20261017-002-history.mjs';
 
 const slugs=['pulse-4k','eikos-4k','zenith-100','zenith-200'];
 const prior=JSON.parse(fs.readFileSync(new URL('./fixtures/w015-midra-zenith-prior.json',import.meta.url),'utf8'));
@@ -53,7 +54,9 @@ test('only the four assigned products change their Port Map image/layout fields'
   const current=read(slug),base=prior[slug];
   assert.deepEqual(current.io,base.io,slug);
   assert.deepEqual(current.specs,base.specs,slug);
-  assert.deepEqual(current.features,base.features,slug);
+  const beforeStage2=beforeW20261017_002Product(current,slug);
+  assert.deepEqual(beforeStage2.features,base.features,slug);
+  assert.deepEqual(beforeStage2.documents,w20261017_002Fixture[slug]?.documents.prior ?? beforeStage2.documents,slug);
   assert.deepEqual(current.videoLayerPlan,base.videoLayerPlan,slug);
   const panel=current.images.find(image=>image.role==='Other');
   const rear=current.images.find(image=>image.role==='Rear');
@@ -82,7 +85,8 @@ test('Midra/Zenith historical inverse rolls back only the approved maps and Othe
   assert.equal(restored.portMaps,undefined,slug);
   assert.deepEqual(restored.images,base.images,slug);
   assert.deepEqual(restored.imageStatuses,base.imageStatuses,slug);
-  assert.equal(beforeW20261016_015MidraRaw(JSON.stringify(current),slug),JSON.stringify(baseProduct(current,base),null,2)+'\n',slug);
+  const beforeStage2=beforeW20261017_002Product(current,slug);
+  assert.equal(beforeW20261016_015MidraRaw(JSON.stringify(current),slug),JSON.stringify(baseProduct(beforeStage2,base),null,2)+'\n',slug);
  }
  const notTarget={};assert.equal(beforeW20261016_015MidraProduct(notTarget,'other'),notTarget);
  const changed=read('zenith-100');changed.portMaps[1].items[0].x1++;
