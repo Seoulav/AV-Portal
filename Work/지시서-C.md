@@ -391,4 +391,5 @@
 - [x] 기준 문서와 공용 카드의 Aquilon 근거·미확인 문구를 실측 4건으로 갱신했다. Alta·Midra, 제품 JSON과 렌더 기능·스타일은 수정하지 않았다. 상세 JS import와 HTML script의 캐시 버전만 갱신했다.
 - [x] 15종 노출 회귀 시험 및 RS2·C+·Zenith 200 카드의 760px·390px 펼침 화면을 확인했다. 여섯 화면의 `scrollWidth`는 각 760·390이며 `outputs/w005-preview/`에 PNG와 측정값을 저장했다.
 - [x] 전체 직렬 시험 890건(889 통과·0 실패·기존 건너뜀 1), `verify-pages`(289·286·529·167), 검색 인덱스 `--check`(712867 bytes), 파생 산출물 재생성, `git diff --check` 완료.
-- [ ] Draft PR·CI 결과를 Work에 제출하고 독립 검증을 기다린다. 검토 전 병합하지 않는다.
+- [x] Draft PR [#614](https://github.com/Seoulav/AV-Portal/pull/614)를 열고 실측 근거·검사·로컬 미리보기 경로를 본문에 적었다.
+- [ ] PR #614 필수 CI 결과와 Work 독립 검증을 기다린다. 검토 전 병합하지 않는다.
