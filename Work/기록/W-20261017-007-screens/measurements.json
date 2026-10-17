@@ -1,0 +1,244 @@
+[
+  {
+    "width": 1280,
+    "fourByTwo": {
+      "cards": [
+        {
+          "name": "Aquilon RS2",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS3",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS4",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS5",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS6",
+          "limit": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon C",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon C+",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmax",
+          "limit": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        }
+      ],
+      "evidence": [
+        "겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.",
+        "카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측).",
+        "제조사 구성 예: Aquilon RS2 데이터시트 8쪽 · 8K 월 2개, 4K60 PIP 믹싱 8개, AUX 4개. RS2 공개 데이터시트 보기"
+      ],
+      "overflow": 0
+    },
+    "twoByTwo": {
+      "cards": [
+        {
+          "name": "Zenith 200",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS alpha",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS1",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS2",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS3",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS4",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS5",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS6",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmini",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon C",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon C+",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmax",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        }
+      ],
+      "evidence": [
+        "겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.",
+        "카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측)."
+      ],
+      "overflow": 0
+    }
+  },
+  {
+    "width": 390,
+    "fourByTwo": {
+      "cards": [
+        {
+          "name": "Aquilon RS2",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS3",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS4",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS5",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS6",
+          "limit": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon C",
+          "limit": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon C+",
+          "limit": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmax",
+          "limit": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        }
+      ],
+      "evidence": [
+        "겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.",
+        "카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측).",
+        "제조사 구성 예: Aquilon RS2 데이터시트 8쪽 · 8K 월 2개, 4K60 PIP 믹싱 8개, AUX 4개. RS2 공개 데이터시트 보기"
+      ],
+      "overflow": 0
+    },
+    "twoByTwo": {
+      "cards": [
+        {
+          "name": "Zenith 200",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS alpha",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS1",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon RS2",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS3",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS4",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS5",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon RS6",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmini",
+          "limit": "4K60 믹싱 최대 4개 · 분할 최대 8개",
+          "converted": false
+        },
+        {
+          "name": "Aquilon C",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon C+",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        },
+        {
+          "name": "Aquilon Cmax",
+          "limit": "4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+          "converted": true
+        }
+      ],
+      "evidence": [
+        "겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.",
+        "카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측)."
+      ],
+      "overflow": 0
+    }
+  }
+]
