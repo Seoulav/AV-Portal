@@ -96,6 +96,43 @@ function syntheticLaborMappings(): unknown {
   };
 }
 
+/** 회의실 타입 템플릿 fixture (B-20261016-07 2단계) — 전부 합성 값이다. */
+function syntheticRoomTemplates(): unknown {
+  return {
+    version: 1,
+    source: '합성 fixture',
+    templates: [
+      {
+        id: '1-1',
+        typeName: '합성 대회의실',
+        sheetTitle: '합성 대회의실',
+        sourceSheet: '1-1',
+        systems: [
+          {
+            name: '영상 시스템',
+            items: [
+              { sku: SKU, name: '합성 테스트 품목', specification: 'FIX-SPEC', unit: 'EA', quantity: '2' },
+              { name: '합성 제작 브라켓', specification: '제작사양', unit: 'EA', quantity: '1', remark: '현장 제작' },
+            ],
+          },
+        ],
+      },
+      {
+        id: '1-2',
+        typeName: '합성 대회의실',
+        sheetTitle: '합성 대회의실',
+        sourceSheet: '1-2',
+        systems: [
+          {
+            name: '영상 시스템',
+            items: [{ sku: SKU, name: '합성 테스트 품목', specification: 'FIX-SPEC', unit: 'EA', quantity: '1' }],
+          },
+        ],
+      },
+    ],
+  };
+}
+
 const GUIDE_FILES = ['guide-won.xlsx', 'guide-pumsem.xlsx', 'guide-ds.xlsx', 'guide-ds-won.xlsx'] as const;
 
 /** `missing` = 404. `Buffer`/객체가 아니면 기본 fixture를 쓴다. */
@@ -118,6 +155,8 @@ export async function mockResources(
     '/data/approved/labor-items.json': syntheticLaborItems(),
     '/data/approved/wage-table.json': syntheticWageTable(),
     '/data/approved/labor-mappings.json': syntheticLaborMappings(),
+    // 저장소의 실제 템플릿이 dev 서버에서 그대로 내려오지 않게 기본도 합성으로 가로챈다.
+    '/data/approved/room-templates.json': syntheticRoomTemplates(),
     '/templates/sanitized/guide-manifest.json': JSON.parse(guideManifestRaw),
   };
   for (const name of GUIDE_FILES) {
