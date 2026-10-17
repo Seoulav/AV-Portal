@@ -12,6 +12,7 @@ import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
 import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
 import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261017-005';
 import { buildAnalogWayLayerStandards, renderAnalogWayLayerStandards } from './analogway-layer-standards.mjs?v=w20261017-005';
+import { relationshipLabel, resolveRelatedProductName } from './related-products.mjs?v=w20261017-012';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -244,10 +245,16 @@ if (!productKey && !allowContentFallback) {
   setMobileSearch();
 
   let catalog = [];
+  let rtcomIndex = null;
+  const relatedItems = data.relatedProducts ?? data.related ?? [];
   try {
-    const catalogResponse = await fetch('../../beta/site/catalog.json');
+    const [catalogResponse, rtcomIndexResponse] = await Promise.all([
+      fetch('../../beta/site/catalog.json'),
+      relatedItems.length ? fetch('../../beta/site/rtcom/raw/index.json') : Promise.resolve(null)
+    ]);
     if (catalogResponse.ok) catalog = await catalogResponse.json();
-  } catch { /* Keep the detail page usable when the catalog is unavailable. */ }
+    if (rtcomIndexResponse?.ok) rtcomIndex = await rtcomIndexResponse.json();
+  } catch { /* Keep the detail page usable when public lookup files are unavailable. */ }
   const brand = brandForProduct(catalog, productKey, data.manufacturer);
   const brandHref = brandListingHref(brand, '../../beta/site/');
   $('#breadcrumb-brand').textContent = data.manufacturer;
@@ -779,9 +786,9 @@ if (!productKey && !allowContentFallback) {
   }
   renderFeatures();
   $('#feature-toggle').addEventListener('click', () => renderFeatures($('#feature-toggle').getAttribute('aria-expanded') !== 'true'));
-  for (const related of data.relatedProducts ?? data.related ?? []) {
+  for (const related of relatedItems) {
     const card = element('div', 'related-card');
-    card.append(element('strong', '', related.productName ?? related.name ?? related.model ?? '관련 제품'), element('small', '', related.relationship ?? related.relation ?? ''));
+    card.append(element('strong', '', resolveRelatedProductName(related, catalog, rtcomIndex)), element('small', '', relationshipLabel(related.relationship ?? related.relation)));
     if (related.url) card.append(safeLink(related.url, '제품 보기 ↗'));
     $('#related-list').append(card);
   }
