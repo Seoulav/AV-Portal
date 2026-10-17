@@ -2,7 +2,7 @@
 
 ## W-20261017-003 1부 — Analog Way 레이어 연출 기준 정리
 
-- 상태: REVIEW (Work 독립 검증 통과; 지적 수정 완료, 수정본 캡처·CI 대기)
+- 상태: MERGED (PR #609, SHA `625f3f7fa1eea84568227d2fccd67569addfa34a`); Pages 배포 재시도 중
 - 명세: `Work/작업/W-20261017-003.md` · 명세 확인 main `598757af700c961a4caf0888a5f5ce3dcde79c08`
 - 브랜치: `codex/W-20261017-003-aw-layer-rules` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
 - 시작 main `598757af700c961a4caf0888a5f5ce3dcde79c08`; 최신 `origin/main` `08d255b7c42faf2f10ba74b2b37a38b453ea09ad` 통합 완료(merge `c38c160f50c955ea4fb41771dae3101f831020b5`).
@@ -20,6 +20,8 @@
 - [x] 수정 후 전체 876건을 순차 실행: 875 pass, 1 skip, 0 fail. 일반 병렬 실행의 `rtcom-sync.test.mjs` 임시 디렉터리 rename `EPERM`은 Windows 간헐 오류이며, 같은 시험 단독 및 전체 순차 실행은 통과. `verify-pages`, 검색 인덱스 `--check`, 공개 상세 자산 재생성 통과.
 - [x] Draft PR #609 생성: https://github.com/Seoulav/AV-Portal/pull/609. 본문에 원문 인용·쪽·검증 결과·시각 검토 차단 사유를 기록했다.
 - [ ] 수정 커밋의 Builder CI 초록, 새 카드 1280px(접기 절 펼침)·390px 캡처 후 Draft 해제·병합한다. 이 세션 브라우저는 `screenshot_no_frame`이므로 세션 D 캡처를 Work에 요청했다.
+- [x] 세션 D의 수정본 캡처 `../codex-d/outputs/w003-preview2/`를 Work가 확인했고, 390px `scrollWidth` 390과 새 열·접기 절을 승인했다. Builder CI 초록 뒤 PR #609를 병합했다.
+- [ ] Pages run `38984725694`는 새 시험이 과거 커밋 파일을 `git show`로 읽는 과정에서 실패했다. 배포 환경의 이력에 의존하지 않도록 승인 기준 코드 블록 SHA-256을 시험에 고정하는 후속 hotfix를 진행한다. 공개 확인은 배포 성공 뒤 수행한다.
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
