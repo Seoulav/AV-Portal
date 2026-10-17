@@ -553,6 +553,8 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-screen-row label, .aw-guide-global-inputs label { display: grid; gap: 5px; min-width: 0; color: var(--pg-ink-2); font-size: 12px; font-weight: 650; }
 .aw-guide-screen-row [hidden] { display: none; }
 .aw-guide-resolution-fields { grid-column: span 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; min-width: 0; }
+.aw-guide-resolution-fields.is-led-pixels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.aw-led-pixel-assumption { grid-column: 1 / -1; }
 .aw-guide-tile-fields { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; min-width: 0; }
 .aw-tile-presets { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
 .aw-wall-visual { grid-column: 1 / -1; min-width: 0; }

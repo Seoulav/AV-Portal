@@ -7,12 +7,7 @@ export const TILE_REFERENCE = Object.freeze([
 export const TILE_LAYER_INPUT_MAX = 8;
 export const TILE_SCREEN_INPUT_MAX = 8;
 
-export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4k = 1, wallLayers = false}, evaluator) {
-  if (![columns,rows,auxOutputs,inputs4k].every(Number.isInteger) ||
-      columns < 1 || columns > 6 || rows < 1 || rows > 6 ||
-      auxOutputs < 0 || inputs4k < 0) {
-    return {status:'invalid', reason:'가로·세로는 각각 1~6판의 정수로 입력해 주세요.'};
-  }
+export function buildTileScreens(columns, rows, layers) {
   const screens = [];
   if (columns === 1 || rows === 1) {
     let remaining = columns * rows;
@@ -28,6 +23,16 @@ export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4
       }
     }
   }
+  return screens;
+}
+
+export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4k = 1, wallLayers = false}, evaluator) {
+  if (![columns,rows,auxOutputs,inputs4k].every(Number.isInteger) ||
+      columns < 1 || columns > 6 || rows < 1 || rows > 6 ||
+      auxOutputs < 0 || inputs4k < 0) {
+    return {status:'invalid', reason:'가로·세로는 각각 1~6판의 정수로 입력해 주세요.'};
+  }
+  const screens = buildTileScreens(columns, rows, layers);
   if (screens.length > TILE_SCREEN_INPUT_MAX) {
     return {status:'invalid', reason:`출력 그룹 ${screens.length}개가 평가 가능한 화면 수 한도 ${TILE_SCREEN_INPUT_MAX}개를 넘습니다.`};
   }

@@ -2,6 +2,7 @@ import {buildHubModel, assertHubParity, SERIES} from './model.mjs';
 import {buildAnalogWayLayerStandards, renderAnalogWayLayerStandards} from '../detail/analogway-layer-standards.mjs';
 import {renderAnalogWayLayerGuide, calculateRecommendations} from '../detail/analogway-layer-guide.mjs';
 import {prepareTileGuide, TILE_REFERENCE} from '../detail/analogway-tile-guide.mjs';
+import {parseLedWallQuery} from '../detail/analogway-led-pixels.mjs';
 
 const site = '../';
 const detailHref = slug => `${site}detail/?product=${encodeURIComponent(slug)}`;
@@ -158,12 +159,14 @@ async function main() {
     aquilonC: {...products['aquilon-c'].layerPlan, models: own(SERIES[1].slugs)},
     video: {...products['zenith-100'].videoLayerPlan, models: own([...SERIES[2].slugs, ...SERIES[3].slugs])},
   });
-  const guide = renderAnalogWayLayerGuide('aquilon-rs1');
+  const ledWallLink=parseLedWallQuery(window.location.search);
+  const guide = renderAnalogWayLayerGuide('aquilon-rs1',ledWallLink);
   const standardCard = renderAnalogWayLayerStandards(standards, 'aquilon-rs1');
   if (!guide || !standardCard) throw new Error('기존 Analog Way 가이드 카드를 불러오지 못했습니다.');
   $('#guide-card').append(guide);
   $('#standards-card').append(standardCard);
   document.documentElement.dataset.ready = 'true';
+  if(ledWallLink)requestAnimationFrame(()=>$('#guide').scrollIntoView({block:'start'}));
 }
 
 main().catch(error => {

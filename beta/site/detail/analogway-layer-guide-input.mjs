@@ -1,6 +1,7 @@
 // A documented format is converted before the W-019, 4K60-only evaluator runs.
 // Do not infer an arbitrary pixel dimension or an HD/4K mixed-resource cost.
 import {prepareTileGuide} from './analogway-tile-guide.mjs';
+import {deriveLedWallTiles} from './analogway-led-pixels.mjs';
 const documentedFormats = new Map([
   ['1920x1080@60', [1, 1, '1', '1080p60 출력 1개']],
   ['2560x1600@60', [1, 1, '1', '출력 1개']],
@@ -25,17 +26,19 @@ export function prepareGuideInput(state, evaluator) {
   if (!state || !Array.isArray(state.screens) || state.screens.length === 0) {
     return {status:'unconfirmed', reason:'공식 자료 미확인 · 화면 입력을 확인해 주세요.', result:null, derivedScreens:[]};
   }
-  if (state.screens.some(screen => screen.inputMode === 'tiles')) {
-    if (state.screens.length !== 1 || state.screens[0].inputMode !== 'tiles') {
+  if (state.screens.some(screen => ['tiles','ledPixels'].includes(screen.inputMode))) {
+    if (state.screens.length !== 1 || !['tiles','ledPixels'].includes(state.screens[0].inputMode)) {
       return {status:'unconfirmed', reason:'타일 입력은 화면 하나씩 선택해 주세요.', result:null, derivedScreens:[]};
     }
     const screen = state.screens[0];
-    const tile = prepareTileGuide({columns:Number(screen.tileColumns), rows:Number(screen.tileRows),
+    const ledWall=screen.inputMode==='ledPixels'?deriveLedWallTiles(Number(screen.width),Number(screen.height)):null;
+    if(screen.inputMode==='ledPixels'&&!ledWall)return {status:'unconfirmed',reason:'LED 벽 가로·세로 픽셀을 확인해 주세요(4K60 타일 가로·세로 각각 최대 6판).',result:null,derivedScreens:[]};
+    const tile = prepareTileGuide({columns:ledWall?.columns??Number(screen.tileColumns), rows:ledWall?.rows??Number(screen.tileRows),
       layers:Number(screen.layers), auxOutputs:Number(state.auxOutputs), inputs4k:Number(state.inputs4k), wallLayers:true}, evaluator);
     if (tile.status !== 'calculated') return {status:'unconfirmed',reason:tile.reason,result:null,derivedScreens:[]};
-    return {status:'calculated',tile,input:tile.input,result:tile.result,
+    return {status:'calculated',tile,ledWall,input:tile.input,result:tile.result,
       derivedScreens:[{confirmed:true,outputs:tile.outputs,capacity:2,layout:`${tile.columns}x${tile.rows}`,
-        label:`${tile.columns}×${tile.rows} · ${tile.width}×${tile.height}@60 · 4K60 출력 ${tile.outputs}개`}]};
+        label:ledWall?`LED 벽 ${ledWall.width.toLocaleString()}×${ledWall.height.toLocaleString()}px → 덮는 타일 ${tile.columns}×${tile.rows} · ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개`:`${tile.columns}×${tile.rows} · ${tile.width}×${tile.height}@60 · 4K60 출력 ${tile.outputs}개`}]};
   }
   const derivedScreens = state.screens.map(screen => {
     if (screen.inputMode === 'resolution') return deriveScreenFormat(Number(screen.width), Number(screen.height), Number(screen.refresh));
