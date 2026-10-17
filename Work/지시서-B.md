@@ -686,3 +686,34 @@
   - [x] layerPlan/videoLayerPlan·Port Map 좌표는 변경하지 않았으며 점검표에 재측정 미수행/기존 검증 유지로 명시
   - [x] Work/기록/W-20261017-002-점검표.md 작성
   - [x] 문서 링크·변경 범위 확인 후 문서 전용 PR #607 작성, Work에 병합 전 검토 요청
+
+
+## W-20261017-002 2단계 — Analog Way 문서 연결·Pulse 충돌 병기
+
+- 상태: IN_PROGRESS
+- 명세: `Work/작업/W-20261017-002.md` (읽은 main SHA `08d255b7c42faf2f10ba74b2b37a38b453ea09ad`), 후속 범위 Work 지시(2026-10-17)
+- 구현 브랜치: `codex/W-20261017-002-analogway-fixes`, 별도 작업 폴더 `codex-b-group6`
+- 범위: RS1 공용 User Manual 및 QSG 문서 유형 정정, Aquilon 브로슈어 공식 URL과 해당 RS 모델 전용 QSG, RC400T QSG, Pulse 4K 스트리밍 충돌을 문구·근거에 병기. Eikos Mixer 표기는 매뉴얼 우선으로 유지. Port Map·레이어 수치·signalFlow 및 빈 자리표시자는 수정하지 않음.
+- 착수 확인: `origin/main`과 HEAD 모두 `08d255b7`; 추적 파일 변경 없음, 기존 `tmp/`만 미추적. 열린 PR 없음.
+- [x] 공식 문서 링크 HTTP 200 및 모델 일치 확인
+- [x] quick-docs 네 슬롯 기준 회귀 테스트 RED→GREEN
+- [x] RS1·RS6·RC400T 전후 빠른 문서 캡처
+- [x] Pulse 충돌 양쪽 값과 페이지를 UI·근거표에 병기
+- [x] 전체 테스트, `verify-pages`, 파생 산출물 재생성·`--check`
+
+
+Verification results (2026-10-17):
+- Unique official document URLs: 9, all HTTP 200 and application/pdf; model-specific links checked against official product downloads.
+- Focused task and affected history suites pass. Full serial suite node --test --test-concurrency=1 tests/*.test.mjs passed: 875 tests, 874 passed, 0 failed, 1 skipped. The default parallel npm test run twice hit one Windows EPERM while renaming an RTCom temporary directory; the serial full run passed.
+- beta/verify-pages.mjs passes: 289 catalog items, 286 details, 529 reviewed product images, 167 uploaded PDFs.
+- Search index and readable catalog generated and checks pass. public-snapshot generation was repeated; SHA-256 remained 7cd9bb7487551894bde4707ed8873922034dc4fb33bb15ad3ad5c3064239a345.
+- Before/after Playwright screenshots at 1280px and 390px for RS1, RS6, and RC400T are in Work/기록/W-20261017-002-preview/index.html.
+- Feature wording diff flags the authorized addition of 720p30/6 Mbps and source page numbers in Pulse feature 5; text ends as a noun phrase and retains both requested conditions.
+- Next: final diff review, commit, PR, CI, then wait for Work review before any merge.
+
+- PR #610 생성 뒤 세션 C PR #609가 main에 병합되어 최신 main 625f3f7을 통합했고 충돌은 없었다. detail assets 16종, search index, readable catalog, snapshot을 통합 이후 다시 생성했다.
+- 통합 후 전후 갤러리를 최신 main 기준으로 재캡처했다. RS1·RS6 문서 행은 3→4, RC400T는 1→2이며 1280px·390px 캡처 6장 모두 브라우저 오류 0건이다. 갤러리: Work/기록/W-20261017-002-preview/index.html.
+- 이전 PR head의 Builder CI run 38984410815는 성공했으나 main 통합 후 head가 바뀌었으므로 새 commit push 뒤 CI를 다시 확인한다.
+- 최신 main 통합 뒤 전체 직렬 테스트 node --test --test-concurrency=1 tests/*.test.mjs: 879건 중 878 통과, 0 실패, 기존 skip 1. verify-pages(289/286/529/167), search-index --check, readable-catalog --check, git diff --check 통과.
+- CI 재실행을 위한 최신 통합·재캡처 커밋을 준비 중. PR #610 이전 head CI 성공은 새 head에 승계되지 않으므로 새 run의 초록을 확인한 뒤 Work가 승인한 #610 우선 병합 절차로 진행한다.
+- 병합 직전 main이 PR #611의 0cc48f80으로 추가 이동해 통합했다(변경은 세션 C 기록·테스트, 제품 데이터 겹침 없음). detail assets 16종과 search-index·readable-catalog·snapshot을 다시 생성했다. 전체 직렬 테스트 879건 중 878 통과·0 실패·skip 1, verify-pages 및 두 산출물 --check, diff check 통과. 새 merge head CI를 다시 확인한다.

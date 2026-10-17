@@ -14,7 +14,7 @@
   "korean": "Pulse 4K는 10개 입력, 2개 PGM 출력, 전용 멀티뷰어 1개를 갖춘 4K60 멀티레이어 비디오 믹서 겸 프레젠테이션 스위처다.",
   "verificationSummary": "제조사 공식 제품 페이지(analogway.com)와 모델 전용 Technical Datasheet(dwn01.analogway.com)에서 개요·기능·전체 기술 사양·물리 사양을 확인했다.",
   "packageStatus": "REVIEW REQUIRED",
-  "overview": "Pulse 4K는 8개의 4K60 입력과 2개의 1080p 입력(HDMI/3G-SDI 사용자 선택 가능) 총 10개 입력을 지원하는 4K60 멀티레이어 비디오 믹서로, 2개의 4K60 미러링 HDMI+SDI 출력을 Program&AUX 또는 2개의 독립 Program으로 구성할 수 있다. 전용 멀티뷰어 출력(HDMI+미러링 SDI, 최대 2560x1600@60)으로 프로그램·프리뷰·모든 입력을 모니터링한다.\n\n제조사 공식 데이터시트에 따르면 Midra 4K FPGA 하드웨어 플랫폼과 Aquilon 시리즈에서 물려받은 5세대 스케일링 엔진을 기반으로, 4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리, HDR10·HLG 지원, HDCP 1.4/2.2 호환을 제공한다. Mixer 모드(1x PGM + 1x AUX)와 Matrix 모드(2x PGM) 2가지 모드를 지원하며, 라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어)를 구성할 수 있다.\n\n전원은 100-240VAC(최대 95W)이며, 2RU 랙 마운트 섀시(핸들 포함 482.5×88×474mm), 액세서리 제외 무게 7.60kg이다.",
+  "overview": "Pulse 4K는 8개의 4K60 입력과 2개의 1080p 입력(HDMI/3G-SDI 사용자 선택 가능) 총 10개 입력을 지원하는 4K60 멀티레이어 비디오 믹서로, 2개의 4K60 미러링 HDMI+SDI 출력을 Program&AUX 또는 2개의 독립 Program으로 구성할 수 있다. 전용 멀티뷰어 출력(HDMI+미러링 SDI, 최대 2560x1600@60)으로 프로그램·프리뷰·모든 입력을 모니터링한다.\n\n제조사 공식 데이터시트에 따르면 Midra 4K FPGA 하드웨어 플랫폼과 Aquilon 시리즈에서 물려받은 5세대 스케일링 엔진을 기반으로, 4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리, HDR10·HLG 지원, HDCP 1.4/2.2 호환을 제공한다. Mixer 모드(1x PGM + 1x AUX)와 Matrix 모드(2x PGM) 2가지 모드를 지원하며, 라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어)를 구성할 수 있다.\n\n전원은 100-240VAC(최대 95W)이며, 2RU 랙 마운트 섀시(핸들 포함 482.5×88×474mm), 액세서리 제외 무게 7.60kg이다.\n\n라이브스트리밍은 데이터시트 p.1·5에서 RTMP 기반 입력·출력 최대 1080p30으로 설명하지만, p.6 H.264 인코딩 사양표는 최대 720p30·6 Mbps로 표기(CONFLICTED).",
   "images": [
     {
       "role": "Front",
@@ -107,7 +107,7 @@
       "status": "FOUND",
       "title": "Pulse 4K Technical Datasheet (2026-05-21)",
       "language": "en",
-      "note": "Key features, Technical specifications, Product Specifications 전체 수록",
+      "note": "Key features, Technical specifications, Product Specifications 전체 수록; 데이터시트 p.1·5: RTMP-based livestreaming of any input or output up to 1080p30; p.6: H.264 video encoding up to 720p30, up to 6 Mbps. Same-edition source values are both preserved (CONFLICTED).",
       "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf"
     },
     {
@@ -144,7 +144,7 @@
       "source": ""
     },
     {
-      "text": "RTMP/RTMPS 기반으로 임의의 입력·출력을 최대 1080p30까지 라이브 스트리밍 가능",
+      "text": "RTMP 기반 입력·출력 라이브스트리밍 최대 1080p30(데이터시트 1·5쪽), H.264 인코딩 사양표 최대 720p30·6 Mbps(6쪽) 표기(CONFLICTED)",
       "source": ""
     },
     {

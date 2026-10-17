@@ -76,9 +76,17 @@
     {
       "type": "User Manual",
       "status": "FOUND",
+      "title": "Aquilon User Manual v6.2",
+      "language": "en",
+      "note": "Aquilon User Manual v6.2 공용 문서; p.1 References 적용 모델 목록: AQL-RS-ALPHA, AQL-RS1–RS6, AQL-Cmini, AQL-C, AQL-C+, AQL-Cmax.",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+    },
+    {
+      "type": "Quick Start Guide",
+      "status": "FOUND",
       "title": "Aquilon RS1 Quick Start Guide",
       "language": "en",
-      "note": "설치 절차 중심 퀵스타트 가이드(전체 사용설명서 아님)",
+      "note": "RS1 model-specific Quick Start Guide",
       "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf"
     },
     {
