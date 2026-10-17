@@ -19,7 +19,8 @@ import { verifyPdfLock } from './pdf-lock.mjs';
 const site = new URL('./site/', import.meta.url);
 const uploadManifest = JSON.parse(await readFile(new URL('docs/manifest.json', site), 'utf8'));
 const files = (await readdir(site)).sort();
-assert.deepEqual(files, ['app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'samples', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual(files, ['analogway', 'app.js', 'catalog.html', 'catalog.json', 'detail', 'docs', 'favicon.svg', 'fonts', 'index.html', 'llms.txt', 'manuals', 'rtcom', 'samples', 'search-index.json', 'shared', 'styles.css', 'system-version.css', 'system-version.js', 'vendor', 'version.json']);
+assert.deepEqual((await readdir(new URL('analogway/', site))).sort(), ['app.mjs', 'index.html', 'model.mjs', 'styles.css']);
 assert.deepEqual(await readdir(new URL('samples/', site)), ['h5-layers']);
 assert.deepEqual((await readdir(new URL('samples/h5-layers/', site))).sort(), ['app.js', 'index.html', 'model.mjs', 'styles.css']);
 assert.deepEqual(await readdir(new URL('vendor/', site)), ['pdfjs']);
@@ -331,8 +332,11 @@ function verifyOfficialUrls(value, slug, hosts) {
   }
 }
 const privateMarkers = /C:[\\/]|Users[\\/]|hkkim[\\/]|(?:^|["\s])Work[\\/]|outputs[\\/]|원본 행|공급처|단가|내부 메모|private source|READY FOR CODEX|READY WITH REVIEW FLAGS/i;
-for (const filename of files.filter(name => !['detail', 'docs', 'manuals', 'fonts', 'rtcom', 'samples', 'shared', 'vendor'].includes(name))) {
+for (const filename of files.filter(name => !['analogway', 'detail', 'docs', 'manuals', 'fonts', 'rtcom', 'samples', 'shared', 'vendor'].includes(name))) {
   assert.ok(!privateMarkers.test(await readFile(new URL(filename, site), 'utf8')), `${filename} private marker`);
+}
+for (const filename of await readdir(new URL('analogway/', site))) {
+  assert.ok(!privateMarkers.test(await readFile(new URL(`analogway/${filename}`, site), 'utf8')), `analogway/${filename} private marker`);
 }
 for (const filename of await readdir(new URL('samples/h5-layers/', site))) {
   assert.ok(!privateMarkers.test(await readFile(new URL(`samples/h5-layers/${filename}`, site), 'utf8')), `H5 sample ${filename} private marker`);

@@ -50,6 +50,8 @@ section[id] { scroll-margin-top: 100px; }
 .category-card:hover, .category-card[aria-pressed="true"] { border-color: var(--pg-accent); background: var(--pg-accent-tint); }
 .category-card:disabled { cursor: not-allowed; opacity: .5; }
 .manufacturer-browser { display: flex; flex-wrap: wrap; gap: 8px; }
+.manufacturer-hub-link { margin: 14px 0 0; font-size: 13px; font-weight: 700; }
+.manufacturer-hub-link a { color: var(--pg-accent-2); }
 .manufacturer-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 6px 9px 6px 13px; border: 1px solid var(--pg-line); border-radius: var(--pg-r-pill); background: var(--pg-field-fill); color: var(--pg-ink); cursor: pointer; }
 .manufacturer-chip strong { font-size: 12px; font-weight: 700; }
 .manufacturer-chip span { display: grid; place-items: center; min-width: 23px; min-height: 23px; padding: 0 4px; border-radius: var(--pg-r-pill); background: white; color: var(--pg-accent-2); font-size: 11px; font-weight: 700; }
