@@ -44,7 +44,7 @@
       "io": 9
     },
     "aquilon-cplus": {
-      "sha256": "734D23BF6EA6D7181C72C6BD34BF1F44998A79715E84F0401D94222B4F960FE9",
+      "sha256": "C1C6FF84DAB30F2D3015D50473A9E13FA3D265150D19CCCEBEEEEE686066427A",
       "features": 8,
       "specifications": 16,
       "io": 9
@@ -56,7 +56,7 @@
       "io": 5
     },
     "aquilon-rs2": {
-      "sha256": "55849BFA8E621CE8B93BB1625855775000B54A4BC7AC5DAC03563D621B992849",
+      "sha256": "42CB7C2679827F1745C534DF04B638B65749745BB92FC28B45A91342981F3A1B",
       "features": 6,
       "specifications": 16,
       "io": 6

@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {enhancementErrors} from '../beta/site/detail/detail-enhancements.mjs';
+import {beforeW20261017_011Stage1Product} from './w20261017-011-stage1-history.mjs';
 const root=new URL('../beta/site/detail/',import.meta.url);
 const prior=JSON.parse(fs.readFileSync(new URL('./fixtures/aquilon-c-cards-before.json',import.meta.url)));
 const read=slug=>JSON.parse(fs.readFileSync(new URL('data/'+slug+'.json',root)));
@@ -26,7 +27,8 @@ test('C card maps reduce 14/16/19/23 circles to 12 each without losing controls 
  };
  assert.deepEqual(Object.values(prior).map(b=>b.beforeMarkerCount),[14,16,19,23]);
  for(const [slug,c]of Object.entries(counts)){
-  const p=read(slug),items=p.portMap.items;
+  // W-011 changes C+ to per-slot numbering; validate the original W-015 grouping after selective rewind.
+  const p=beforeW20261017_011Stage1Product(read(slug),slug),items=p.portMap.items;
   assert.deepEqual(enhancementErrors(p),[],slug);
   assert.deepEqual(items.map(i=>i.n),Array.from({length:12},(_,n)=>n+1),slug);
   for(const [type,count]of [['HDMI',c.hdmi],['DP',c.dp],['SDI',c.sdi]]){

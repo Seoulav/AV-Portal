@@ -30,6 +30,6 @@ test('eleven Analog Way selective inverses restore exact prior product bytes', (
     product.overview += ' independent later edit';
     assert.match(beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug, { w002Undone: true }), slug, { w002Undone: true }), slug).overview, /independent later edit/);
     product.portMap.items[0].x2--;
-    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug, { w002Undone: true }), slug), slug), /unexpected W-015 Midra\/Zenith Port Map layout|unexpected W-014 Port Map changes|approved marker offsets changed|approved Analog Way map changed/);
+    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug, { w002Undone: true }), slug), slug), /unexpected W-20261017-011 map change|unexpected W-015 Midra\/Zenith Port Map layout|unexpected W-014 Port Map changes|approved marker offsets changed|approved Analog Way map changed/);
   }
 });
