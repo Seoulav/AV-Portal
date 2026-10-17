@@ -42,6 +42,13 @@ export function beforeW20261016_001Styles(css) {
     if(end<0) throw new Error('W-011 renderer style boundary changed');
     css=css.slice(0,start)+css.slice(end+laterEnd.length);
   }
+  const standardsStart='\n/* W-20261017-003 shared Analog Way layer standards card. */';
+  const standardsEnd='/* W-20261017-003 shared layer standards card end. */\n';
+  if(css.includes(standardsStart)) {
+    const start=css.indexOf(standardsStart), end=css.indexOf(standardsEnd,start);
+    if(end<0) throw new Error('W-003 standards style boundary changed');
+    css=css.slice(0,start)+css.slice(end+standardsEnd.length);
+  }
   const addition='\n.inogeni-flow .inogeni-control-line { fill: none; stroke: #686580; stroke-width: 2; stroke-dasharray: 7 6; }\n';
   const normalized = css.trimEnd();
   if (!normalized.endsWith(addition.trimEnd())) throw new Error('W-001 renderer style changed');
