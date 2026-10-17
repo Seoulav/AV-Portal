@@ -2,7 +2,7 @@
 
 ## W-20261017-003 1부 — Analog Way 레이어 연출 기준 정리
 
-- 상태: MERGED (PR #609, SHA `625f3f7fa1eea84568227d2fccd67569addfa34a`); Pages 배포 재시도 중
+- 상태: MERGED·DEPLOYED (PR #609, SHA `625f3f7fa1eea84568227d2fccd67569addfa34a`; 배포 시험 수정 PR #611, SHA `0cc48f80a481b217537dacd5c08cf38b10c68b86`)
 - 명세: `Work/작업/W-20261017-003.md` · 명세 확인 main `598757af700c961a4caf0888a5f5ce3dcde79c08`
 - 브랜치: `codex/W-20261017-003-aw-layer-rules` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
 - 시작 main `598757af700c961a4caf0888a5f5ce3dcde79c08`; 최신 `origin/main` `08d255b7c42faf2f10ba74b2b37a38b453ea09ad` 통합 완료(merge `c38c160f50c955ea4fb41771dae3101f831020b5`).
@@ -19,9 +19,21 @@
 - [x] Work 2026-10-17 승인: 기존 모델별 해설 카드의 레이어 다이어그램·계산 예시 콜아웃 제거. 공용 카드와 새 접기 절로 대체한다.
 - [x] 수정 후 전체 876건을 순차 실행: 875 pass, 1 skip, 0 fail. 일반 병렬 실행의 `rtcom-sync.test.mjs` 임시 디렉터리 rename `EPERM`은 Windows 간헐 오류이며, 같은 시험 단독 및 전체 순차 실행은 통과. `verify-pages`, 검색 인덱스 `--check`, 공개 상세 자산 재생성 통과.
 - [x] Draft PR #609 생성: https://github.com/Seoulav/AV-Portal/pull/609. 본문에 원문 인용·쪽·검증 결과·시각 검토 차단 사유를 기록했다.
-- [ ] 수정 커밋의 Builder CI 초록, 새 카드 1280px(접기 절 펼침)·390px 캡처 후 Draft 해제·병합한다. 이 세션 브라우저는 `screenshot_no_frame`이므로 세션 D 캡처를 Work에 요청했다.
+- [x] 수정 커밋의 Builder CI 초록, 새 카드 1280px(접기 절 펼침)·390px 캡처를 Work가 확인한 뒤 Draft 해제·병합했다.
 - [x] 세션 D의 수정본 캡처 `../codex-d/outputs/w003-preview2/`를 Work가 확인했고, 390px `scrollWidth` 390과 새 열·접기 절을 승인했다. Builder CI 초록 뒤 PR #609를 병합했다.
-- [ ] Pages run `38984725694`는 새 시험이 과거 커밋 파일을 `git show`로 읽는 과정에서 실패했다. 배포 환경의 이력에 의존하지 않도록 승인 기준 코드 블록 SHA-256을 시험에 고정하는 후속 hotfix를 진행한다. 공개 확인은 배포 성공 뒤 수행한다.
+- [x] Pages run `38984725694`는 얕은 CI 체크아웃에서 `git show`를 호출한 시험 때문에 실패했다. 승인 기준 코드 블록 SHA-256을 검사하는 PR #611로 수정했다. Pages run `38985400147` 성공(전체 시험·Builder·CPQ·배포). 공개 Pulse 4K·Aquilon RS6에서 카드·접기 절·Midra 열과 390px 가로 넘침 없음을 DOM으로 확인했다. C 브라우저 캡처는 `screenshot_no_frame`이므로 공개 PNG는 만들지 않았으며, 병합 전 캡처는 세션 D가 제공했다.
+
+## W-20261017-003 2부 — Analog Way 설계 가이드 보완
+
+- 상태: IN_PROGRESS
+- 명세: `Work/작업/W-20261017-003.md` 2부 · 확인 main `0cc48f80a481b217537dacd5c08cf38b10c68b86`
+- 브랜치: `codex/W-20261017-003-aw-layer-guide` · 전용 워크트리 `../codex-c-w003-aw-layer-rules`
+- 범위: 화면 해상도에서 출력 수·용량을 변환하는 입력층, HD 레이어 미확인 판정, 공식 시뮬레이터 연결, 텍스트 내보내기. W-019 판정·제품 JSON 불변.
+- [x] Aquilon User Manual v6.2 61·66·69쪽과 Midra·Alta 한글 기준 문서의 원문 및 로컬 공식 PDF를 재확인했다.
+- [x] 문서에 있는 해상도·타일 배치를 4K60 기존 판정에 전달하고, HD·혼합·용량 4·미기재 해상도는 미확인으로 분기했다.
+- [x] 5개 단위 시험과 W-019 회귀 시험 통과. 대표 RS2·Zenith 200·C+ 로컬 1280px·390px 캡처 각 1장, 여섯 화면 모두 `scrollWidth`가 뷰포트와 일치했다. HD 레이어 입력 시 4K 전용 추천 카드가 사라지는 것도 확인했다. 캡처는 `outputs/w003-v2/`(비커밋).
+- [x] 전체 순차 검사 881건: 880 pass·0 fail·기존 skip 1. 생성 상세 자산 17개 갱신, `verify-pages` 289 장비·286 상세·529 이미지·167 PDF 통과, 검색 인덱스 `--check` 712807 bytes 일치.
+- [ ] 최신 main 통합·파생 재생성, PR 본문 근거 인용, CI, Work 독립 검증 대기.
 
 ## W-20261016-010 — Aquilon 레이어 해설·브로슈어 문서 버튼
 
