@@ -57,3 +57,10 @@ export function calculateTileLayerMaximums(tile, evaluator) {
   }
   return maximums;
 }
+
+export function formatTileLayerMaximum(maximum) {
+  if (maximum.atInputCeiling) {
+    return `4K60 믹싱 ${maximum.mixing}개까지 확인(평가 입력 상한) · 분할 ${maximum.split}개까지 확인 — 실제 한도는 이보다 클 수 있습니다`;
+  }
+  return `4K60 믹싱 최대 ${maximum.mixing}개 · 분할 최대 ${maximum.split}개`;
+}

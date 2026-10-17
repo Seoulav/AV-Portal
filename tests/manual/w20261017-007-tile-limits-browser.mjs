@@ -51,10 +51,15 @@ try{
     assert.equal(await evaluate("document.querySelector('#load-error').hidden"),true);
     assert.equal(await evaluate("document.querySelectorAll('.aw-guide-tile-limit').length"),0,'ordinary input mode must remain unchanged');
     await evaluate(`(()=>{const mode=document.querySelector('#guide [data-field="inputMode"]');mode.value='tiles';mode.dispatchEvent(new Event('change',{bubbles:true}));for(const [field,value] of [['tileColumns','4'],['tileRows','2'],['layers','2']]){const input=document.querySelector('#guide [data-field="'+field+'"]');input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}})()`);
-    const state=await evaluate(`(()=>({cards:[...document.querySelectorAll('.aw-guide-possible-models .aw-guide-model')].map(card=>({name:card.querySelector('h4').textContent,limit:card.querySelector('.aw-guide-tile-limit')?.textContent,converted:!!card.querySelector('.aw-guide-tile-limit-note')})),evidence:[...document.querySelectorAll('.aw-guide-summary .aw-guide-tile-caveat')].map(node=>node.textContent),overflow:document.documentElement.scrollWidth-innerWidth}))()`);
-    for(const [name,mixing,split,converted] of [['Aquilon RS2',8,16,false],['Aquilon RS4',12,24,true],['Aquilon RS6',16,32,true]]){
+    const readState=`(()=>({cards:[...document.querySelectorAll('.aw-guide-possible-models .aw-guide-model')].map(card=>({name:card.querySelector('h4').textContent,limit:card.querySelector('.aw-guide-tile-limit')?.textContent,converted:[...card.querySelectorAll('.aw-guide-tile-limit-note')].some(note=>note.textContent.includes('환산'))})),evidence:[...document.querySelectorAll('.aw-guide-summary .aw-guide-tile-caveat')].map(node=>node.textContent),overflow:document.documentElement.scrollWidth-innerWidth}))()`;
+    const state=await evaluate(readState);
+    for(const [name,limit,converted] of [
+      ['Aquilon RS2','4K60 믹싱 최대 8개 · 분할 최대 16개',false],
+      ['Aquilon RS4','4K60 믹싱 최대 12개 · 분할 최대 24개',true],
+      ['Aquilon RS6','4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다',true],
+    ]){
       const card=state.cards.find(item=>item.name===name);
-      assert.equal(card?.limit,`4K60 믹싱 최대 ${mixing}개 · 분할 최대 ${split}개`);
+      assert.equal(card?.limit,limit);
       assert.equal(card.converted,converted);
     }
     assert.ok(state.evidence.some(note=>note.includes('RS2 데이터시트 8쪽')));
@@ -62,8 +67,15 @@ try{
     const rect=await evaluate("(()=>{const r=document.querySelector('#guide').getBoundingClientRect();return{x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height}})()");
     const shot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...rect,scale:1}});
     fs.writeFileSync(path.join(output,`guide-4x2-${width}.png`),Buffer.from(shot.data,'base64'));
-    measures.push({width,...state});
-    console.log(`${width}px: RS2/RS4/RS6 limits correct, overflow 0`);
+    await evaluate(`(()=>{const col=document.querySelector('#guide [data-field="tileColumns"]');col.value='2';col.dispatchEvent(new Event('input',{bubbles:true}));})()`);
+    const small=await evaluate(readState);
+    assert.equal(small.cards.find(card=>card.name==='Aquilon RS4')?.limit,'4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다');
+    assert.equal(small.overflow,0,`${width}px 2×2 horizontal overflow`);
+    const smallRect=await evaluate("(()=>{const r=document.querySelector('#guide').getBoundingClientRect();return{x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height}})()");
+    const smallShot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...smallRect,scale:1}});
+    fs.writeFileSync(path.join(output,`guide-2x2-${width}.png`),Buffer.from(smallShot.data,'base64'));
+    measures.push({width,fourByTwo:state,twoByTwo:small});
+    console.log(`${width}px: proven and input-ceiling wording correct, overflow 0`);
   }
   fs.writeFileSync(path.join(output,'measurements.json'),JSON.stringify(measures,null,2)+'\n');
 }finally{socket?.close();chrome.kill();server.close();}

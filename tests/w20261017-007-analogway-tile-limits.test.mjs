@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {calculateRecommendations} from '../beta/site/detail/analogway-layer-guide.mjs';
-import {calculateTileLayerMaximums, prepareTileGuide} from '../beta/site/detail/analogway-tile-guide.mjs';
+import {calculateTileLayerMaximums, formatTileLayerMaximum, prepareTileGuide} from '../beta/site/detail/analogway-tile-guide.mjs';
 
 const maxFor = (columns, rows, layers, slug) => {
   const tile = prepareTileGuide({columns, rows, layers}, calculateRecommendations);
@@ -58,4 +58,13 @@ test('maximum helper actually re-evaluates every supported layer input with unch
   });
   assert.deepEqual(calls.map(call => call.layers), Array.from({length: 9}, (_, layers) => [layers, layers]));
   assert.ok(calls.every(call => call.auxOutputs === 2 && call.inputs4k === 4));
+});
+
+test('a proven limit says maximum while an input-ceiling result says only confirmed up to that count', () => {
+  const proven = maxFor(4, 2, 2, 'aquilon-rs2');
+  const ceiling = maxFor(2, 2, 2, 'aquilon-rs4');
+  assert.equal(proven.atInputCeiling, false);
+  assert.equal(formatTileLayerMaximum(proven), '4K60 믹싱 최대 8개 · 분할 최대 16개');
+  assert.equal(ceiling.atInputCeiling, true);
+  assert.equal(formatTileLayerMaximum(ceiling), '4K60 믹싱 8개까지 확인(평가 입력 상한) · 분할 16개까지 확인 — 실제 한도는 이보다 클 수 있습니다');
 });

@@ -1,6 +1,6 @@
 import {modelData, exampleConfigurations, guideEvidence} from './analogway-layer-guide-data.mjs';
 import {prepareGuideInput, buildGuideExportText} from './analogway-layer-guide-input.mjs';
-import {calculateTileLayerMaximums} from './analogway-tile-guide.mjs';
+import {calculateTileLayerMaximums, formatTileLayerMaximum} from './analogway-tile-guide.mjs';
 export {modelData, exampleConfigurations};
 
 const RESOURCE_NOTES = {
@@ -190,9 +190,8 @@ function renderModelResult(result,currentSlug,tileMaximums){
     card.append(makeElement('p',model.possible?'aw-guide-status is-possible':'aw-guide-status is-impossible',model.possible?'가능 · '+model.displayMode:'불가'));
     const tileMaximum=model.possible?tileMaximums?.get(model.slug):null;
     if(tileMaximum){
-      card.append(makeElement('p','aw-guide-tile-limit',`4K60 믹싱 최대 ${tileMaximum.mixing}개 · 분할 최대 ${tileMaximum.split}개`));
+      card.append(makeElement('p','aw-guide-tile-limit',formatTileLayerMaximum(tileMaximum)));
       if(tileMaximum.splitConvertedBeyondEvaluator)card.append(makeElement('p','aw-guide-tile-limit-note','분할 수는 믹싱 1개 = 분할 2개 환산(그룹당 평가 입력 8개 초과).'));
-      if(tileMaximum.atInputCeiling)card.append(makeElement('p','aw-guide-tile-limit-note','믹싱은 그룹당 입력 상한 8개까지 평가한 값.'));
     }
     if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','입출력 수: '+model.connectorBasis));
     if(model.reasons.length){
