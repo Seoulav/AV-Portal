@@ -1,4 +1,4 @@
-﻿import { readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 export const w20261018_001Fixture = JSON.parse(readFileSync(new URL('./fixtures/w20261018-001-ultrix-history.json', import.meta.url), 'utf8'));
 
