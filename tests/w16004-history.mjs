@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { beforeW20261018_001Product } from './w20261018-001-history.mjs';
 import { createHash } from 'node:crypto';
 
 const fixture = JSON.parse(readFileSync(new URL('./fixtures/w16004-ultrix-history.json', import.meta.url), 'utf8'));
@@ -11,18 +12,21 @@ const slugs = new Set([
   'ultritouch-2-hr',
 ]);
 
-// Historical checks see today's object with only the W-004 specification/source
-// changes reversed. Every other live field remains visible to those checks.
+// Historical checks first rewind the approved W-001 fields, then reverse W-004.
+// Every other live field remains visible to those checks.
 export function beforeW16004Product(current, slug) {
   const record = fixture.products[slug];
   if (!record) return current;
-  const specSha = sha(current.specifications);
-  const sourceSha = sha(current.sources);
-  if (specSha === sha(record.priorSpecifications) && sourceSha === sha(record.priorSources)) return current;
+  const afterW001 = ['ultrix-ns-fr2', 'ultrix-hdx-io'].includes(slug)
+    ? beforeW20261018_001Product(current, slug)
+    : current;
+  const specSha = sha(afterW001.specifications);
+  const sourceSha = sha(afterW001.sources);
+  if (specSha === sha(record.priorSpecifications) && sourceSha === sha(record.priorSources)) return afterW001;
   if (specSha !== record.approvedSpecificationsSha256 || sourceSha !== record.approvedSourcesSha256) {
     throw new Error(`${slug}: unexpected W-004 specifications or sources`);
   }
-  const result = structuredClone(current);
+  const result = structuredClone(afterW001);
   result.specifications = structuredClone(record.priorSpecifications);
   result.sources = structuredClone(record.priorSources);
   return result;
