@@ -77,7 +77,7 @@ function evaluateAquilon(model,input,pgmOutputs) {
   if(input.inputs4k>model.inputs4k)reasons.push('4K 입력 '+input.inputs4k+'개가 한도 '+model.inputs4k+'개를 넘습니다.');
   const possible=reasons.length===0;
   const layers=input.screens.reduce((sum,screen)=>sum+screen.layers,0);
-  const simulatorBasis=input.screens.some(screen=>screen.layers>0&&(screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2)>8);
+  const simulatorBasis=fit.fits&&fit.minUnits>fit.bins.length;
   const modes=unique(input.screens.filter(screen=>screen.outputs>=3&&screen.layers>0).map(()=> 'Optimized mode · 4K 전용'));
   return {possible,reasons,mode:possible?(modes.join(', ')||'처리 보드(VPU) '+fit.minUnits+'개'):'' ,
     displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용'+(simulatorBasis?' · 실측 근거(시뮬레이터)':''):'레이어 처리 보드 불필요'):'',

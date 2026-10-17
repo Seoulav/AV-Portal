@@ -32,6 +32,19 @@ test('Aquilon checks the whole model resource pool, not a fixed four layer scree
   assert.ok(rs1.reasons.every(reason => !reason.includes('화면당 4K 믹싱 최대 4개')));
 });
 
+test('Aquilon labels simulator evidence when several screens need more source VPUs than output VPUs', () => {
+  const screens = [
+    {outputs: 1, layerType: 'mixing', layers: 3},
+    {outputs: 1, layerType: 'mixing', layers: 3},
+  ];
+  const rs2 = model(screens, 'aquilon-rs2');
+  assert.equal(rs2.possible, true);
+  assert.equal(rs2.used.outputLinks, 4);
+  assert.equal(rs2.used.sourceLinks, 12);
+  assert.equal(rs2.used.processingUnits, 2);
+  assert.match(rs2.displayMode, /실측 근거\(시뮬레이터\)/);
+});
+
 test('Aquilon standards distinguish manual one-VPU example and simulator observations', () => {
   const standards = buildAnalogWayLayerStandards({
     aquilonRs: product('aquilon-rsalpha').layerPlan,
