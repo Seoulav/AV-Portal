@@ -31,6 +31,15 @@
 .aw-table td[data-key="input"], .aw-table td[data-key="output"] { min-width: 175px; max-width: 290px; }
 .aw-table td[data-key="layers"] { min-width: 200px; }
 .aw-table td[data-key="power"] { min-width: 160px; }
+.aw-tile-table { min-width: 720px; }
+.aw-tile-table tbody th { min-width: 90px; }
+.aw-tile-table tbody th:first-child { position: sticky; left: 0; z-index: 1; background: #fff; box-shadow: 1px 0 0 var(--pg-line); }
+.aw-tile-table td:nth-child(2) { min-width: 120px; }
+.aw-tile-table td:nth-child(3) { min-width: 165px; }
+.aw-tile-table td:nth-child(4) { min-width: 90px; }
+.aw-tile-table .aw-tile-models { min-width: 230px; }
+.aw-tile-model-group + .aw-tile-model-group { margin-top: 5px; }
+.aw-tile-model-group a { display: inline-block; margin: 2px 7px 2px 0; }
 .aw-table-note { margin: 14px 0 0; color: var(--pg-ink-2); font-size: 12px; line-height: 1.65; }
 .aw-hub-page .aw-layer-guide, .aw-hub-page .aw-layer-standards { margin: 0; }
 .aw-hub-page .aw-guide-current-badge { display: none; }

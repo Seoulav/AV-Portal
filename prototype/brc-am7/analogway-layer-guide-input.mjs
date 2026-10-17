@@ -1,5 +1,6 @@
 // A documented format is converted before the W-019, 4K60-only evaluator runs.
 // Do not infer an arbitrary pixel dimension or an HD/4K mixed-resource cost.
+import {prepareTileGuide} from './analogway-tile-guide.mjs';
 const documentedFormats = new Map([
   ['1920x1080@60', [1, 1, '1', '1080p60 출력 1개']],
   ['2560x1600@60', [1, 1, '1', '출력 1개']],
@@ -23,6 +24,18 @@ export function deriveScreenFormat(width, height, refresh = 60) {
 export function prepareGuideInput(state, evaluator) {
   if (!state || !Array.isArray(state.screens) || state.screens.length === 0) {
     return {status:'unconfirmed', reason:'공식 자료 미확인 · 화면 입력을 확인해 주세요.', result:null, derivedScreens:[]};
+  }
+  if (state.screens.some(screen => screen.inputMode === 'tiles')) {
+    if (state.screens.length !== 1 || state.screens[0].inputMode !== 'tiles') {
+      return {status:'unconfirmed', reason:'타일 입력은 화면 하나씩 선택해 주세요.', result:null, derivedScreens:[]};
+    }
+    const screen = state.screens[0];
+    const tile = prepareTileGuide({columns:Number(screen.tileColumns), rows:Number(screen.tileRows),
+      layers:Number(screen.layers), auxOutputs:Number(state.auxOutputs), inputs4k:Number(state.inputs4k)}, evaluator);
+    if (tile.status !== 'calculated') return {status:'unconfirmed',reason:tile.reason,result:null,derivedScreens:[]};
+    return {status:'calculated',tile,input:tile.input,result:tile.result,
+      derivedScreens:[{confirmed:true,outputs:tile.outputs,capacity:2,layout:`${tile.columns}x${tile.rows}`,
+        label:`${tile.columns}×${tile.rows} · ${tile.width}×${tile.height}@60 · 4K60 출력 ${tile.outputs}개`}]};
   }
   const derivedScreens = state.screens.map(screen => {
     if (screen.inputMode === 'resolution') return deriveScreenFormat(Number(screen.width), Number(screen.height), Number(screen.refresh));
@@ -56,7 +69,7 @@ export function buildGuideExportText(state, prepared) {
     const format = prepared.derivedScreens[index];
     const hdLayers = Number(screen.hdLayers);
     const hdLabel = Number.isInteger(hdLayers) && hdLayers >= 0 ? `HD 레이어 ${hdLayers}개` : 'HD 레이어 입력 오류';
-    lines.push(`화면 ${index + 1}: ${format?.label ?? '미확인'} · ${screen.layerType === 'split' ? '분할' : '믹싱'} 4K 레이어 ${screen.layers}개 · ${hdLabel}`);
+    lines.push(`화면 ${index + 1}: ${format?.label ?? '미확인'} · ${screen.inputMode === 'tiles' ? '믹싱' : screen.layerType === 'split' ? '분할' : '믹싱'} 4K 레이어 ${screen.layers}개${screen.inputMode === 'tiles' ? ' · 출력 그룹당' : ''} · ${hdLabel}`);
   });
   lines.push(`보조 출력 ${state.auxOutputs}개 · 4K 입력 소스 ${state.inputs4k}개`);
   if (prepared.status === 'calculated' && prepared.result?.valid) {

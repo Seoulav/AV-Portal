@@ -1,0 +1,50 @@
+[
+  {
+    "width": 1280,
+    "metrics": "합성 11,520×4,320@60 · 4K60 출력 6개 · 출력 링크 12개 · 출력 링크 기준 Aquilon VPU 최소 2개 · 믹싱 레이어 2개 · 출력 그룹당",
+    "grid": 6,
+    "possible": [
+      "Aquilon RS2",
+      "Aquilon RS3",
+      "Aquilon RS4",
+      "Aquilon RS5",
+      "Aquilon RS6",
+      "Aquilon C",
+      "Aquilon C+",
+      "Aquilon Cmax"
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "width": 760,
+    "metrics": "합성 11,520×4,320@60 · 4K60 출력 6개 · 출력 링크 12개 · 출력 링크 기준 Aquilon VPU 최소 2개 · 믹싱 레이어 2개 · 출력 그룹당",
+    "grid": 6,
+    "possible": [
+      "Aquilon RS2",
+      "Aquilon RS3",
+      "Aquilon RS4",
+      "Aquilon RS5",
+      "Aquilon RS6",
+      "Aquilon C",
+      "Aquilon C+",
+      "Aquilon Cmax"
+    ],
+    "scrollWidth": 760
+  },
+  {
+    "width": 390,
+    "metrics": "합성 11,520×4,320@60 · 4K60 출력 6개 · 출력 링크 12개 · 출력 링크 기준 Aquilon VPU 최소 2개 · 믹싱 레이어 2개 · 출력 그룹당",
+    "grid": 6,
+    "possible": [
+      "Aquilon RS2",
+      "Aquilon RS3",
+      "Aquilon RS4",
+      "Aquilon RS5",
+      "Aquilon RS6",
+      "Aquilon C",
+      "Aquilon C+",
+      "Aquilon Cmax"
+    ],
+    "scrollWidth": 390
+  }
+]
