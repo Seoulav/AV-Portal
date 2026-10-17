@@ -75,4 +75,11 @@ try{
   const detailImage=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
   fs.writeFileSync(path.join(output,'product-detail-pdf-390.png'),Buffer.from(detailImage.data,'base64'));
   console.log('390px product detail: existing PDF.js view and separate download verified');
+  const lockedPath=encodeURIComponent('/manuals/samsung-115qhf-spec-ko.pdf');
+  await cdp('Page.navigate',{url:`${base}/pdfjs/web/viewer.html?file=${lockedPath}`});
+  await waitFor("document.querySelector('.pdf-password')?.hidden === false",'locked PDF password prompt');
+  const lockedState=await evaluate("({sourceHidden:document.querySelectorAll('#pdf-dialog a.pdf-link')[1]?.hidden,downloadDisabled:document.querySelector('#pdf-dialog a[download]')===null})");
+  assert.equal(lockedState.sourceHidden,true,JSON.stringify(lockedState));
+  assert.equal(lockedState.downloadDisabled,true,JSON.stringify(lockedState));
+  console.log('locked PDF: password prompt shown, source and download withheld');
 }finally{socket?.close();chrome.kill();server.close();}

@@ -27,3 +27,13 @@ export function viewerHrefFor(file, pageUrl) {
     return viewer.href;
   } catch { return null; }
 }
+
+export function isViewerPdfLocked(pdf, viewerUrl, manifest) {
+  const viewer = new URL(viewerUrl);
+  if (!pdf || !allowedPdf(pdf, viewer)) return true;
+  const siteRoot = new URL('../../', viewer);
+  const file = pdf.pathname.slice(siteRoot.pathname.length);
+  if (!file.startsWith('manuals/')) return false;
+  const upload = manifest?.uploads?.find(entry => entry.file === file);
+  return upload ? upload.locked === true : true;
+}
