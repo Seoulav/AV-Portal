@@ -539,6 +539,7 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-layer-guide h2 { margin: 0 0 8px; font-size: 20px; }
 .aw-layer-guide h3 { margin: 0 0 10px; font-size: 15px; }
 .aw-guide-intro { max-width: 75ch; color: var(--pg-ink-2); line-height: 1.6; }
+.aw-guide-format-note { max-width: 78ch; color: var(--pg-ink-2); font-size: 12px; line-height: 1.5; }
 .aw-guide-order-note { margin: 0 0 12px; color: var(--pg-ink-2); font-size: 12px; }
 .aw-guide-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
 .aw-guide-example, .aw-guide-add-screen, .aw-guide-remove-screen { min-height: 38px; padding: 8px 12px; border: 1px solid #cbd9eb; border-radius: 999px; color: var(--pg-ink); background: #fff; font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; }
@@ -550,6 +551,8 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-screen-row { display: grid; grid-template-columns: minmax(150px, 1.7fr) minmax(135px, 1.3fr) minmax(85px, .55fr) auto; align-items: end; gap: 9px; min-width: 0; margin: 0; padding: 10px; border: 1px solid #e3eaf3; border-radius: 11px; }
 .aw-guide-screen-row legend { padding: 0 5px; color: var(--pg-ink); font-size: 12px; font-weight: 750; }
 .aw-guide-screen-row label, .aw-guide-global-inputs label { display: grid; gap: 5px; min-width: 0; color: var(--pg-ink-2); font-size: 12px; font-weight: 650; }
+.aw-guide-screen-row [hidden] { display: none; }
+.aw-guide-resolution-fields { grid-column: span 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; min-width: 0; }
 .aw-guide-screen-row select, .aw-guide-screen-row input, .aw-guide-global-inputs input { width: 100%; min-width: 0; height: 38px; padding: 6px 8px; border: 1px solid #cbd6e5; border-radius: 8px; color: var(--pg-ink); background: #fff; font: inherit; font-size: 13px; }
 .aw-guide-remove-screen { border-radius: 8px; padding-inline: 9px; }
 .aw-guide-remove-screen:disabled, .aw-guide-add-screen:disabled { cursor: not-allowed; opacity: .5; }
@@ -558,6 +561,12 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-global-inputs h3 { margin-bottom: 0; }
 .aw-guide-summary { margin: 14px 0 9px; }
 .aw-guide-summary p { margin: 0; font-weight: 750; line-height: 1.5; }
+.aw-guide-summary .aw-guide-derived-formats { margin-bottom: 6px; color: var(--pg-ink-2); font-size: 12px; font-weight: 600; }
+.aw-guide-unconfirmed { color: #8b5310; }
+.aw-guide-export-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+.aw-guide-copy { min-height: 38px; padding: 8px 12px; border: 1px solid #cbd9eb; border-radius: 999px; background: #fff; color: var(--pg-accent-2); font: inherit; font-size: 12px; font-weight: 750; cursor: pointer; }
+.aw-guide-copy:focus-visible { outline: 3px solid #8ebfff; outline-offset: 2px; }
+.aw-guide-copy-status { color: var(--pg-ink-2); font-size: 12px; }
 .aw-guide-recommendation { color: #075b3a; }
 .aw-guide-no-recommendation, .aw-guide-error { color: #9b2c24; }
 .aw-guide-result-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; min-width: 0; }
@@ -592,15 +601,16 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-notes li + li { margin-top: 5px; }
 .aw-guide-simulator-note { margin: 10px 0 0; }
 .aw-guide-simulator-link { display: inline-block; margin: 3px 5px 0 0; color: var(--pg-accent-2); font-weight: 700; }
+@media (max-width: 900px) { .aw-guide-form { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 720px) {
   .aw-layer-guide { padding: 14px; }
-  .aw-guide-form { grid-template-columns: minmax(0, 1fr); }
   .aw-guide-screen-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .aw-guide-remove-screen { justify-self: start; }
 }
 @media (max-width: 430px) {
   .aw-guide-result-list { grid-template-columns: minmax(0, 1fr); }
   .aw-guide-screen-row { grid-template-columns: minmax(0, 1fr); }
+  .aw-guide-resolution-fields { grid-column: 1; }
   .aw-guide-resource-row { grid-template-columns: minmax(72px, 1fr) auto auto; gap: 5px; font-size: 11px; }
   .aw-guide-resource-row dd { white-space: normal; }
   .aw-guide-example { max-width: 100%; white-space: normal; text-align: left; }
