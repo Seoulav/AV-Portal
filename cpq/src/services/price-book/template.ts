@@ -17,7 +17,7 @@ import {
   DEFAULT_BULK_METERS_PER_SEGMENT_BY_LINE_TYPE,
   DEFAULT_READY_MADE_CABLE_SKU_BY_LINE_TYPE,
 } from '../../import/diagram/cables';
-import { CONNECTOR_SKU_BY_CABLE_SKU } from '../../import/diagram/derived';
+import { CONNECTOR_SKUS_BY_CABLE_SKU } from '../../import/diagram/derived';
 import {
   FOUR_SHEET_DEFAULTS,
   FOUR_SHEET_INDIRECT,
@@ -55,7 +55,7 @@ export function currentCableDefaults(): Array<[string, string, string, string]> 
     const cable =
       DEFAULT_READY_MADE_CABLE_SKU_BY_LINE_TYPE.get(lineType) ?? DEFAULT_BULK_CABLE_SKU_BY_LINE_TYPE.get(lineType) ?? '';
     const meters = DEFAULT_BULK_METERS_PER_SEGMENT_BY_LINE_TYPE.get(lineType);
-    const connector = cable === '' ? '' : (CONNECTOR_SKU_BY_CABLE_SKU.get(cable) ?? '');
+    const connector = cable === '' ? '' : (CONNECTOR_SKUS_BY_CABLE_SKU.get(cable) ?? []).join('·');
     return [lineType, cable, meters === undefined ? '' : String(meters), connector];
   });
 }

@@ -35,13 +35,19 @@ export const CONNECTOR_PACK = 10;
 const DEFAULT_CONNECTOR_MODEL = 'CAT6 UTP용';
 
 /**
- * 케이블 SKU → 그 케이블 전용 커넥터 SKU (운영자 결정 2026-10-16).
+ * 케이블 SKU → 그 케이블 전용 커넥터 SKU 목록 (운영자 결정 2026-10-16·2026-10-18).
  *
  * 여기 있는 케이블의 구간은 기본 커넥터 대신 이 커넥터로 따로 센다.
- * 개수 규칙(구간당 3개, 10EA 묶음)은 같다.
+ * 개수 규칙은 같다 — **구간당 3개(사용 2 + 예비 1)를 목록의 커넥터가 나눠 갖고**,
+ * 커넥터마다 10EA 묶음으로 올림한다. 목록이 1개면 지금까지와 똑같다.
+ *
+ * 마이크 케이블은 XLR 3핀(사용자 결정 2026-10-18)이고, 구간 양끝이 F·M 한 쌍이라
+ * 두 SKU를 함께 센다. 회의실 견적 샘플도 XLR 커넥터를 F·M 같은 수량으로 함께
+ * 올렸다(B-20261018-01).
  */
-export const CONNECTOR_SKU_BY_CABLE_SKU: ReadonlyMap<string, string> = new Map([
-  ['CBL-0090', 'CBL-0091'], // 10GXE02 S/FTP CAT6A → STP Modular Cat.7/Cat.6A용
+export const CONNECTOR_SKUS_BY_CABLE_SKU: ReadonlyMap<string, readonly string[]> = new Map([
+  ['CBL-0090', ['CBL-0091']], // 10GXE02 S/FTP CAT6A → STP Modular Cat.7/Cat.6A용
+  ['CBL-0106', ['CBL-0129', 'CBL-0130']], // YJ56878 마이크 케이블 → XLR 3핀 NC3FXX(F)·NC3MXX(M)
 ]);
 
 /** 구간 수 → 10EA 묶음 개수. */
@@ -97,7 +103,7 @@ export function buildDerivedLines(cables: readonly CableLine[], catalog: Catalog
   // --- 커넥터: 나머지 벌크 케이블 구간 수의 합 ---
   const bulkSegments = cables
     .filter(isBulkLine)
-    .filter((line) => line.sku === undefined || !CONNECTOR_SKU_BY_CABLE_SKU.has(line.sku))
+    .filter((line) => line.sku === undefined || !CONNECTOR_SKUS_BY_CABLE_SKU.has(line.sku))
     .reduce((sum, line) => sum + line.segmentCount, 0);
 
   const packs = connectorPacks(bulkSegments);
@@ -123,21 +129,34 @@ export function buildDerivedLines(cables: readonly CableLine[], catalog: Catalog
   }
 
   // --- 전용 커넥터: 케이블 SKU별로 따로 센다 (기본 커넥터 행 뒤에 둬 그 행 번호를 지킨다) ---
-  const dedicatedSegments = new Map<string, number>();
+  // 목록이 2개 이상(예: XLR F·M 쌍)이면 구간당 3개를 커넥터 수로 나눠 갖는다.
+  // ⚠ split은 처음 본 케이블의 목록 길이다 — 한 커넥터 SKU를 **길이가 다른
+  // 두 목록**이 공유하게 되면 이 합산이 틀린다. 그런 등록을 추가하지 않는다
+  // (지금 두 항목은 겹치지 않는다. B-20261018-01 독립 리뷰 지적).
+  const dedicatedSegments = new Map<string, { segments: number; split: number }>();
   for (const cable of cables.filter(isBulkLine)) {
-    const connectorSku = cable.sku !== undefined ? CONNECTOR_SKU_BY_CABLE_SKU.get(cable.sku) : undefined;
-    if (connectorSku === undefined) continue;
-    dedicatedSegments.set(connectorSku, (dedicatedSegments.get(connectorSku) ?? 0) + cable.segmentCount);
+    const connectorSkus = cable.sku !== undefined ? CONNECTOR_SKUS_BY_CABLE_SKU.get(cable.sku) : undefined;
+    if (connectorSkus === undefined) continue;
+    for (const connectorSku of connectorSkus) {
+      const entry = dedicatedSegments.get(connectorSku) ?? { segments: 0, split: connectorSkus.length };
+      entry.segments += cable.segmentCount;
+      dedicatedSegments.set(connectorSku, entry);
+    }
   }
-  for (const [connectorSku, segments] of dedicatedSegments) {
+  for (const [connectorSku, { segments, split }] of dedicatedSegments) {
     const product = catalog.products.find((p) => p.sku === connectorSku);
     const price = catalog.prices.get(connectorSku);
+    const connectorCount = Math.ceil((segments * CONNECTORS_PER_SEGMENT) / split);
+    const basis =
+      split === 1
+        ? `${segments}구간 × ${CONNECTORS_PER_SEGMENT}개`
+        : `${segments}구간 × ${CONNECTORS_PER_SEGMENT}개 ÷ ${split}종`;
     lines.push({
       ...(product !== undefined ? { sku: product.sku } : {}),
       name: product?.quoteName ?? connectorSku,
-      specification: `${product?.quoteSpec ?? connectorSku} (${segments}구간 × ${CONNECTORS_PER_SEGMENT}개)`,
+      specification: `${product?.quoteSpec ?? connectorSku} (${basis})`,
       unit: `${CONNECTOR_PACK}EA`,
-      quantity: String(connectorPacks(segments)),
+      quantity: String(Math.ceil(connectorCount / CONNECTOR_PACK)),
       ...(price !== undefined ? { sellingUnitPrice: price } : {}),
       ...(product?.laborMappingId !== undefined ? { laborMappingId: product.laborMappingId } : {}),
       isAccessory: true,
