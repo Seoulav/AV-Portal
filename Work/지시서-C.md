@@ -409,5 +409,6 @@
 - [x] 전체 직렬 Node 시험 913건: 912 pass, 0 fail, 기존 skip 1. `node beta/verify-pages.mjs`: 289 장비·286 상세·529 이미지·167 업로드. `node beta/build-search-index.mjs --check`: 통과. `git diff --check`: 통과.
 - [x] 최신 main `7534846e`를 통합하고 검색 인덱스·스냅샷·읽기용 카탈로그를 재생성했다. 통합 뒤 전체 직렬 시험 913건(912 pass·기존 skip 1·0 fail), Pages·검색 검사·커밋 diff 검사를 다시 통과했다.
 - [x] 검토용 Draft PR [#634](https://github.com/Seoulav/AV-Portal/pull/634)을 열고 전후 760px·390px 확대 비교를 제출했다.
-- [ ] Work·사용자 확인 대기. 확인 전 Ready·병합·나머지 9종 적용 금지.
+- [x] Work·사용자 시안 확인 완료. 승인 전까지 Ready·병합·나머지 9종 적용을 하지 않았다.
+- 승인 갱신(2026-10-17): 사용자가 시안을 보고 "둘다 진행"으로 RS2·C+ 시안 및 나머지 9종 동일 기준 적용을 승인했다. Work도 RS2 전후 760px·390px 확대 좌·우 캡처를 직접 확인했다. 1단계 PR #634는 최신 main·CI를 다시 확인하고 병합하며, 2단계는 별도 Draft PR로 제출한다.
 - 참고: main에는 이 ID의 별도 Codex 인계서가 없지만 READY 명세와 Work의 직접 배정이 있어 1단계 시안을 진행했다.
