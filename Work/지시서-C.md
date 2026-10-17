@@ -415,7 +415,7 @@
 
 ## W-20261017-011 2단계 — Aquilon 9종 슬롯 중심 Rear 포트맵 (2026-10-17)
 
-- 상태: REVIEW 준비. 9종 묶음 Draft PR 제출 뒤 Work의 390px 확대 검토 및 병합 신호 대기.
+- 상태: MERGED · Pages 공개 확인 완료. 종결 문서 반영 중.
 - 명세: `Work/작업/W-20261017-011.md`; 읽은 main SHA `23bc6b289eef66020e2397015e398075e052547c`.
 - 승인: 사용자 2026-10-17 “둘다 진행” — RS2·C+ 시안과 같은 기준의 전체 적용. Work가 시안 전후 760px·390px 확대를 직접 확인했다.
 - 브랜치·워크트리: `codex/W-20261017-011-aquilon-slots-phase2`, `../codex-c-w011-aquilon-slots`.
@@ -425,5 +425,8 @@
 - [x] 9종 760px·390px 좌·우 미리보기 생성·눈 확인. 문서 폭은 각각 760·390, 번호 수와 목록 수가 모두 일치. `portmap-audit` 29개 보조 신호를 실제 SVG 선 간격과 대조해 점검표에 기록.
 - [x] 전체 Node 시험 926건(925 pass·0 fail·기존 skip 1). `verify-pages` 289 목록·286 상세·529 이미지·167 PDF, 검색 인덱스 `--check` 통과. 최신 `origin/main`과 현재 작업 기준 SHA가 모두 `c983110ab5e42783dcf3d51307557aefd6252c9c`임을 확인하고 파생 파일을 재생성.
 - [x] [Draft PR #639](https://github.com/Seoulav/AV-Portal/pull/639)을 열고 9종 390px 좌·우 미리보기를 PR 본문에 연결. Work 검토 전 Ready·병합 금지.
-- [ ] PR #639 Builder CI 확인. 처음 조회 시 `builder` pending(run `39042364495`).
-- [ ] Work의 390px 확대 검토와 병합 지시 후 Ready·병합·Pages·공개 9종 확인.
+- [x] PR #639 Builder CI [run 39042466824](https://github.com/Seoulav/AV-Portal/actions/runs/39042466824) 통과. 병합 직전 `git merge origin/main`은 최신 상태였고 검색 인덱스·스냅샷·읽기용 카탈로그 재생성에서 추가 차이 없음.
+- [x] Work가 9종의 390px 좌·우 확대를 직접 확인하고 병합 승인. #639 Ready 전환 후 병합 SHA `1492aca3056e540a772208a597495b181de67903`을 GitHub PR에서 확인.
+- [x] Pages [run 39042998497](https://github.com/Seoulav/AV-Portal/actions/runs/39042998497) 성공. 공개 `version.json` revision `1492aca`. RS4·Cmax Rear를 실제 390px 브라우저 좌·우로 캡처·눈 확인. 번호/목록 각각 19·22개, 문서 `scrollWidth=390`, 사진 영역 `scrollWidth=560`·`clientWidth=298`, 슬롯/고정부 괄호 관통·오인 0건. [공개 캡처](기록/W-20261017-011-public/).
+- [x] `Work/기록/W-20261016-015-예외.md`의 과거 Aquilon 묶음 번호 문단을 이력으로 구분하고 현행 W-011 11종 슬롯 번호 및 추가 예외 없음 사실을 후속 절에 기록.
+- [x] W-011 종결. 세션 C 대기열에 남은 배정 작업 없음.
