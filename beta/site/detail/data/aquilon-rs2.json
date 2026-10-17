@@ -101,9 +101,18 @@
       "status": "FOUND",
       "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
       "language": "en",
-      "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+      "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
       "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
-      "quickSlot": "technical"
+      "quickSlot": "technical",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+    },
+    {
+      "type": "Quick Start Guide",
+      "status": "FOUND",
+      "title": "Aquilon RS2 Quick Start Guide",
+      "language": "en",
+      "note": "모델별 빠른 시작 안내서",
+      "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Quick+Start+Guide/Aquilon-RS2-quick-start-guide.pdf"
     },
     {
       "type": "Official Product Page",

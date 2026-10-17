@@ -1,0 +1,864 @@
+{
+  "aquilon-rs1": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon RS1 Quick Start Guide",
+          "language": "en",
+          "note": "설치 절차 중심 퀵스타트 가이드(전체 사용설명서 아님)",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS1 Technical Datasheet",
+          "language": "en",
+          "note": "모델 전용 기술 데이터시트",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs1"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon User Manual v6.2 공용 문서; p.1 References 적용 모델 목록: AQL-RS-ALPHA, AQL-RS1–RS6, AQL-Cmini, AQL-C, AQL-C+, AQL-Cmax.",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS1 Quick Start Guide",
+          "language": "en",
+          "note": "RS1 model-specific Quick Start Guide",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Quick+Start+Guide/Aquilon-RS1-quick-start-guide.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS1 Technical Datasheet",
+          "language": "en",
+          "note": "모델 전용 기술 데이터시트",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS1/Technical+Datasheet/Aquilon-RS1-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs1"
+        }
+      ]
+    }
+  },
+  "aquilon-rsalpha": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS alpha Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Technical+Datasheet/Aquilon-RS-alpha-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs-alpha"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS alpha Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Technical+Datasheet/Aquilon-RS-alpha-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS alpha Quick Start Guide",
+          "language": "en",
+          "note": "모델별 빠른 시작 안내서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS+alpha/Quick+Start+Guide/aquilon-RS-alpha-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs-alpha"
+        }
+      ]
+    }
+  },
+  "aquilon-rs2": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS2 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs2"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS2 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS2 Quick Start Guide",
+          "language": "en",
+          "note": "모델별 빠른 시작 안내서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Quick+Start+Guide/Aquilon-RS2-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs2"
+        }
+      ]
+    }
+  },
+  "aquilon-rs3": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS3 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS3/Technical+Datasheet/Aquilon-RS3-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs3"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS3 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS3/Technical+Datasheet/Aquilon-RS3-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs3"
+        }
+      ]
+    }
+  },
+  "aquilon-rs4": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS4 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS4/Technical+Datasheet/Aquilon-RS4-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs4"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS4 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS4/Technical+Datasheet/Aquilon-RS4-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS4 Quick Start Guide",
+          "language": "en",
+          "note": "모델별 빠른 시작 안내서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS4/Quick+Start+Guide/Aquilon-RS4-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs4"
+        }
+      ]
+    }
+  },
+  "aquilon-rs5": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS5 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS5/Technical+Datasheet/Aquilon-RS5-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs5"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS5 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS5/Technical+Datasheet/Aquilon-RS5-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS5 Quick Start Guide",
+          "language": "en",
+          "note": "모델별 빠른 시작 안내서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS5/Quick+Start+Guide/Aquilon-RS5-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs5"
+        }
+      ]
+    }
+  },
+  "aquilon-rs6": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS6 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS6/Technical+Datasheet/Aquilon-RS6-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "사용자 제공 제조사 공식 자료. 7쪽 모델별 레이어·입출력 비교.",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs6"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Aquilon User Manual v6.2",
+          "language": "en",
+          "note": "Aquilon 시리즈(RS1/RS2 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/User+Manual/Aquilon_User_Manual_v6.2.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Aquilon RS6 Technical Datasheet (2026-07-03)",
+          "language": "en",
+          "note": "Technical Specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS6/Technical+Datasheet/Aquilon-RS6-datasheet-en-20260703.pdf"
+        },
+        {
+          "type": "Brochure",
+          "status": "FOUND",
+          "title": "Analog Way Aquilon 브로슈어(2026년 4월)",
+          "language": "en",
+          "note": "2026년 4월 공식 Aquilon 시리즈 브로슈어",
+          "file": "manuals/analog-way-aquilon-brochure-april-2026.pdf",
+          "quickSlot": "technical",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Common/Brochure/brochure-Aquilon-april2026-web.pdf"
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "Aquilon RS6 Quick Start Guide",
+          "language": "en",
+          "note": "모델별 빠른 시작 안내서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS6/Quick+Start+Guide/Aquilon-RS6-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/aquilon-rs6"
+        }
+      ]
+    }
+  },
+  "pulse-4k": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Midra 4K User Manual (Pulse 4K 포함 공용, 2026-05-21)",
+          "language": "en",
+          "note": "Midra 4K 플랫폼(Pulse 4K/Eikos 4K 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Pulse 4K Technical Datasheet (2026-05-21)",
+          "language": "en",
+          "note": "Key features, Technical specifications, Product Specifications 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf"
+        },
+        {
+          "type": "Technical Document",
+          "status": "MISSING",
+          "title": "Technical Document 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/pulse-4k"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "FOUND",
+          "title": "Midra 4K User Manual (Pulse 4K 포함 공용, 2026-05-21)",
+          "language": "en",
+          "note": "Midra 4K 플랫폼(Pulse 4K/Eikos 4K 등) 공용 사용설명서",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Common/User+Manual/AW_Midra4K_UserManual_20260521.pdf"
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "Pulse 4K Technical Datasheet (2026-05-21)",
+          "language": "en",
+          "note": "Key features, Technical specifications, Product Specifications 전체 수록; 데이터시트 p.1·5: RTMP-based livestreaming of any input or output up to 1080p30; p.6: H.264 video encoding up to 720p30, up to 6 Mbps. Same-edition source values are both preserved (CONFLICTED).",
+          "url": "https://dwn01.analogway.com/Site+Internet/Series/Midra+4k/Products/Pulse+4k/Technical+Datasheet/AW_Midra4K_Pulse4K_Datasheet_en_20260521.pdf"
+        },
+        {
+          "type": "Technical Document",
+          "status": "MISSING",
+          "title": "Technical Document 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/pulse-4k"
+        }
+      ]
+    },
+    "fields": {
+      "overview": {
+        "prior": "Pulse 4K는 8개의 4K60 입력과 2개의 1080p 입력(HDMI/3G-SDI 사용자 선택 가능) 총 10개 입력을 지원하는 4K60 멀티레이어 비디오 믹서로, 2개의 4K60 미러링 HDMI+SDI 출력을 Program&AUX 또는 2개의 독립 Program으로 구성할 수 있다. 전용 멀티뷰어 출력(HDMI+미러링 SDI, 최대 2560x1600@60)으로 프로그램·프리뷰·모든 입력을 모니터링한다.\n\n제조사 공식 데이터시트에 따르면 Midra 4K FPGA 하드웨어 플랫폼과 Aquilon 시리즈에서 물려받은 5세대 스케일링 엔진을 기반으로, 4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리, HDR10·HLG 지원, HDCP 1.4/2.2 호환을 제공한다. Mixer 모드(1x PGM + 1x AUX)와 Matrix 모드(2x PGM) 2가지 모드를 지원하며, 라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어)를 구성할 수 있다.\n\n전원은 100-240VAC(최대 95W)이며, 2RU 랙 마운트 섀시(핸들 포함 482.5×88×474mm), 액세서리 제외 무게 7.60kg이다.",
+        "approved": "Pulse 4K는 8개의 4K60 입력과 2개의 1080p 입력(HDMI/3G-SDI 사용자 선택 가능) 총 10개 입력을 지원하는 4K60 멀티레이어 비디오 믹서로, 2개의 4K60 미러링 HDMI+SDI 출력을 Program&AUX 또는 2개의 독립 Program으로 구성할 수 있다. 전용 멀티뷰어 출력(HDMI+미러링 SDI, 최대 2560x1600@60)으로 프로그램·프리뷰·모든 입력을 모니터링한다.\n\n제조사 공식 데이터시트에 따르면 Midra 4K FPGA 하드웨어 플랫폼과 Aquilon 시리즈에서 물려받은 5세대 스케일링 엔진을 기반으로, 4K60 10비트 4:4:4 초저지연(16ms @60Hz) 영상 처리, HDR10·HLG 지원, HDCP 1.4/2.2 호환을 제공한다. Mixer 모드(1x PGM + 1x AUX)와 Matrix 모드(2x PGM) 2가지 모드를 지원하며, 라이브 배경 + 최대 4개의 4K 분할 레이어(또는 2개의 4K 믹싱 레이어)를 구성할 수 있다.\n\n전원은 100-240VAC(최대 95W)이며, 2RU 랙 마운트 섀시(핸들 포함 482.5×88×474mm), 액세서리 제외 무게 7.60kg이다.\n\n라이브스트리밍은 데이터시트 p.1·5에서 RTMP 기반 입력·출력 최대 1080p30으로 설명하지만, p.6 H.264 인코딩 사양표는 최대 720p30·6 Mbps로 표기(CONFLICTED)."
+      },
+      "feature5": {
+        "prior": {
+          "text": "RTMP/RTMPS 기반으로 임의의 입력·출력을 최대 1080p30까지 라이브 스트리밍 가능",
+          "source": ""
+        },
+        "approved": {
+          "text": "RTMP 기반 입력·출력 라이브스트리밍 최대 1080p30(데이터시트 1·5쪽), H.264 인코딩 사양표 최대 720p30·6 Mbps(6쪽) 표기(CONFLICTED)",
+          "source": ""
+        }
+      }
+    }
+  },
+  "rc400t": {
+    "documents": {
+      "prior": [
+        {
+          "type": "User Manual",
+          "status": "MISSING",
+          "title": "User Manual 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "RC400T Technical Datasheet",
+          "language": "en",
+          "note": "Technical Specifications, Key Features 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Technical+Datasheet/rc400t-datasheet-en.pdf"
+        },
+        {
+          "type": "Technical Document",
+          "status": "MISSING",
+          "title": "Technical Document 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/rc400t"
+        }
+      ],
+      "approved": [
+        {
+          "type": "User Manual",
+          "status": "MISSING",
+          "title": "User Manual 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Independent Specification",
+          "status": "MISSING",
+          "title": "Independent Specification 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Specification",
+          "status": "FOUND",
+          "title": "RC400T Technical Datasheet",
+          "language": "en",
+          "note": "Technical Specifications, Key Features 전체 수록",
+          "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Technical+Datasheet/rc400t-datasheet-en.pdf"
+        },
+        {
+          "type": "Technical Document",
+          "status": "MISSING",
+          "title": "Technical Document 미확인",
+          "language": "언어 미확인",
+          "note": ""
+        },
+        {
+          "type": "Quick Start Guide",
+          "status": "FOUND",
+          "title": "RC400T event controller - Quick Start Guide",
+          "language": "en",
+          "note": "Quick setup and operation guide",
+          "url": "https://dwn01.analogway.com/Site+Internet/Consoles+%26+Controllers/RC400T/Quick+Start+Guide/RC400T-quick-start-guide.pdf"
+        },
+        {
+          "type": "Official Product Page",
+          "status": "VERIFIED",
+          "title": "공식 제품 페이지",
+          "language": "언어 미확인",
+          "note": "",
+          "url": "https://www.analogway.com/products/rc400t"
+        }
+      ]
+    }
+  }
+}
