@@ -23,8 +23,8 @@
 
 ## Task 3: Record and review
 
-- [ ] Record scope and verification in `Work/지시서.md` and `Work/기록/W-20261017-007-Work-인계.md`.
-- [ ] Run the focused and full tests, `verify-pages`, search-index check, asset generation, and diff checks.
-- [ ] Integrate latest `origin/main`, commit and push; open a Draft PR with 1280px and 390px captures for Work's independent review. Do not merge before that review.
+- [x] Record scope and verification in `Work/지시서.md` and `Work/기록/W-20261017-007-Work-인계.md`.
+- [x] Run the focused and full tests, `verify-pages`, search-index check, asset generation, and diff checks.
+- [x] Integrate latest `origin/main`, commit and push; open a Draft PR with 1280px and 390px captures for Work's independent review. Do not merge before that review.
 
 **Resolved wording decision:** Work directs the cards to show split `2N` as a conversion from mixing N, citing the manual's pair rule (p. 66) and the simulator's exact 2× split setting. Tests directly call the evaluator for split values within the eight-per-group input range. Above that range, label split `2N` as a documented conversion rather than a directly evaluated result.
