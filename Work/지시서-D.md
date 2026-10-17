@@ -371,3 +371,25 @@
 
 - PR CI: 문서 경로는 Builder/CPQ PR workflow의 paths 대상이 아니고 Pages는 main push에서만 실행됩니다. #606 체크·workflow run 0개, mergeStateStatus CLEAN. CI 통과로 표현하지 않습니다.
 - [x] 문서 PR 제출·최신main/변경범위/CI 적용 여부 확인 완료. Work에게 병합 검토 요청; 승인 전까지 REVIEW 유지.
+
+## W-20261017-013 RTCOM 예약 동기화 복구 — IN_PROGRESS (2026-10-17)
+
+- 명세: Work/작업/W-20261017-013.md READY. 읽은 main SHA: 19d637cde86d8515f20dd7c27d3482ded53a654d.
+- 브랜치: codex/W-20261017-013-rtcom-sync. 작업 위치: codex-d 전용 워크트리. 별도 Codex 인계 파일은 없으며 Work의 2026-10-17 직접 배정으로 착수.
+- 범위: XDM-MR4S 수신에 따른 시험 기대 목록/개수, RTCOM 동기화 산출물, 검색·읽기용 파생물. 원본/일반 제품 JSON·렌더러·Analog Way 페이지·가이드·builder/cpq 무변경.
+- 실패 run 38967102666 실제 확인: W-012 지도 검증 스냅샷에 rtcom-xdm-mr4s 누락; overview-fallback 및 rtcom-embed의 고정 개수 32도 실패. 실수신 기대는 accepted:true/errors:[]/crop:false.
+- [x] 최신 main·명세·실패 로그·관련 시험 확인.
+- [x] 동기화 전 자기 변경 커밋·최신 main 통합, 원본 동기화 및 실패 재현.
+- [x] 최소 시험 기대값 갱신, 파생 재생성, 전체 검사.
+- [x] XDM-MR4S 카드·상세 화면 확인, Draft PR 및 Work 검토 요청.
+- [ ] Work 승인 뒤 병합·예약 workflow 수동 1회 초록 확인.
+- Work 추가 승인(2026-10-17): 신규 제품 1종 수신에 따른 기대값 3곳 갱신. 실제 SYNC source/published 및 상세 파일 수 모두 33 확인. 기존 32종 시험 12/12 통과 → 동기화 후 9 pass/3 fail 재현. 검증 로직과 수신 데이터는 수동 변경하지 않음.
+
+- [x] 동기화 전 진행 기록 커밋 f7c1f5d1, fetch/merge origin/main 완료 후 동기화. 신규 xdm-mr4s 1종, 실제 source/published/상세 파일 모두 33. 기존 11종은 최신 원본 변경을 그대로 수신.
+- [x] 기대값 3곳만 수정. 관련 시험 동기화 전 12pass → 수신 후 9pass/3fail → 수정 후 12pass. 변경 원본 15파일을 공식 서버와 SHA 재대조, 전부 동일.
+- [x] 검색/읽기용 파생물 재생성, RTCOM check·검색 check·Pages 검증 통과. 읽기용 카탈로그는 실제 --check 모드가 없어 생성 함수 결과와 바이트 비교 통과.
+- [x] npm test: 911건 / 910pass / 0fail / 기존skip1. Pages: 일반 289장비·286상세·529사진·167uploads. 일반+RTCOM 목록 322개.
+- [x] XDM-MR4S 목록 카드·상세 Front/Rear를 1280px/390px로 직접 확인. 번호와 목록 각5개, 사진2장 정상, 페이지 넘침0. 390px 내부 좌우 스크롤도 확인. 로컬 outputs/w20261017-013/ PNG8장/측정/검증 로그.
+- 상태 REVIEW: Draft PR 제출 후 Work 확인 대기. 병합·수동 동기화·다음 예약 성공은 아직 미완료.
+
+- Draft PR [#632](https://github.com/Seoulav/AV-Portal/pull/632) 제출. Work 병합 검토 요청. 승인 뒤 수동 sync-rtcom workflow 실행 예정.
