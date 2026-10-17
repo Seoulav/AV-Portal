@@ -130,6 +130,9 @@ export function buildDerivedLines(cables: readonly CableLine[], catalog: Catalog
 
   // --- 전용 커넥터: 케이블 SKU별로 따로 센다 (기본 커넥터 행 뒤에 둬 그 행 번호를 지킨다) ---
   // 목록이 2개 이상(예: XLR F·M 쌍)이면 구간당 3개를 커넥터 수로 나눠 갖는다.
+  // ⚠ split은 처음 본 케이블의 목록 길이다 — 한 커넥터 SKU를 **길이가 다른
+  // 두 목록**이 공유하게 되면 이 합산이 틀린다. 그런 등록을 추가하지 않는다
+  // (지금 두 항목은 겹치지 않는다. B-20261018-01 독립 리뷰 지적).
   const dedicatedSegments = new Map<string, { segments: number; split: number }>();
   for (const cable of cables.filter(isBulkLine)) {
     const connectorSkus = cable.sku !== undefined ? CONNECTOR_SKUS_BY_CABLE_SKU.get(cable.sku) : undefined;
