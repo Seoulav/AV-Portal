@@ -80,7 +80,7 @@ export function buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }) {
     examples: [
       {
         title: 'Aquilon · 2×2 4K60 화면',
-        text: `출력 ${rsExample.outputs}개를 연결한 화면 1개에는 믹싱 ${rsExample.mixingLayersPerScreen}개 또는 분할 ${rsExample.splitLayersPerScreen}개까지 배치할 수 있습니다.`,
+        text: `출력 ${rsExample.outputs}개를 연결한 화면 1개를 VPU ${rsExample.vpusForScreen}개로 처리하는 예시는 믹싱 ${rsExample.mixingLayersPerScreen}개 또는 분할 ${rsExample.splitLayersPerScreen}개입니다. 큰 모델은 레이어 자원을 다른 VPU에도 나눌 수 있습니다.`,
       },
       {
         title: 'Alta 4K · 여러 화면으로 나눠 쓰기',
@@ -101,14 +101,15 @@ export function buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }) {
       '보조 화면(AUX)은 주 화면과 별도 출력입니다. Midra 1080p AUX에는 크기를 바꿀 수 없는 레이어 1개가 있고, Alta AUX는 레이어 자원을 쓰지 않습니다.',
     ],
     pipNote: '화면 안 작은 창(PiP)은 화면의 레이어 자원을 사용합니다. PiP만의 별도 최대 개수는 확인되지 않았습니다.',
-    calculationNote: `2×2 4K60 화면 1개 = 출력 ${rsExample.outputs}개 × 용량 ${rsExample.outputCapacity} = 출력 링크 ${rsExample.outputLinks}개 = VPU ${rsExample.vpusForScreen}개. 화면당 믹싱 ${rsExample.mixingLayersPerScreen}개 또는 분할 ${rsExample.splitLayersPerScreen}개까지 배치합니다. (Aquilon User Manual v6.2, 61·66·79쪽)`,
+    calculationNote: `2×2 4K60 화면 1개 = 출력 ${rsExample.outputs}개 × 용량 ${rsExample.outputCapacity} = 출력 링크 ${rsExample.outputLinks}개 = VPU ${rsExample.vpusForScreen}개. VPU 1개의 소스 링크 8개로 믹싱 ${rsExample.mixingLayersPerScreen}개 또는 분할 ${rsExample.splitLayersPerScreen}개를 처리하는 매뉴얼 예시입니다. 화면 자체의 고정 상한은 아닙니다. (Aquilon User Manual v6.2, 61·66·79쪽)`,
     cautionNotes: [
       '배경 콘텐츠는 출력 용량과 일치해야 하며 확대·축소되지 않습니다. 2×2 4K60 화면은 출력마다 4K60 소스가 필요합니다. (Aquilon User Manual v6.2, 101쪽)',
-      '출력 8개 이하인 화면의 레이어를 VPU 두 개에 나눠 늘릴 수 있는지는 확인되지 않았습니다. (같은 매뉴얼, 68쪽의 확인 범위)',
-      '용량 1(HD)과 용량 2(4K60) 레이어를 섞을 때의 자원 비용은 확인되지 않았습니다. 매뉴얼은 Optimized mode에서 용량 2만 쓰도록 권고합니다. (같은 매뉴얼, 69쪽)',
-      'Region Captive PiP의 절감 산식은 확인되지 않았습니다. PiP 배치만으로 링크가 절약된다고 확인되지 않았습니다. (Aquilon RS1 Technical Datasheet, 3쪽; Aquilon User Manual v6.2, 83쪽)',
+      'Aquilon은 출력 링크 8개인 2×2 4K60 화면에서도 레이어를 VPU 여러 개에 나눌 수 있습니다. C+의 용량 4 믹싱 6개는 실제 적용(APPLY)에 성공했고 7개째는 거부됐습니다. 화면당 4개는 VPU 1개 예시입니다. 용량 2 믹싱 12개는 시뮬레이터의 추가 가능 수 표시이며 APPLY 검증값은 아닙니다. (AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측)',
+      'Aquilon 기본 모드에서 용량 1 믹싱 1개를 적용하자 남은 용량 1·2·4 믹싱 수가 각각 12→11, 12→5, 6→2로 바뀌었습니다. 혼합 비용은 레이어 용량·걸친 출력 범위에 따라 달라집니다. Alta·Midra에는 적용하지 않습니다. (AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측; Aquilon User Manual v6.2, 69쪽)',
+      'Aquilon C+에서 Region을 출력 링크 4개로 제한한 용량 1 믹싱은 24개, 화면 전체 출력 링크 8개를 걸치면 12개였습니다. 기본 모드의 레이어 링크 비용은 max(레이어 용량, 걸친 출력 링크÷4의 올림)이며 Cut&Fill은 그 두 배입니다. Region Captive PiP 용어는 RS1 데이터시트 3쪽에 있습니다. (AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측; Aquilon User Manual v6.2, 68·83쪽)',
+      'Aquilon Optimized mode에서는 4링크 경계가 없어지고 레이어 비용이 용량 1·2·4 그대로입니다(Cut&Fill은 두 배). 용량 4 Cut&Fill은 기본 모드에서 불가하지만 이 모드에서는 가능했습니다. 시뮬레이터 실측은 Aquilon에만 해당합니다. (AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측; Aquilon User Manual v6.2, 69쪽)',
     ],
-    sourceNote: '근거: Aquilon User Manual v6.2 61·66·68·69·79·83·101쪽; Aquilon RS1 Technical Datasheet 3쪽.',
+    sourceNote: '근거: Aquilon User Manual v6.2 61·66·68·69·79·83·101쪽; Aquilon RS1 Technical Datasheet 3쪽; AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측.',
   };
 }
 
@@ -119,7 +120,7 @@ function renderTable(series, currentSlug) {
   region.tabIndex = 0;
   const table = make('table');
   const headings = series.id.startsWith('aquilon')
-    ? ['모델', '2×2 4K60 화면 수', '화면당 레이어(분할)', '장비 전체 레이어(분할)', '4K60 프로그램 출력', 'VPU']
+    ? ['모델', '2×2 4K60 화면 수', 'VPU 1개 예시(분할)', '장비 전체 레이어(분할)', '4K60 프로그램 출력', 'VPU']
     : series.id === 'alta'
       ? ['모델', '최대 화면 수', '최대 화면 수일 때 화면당(분할)', '장비 전체(분할)', '그때 AUX', '한 화면만 쓸 때(분할)', 'AUX 최대']
       : ['모델', '최대 4K60 화면', '최대 화면 수일 때 화면당(분할)', '장비 전체(분할)', '한 화면만 쓸 때(분할)', '운영 모드'];

@@ -381,3 +381,14 @@
 - [x] Regenerated detail assets, search-index (712807 bytes), and readable catalog after main integration.
 - [x] Post-integration serial suite: 855 tests, 854 pass, 0 fail, 1 skipped. verify-pages and search-index --check pass.
 - [ ] Push integration, update PR text, confirm CI, then mark ready and merge.
+
+## W-20261017-003 2부 종료 · W-20261017-005 착수 (2026-10-17)
+
+- W-003 2부 PR #612는 Work의 화면·코드 검토 승인 후 최신 main을 통합하고 파생물을 재생성했다. 전체 직렬 시험 887건(886 통과·기존 건너뜀 1), `verify-pages`, 검색 인덱스 검사, Builder CI를 통과했다.
+- PR #612 병합 SHA `13dbadb3d8064c2ccdf2948758678b0bbf9c11a0`; Pages run `39006252653` 성공, 공개 revision `13dbadb`. Aquilon RS2 공개 화면을 1280px·390px에서 확인했다. 두 폭에서 페이지 가로 넘침과 JS 오류가 없고, 7680×1080@60의 출력 4개 및 Aquilon HD 주의 문구가 보인다.
+- W-20261017-005 상태: REVIEW. 명세 `Work/작업/W-20261017-005.md`, 인계 `Work/기록/W-20261017-005-Codex-인계.md`, 실측 원본 `Work/기록/W-20261017-003-시뮬레이터실측.md`를 기준 main `13dbadb3d8064c2ccdf2948758678b0bbf9c11a0`에서 읽었다. 브랜치 `codex/W-20261017-005-aw-simulator`, 전용 워크트리 `codex-c-w005-aw-sim`.
+- [x] Aquilon 가이드 판정의 VPU 분산·장비 전체 자원 기준을 실측에 맞게 보정하고 회귀 시험을 갱신했다. RS1은 2×2 믹싱 6개 불가, RS2·C+는 가능하며 소스 링크 12개·출력 링크 8개·VPU 2개로 계산한다.
+- [x] 기준 문서와 공용 카드의 Aquilon 근거·미확인 문구를 실측 4건으로 갱신했다. Alta·Midra, 제품 JSON과 렌더 기능·스타일은 수정하지 않았다. 상세 JS import와 HTML script의 캐시 버전만 갱신했다.
+- [x] 15종 노출 회귀 시험 및 RS2·C+·Zenith 200 카드의 760px·390px 펼침 화면을 확인했다. 여섯 화면의 `scrollWidth`는 각 760·390이며 `outputs/w005-preview/`에 PNG와 측정값을 저장했다.
+- [x] 전체 직렬 시험 890건(889 통과·0 실패·기존 건너뜀 1), `verify-pages`(289·286·529·167), 검색 인덱스 `--check`(712867 bytes), 파생 산출물 재생성, `git diff --check` 완료.
+- [ ] Draft PR·CI 결과를 Work에 제출하고 독립 검증을 기다린다. 검토 전 병합하지 않는다.

@@ -82,7 +82,7 @@ test('Midra table distinguishes two-screen Matrix from one-screen Mixer', () => 
     assert.equal(cautions.length, 1);
     assert.equal(cautions[0].children[0].textContent, '계산 근거와 미확인 사항');
     assert.match(cautions[0].children[1].textContent, /출력 4개.*출력 링크 8개.*VPU 1개.*믹싱 4개.*분할 8개/);
-    assert.equal(cautions[0].children[2].children.length, 4);
+    assert.equal(cautions[0].children[2].children.length, 5);
     assert.match(cautions[0].children[3].textContent, /Aquilon User Manual v6\.2.*101쪽/);
   } finally {
     globalThis.document = previousDocument;

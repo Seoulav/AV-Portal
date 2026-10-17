@@ -10,8 +10,8 @@ import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-
 import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
 import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
 import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
-import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261016-019';
-import { buildAnalogWayLayerStandards, renderAnalogWayLayerStandards } from './analogway-layer-standards.mjs?v=w20261017-003';
+import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261017-005';
+import { buildAnalogWayLayerStandards, renderAnalogWayLayerStandards } from './analogway-layer-standards.mjs?v=w20261017-005';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
