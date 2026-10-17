@@ -383,3 +383,11 @@
 - [ ] 최소 시험 기대값 갱신, 파생 재생성, 전체 검사.
 - [ ] XDM-MR4S 카드·상세 화면 확인, Draft PR 및 Work 검토 요청.
 - [ ] Work 승인 뒤 병합·예약 workflow 수동 1회 초록 확인.
+- Work 추가 승인(2026-10-17): 신규 제품 1종 수신에 따른 기대값 3곳 갱신. 실제 SYNC source/published 및 상세 파일 수 모두 33 확인. 기존 32종 시험 12/12 통과 → 동기화 후 9 pass/3 fail 재현. 검증 로직과 수신 데이터는 수동 변경하지 않음.
+
+- [x] 동기화 전 진행 기록 커밋 f7c1f5d1, fetch/merge origin/main 완료 후 동기화. 신규 xdm-mr4s 1종, 실제 source/published/상세 파일 모두 33. 기존 11종은 최신 원본 변경을 그대로 수신.
+- [x] 기대값 3곳만 수정. 관련 시험 동기화 전 12pass → 수신 후 9pass/3fail → 수정 후 12pass. 변경 원본 15파일을 공식 서버와 SHA 재대조, 전부 동일.
+- [x] 검색/읽기용 파생물 재생성, RTCOM check·검색 check·Pages 검증 통과. 읽기용 카탈로그는 실제 --check 모드가 없어 생성 함수 결과와 바이트 비교 통과.
+- [x] npm test: 911건 / 910pass / 0fail / 기존skip1. Pages: 일반 289장비·286상세·529사진·167uploads. 일반+RTCOM 목록 322개.
+- [x] XDM-MR4S 목록 카드·상세 Front/Rear를 1280px/390px로 직접 확인. 번호와 목록 각5개, 사진2장 정상, 페이지 넘침0. 390px 내부 좌우 스크롤도 확인. 로컬 outputs/w20261017-013/ PNG8장/측정/검증 로그.
+- 상태 REVIEW: Draft PR 제출 후 Work 확인 대기. 병합·수동 동기화·다음 예약 성공은 아직 미완료.

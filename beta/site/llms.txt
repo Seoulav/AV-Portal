@@ -5,8 +5,8 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
 - 홈: https://seoulav.github.io/AV-Portal/
 - 정적 HTML 카탈로그: https://seoulav.github.io/AV-Portal/catalog.html
 - 공개 JSON: https://seoulav.github.io/AV-Portal/catalog.json
-- 공개 장비: 321개
-- Product Detail: 318개
+- 공개 장비: 322개
+- Product Detail: 319개
 - 데이터 범위: 공개 허용된 제조사, 제품명, 복수 분류, 장비 종류, 공식 링크
 - 링크 표기: "공식 링크"는 해당 모델 전용 제조사 페이지, "제품군 링크"는 그 모델이 속한 제품군·시리즈의 제조사 페이지입니다.
 - 주의: 세부 사양과 적용 조건은 연결된 제조사 공식 원문에서 확인해야 합니다.
@@ -2159,6 +2159,12 @@ AV Portal은 AV 장비를 제조사, 제품명, 카테고리와 연결 규격으
   종류: 장비
   공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-ft101-fr101
   상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-ft101-fr101
+
+- 제품: RTCOM XDM-MR4S
+  분류: 영상 | Video | Extension Frame
+  종류: 장비
+  공식 링크: https://seoulav.github.io/rtcom-configurator/#products/xdm-mr4s
+  상세: https://seoulav.github.io/AV-Portal/detail/?product=rtcom-xdm-mr4s
 
 - 제품: RTCOM XDM-PSU
   분류: 영상 | Video | Extender | Power

@@ -64,7 +64,7 @@ test('RTCOM detail keeps its existing unfiltered fallback presentation',async()=
     assert.deepEqual(detail.keySpecifications,legacy,file);
     if(file==='umc.json') assert.deepEqual(detail.keySpecifications.slice(0,4).map(item=>item.name),['케이블','잠금 강도','인증','시험']);
   }
-  assert.equal(files.length,32);
+  assert.equal(files.length,33);
   const app=await readFile(new URL('../prototype/brc-am7/app.js',import.meta.url),'utf8');
   assert.match(app,/compactFallback:\s*!rtcomId/);
 });
