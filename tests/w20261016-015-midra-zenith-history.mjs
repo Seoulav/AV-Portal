@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
+import { beforeW20261017_002Product, beforeW20261017_002Raw } from './w20261017-002-history.mjs';
 const prior=JSON.parse(fs.readFileSync(new URL('./fixtures/w015-midra-zenith-prior.json',import.meta.url),'utf8'));
 const approved=JSON.parse(fs.readFileSync(new URL('./fixtures/w015-midra-zenith-approved.json',import.meta.url),'utf8'));
 const slugs=new Set(Object.keys(prior));
@@ -7,7 +8,8 @@ const sha=value=>createHash('sha256').update(value).digest('hex');
 const layout=map=>({image:map.image,measuredImage:map.measuredImage,crop:map.crop??null,items:map.items.map(item=>Object.fromEntries(['n','side','x','x1','x2','y','y1','y2','labelX','via'].filter(key=>Object.hasOwn(item,key)).map(key=>[key,item[key]])))});
 const stable=map=>map.items.map(({n,label,desc})=>({n,label,desc}));
 const bytes=product=>JSON.stringify(product,null,2)+'\n';
-export function beforeW20261016_015MidraProduct(current,slug){
+export function beforeW20261016_015MidraProduct(current,slug,{w002Undone=false}={}){
+ if(!w002Undone)current=beforeW20261017_002Product(current,slug);
  if(!slugs.has(slug))return current;
  const base=prior[slug],expected=approved[slug];
  if(!current.portMaps)return current;
@@ -31,7 +33,8 @@ export function beforeW20261016_015MidraProduct(current,slug){
  restored.imageStatuses[statusIndex]=structuredClone(base.imageStatuses.find(status=>status.role==='Other'));
  return restored;
 }
-export function beforeW20261016_015MidraRaw(raw,slug){
+export function beforeW20261016_015MidraRaw(raw,slug,{w002Undone=false}={}){
+ if(!w002Undone)raw=beforeW20261017_002Raw(raw,slug);
  if(!slugs.has(slug))return raw;
  return bytes(beforeW20261016_015MidraProduct(JSON.parse(raw),slug));
 }

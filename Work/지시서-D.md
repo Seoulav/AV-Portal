@@ -349,3 +349,25 @@
 - 공개 수정9제품 JSON 및 렌더러·검증기·CSS3개(총12파일) SHA가 승인본과 일치. 공개 증빙은 outputs/w015-closeout-fixes/public-verification.json, public-assets.json, public/*.png 및 completion.json에 보존.
 - 마감 점검 기준180제품185지도. 사진 안쪽 y필드 지도148→42; 남은42지도는 기록된 승인 예외. 마지막9지도 규칙대상 근접16→0, 번호원92 유지. 평행<=8px 및 기존 승인 장선 소급 제외 결정을 유지. 자동 간격 검사는 단자 의미 오인을 판단하지 못하므로 독립 확대 시각검토를 병행했다.
 - **W-015 Port Map 전수 정리 종료. 새 배정 대기.** 종전 REVIEW/승인대기 체크는 당시 스냅샷이며, 이 종료 기록으로 완료 상태를 확정한다.
+
+## W-20261017-001 Analog Way 빠진 모델 조사 — REVIEW (2026-10-17)
+
+- 명세 Work/작업/W-20261017-001.md, 읽은 main SHA 598757af700c961a4caf0888a5f5ce3dcde79c08. 브랜치 codex/W-20261017-001-analogway-lineup, codex-d 전용 워크트리.
+- 조사만: 공식 현재 제품/시리즈/자료 목록과 포털16종 비교, 빠진 모델·코드·자료·후면 사진·공식 단종/지역 표기 확인. 옵션 카드는 구성품 후보로 분리.
+- 제품JSON/카탈로그/사진/코드/잠금PDF/다른세션진행 파일 무변경. 문서 PR 뒤 Work 병합 승인 필수.
+- [x] 공식 목록 수집과16종 기준 대조
+- [x] 개별 누락 모델·코드·자료·후면사진/단종 표기 확인
+- [ ] 보고서·Work인계·문서검증·PR→Work검토 요청
+
+- Work 추가 지시(2026-10-17): 중심 대상은 Aquilon(LivePremier 포함)·Alta4K·Midra4K. 공식 사이트 후보를 단종 추정/판정으로 제외하지 않음. 공식 단종/EOL은 원문+URL만 기록하고 모든 표 마지막 등록여부(사용자결정) 칸은 공란. 그 밖 계열은 별도 요약. 어떤 제품도 등록하지 않음.
+
+- Work 추가 지시(2026-10-17): 미디어 서버는 조사에서 제외하고 보고서에 사용자 결정으로 제외했다는 한 줄만 유지.
+- [x] 보고서·Work인계 작성. Aquilon11·Alta2·Midra4K4 중 포털 누락은 QuickMatrix4K/QuickVu4K 두 종. DS1쪽 코드 및 후면 MODEL 인쇄 확인.
+- [x] 범위 내 공식122페이지(기등록16/미등록106)와 공식 단종 표기49행 보존. 중심 외 참고 표는 접어서 표시하며 등록 결정128행은 공란.
+- [x] verify-report: 참조398개 정의·공식 링크409개HTTP200, 모델명/코드 대조·후보누락·서버제외 확인. git diff --check 통과. 문서 작업이라 앱 시험·파생재생성은 실행하지 않음.
+- [ ] 문서 PR·CI 확인 후 Work 검토/병합 승인 요청. 승인 전 병합 금지. 제품 등록 없음.
+
+- PR [#606](https://github.com/Seoulav/AV-Portal/pull/606) OPEN. 최신 main 598757af 통합 완료, PR 전체 diff 문서3개만 확인. CI 확인 후 Work 문서 승인 요청 예정.
+
+- PR CI: 문서 경로는 Builder/CPQ PR workflow의 paths 대상이 아니고 Pages는 main push에서만 실행됩니다. #606 체크·workflow run 0개, mergeStateStatus CLEAN. CI 통과로 표현하지 않습니다.
+- [x] 문서 PR 제출·최신main/변경범위/CI 적용 여부 확인 완료. Work에게 병합 검토 요청; 승인 전까지 REVIEW 유지.

@@ -10,7 +10,8 @@ import { brandForProduct, brandListingHref } from '../../beta/site/shared/brand-
 import { mountRtcomProductView } from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002';
 import { renderDs8sGuide } from './ds8s-guide.mjs?v=w20261013-005-followup';
 import { frontConnectionPointsFor, frontPointPercent } from './front-connection-points.mjs';
-import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261016-019';
+import { renderAnalogWayLayerGuide } from './analogway-layer-guide.mjs?v=w20261017-005';
+import { buildAnalogWayLayerStandards, renderAnalogWayLayerStandards } from './analogway-layer-standards.mjs?v=w20261017-005';
 
 const $ = selector => document.querySelector(selector);
 const element = (tag, className = '', value) => {
@@ -31,8 +32,7 @@ function renderAquilonLayerPlan(plan, currentSlug) {
     : plan.models.every(row => row.model.startsWith('Aquilon C')) ? 'Aquilon C' : 'Aquilon';
   const section = element('section', 'aquilon-layer-plan');
   section.setAttribute('aria-labelledby', 'aquilon-layer-title');
-  section.append(element('h2', '', plan.title));
-  section.append(element('p', 'aquilon-layer-intro', '2×2 4K60 화면 한 개에는 모든 Aquilon 모델에서 4K 믹싱 레이어 최대 4개(분할 8개)를 배치할 수 있습니다. 큰 모델은 같은 구성을 더 많이 만들 수 있습니다.'));
+  section.append(element('h2', '', `${family} 모델별 수치`));
   const current = plan.models.find(row => row.slug === currentSlug);
   const metrics = element('div', 'aquilon-layer-metrics');
   for (const [label, value] of [
@@ -46,24 +46,7 @@ function renderAquilonLayerPlan(plan, currentSlug) {
     metrics.append(card);
   }
   section.append(metrics);
-  const diagram = element('div', 'aquilon-layer-diagram');
-  diagram.setAttribute('role', 'img');
-  diagram.setAttribute('aria-label', '입력·정지 화면 등 소스가 Aquilon 레이어 풀을 거쳐 2 곱하기 2 4K 화면으로 출력되는 예시');
-  const sources = element('div', 'aquilon-layer-node aquilon-layer-sources');
-  sources.append(element('strong', '', '레이어 소스'));
-  for (const source of plan.sourceTypes) sources.append(element('span', '', source));
-  const pool = element('div', 'aquilon-layer-node aquilon-layer-pool');
-  pool.append(element('strong', '', 'Aquilon 레이어 풀'), element('span', '', `이 화면에서 4K 믹싱 레이어 ${current.mixingLayers4kPerScreen}개`), element('span', '', `분할 레이어 ${current.splitLayers2kPerScreen}개`));
-  const output = element('div', 'aquilon-layer-node aquilon-layer-output');
-  output.append(element('strong', '', '2×2 4K 화면'), element('span', '', '화면에 출력 연결된 4개 출력 링크'));
-  diagram.append(sources, element('span', 'aquilon-layer-arrow', '→'), pool, element('span', 'aquilon-layer-arrow', '→'), output);
-  section.append(diagram);
   const example = plan.example;
-  const calculation = element('div', 'aquilon-layer-callout');
-  calculation.append(element('h3', '', example.title));
-  calculation.append(element('p', '', `2×2 화면은 4K60 출력 ${example.outputs}개입니다. 출력마다 용량 ${example.outputCapacity}이므로 출력 링크 ${example.outputLinks}개가 필요합니다. VPU 1개의 소스 링크 ${example.sourceLinksPerVpu}개를 쓰며, 용량 ${example.layerCapacity} 믹싱 레이어 하나는 ${example.layerLinksPerMixer}개 링크를 사용합니다. 따라서 화면 전체는 4K 믹싱 레이어 ${example.mixingLayersPerScreen}개, 분할 레이어 ${example.splitLayersPerScreen}개가 최대입니다.`));
-  calculation.append(element('small', '', '근거: Aquilon User Manual v6.2, 61·66쪽(4K 출력 용량·레이어 링크), 68쪽(VPU 용량), 79쪽(VPU별 믹싱 레이어).'));
-  section.append(calculation);
   const comparison = element('div', 'aquilon-layer-comparison');
   comparison.append(element('h3', '', '같은 2×2 화면 예시 · XDM-WOS100 비교'));
   const compareGrid = element('div', 'aquilon-layer-comparison-grid');
@@ -94,22 +77,17 @@ function renderAquilonLayerPlan(plan, currentSlug) {
     body.append(row);
   }
   table.append(body); wrap.append(table); section.append(wrap);
-  const notes = element('ul', 'aquilon-layer-notes');
-  for (const note of plan.notes) notes.append(element('li', '', note));
-  section.append(notes);
   section.append(element('small', 'aquilon-layer-sources-note', `4K60 프로그램 출력 수 근거: Aquilon User Manual v6.2 ${plan.evidence.programOutputsManualPage}쪽. 출력 커넥터·입력 수 근거: 공식 브로슈어 ${plan.evidence.outputConnectorsBrochurePage}쪽.`));
   return section;
 }
 function renderVideoLayerPlan(plan, currentSlug) {
   const section = element('section', 'video-layer-plan');
   section.setAttribute('aria-labelledby', 'video-layer-title');
-  const heading = element('h2', '', plan.title);
+  const heading = element('h2', '', 'Midra 4K · Alta 4K 모델별 수치');
   heading.id = 'video-layer-title';
   section.append(heading);
   const current = plan.models.find(row => row.slug === currentSlug);
   if (!current) return section;
-  section.append(element('p', 'video-layer-intro', current.headline));
-
   const metrics = element('div', 'video-layer-metrics');
   const metricRows = [
     ['화면 최대 수', `${current.maxPgm4kScreens}개`],
@@ -140,8 +118,6 @@ function renderVideoLayerPlan(plan, currentSlug) {
   }
   if (current.allocationExamples.length) modes.append(element('p', 'video-layer-allocation-examples', `매뉴얼의 화면별 배분 예: ${current.allocationExamples.join(' · ')}`));
   section.append(modes);
-  section.append(element('p', 'video-layer-explainer', '믹싱은 소스 사이를 부드럽게 전환합니다. 분할은 컷 전환만 되는 대신 레이어 수를 2배로 구성합니다. 프로그램 화면은 메인 출력 화면이고, 보조 화면은 별도 보조 출력입니다.'));
-
   const comparison = element('div', 'video-layer-comparison');
   comparison.append(element('h3', '', '다른 장비의 참고 정보'));
   const compareGrid = element('div', 'video-layer-comparison-grid');
@@ -189,9 +165,6 @@ function renderVideoLayerPlan(plan, currentSlug) {
   }
   table.append(body); wrap.append(table); section.append(wrap);
 
-  const notes = element('ul', 'video-layer-notes');
-  for (const note of plan.notes) notes.append(element('li', '', note));
-  section.append(notes);
   section.append(element('small', 'video-layer-source-note', '근거: Midra 4K User Manual 인쇄 25·41–44쪽; Alta 4K User Manual 인쇄 25·42–43·46·50·52쪽; 모델별 공식 Technical Datasheet 1·5–6쪽.'));
   return section;
 }
@@ -742,7 +715,23 @@ if (!productKey && !allowContentFallback) {
   }
   if (data.manufacturer === 'Analog Way') {
     const guide = renderAnalogWayLayerGuide(productKey);
-    if (guide) $('.supplemental-cards').prepend(guide);
+    if (guide) {
+      const loadPlan = async (slug, currentPlan) => {
+        if (currentPlan) return currentPlan;
+        const response = await fetch(`./data/${slug}.json`);
+        if (!response.ok) throw new Error(`Analog Way 기준 데이터를 불러오지 못했습니다: ${slug}`);
+        const product = await response.json();
+        return product.layerPlan ?? product.videoLayerPlan;
+      };
+      const [aquilonRs, aquilonC, video] = await Promise.all([
+        loadPlan('aquilon-rsalpha', enhancements.layerPlan?.models.some(row => row.slug.startsWith('aquilon-rs')) ? enhancements.layerPlan : null),
+        loadPlan('aquilon-cmini', enhancements.layerPlan?.models.some(row => row.slug.startsWith('aquilon-c')) ? enhancements.layerPlan : null),
+        loadPlan('zenith-100', enhancements.videoLayerPlan ?? null),
+      ]);
+      const standards = renderAnalogWayLayerStandards(buildAnalogWayLayerStandards({ aquilonRs, aquilonC, video }), productKey);
+      if (standards) $('.supplemental-cards').prepend(standards);
+      $('.supplemental-cards').prepend(guide);
+    }
   }
   const layerComparison = (enhancements.layerPlan || enhancements.videoLayerPlan) ? null : layerComparisonFor(productKey);
   if (layerComparison) {
@@ -801,6 +790,7 @@ if (!productKey && !allowContentFallback) {
   if (enhancements.layerPlan) visible.add('aquilon-layer-card');
   if (enhancements.videoLayerPlan) visible.add('video-layer-card');
   if (data.manufacturer === 'Analog Way') visible.add('analogway-layer-guide');
+  if (data.manufacturer === 'Analog Way') visible.add('analogway-layer-standards');
   if (documentCardVisible(openDocuments, uploadedDocuments)) visible.add('documents');
   for (const [index, setting] of enhancements.settings.entries()) visible.add(`setting-${settingNumber(setting, index)}`);
   for (const card of document.querySelectorAll('[data-card], [data-supplemental]')) card.hidden = !visible.has(card.id);

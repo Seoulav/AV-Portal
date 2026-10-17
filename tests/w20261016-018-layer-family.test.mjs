@@ -6,7 +6,7 @@ import {renderLayer,layerSource} from './w20261016-018-layer-dom.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url)));
 const baseline=read('./fixtures/w018/rs-layer-dom-hashes.json');
 const hash=s=>createHash('sha256').update(s).digest('hex');
-test('W-018 preserves all seven RS layer DOM and text bytes captured from Chrome before family generalization',()=>{
+test('W-003 keeps the seven RS model-number cards stable after moving shared rules to the standards card',()=>{
  for(const [slug,b]of Object.entries(baseline)){const p=read('../beta/site/detail/data/'+slug+'.json');const n=renderLayer(layerSource(),p.layerPlan,slug);assert.equal(hash(n.outerHTML),b.html,slug+' DOM');assert.equal(hash(n.textContent),b.text,slug+' text');}
 });
 test('W-018 family labels cover C-only and mixed plans in both approved locations',()=>{

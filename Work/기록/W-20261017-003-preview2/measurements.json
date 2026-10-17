@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "aquilon-rs2",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "formStacked": false,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-rs2-1280.png"
+  },
+  {
+    "slug": "aquilon-rs2",
+    "width": 760,
+    "scrollWidth": 760,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-rs2-760.png"
+  },
+  {
+    "slug": "aquilon-rs2",
+    "width": 390,
+    "scrollWidth": 390,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-rs2-390.png"
+  },
+  {
+    "slug": "zenith-200",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "formStacked": false,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "zenith-200-1280.png"
+  },
+  {
+    "slug": "zenith-200",
+    "width": 760,
+    "scrollWidth": 760,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "zenith-200-760.png"
+  },
+  {
+    "slug": "zenith-200",
+    "width": 390,
+    "scrollWidth": 390,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "zenith-200-390.png"
+  },
+  {
+    "slug": "aquilon-cplus",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "formStacked": false,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-cplus-1280.png"
+  },
+  {
+    "slug": "aquilon-cplus",
+    "width": 760,
+    "scrollWidth": 760,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-cplus-760.png"
+  },
+  {
+    "slug": "aquilon-cplus",
+    "width": 390,
+    "scrollWidth": 390,
+    "formStacked": true,
+    "derived": "화면 1: 7680×4320@60 · 4K60 출력 4개",
+    "recommendation": "추천: Zenith 200 · 요청한 구성이 확인된 한도 안에 들어갑니다.",
+    "simulatorLinks": 3,
+    "exportButton": "입력·결과 텍스트 복사",
+    "file": "aquilon-cplus-390.png"
+  }
+]

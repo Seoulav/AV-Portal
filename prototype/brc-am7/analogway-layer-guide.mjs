@@ -1,8 +1,9 @@
 import {modelData, exampleConfigurations, guideEvidence} from './analogway-layer-guide-data.mjs';
+import {prepareGuideInput, buildGuideExportText} from './analogway-layer-guide-input.mjs';
 export {modelData, exampleConfigurations};
 
 const RESOURCE_NOTES = {
-  aquilon:'Aquilon은 4K60 용량 2 기준으로 계산합니다. 믹싱 한 개는 링크 두 개, 분할 레이어 두 개 한 쌍도 링크 두 개를 사용합니다. 레이어가 없는 화면과 보조 출력은 처리 링크를 쓰지 않습니다.',
+  aquilon:'Aquilon은 4K60 용량 2 기준으로 계산합니다. 믹싱 한 개는 링크 두 개, 분할 레이어 두 개 한 쌍도 링크 두 개를 사용합니다. 레이어가 없는 화면과 보조 출력은 처리 링크를 쓰지 않습니다. 한 화면의 레이어를 여러 VPU에 나누는 계산은 실측 근거(시뮬레이터)입니다.',
   alta:'Alta 4K는 믹싱 한 개 또는 분할 두 개를 레이어 자원 한 개로 계산합니다. 레이어가 여러 출력 경계를 넘을 때 추가 자원은 미확인입니다.',
   midra:'Midra 4K는 공식 문서에 있는 Mixer·Matrix·Blend 구성만 계산합니다.',
 };
@@ -26,16 +27,16 @@ function packAquilonAtLimit(tasks,limit) {
     if(index===tasks.length)return true;
     const task=tasks[index],seen=new Set();
     for(const bin of bins){
-      const signature=bin.outputLinks+':'+bin.sourceLinks;
+      const signature=String(bin.outputLinks);
       if(seen.has(signature))continue;
       seen.add(signature);
-      if(bin.outputLinks+task.outputLinks>8||bin.sourceLinks+task.sourceLinks>8)continue;
-      bin.outputLinks+=task.outputLinks;bin.sourceLinks+=task.sourceLinks;bin.screens.push(task.screen);
+      if(bin.outputLinks+task.outputLinks>8)continue;
+      bin.outputLinks+=task.outputLinks;bin.screens.push(task.screen);
       if(place(index+1))return true;
-      bin.outputLinks-=task.outputLinks;bin.sourceLinks-=task.sourceLinks;bin.screens.pop();
+      bin.outputLinks-=task.outputLinks;bin.screens.pop();
     }
     if(bins.length<limit){
-      bins.push({outputLinks:task.outputLinks,sourceLinks:task.sourceLinks,screens:[task.screen]});
+      bins.push({outputLinks:task.outputLinks,screens:[task.screen]});
       if(place(index+1))return true;
       bins.pop();
     }
@@ -44,39 +45,29 @@ function packAquilonAtLimit(tasks,limit) {
   return place(0)?bins.map(bin=>({...bin,screens:[...bin.screens]})):null;
 }
 
-function packAquilonScreens(screens,maxUnits=4) {
+function packAquilonScreens(screens,maxUnits=8) {
   const tasks=screens.map((screen,index)=>({
     screen:index+1,
     outputLinks:screen.layers===0?0:screen.outputs*2,
     sourceLinks:screen.layers===0?0:screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2,
   })).filter(task=>task.outputLinks||task.sourceLinks);
-  const oversized=tasks.filter(task=>task.outputLinks>8||task.sourceLinks>8);
-  const validTasks=tasks.filter(task=>task.outputLinks<=8&&task.sourceLinks<=8)
-    .sort((a,b)=>Math.max(b.outputLinks,b.sourceLinks)-Math.max(a.outputLinks,a.sourceLinks)||
-      (b.outputLinks+b.sourceLinks)-(a.outputLinks+a.sourceLinks)||a.screen-b.screen);
-  if(oversized.length)return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  const oversized=tasks.filter(task=>task.outputLinks>8);
+  const validTasks=tasks.filter(task=>task.outputLinks<=8)
+    .sort((a,b)=>b.outputLinks-a.outputLinks||a.screen-b.screen);
+  const totalSourceLinks=tasks.reduce((sum,task)=>sum+task.sourceLinks,0);
+  const totalOutputLinks=tasks.reduce((sum,task)=>sum+task.outputLinks,0);
+  if(oversized.length)return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks,totalOutputLinks};
   for(let limit=0;limit<=maxUnits;limit++){
     const bins=limit===0?(validTasks.length===0?[]:null):packAquilonAtLimit(validTasks,limit);
-    if(bins)return {bins,oversized,fits:true,minUnits:bins.length,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+    // Output links stay with their Screen. Simulator APPLY confirms its source layers
+    // can also draw on other VPUs, so source links use a separate device-wide pool.
+    if(bins)return {bins,oversized,fits:true,minUnits:Math.max(bins.length,Math.ceil(totalSourceLinks/8)),totalSourceLinks,totalOutputLinks};
   }
-  return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks,totalOutputLinks};
 }
 
 function evaluateAquilon(model,input,pgmOutputs) {
-  const reasons=[],fit=packAquilonScreens(input.screens,4);
-  for(const screen of input.screens){
-    if(screen.layers===0)continue;
-    const outputLinks=screen.outputs*2;
-    if(outputLinks>8)reasons.push('한 화면에 필요한 출력 링크 '+outputLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
-    if(screen.layerType==='mixing'&&screen.layers>model.mixingLayersPerScreen)
-      reasons.push('화면당 4K 믹싱 최대 '+model.mixingLayersPerScreen+'개(매뉴얼 66·79쪽) 초과');
-    else if(screen.layerType==='split'&&screen.layers>model.splitLayersPerScreen)
-      reasons.push('화면당 4K 분할 최대 '+model.splitLayersPerScreen+'개 초과');
-    else {
-      const sourceLinks=screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2;
-      if(sourceLinks>8)reasons.push('한 화면에 필요한 레이어 입력 링크 '+sourceLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
-    }
-  }
+  const reasons=[],fit=packAquilonScreens(input.screens);
   if(fit.fits&&fit.minUnits>model.processingUnits)
     reasons.push('처리 보드(VPU) '+fit.minUnits+'개가 필요하지만 보유 수는 '+model.processingUnits+'개입니다.');
   else if(!fit.fits&&!reasons.length)
@@ -86,9 +77,10 @@ function evaluateAquilon(model,input,pgmOutputs) {
   if(input.inputs4k>model.inputs4k)reasons.push('4K 입력 '+input.inputs4k+'개가 한도 '+model.inputs4k+'개를 넘습니다.');
   const possible=reasons.length===0;
   const layers=input.screens.reduce((sum,screen)=>sum+screen.layers,0);
+  const simulatorBasis=fit.fits&&fit.minUnits>fit.bins.length;
   const modes=unique(input.screens.filter(screen=>screen.outputs>=3&&screen.layers>0).map(()=> 'Optimized mode · 4K 전용'));
   return {possible,reasons,mode:possible?(modes.join(', ')||'처리 보드(VPU) '+fit.minUnits+'개'):'' ,
-    displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용':'레이어 처리 보드 불필요'):'',
+    displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용'+(simulatorBasis?' · 실측 근거(시뮬레이터)':''):'레이어 처리 보드 불필요'):'',
     used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,outputConnectors:pgmOutputs+input.auxOutputs,inputs4k:input.inputs4k,processingUnits:fit.minUnits,sourceLinks:fit.totalSourceLinks,outputLinks:fit.totalOutputLinks,layers},
     remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),processingUnits:fit.fits?Math.max(0,model.processingUnits-fit.minUnits):undefined,sourceLinks:Math.max(0,model.processingUnits*8-fit.totalSourceLinks),outputLinks:Math.max(0,model.processingUnits*8-fit.totalOutputLinks)}};
 }
@@ -166,10 +158,15 @@ const inputTopologies=[
 
 function readScreenInputs(container){
   return [...container.querySelectorAll('.aw-guide-screen-row')].map(row=>({
+    inputMode:row.querySelector('[data-field="inputMode"]').value,
+    width:Number(row.querySelector('[data-field="width"]').value),
+    height:Number(row.querySelector('[data-field="height"]').value),
+    refresh:Number(row.querySelector('[data-field="refresh"]').value),
     layout:row.querySelector('[data-field="layout"]').value,
     outputs:Number(row.querySelector('[data-field="layout"] option:checked').dataset.outputs),
     layerType:row.querySelector('[data-field="layerType"]').value,
     layers:Number(row.querySelector('[data-field="layers"]').value),
+    hdLayers:Number(row.querySelector('[data-field="hdLayers"]').value),
   }));
 }
 
@@ -228,6 +225,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
   section.setAttribute('aria-labelledby','aw-layer-guide-title');
   const title=makeElement('h2','','화면·레이어 설계 가이드'); title.id='aw-layer-guide-title'; section.append(title);
   section.append(makeElement('p','aw-guide-intro','필요한 화면 구성과 레이어 수를 입력하면, 공식 문서에 적힌 구성 한도 안에서 가능한 Analog Way 모델을 비교합니다.'));
+  section.append(makeElement('p','aw-guide-format-note','화면 크기 자동 변환은 겹침 없는 동일한 출력 타일로 나누는 구성 가정입니다. 문서에 없는 해상도·용량 조합은 미확인으로 표시합니다(매뉴얼 61쪽).'));
   section.append(makeElement('p','aw-guide-order-note','추천은 시리즈·규모 순서이며 가격 비교가 아닙니다.'));
   const examples=makeElement('div','aw-guide-examples');
   examples.setAttribute('role','group'); examples.setAttribute('aria-label','구성 예시');
@@ -249,11 +247,22 @@ export function renderAnalogWayLayerGuide(currentSlug){
   const summary=makeElement('div','aw-guide-summary'); summary.setAttribute('aria-live','polite'); summary.setAttribute('aria-atomic','true');
   const results=makeElement('div','aw-guide-results'); results.id='aw-guide-results'; results.setAttribute('aria-live','polite');
   section.append(summary,results);
+  const exportActions=makeElement('div','aw-guide-export-actions');
+  const copyButton=makeElement('button','aw-guide-copy','입력·결과 텍스트 복사'); copyButton.type='button';
+  const copyStatus=makeElement('span','aw-guide-copy-status'); copyStatus.setAttribute('role','status');
+  exportActions.append(copyButton,copyStatus);section.append(exportActions);
+  let lastState=null,lastPrepared=null;
 
   function getState(){return {screens:readScreenInputs(rows),auxOutputs:Number(auxInput.value),inputs4k:Number(sourceInput.value)};}
   function update(){
-    const result=calculateRecommendations(getState());
+    lastState=getState();lastPrepared=prepareGuideInput(lastState,calculateRecommendations);
     summary.replaceChildren();
+    const formats=lastPrepared.derivedScreens.map((format,index)=>`화면 ${index+1}: ${format.label ?? '공식 자료 미확인'}`);
+    if(formats.length)summary.append(makeElement('p','aw-guide-derived-formats',formats.join(' · ')));
+    if(lastPrepared.status==='unconfirmed'){
+      summary.append(makeElement('p','aw-guide-unconfirmed',lastPrepared.reason));results.replaceChildren();return;
+    }
+    const result=lastPrepared.result;
     if(!result.valid){summary.append(makeElement('p','aw-guide-error',result.error));results.replaceChildren();return;}
     const recommended=result.models.find(item=>item.recommended);
     summary.append(makeElement('p',recommended?'aw-guide-recommendation':'aw-guide-no-recommendation',recommended?`추천: ${recommended.name} · 요청한 구성이 확인된 한도 안에 들어갑니다.`:'요청한 구성을 지원하는 모델을 찾지 못했습니다.'));
@@ -264,13 +273,24 @@ export function renderAnalogWayLayerGuide(currentSlug){
     initial.forEach((screen,index)=>{
       const fieldset=makeElement('fieldset','aw-guide-screen-row');
       fieldset.append(makeElement('legend','',`화면 ${index+1}`));
+      const modeLabel=makeElement('label','','입력 방식');const mode=makeElement('select','');mode.dataset.field='inputMode';
+      for(const [value,label] of [['topology','출력 구성'],['resolution','화면 해상도']]){const option=makeElement('option','',label);option.value=value;mode.append(option);}
+      mode.value=screen.inputMode??'topology';modeLabel.append(mode);fieldset.append(modeLabel);
       const layoutLabel=makeElement('label','','출력 구성'); const layout=makeElement('select',''); layout.dataset.field='layout'; layout.setAttribute('aria-label',`화면 ${index+1} 출력 구성`);
       for(const choice of inputTopologies){const option=makeElement('option','',choice.label);option.value=choice.value;option.dataset.outputs=choice.outputs;layout.append(option);}
       const defaultLayout={1:'1',2:'2x1',3:'3',4:'2x2'}[screen.outputs];
       layout.value=screen.layout??defaultLayout; layoutLabel.append(layout); fieldset.append(layoutLabel);
+      const sizeGroup=makeElement('div','aw-guide-resolution-fields');
+      for(const [field,label,value] of [['width','가로 픽셀',screen.width??3840],['height','세로 픽셀',screen.height??2160],['refresh','Hz',screen.refresh??60]]){
+        const fieldLabel=makeElement('label','',label);const input=makeElement('input','');input.type='number';input.min='1';input.step='1';input.value=String(value);input.dataset.field=field;input.setAttribute('aria-label',`화면 ${index+1} ${label}`);fieldLabel.append(input);sizeGroup.append(fieldLabel);
+      }
+      fieldset.append(sizeGroup);
+      const toggleFields=()=>{const resolution=mode.value==='resolution';layoutLabel.hidden=resolution;sizeGroup.hidden=!resolution;};
+      mode.addEventListener('change',toggleFields);toggleFields();
       const typeLabel=makeElement('label','','레이어 방식'); const type=makeElement('select','');type.dataset.field='layerType';type.setAttribute('aria-label',`화면 ${index+1} 레이어 방식`);
       for(const [value,label] of [['mixing','믹싱 · 부드러운 전환'],['split','분할 · 컷 전환']]){const option=makeElement('option','',label);option.value=value;type.append(option);}type.value=screen.layerType;typeLabel.append(type);fieldset.append(typeLabel);
-      const countLabel=makeElement('label','','레이어 수');const count=makeElement('input','');count.type='number';count.min='0';count.max='8';count.step='1';count.value=String(screen.layers);count.dataset.field='layers';count.setAttribute('aria-label',`화면 ${index+1} 레이어 수`);countLabel.append(count);fieldset.append(countLabel);
+      const countLabel=makeElement('label','','4K60(용량 2) 레이어 수');const count=makeElement('input','');count.type='number';count.min='0';count.max='8';count.step='1';count.value=String(screen.layers);count.dataset.field='layers';count.setAttribute('aria-label',`화면 ${index+1} 4K60 레이어 수`);countLabel.append(count);fieldset.append(countLabel);
+      const hdLabel=makeElement('label','','HD(용량 1) 레이어 수');const hd=makeElement('input','');hd.type='number';hd.min='0';hd.max='8';hd.step='1';hd.value=String(screen.hdLayers??0);hd.dataset.field='hdLayers';hd.setAttribute('aria-label',`화면 ${index+1} HD 레이어 수`);hdLabel.append(hd);fieldset.append(hdLabel);
       const remove=makeElement('button','aw-guide-remove-screen','화면 삭제');remove.type='button';remove.disabled=initial.length<=1;remove.addEventListener('click',()=>{const next=readScreenInputs(rows);next.splice(index,1);renderRows(next);update();});fieldset.append(remove);
       fieldset.addEventListener('input',update);fieldset.addEventListener('change',update);rows.append(fieldset);
     });
@@ -279,6 +299,11 @@ export function renderAnalogWayLayerGuide(currentSlug){
   renderRows([{outputs:1,layerType:'mixing',layers:1}]);
   add.addEventListener('click',()=>{const next=readScreenInputs(rows);if(next.length<8)next.push({outputs:1,layerType:'mixing',layers:1});renderRows(next);update();});
   auxInput.addEventListener('input',update);sourceInput.addEventListener('input',update);
+  copyButton.addEventListener('click',async()=>{
+    if(!lastState||!lastPrepared)return;
+    try{await navigator.clipboard.writeText(buildGuideExportText(lastState,lastPrepared));copyStatus.textContent='입력과 결과를 복사했습니다.';}
+    catch{copyStatus.textContent='복사할 수 없습니다. 브라우저의 클립보드 권한을 확인해 주세요.';}
+  });
   examples.addEventListener('click',event=>{
     const button=event.target.closest('button[data-example]');if(!button)return;
     const config=exampleConfigurations[button.dataset.example];renderRows(config.screens.map(screen=>({...screen})));
@@ -297,9 +322,9 @@ export function renderAnalogWayLayerGuide(currentSlug){
     '수량·모드 한도 근거: Aquilon User Manual v6.2 61·66–69·79쪽, Aquilon 데이터시트 1·3쪽; Alta 4K User Manual 25·42–43·46·50·52쪽, 데이터시트 6쪽; Midra 4K User Manual 25·41–42·44쪽, 데이터시트 5–6쪽.',
   ])noteList.append(makeElement('li','',note));
   notes.append(noteList);
-  const simulator=makeElement('p','aw-guide-simulator-note','계산 결과를 실제 장비 구성에 적용하기 전에 제조사 시뮬레이터에서 최종 확인하세요.');
+  const simulator=makeElement('p','aw-guide-simulator-note','이 구성을 제조사 시뮬레이터로 확인하세요.');
   for(const item of guideEvidence.simulators){const link=makeElement('a','aw-guide-simulator-link',item.label);link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';simulator.append(document.createTextNode(' '),link);}
-  notes.append(simulator);section.append(notes);
+  section.append(simulator,notes);
   update();
   return section;
 }

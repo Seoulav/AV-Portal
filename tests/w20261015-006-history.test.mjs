@@ -25,11 +25,11 @@ const sha = raw => createHash('sha256').update(raw).digest('hex');
 test('eleven Analog Way selective inverses restore exact prior product bytes', () => {
   for (const [slug, priorHash] of Object.entries(expected)) {
     const raw = readFileSync(new URL(`../beta/site/detail/data/${slug}.json`, import.meta.url), 'utf8');
-    assert.equal(sha(beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(beforeW010AquilonRaw(beforeW014AnalogWayRaw(raw, slug), slug), slug), slug)), priorHash, slug);
+    assert.equal(sha(beforeW20261015_006Raw(beforeW20261015_006LabelsRaw(beforeW010AquilonRaw(beforeW014AnalogWayRaw(raw, slug), slug, { w002Undone: true }), slug, { w002Undone: true }), slug)), priorHash, slug);
     const product = JSON.parse(raw);
     product.overview += ' independent later edit';
-    assert.match(beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug), slug), slug).overview, /independent later edit/);
+    assert.match(beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug, { w002Undone: true }), slug, { w002Undone: true }), slug).overview, /independent later edit/);
     product.portMap.items[0].x2--;
-    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug), slug), slug), /unexpected W-015 Midra\/Zenith Port Map layout|unexpected W-014 Port Map changes|approved marker offsets changed|approved Analog Way map changed/);
+    assert.throws(() => beforeW20261015_006Product(beforeW20261015_006LabelsProduct(beforeW010AquilonProduct(beforeW014AnalogWayProduct(product, slug), slug, { w002Undone: true }), slug), slug), /unexpected W-015 Midra\/Zenith Port Map layout|unexpected W-014 Port Map changes|approved marker offsets changed|approved Analog Way map changed/);
   }
 });
