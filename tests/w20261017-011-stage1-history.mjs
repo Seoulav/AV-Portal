@@ -1,6 +1,7 @@
 // Undo only W-20261017-011's two approved prototype maps before older hash checks.
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {beforeW20261017_011Stage2Product} from './w20261017-011-stage2-history.mjs';
 
 const fixture=JSON.parse(readFileSync(new URL('./fixtures/w20261017-011-stage1-prior-maps.json',import.meta.url),'utf8'));
 const approved={
@@ -10,6 +11,7 @@ const approved={
 const sha=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function beforeW20261017_011Stage1Product(product,slug){
+  product=beforeW20261017_011Stage2Product(product,slug);
   const record=fixture[slug];
   if(!record)return product;
   if(!product.portMap)return product;

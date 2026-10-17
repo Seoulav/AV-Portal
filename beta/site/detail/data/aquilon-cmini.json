@@ -818,31 +818,47 @@
     },
     "items": [
       {
-        "label": "HDMI 입력 카드",
-        "desc": "HDMI 입력 카드 1장 · 첫째 줄 왼쪽 · IN 1–4 · 사진 장착 예",
+        "n": 1,
+        "label": "슬롯 1 · 입력",
+        "desc": "슬롯식 섀시 — 사진은 카드 장착 예시이며 실제 구성은 주문에 따라 다릅니다. 슬롯 1 — 사진 예시: HDMI 입력 카드 · IN 1–4.",
         "side": "left",
-        "y1": 150,
-        "y2": 178,
-        "n": 1
+        "y1": 30,
+        "y2": 210
       },
       {
-        "label": "SDI 입력 카드 · 8플러그",
-        "desc": "SDI 입력 카드 1장 · 첫째 줄 가운데 · 12G-SDI·3G-SDI 혼합 8플러그 · 4K 입력 최대 4개 또는 2K 입력 최대 8개 · 사진 장착 예",
-        "side": "top",
         "n": 2,
-        "x1": 728,
-        "x2": 1140
+        "label": "슬롯 2 · 입력",
+        "desc": "슬롯 2 — 사진 예시: SDI 입력 카드 · 12G-SDI·3G-SDI 혼합 8플러그.",
+        "side": "top",
+        "x1": 715,
+        "x2": 1145
       },
       {
-        "label": "DP·HDMI 출력 카드",
-        "desc": "DP 출력 카드 1장(위)·HDMI 출력 카드 1장(아래) · 각 OUT 1–4 · 사진 장착 예",
+        "n": 3,
+        "label": "슬롯 3 · 출력",
+        "desc": "슬롯 3 — 사진 예시: DisplayPort 출력 카드 · OUT 1–4.",
         "side": "right",
-        "y1": 150,
-        "y2": 356,
-        "n": 3
+        "y1": 30,
+        "y2": 210
       },
       {
         "n": 4,
+        "label": "슬롯 4 · 출력",
+        "desc": "슬롯 4 — 사진 예시: HDMI 출력 카드 · OUT 1–4.",
+        "side": "right",
+        "y1": 218,
+        "y2": 386
+      },
+      {
+        "n": 5,
+        "label": "슬롯 5 · LINK",
+        "desc": "슬롯 5 — 사진 예시: LINK 카드 · QSFP+ 케이지 6개.",
+        "side": "right",
+        "y1": 394,
+        "y2": 568
+      },
+      {
+        "n": 6,
         "label": "USB · 후면 2개",
         "desc": "전면 2개와 별도인 후면 USB 포트 2개",
         "side": "bottom",
@@ -866,7 +882,7 @@
         "labelX": 120
       },
       {
-        "n": 5,
+        "n": 7,
         "label": "SYNC IN/OUT 1·2",
         "desc": "SYNC IN 1·2 및 SYNC OUT 1·2 · 장비 간 동기 연결 · 각 포트 독립 사용",
         "side": "bottom",
@@ -886,14 +902,33 @@
         ]
       },
       {
-        "n": 6,
+        "n": 8,
+        "label": "AC 전원 · PSU 2개",
+        "desc": "1+1 이중화 교체형 전원 공급 장치 2개",
+        "side": "left",
+        "y1": 399,
+        "y2": 560,
+        "x": 85,
+        "via": [
+          [
+            73,
+            481
+          ],
+          [
+            0,
+            481
+          ]
+        ]
+      },
+      {
+        "n": 9,
         "label": "LOCK INPUT · LOOP OUT",
         "desc": "외부 기준 동기 입력과 동기 신호 루프 출력",
         "side": "bottom",
         "x1": 711,
         "x2": 849,
         "y": 372,
-        "labelX": 824,
+        "labelX": 770,
         "via": [
           [
             824,
@@ -906,7 +941,7 @@
         ]
       },
       {
-        "n": 7,
+        "n": 10,
         "label": "LAN",
         "desc": "Web RCS 및 IP 제어 네트워크 연결",
         "side": "bottom",
@@ -926,7 +961,15 @@
         ]
       },
       {
-        "n": 8,
+        "n": 11,
+        "label": "ON/OFF · GPI · GPO",
+        "desc": "MCO 5핀 커넥터 3개 · ON/OFF 1·GPI 2·GPO 8 기능",
+        "side": "bottom",
+        "x1": 914,
+        "x2": 1038
+      },
+      {
+        "n": 12,
         "label": "MULTIVIEWERS 1·2",
         "desc": "사진 장착 HDMI 멀티뷰어 출력 2개 · HDMI 카드 포맷에 따른 모니터링",
         "side": "bottom",
@@ -946,36 +989,12 @@
         ]
       },
       {
-        "n": 9,
-        "label": "AC 전원 · PSU 2개",
-        "desc": "1+1 이중화 교체형 전원 공급 장치 2개",
-        "side": "bottom",
-        "x1": 154,
-        "x2": 765
-      },
-      {
-        "n": 10,
-        "label": "ON/OFF · GPI · GPO",
-        "desc": "MCO 5핀 커넥터 3개 · ON/OFF 1·GPI 2·GPO 8 기능",
-        "side": "bottom",
-        "x1": 914,
-        "x2": 1038
-      },
-      {
-        "n": 11,
+        "n": 13,
         "label": "Dante 1st·2nd",
         "desc": "Dante Primary/Secondary 오디오 네트워크 연결",
         "side": "bottom",
         "x1": 1065,
         "x2": 1126
-      },
-      {
-        "n": 12,
-        "label": "LINK · QSFP+",
-        "desc": "사진 장착 LINK 카드의 QSFP+ 케이지 6개 · 장비 간 링크용 · 영상 출력 카드 슬롯 사용",
-        "side": "bottom",
-        "x1": 1257,
-        "x2": 1744
       }
     ]
   }

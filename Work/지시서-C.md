@@ -412,3 +412,18 @@
 - [x] Work·사용자 시안 확인 완료. 승인 전까지 Ready·병합·나머지 9종 적용을 하지 않았다.
 - 승인 갱신(2026-10-17): 사용자가 시안을 보고 "둘다 진행"으로 RS2·C+ 시안 및 나머지 9종 동일 기준 적용을 승인했다. Work도 RS2 전후 760px·390px 확대 좌·우 캡처를 직접 확인했다. 1단계 PR #634는 최신 main·CI를 다시 확인하고 병합하며, 2단계는 별도 Draft PR로 제출한다.
 - 참고: main에는 이 ID의 별도 Codex 인계서가 없지만 READY 명세와 Work의 직접 배정이 있어 1단계 시안을 진행했다.
+
+## W-20261017-011 2단계 — Aquilon 9종 슬롯 중심 Rear 포트맵 (2026-10-17)
+
+- 상태: REVIEW 준비. 9종 묶음 Draft PR 제출 뒤 Work의 390px 확대 검토 및 병합 신호 대기.
+- 명세: `Work/작업/W-20261017-011.md`; 읽은 main SHA `23bc6b289eef66020e2397015e398075e052547c`.
+- 승인: 사용자 2026-10-17 “둘다 진행” — RS2·C+ 시안과 같은 기준의 전체 적용. Work가 시안 전후 760px·390px 확대를 직접 확인했다.
+- 브랜치·워크트리: `codex/W-20261017-011-aquilon-slots-phase2`, `../codex-c-w011-aquilon-slots`.
+- [x] 1단계 PR #634 병합 SHA `c983110ab5e42783dcf3d51307557aefd6252c9c`. Pages run `39040004304` 성공. 공개 RS2·C+ 390px 좌·우 확대에서 번호/목록 각각 16·19개, 문서 `scrollWidth=390`, 사진 영역 가로 스크롤과 Rear 표식 확인.
+- [x] RS alpha·RS1·RS3·RS4·RS5·RS6·Cmini·C·Cmax의 제조사 Rear 사진에서 슬롯·덮개·고정부를 대조하고 슬롯 순서(왼쪽→오른쪽, 위→아래)대로 새 번호를 작성. 기존 사진·사양·I/O·렌더러 불변.
+- [x] 과거 포트맵 해시 검사 앞에 2단계만 되감는 함수를 연결. 9종의 변경 전 지도와 비지도 사실 해시를 fixture에 보존.
+- [x] 9종 760px·390px 좌·우 미리보기 생성·눈 확인. 문서 폭은 각각 760·390, 번호 수와 목록 수가 모두 일치. `portmap-audit` 29개 보조 신호를 실제 SVG 선 간격과 대조해 점검표에 기록.
+- [x] 전체 Node 시험 926건(925 pass·0 fail·기존 skip 1). `verify-pages` 289 목록·286 상세·529 이미지·167 PDF, 검색 인덱스 `--check` 통과. 최신 `origin/main`과 현재 작업 기준 SHA가 모두 `c983110ab5e42783dcf3d51307557aefd6252c9c`임을 확인하고 파생 파일을 재생성.
+- [x] [Draft PR #639](https://github.com/Seoulav/AV-Portal/pull/639)을 열고 9종 390px 좌·우 미리보기를 PR 본문에 연결. Work 검토 전 Ready·병합 금지.
+- [ ] PR #639 Builder CI 확인. 처음 조회 시 `builder` pending(run `39042364495`).
+- [ ] Work의 390px 확대 검토와 병합 지시 후 Ready·병합·Pages·공개 9종 확인.
