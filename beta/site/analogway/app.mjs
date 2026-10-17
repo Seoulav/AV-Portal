@@ -1,6 +1,7 @@
 import {buildHubModel, assertHubParity, SERIES} from './model.mjs';
 import {buildAnalogWayLayerStandards, renderAnalogWayLayerStandards} from '../detail/analogway-layer-standards.mjs';
-import {renderAnalogWayLayerGuide} from '../detail/analogway-layer-guide.mjs';
+import {renderAnalogWayLayerGuide, calculateRecommendations} from '../detail/analogway-layer-guide.mjs';
+import {prepareTileGuide, TILE_REFERENCE} from '../detail/analogway-tile-guide.mjs';
 
 const site = '../';
 const detailHref = slug => `${site}detail/?product=${encodeURIComponent(slug)}`;
@@ -77,6 +78,46 @@ function renderComparison(model) {
   }
 }
 
+function renderTileReference() {
+  const scroll = make('div', 'aw-table-scroll');
+  scroll.setAttribute('role','region');
+  scroll.setAttribute('aria-label','4K 패널 구성별 가능 모델');
+  scroll.tabIndex=0;
+  const table=make('table','aw-table aw-tile-table');
+  const head=make('tr');
+  for(const label of ['패널 구성','합성 해상도','출력 · 링크 · VPU','레이어','가능 모델']){
+    const th=make('th','',label);th.scope='col';head.append(th);
+  }
+  const thead=make('thead');thead.append(head);table.append(thead);
+  const body=make('tbody');
+  for(const [columns,rows] of TILE_REFERENCE){
+    for(const layers of [0,2]){
+      const tile=prepareTileGuide({columns,rows,layers},calculateRecommendations);
+      if(tile.status!=='calculated'||!tile.result.valid)throw new Error(`${columns}×${rows} 타일 계산 실패`);
+      const alternate=columns*rows===12?prepareTileGuide({columns:rows,rows:columns,layers},calculateRecommendations):null;
+      if(alternate&&tile.result.models.some((item,index)=>item.possible!==alternate.result.models[index].possible))
+        throw new Error('12판 회전 구성의 모델 판정이 다릅니다.');
+      const tr=make('tr');tr.dataset.tiles=`${columns}x${rows}`;tr.dataset.layers=String(layers);
+      const cell=(tag,text)=>tr.append(make(tag,'',text));
+      cell('th',`${tile.outputs}판 · ${columns}×${rows}${alternate?` / ${rows}×${columns}`:''}`);
+      cell('td',`${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60${alternate?` / ${alternate.width.toLocaleString()}×${alternate.height.toLocaleString()}@60`:''}`);
+      cell('td',`4K60 출력 ${tile.outputs} · 링크 ${tile.outputLinks} · Aquilon VPU 최소 ${tile.requiredVpu}`);
+      cell('td',layers===0?'레이어 0개':'믹싱 2개/출력 그룹');
+      const models=make('td','aw-tile-models');
+      for(const series of SERIES.filter(item=>item.id!=='controller')){
+        const matching=tile.result.models.filter(item=>item.possible&&series.slugs.includes(item.slug));
+        if(!matching.length)continue;
+        const group=make('div','aw-tile-model-group');group.append(make('strong','',`${series.title}: `));
+        for(const item of matching){const link=make('a','',item.name);link.href=detailHref(item.slug);group.append(link);}
+        models.append(group);
+      }
+      if(!models.childElementCount)models.textContent='해당 없음';
+      tr.append(models);body.append(tr);
+    }
+  }
+  table.append(body);scroll.append(table);$('#tile-reference-table').append(scroll);
+}
+
 function renderDocuments(documents, manifest) {
   for (const document of documents) {
     const item = make('article', 'aw-document');
@@ -103,6 +144,7 @@ async function main() {
   assertHubParity(model, entries, products);
   renderSeries(model.cards);
   renderComparison(model);
+  renderTileReference();
   renderDocuments(model.documents, manifest);
 
   const own = slugs => slugs.map(slug => {
