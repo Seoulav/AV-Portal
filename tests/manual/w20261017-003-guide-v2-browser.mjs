@@ -40,7 +40,7 @@ try{
   const evaluate=async expression=>{const result=await cdp('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(result.exceptionDetails)throw Error(result.exceptionDetails.text);return result.result.value;};
   await cdp('Page.enable');
   const measures=[];
-  for(const slug of ['aquilon-rs2','zenith-200','aquilon-cplus'])for(const width of [1280,390]){
+  for(const slug of ['aquilon-rs2','zenith-200','aquilon-cplus'])for(const width of [1280,760,390]){
     await cdp('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:false});
     await cdp('Page.navigate',{url:`http://127.0.0.1:${server.address().port}/beta/site/detail/?product=${slug}`});
     let ready=false;
@@ -57,6 +57,7 @@ try{
       }
       const rect=guide.getBoundingClientRect();
       return {slug:'${slug}',width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
+        formStacked:guide.querySelector('.aw-guide-global-inputs').getBoundingClientRect().top >= guide.querySelector('.aw-guide-screens-panel').getBoundingClientRect().bottom,
         derived:guide.querySelector('.aw-guide-derived-formats')?.textContent,
         recommendation:guide.querySelector('.aw-guide-recommendation')?.textContent,
         simulatorLinks:guide.querySelectorAll('.aw-guide-simulator-link').length,
@@ -64,6 +65,7 @@ try{
         clip:{x:0,y:Math.max(0,rect.top+scrollY-8),width:innerWidth,height:Math.min(6000,rect.height+16),scale:1}};
     })()`);
     assert.equal(measure.width,width);assert.equal(measure.scrollWidth,width,`${slug} ${width}px overflow`);
+    if(width===760) assert.equal(measure.formStacked,true,`${slug} ${width}px input form must have readable full-width rows`);
     assert.match(measure.derived,/7680×4320@60.*4K60 출력 4개/);
     assert.match(measure.recommendation,/Zenith 200/);
     assert.equal(measure.simulatorLinks,3);

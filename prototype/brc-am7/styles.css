@@ -601,9 +601,9 @@ section[id], details[id], .source-row[id] { scroll-margin-top: 105px; }
 .aw-guide-notes li + li { margin-top: 5px; }
 .aw-guide-simulator-note { margin: 10px 0 0; }
 .aw-guide-simulator-link { display: inline-block; margin: 3px 5px 0 0; color: var(--pg-accent-2); font-weight: 700; }
+@media (max-width: 900px) { .aw-guide-form { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 720px) {
   .aw-layer-guide { padding: 14px; }
-  .aw-guide-form { grid-template-columns: minmax(0, 1fr); }
   .aw-guide-screen-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .aw-guide-remove-screen { justify-self: start; }
 }
