@@ -50,7 +50,8 @@
 .aw-document small { display: block; color: var(--pg-muted); font-size: 11px; }
 .aw-document strong { display: block; margin-top: 3px; overflow-wrap: anywhere; font-size: 13px; }
 .aw-document .pg-btn { flex: none; }
+.aw-document-actions { display: flex; flex: none; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
 .aw-hub-page footer { padding: 28px 5px 4px; color: var(--pg-muted); font-size: 12px; }
 .aw-error { position: fixed; z-index: 100; inset: auto 15px 15px; padding: 16px; border-radius: 12px; color: #8c1f17; background: #ffe4df; box-shadow: var(--pg-shadow-card); }
 @media(max-width: 900px) { .aw-series-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media(max-width: 600px) { .aw-hub-page .pg-wrap { padding: 12px 10px 28px; } .aw-draft-badge { font-size: 10px; } .aw-series-grid, .aw-documents { grid-template-columns: minmax(0, 1fr); } .aw-document { align-items: flex-start; } .aw-document .pg-btn { font-size: 11px; padding: 8px 9px; } .aw-section-head h2 { font-size: 20px; } .aw-hero > p:not(.aw-kicker) { font-size: 14px; } }
+@media(max-width: 600px) { .aw-hub-page .pg-wrap { padding: 12px 10px 28px; } .aw-draft-badge { font-size: 10px; } .aw-series-grid, .aw-documents { grid-template-columns: minmax(0, 1fr); } .aw-document { align-items: flex-start; flex-wrap: wrap; } .aw-document-actions { width: 100%; justify-content: flex-start; } .aw-document .pg-btn { font-size: 11px; padding: 8px 9px; } .aw-section-head h2 { font-size: 20px; } .aw-hero > p:not(.aw-kicker) { font-size: 14px; } }
