@@ -22,28 +22,43 @@
 
 ### 3. 화면당·장비 전체 레이어 수와 나눠 쓰는 방식
 
-용량 2(4K60) 믹싱 레이어 한 개는 소스 링크 두 개를, 분할 레이어 한 쌍도 소스 링크 두 개를 씁니다. VPU 하나의 소스 링크는 8개이므로, VPU 하나에 2×2 4K60 화면 하나를 연결하면 화면당 최대 믹싱 4개 또는 분할 8개입니다. 모델 전체 화면 수와 레이어 총량은 각 모델의 공개 `layerPlan` 값에 따릅니다. 큰 모델은 이 화면 구성을 여러 개 만들 수 있으며, 화면 하나의 상한 자체를 늘리지는 않습니다.
+용량 2(4K60) 믹싱 레이어 한 개는 소스 링크 두 개를, 분할 레이어 한 쌍도 소스 링크 두 개를 씁니다. VPU 하나의 소스 링크는 8개이므로, VPU 하나로 2×2 4K60 화면을 처리하는 **매뉴얼 예시**는 믹싱 4개 또는 분할 8개입니다. 이것이 화면 자체의 절대 상한은 아닙니다. 제조사 시뮬레이터에서 출력 링크 8개인 한 화면의 레이어가 VPU 여러 개에 분산됨을 확인했습니다. C+의 용량 4 믹싱 6개(총 소스 링크 24개)는 실제 적용(APPLY)됐고 7개째는 거부됐습니다. 용량 2 믹싱 12개는 시뮬레이터가 표시한 추가 가능 수이며, 실제 APPLY로 확인한 값은 용량 4 믹싱 6개입니다. 모델 전체 수량은 공개 `layerPlan`에 따릅니다.
 
 - 원문: “Each VPU contains 8 source links and 8 outputs links.” — 66쪽.
 - 원문: “Capacity 1 uses one link and capacity 2 uses two links, etc.” — 66쪽.
 - 원문: “4 mixer layers (or 4 pairs of split layers) spread over 4 outputs, in capacity 2.” — 66쪽.
 - 표 원문: 용량 2 레이어 구성 — 같은 매뉴얼, 79쪽.
+- 실측: [AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측](../기록/W-20261017-003-시뮬레이터실측.md) §2–3. 화면 1개의 레이어가 여러 VPU를 사용함을 실제 적용으로 확인했습니다.
 
 ### 4. 화면 크기·해상도(용량)에 따른 차이
 
 용량은 출력 형식에 따라 정해집니다. 4K60은 용량 2이며, 다른 해상도에 대한 일반 조합 계산은 이번 카드에서 제공하지 않습니다.
 
+Aquilon 기본 모드에서 한 2×2 화면에 레이어가 없을 때 시뮬레이터의 추가 가능 수는 다음과 같습니다. 이는 C+의 시뮬레이터 표시이며 모든 모델에 그대로 적용되는 고정값이 아닙니다.
+
+| 레이어 용량 | 믹싱 | 분할 | Cut&Fill 믹싱 |
+|---|---:|---:|---:|
+| 1(HD) | 12 | 24 | 6 |
+| 2(4K60) | 12 | 24 | 6 |
+| 4 | 6 | 12 | 0(추가 불가) |
+
+같은 기본 모드에서 용량 1 믹싱 1개를 넣은 뒤 남은 믹싱 가능 수는 용량 1이 12→11, 용량 2가 12→5, 용량 4가 6→2로 변했습니다. 서로 다른 용량의 비용을 단순한 개수 합으로 계산하지 않습니다. 이는 Aquilon 실측이며 Alta·Midra의 HD 혼합 비용을 확정하지 않습니다.
+
 - 표 원문: 출력 해상도별 용량 표 — Aquilon User Manual v6.2, 61쪽.
 - 원문: “Capacity 1 uses one link and capacity 2 uses two links, etc.” — 66쪽.
 - 원문: “When Optimized mode is enabled in one Screen, use only layers of capacity 2.” — 69쪽.
+- 시뮬레이터 도움말 원문: “If the sum of a screen's output capacities exceeds 4 then only layers of capacity 2 should be used to optimize the layer allocation.” — [AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측](../기록/W-20261017-003-시뮬레이터실측.md) §4.
 
 ### 5. 여러 출력에 걸친 화면의 계산
 
 2×2 4K60 화면 하나는 출력 4개, 출력 링크 8개를 씁니다. 한 화면이 출력 링크 5개 이상을 쓰고 용량 2 레이어가 하나 이상이면 해당 VPU의 Optimized mode가 적용되어 4링크 경계를 없앱니다. 한 화면이 출력 8개를 초과하면 다른 VPU가 필요합니다.
 
+시뮬레이터의 Optimization 스위치를 켠 실측에서는 레이어 비용이 용량 1·2·4에 각각 1·2·4링크이고 Cut&Fill은 두 배였습니다. 기본 모드에서 추가할 수 없던 용량 4 Cut&Fill도 이 모드에서는 가능했습니다. 화면의 출력 링크 배치와 레이어의 소스 링크 배분을 구분합니다. 출력 링크 8개 화면의 레이어가 다른 VPU의 소스 링크도 쓰는 사례가 §3에서 확인됐습니다.
+
 - 원문: “An Optimized mode is enabled for the whole VPU when one Screen uses at least 5 outputs links and at least one layer of capacity 2.” — Aquilon User Manual v6.2, 69쪽.
 - 원문: “The Optimized mode removes the 4 links boundary and configures the links to bring the best performance for layers of capacity 2.” — 69쪽.
 - 원문: “A Screen using more than 8 outputs uses another VPU.” — 68쪽.
+- 실측: [AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측](../기록/W-20261017-003-시뮬레이터실측.md) §6.
 
 ### 6. 레이어 없는 화면
 
@@ -53,19 +68,20 @@
 
 ### 7. PiP
 
-화면 전체 레이어와 출력 내부 PiP는 같은 처리 링크를 사용합니다. PiP를 만든다고 링크가 절약된다고 확인되지 않았습니다. Region Captive PiPs라는 용어는 RS1 데이터시트 3쪽에 있으며 매뉴얼 83쪽은 화면 영역 제한을 설명하지만 절감 산식은 제시하지 않습니다.
+화면 전체 레이어와 출력 내부 PiP는 같은 처리 링크를 사용합니다. Region Captive PiPs라는 용어는 RS1 데이터시트 3쪽에 있습니다. 매뉴얼 83쪽은 화면 영역 제한을 설명하지만 절감 산식은 제시하지 않습니다. **시뮬레이터 실측**에서는 Region을 출력 링크 4개로 제한한 용량 1 믹싱을 24개, 화면 전체 출력 링크 8개를 걸친 용량 1 믹싱을 12개 추가할 수 있었습니다. 기본 모드의 한 레이어 비용은 `max(레이어 용량, ceil(걸친 출력 링크/4))`이며 Cut&Fill은 두 배, 분할은 절반입니다. 이 수치와 산식은 Aquilon 시뮬레이터에서 확인한 범위로 한정합니다.
 
 - Region Captive PiPs 용어 — Aquilon RS1 Technical Datasheet, 3쪽.
 - 원문: “Set Screen regions to optimize layer resources by limiting layers to specific outputs of a Screen.” — Aquilon User Manual v6.2, 83쪽.
 - 레이어·출력 연결 예시 — 같은 매뉴얼, 67–68쪽 그림.
+- 실측: [AW LivePremier Simulator 6.2.2(펌웨어 6.2.79), 2026-10-17 실측](../기록/W-20261017-003-시뮬레이터실측.md) §5.
 
 ### 8. 확인되지 않은 점
 
-- 출력이 8개 이하인 화면의 레이어를 두 VPU에 나눠 배치할 수 있는지.
-- 용량 1(HD)과 용량 2(4K60) 레이어를 섞을 때의 자원 비용. 매뉴얼은 Optimized mode에서 용량 2만 사용할 것을 권고합니다(69쪽).
-- Region Captive PiP의 레이어 절감 산식.
+- 여러 화면이 각각 VPU 출력을 차지한 상태에서 남는 소스 링크를 화면 간에 공유하는 구성까지는 실측하지 않았다(실측은 한 화면이 출력 없는 VPU의 소스 링크를 쓰는 것까지).
+- 이 실측 외의 출력·레이어 용량 조합을 모든 모델과 펌웨어에 일반화할 수 있는지. 설계 가이드는 4K60 용량 2의 공개 모델 한도 안에서 판정하고, 실제 카드·펌웨어 구성은 제조사 시뮬레이터로 최종 확인합니다.
+- Alta 4K·Midra 4K에서 용량 1(HD)과 용량 2(4K60)를 섞을 때의 비용은 여전히 미확인입니다. Aquilon 매뉴얼은 Optimized mode에서 용량 2만 사용할 것을 권고합니다(69쪽).
 - 배경 콘텐츠는 출력 용량과 맞아야 하며 확대·축소되지 않습니다. 예를 들어 2×2 4K60 화면에는 각 출력마다 4K60 소스가 필요합니다(101쪽).
-- 관련 원문: “When Optimized mode is enabled in one Screen, use only layers of capacity 2.” — Aquilon User Manual v6.2, 69쪽; “The content and output capacities must match.” — 같은 매뉴얼, 101쪽. 이 문장들은 혼합 용량 비용이나 Region Captive 절감량의 산식을 제시하지 않습니다.
+- 관련 원문: “When Optimized mode is enabled in one Screen, use only layers of capacity 2.” — Aquilon User Manual v6.2, 69쪽; “The content and output capacities must match.” — 같은 매뉴얼, 101쪽. Region과 용량 혼합 산식은 이 매뉴얼의 확정 문구가 아닌 Aquilon 시뮬레이터 실측입니다.
 
 ## Alta 4K · Zenith 100 · Zenith 200
 

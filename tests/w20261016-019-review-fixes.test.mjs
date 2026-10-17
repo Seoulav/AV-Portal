@@ -51,11 +51,12 @@ test('Aquilon split layers consume source links in pairs',()=>{
   }
 });
 
-test('Aquilon per-screen mixing overflow reports only the violated layer limit',()=>{
+test('Aquilon mixing beyond one VPU reports only a genuinely exceeded model limit',()=>{
   const result=resultFor([{outputs:4,layerType:'mixing',layers:5}],0,4);
   const rs6=resultModel(result,'aquilon-rs6');
-  assert.equal(rs6.possible,false);
-  assert.deepEqual(rs6.reasons,['화면당 4K 믹싱 최대 4개(매뉴얼 66·79쪽) 초과']);
+  assert.equal(rs6.possible,true);
+  assert.deepEqual(rs6.reasons,[]);
+  assert.equal(rs6.used.processingUnits,2);
 });
 
 test('Aquilon C family follows layerPlan and uses BTO maximum connector values',()=>{

@@ -3,7 +3,7 @@ import {prepareGuideInput, buildGuideExportText} from './analogway-layer-guide-i
 export {modelData, exampleConfigurations};
 
 const RESOURCE_NOTES = {
-  aquilon:'Aquilon은 4K60 용량 2 기준으로 계산합니다. 믹싱 한 개는 링크 두 개, 분할 레이어 두 개 한 쌍도 링크 두 개를 사용합니다. 레이어가 없는 화면과 보조 출력은 처리 링크를 쓰지 않습니다.',
+  aquilon:'Aquilon은 4K60 용량 2 기준으로 계산합니다. 믹싱 한 개는 링크 두 개, 분할 레이어 두 개 한 쌍도 링크 두 개를 사용합니다. 레이어가 없는 화면과 보조 출력은 처리 링크를 쓰지 않습니다. 한 화면의 레이어를 여러 VPU에 나누는 계산은 실측 근거(시뮬레이터)입니다.',
   alta:'Alta 4K는 믹싱 한 개 또는 분할 두 개를 레이어 자원 한 개로 계산합니다. 레이어가 여러 출력 경계를 넘을 때 추가 자원은 미확인입니다.',
   midra:'Midra 4K는 공식 문서에 있는 Mixer·Matrix·Blend 구성만 계산합니다.',
 };
@@ -27,16 +27,16 @@ function packAquilonAtLimit(tasks,limit) {
     if(index===tasks.length)return true;
     const task=tasks[index],seen=new Set();
     for(const bin of bins){
-      const signature=bin.outputLinks+':'+bin.sourceLinks;
+      const signature=String(bin.outputLinks);
       if(seen.has(signature))continue;
       seen.add(signature);
-      if(bin.outputLinks+task.outputLinks>8||bin.sourceLinks+task.sourceLinks>8)continue;
-      bin.outputLinks+=task.outputLinks;bin.sourceLinks+=task.sourceLinks;bin.screens.push(task.screen);
+      if(bin.outputLinks+task.outputLinks>8)continue;
+      bin.outputLinks+=task.outputLinks;bin.screens.push(task.screen);
       if(place(index+1))return true;
-      bin.outputLinks-=task.outputLinks;bin.sourceLinks-=task.sourceLinks;bin.screens.pop();
+      bin.outputLinks-=task.outputLinks;bin.screens.pop();
     }
     if(bins.length<limit){
-      bins.push({outputLinks:task.outputLinks,sourceLinks:task.sourceLinks,screens:[task.screen]});
+      bins.push({outputLinks:task.outputLinks,screens:[task.screen]});
       if(place(index+1))return true;
       bins.pop();
     }
@@ -45,39 +45,29 @@ function packAquilonAtLimit(tasks,limit) {
   return place(0)?bins.map(bin=>({...bin,screens:[...bin.screens]})):null;
 }
 
-function packAquilonScreens(screens,maxUnits=4) {
+function packAquilonScreens(screens,maxUnits=8) {
   const tasks=screens.map((screen,index)=>({
     screen:index+1,
     outputLinks:screen.layers===0?0:screen.outputs*2,
     sourceLinks:screen.layers===0?0:screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2,
   })).filter(task=>task.outputLinks||task.sourceLinks);
-  const oversized=tasks.filter(task=>task.outputLinks>8||task.sourceLinks>8);
-  const validTasks=tasks.filter(task=>task.outputLinks<=8&&task.sourceLinks<=8)
-    .sort((a,b)=>Math.max(b.outputLinks,b.sourceLinks)-Math.max(a.outputLinks,a.sourceLinks)||
-      (b.outputLinks+b.sourceLinks)-(a.outputLinks+a.sourceLinks)||a.screen-b.screen);
-  if(oversized.length)return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  const oversized=tasks.filter(task=>task.outputLinks>8);
+  const validTasks=tasks.filter(task=>task.outputLinks<=8)
+    .sort((a,b)=>b.outputLinks-a.outputLinks||a.screen-b.screen);
+  const totalSourceLinks=tasks.reduce((sum,task)=>sum+task.sourceLinks,0);
+  const totalOutputLinks=tasks.reduce((sum,task)=>sum+task.outputLinks,0);
+  if(oversized.length)return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks,totalOutputLinks};
   for(let limit=0;limit<=maxUnits;limit++){
     const bins=limit===0?(validTasks.length===0?[]:null):packAquilonAtLimit(validTasks,limit);
-    if(bins)return {bins,oversized,fits:true,minUnits:bins.length,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+    // Output links stay with their Screen. Simulator APPLY confirms its source layers
+    // can also draw on other VPUs, so source links use a separate device-wide pool.
+    if(bins)return {bins,oversized,fits:true,minUnits:Math.max(bins.length,Math.ceil(totalSourceLinks/8)),totalSourceLinks,totalOutputLinks};
   }
-  return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks:validTasks.reduce((sum,task)=>sum+task.sourceLinks,0),totalOutputLinks:validTasks.reduce((sum,task)=>sum+task.outputLinks,0)};
+  return {bins:[],oversized,fits:false,minUnits:null,totalSourceLinks,totalOutputLinks};
 }
 
 function evaluateAquilon(model,input,pgmOutputs) {
-  const reasons=[],fit=packAquilonScreens(input.screens,4);
-  for(const screen of input.screens){
-    if(screen.layers===0)continue;
-    const outputLinks=screen.outputs*2;
-    if(outputLinks>8)reasons.push('한 화면에 필요한 출력 링크 '+outputLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
-    if(screen.layerType==='mixing'&&screen.layers>model.mixingLayersPerScreen)
-      reasons.push('화면당 4K 믹싱 최대 '+model.mixingLayersPerScreen+'개(매뉴얼 66·79쪽) 초과');
-    else if(screen.layerType==='split'&&screen.layers>model.splitLayersPerScreen)
-      reasons.push('화면당 4K 분할 최대 '+model.splitLayersPerScreen+'개 초과');
-    else {
-      const sourceLinks=screen.layerType==='mixing'?screen.layers*2:Math.ceil(screen.layers/2)*2;
-      if(sourceLinks>8)reasons.push('한 화면에 필요한 레이어 입력 링크 '+sourceLinks+'개가 처리 보드당 한도 8개를 넘습니다.');
-    }
-  }
+  const reasons=[],fit=packAquilonScreens(input.screens);
   if(fit.fits&&fit.minUnits>model.processingUnits)
     reasons.push('처리 보드(VPU) '+fit.minUnits+'개가 필요하지만 보유 수는 '+model.processingUnits+'개입니다.');
   else if(!fit.fits&&!reasons.length)
@@ -87,9 +77,10 @@ function evaluateAquilon(model,input,pgmOutputs) {
   if(input.inputs4k>model.inputs4k)reasons.push('4K 입력 '+input.inputs4k+'개가 한도 '+model.inputs4k+'개를 넘습니다.');
   const possible=reasons.length===0;
   const layers=input.screens.reduce((sum,screen)=>sum+screen.layers,0);
+  const simulatorBasis=fit.fits&&fit.minUnits>fit.bins.length;
   const modes=unique(input.screens.filter(screen=>screen.outputs>=3&&screen.layers>0).map(()=> 'Optimized mode · 4K 전용'));
   return {possible,reasons,mode:possible?(modes.join(', ')||'처리 보드(VPU) '+fit.minUnits+'개'):'' ,
-    displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용':'레이어 처리 보드 불필요'):'',
+    displayMode:possible?(fit.minUnits?'처리 보드(VPU) '+fit.minUnits+'개 사용'+(simulatorBasis?' · 실측 근거(시뮬레이터)':''):'레이어 처리 보드 불필요'):'',
     used:{screens:input.screens.length,pgmOutputs,auxOutputs:input.auxOutputs,outputConnectors:pgmOutputs+input.auxOutputs,inputs4k:input.inputs4k,processingUnits:fit.minUnits,sourceLinks:fit.totalSourceLinks,outputLinks:fit.totalOutputLinks,layers},
     remaining:{pgmOutputs:Math.max(0,model.pgmOutputs-pgmOutputs),outputConnectors:Math.max(0,model.outputConnectors-pgmOutputs-input.auxOutputs),inputs4k:Math.max(0,model.inputs4k-input.inputs4k),processingUnits:fit.fits?Math.max(0,model.processingUnits-fit.minUnits):undefined,sourceLinks:Math.max(0,model.processingUnits*8-fit.totalSourceLinks),outputLinks:Math.max(0,model.processingUnits*8-fit.totalOutputLinks)}};
 }
