@@ -407,5 +407,7 @@
 - [x] 과거 지도 해시를 좁은 되감기 함수로 연결하고, 기존 W-014·W-015 역사적 시험의 대상 지도를 먼저 되감았다.
 - [x] `portmap-audit` 시트와 760px·390px 전후·좌우 확대 캡처를 `Work/기록/W-20261017-011-preview/`에 저장했다. 브라우저 scrollWidth 760·390, 사진 영역만 가로 이동. 번호별 점검은 `Work/기록/W-20261017-011-점검표.md`.
 - [x] 전체 직렬 Node 시험 913건: 912 pass, 0 fail, 기존 skip 1. `node beta/verify-pages.mjs`: 289 장비·286 상세·529 이미지·167 업로드. `node beta/build-search-index.mjs --check`: 통과. `git diff --check`: 통과.
-- [ ] Draft PR을 열고 Work·사용자에게 시안 비교를 제출한다. 확인 전 Ready·병합·나머지 9종 적용 금지.
+- [x] 최신 main `7534846e`를 통합하고 검색 인덱스·스냅샷·읽기용 카탈로그를 재생성했다. 통합 뒤 전체 직렬 시험 913건(912 pass·기존 skip 1·0 fail), Pages·검색 검사·커밋 diff 검사를 다시 통과했다.
+- [x] 검토용 Draft PR [#634](https://github.com/Seoulav/AV-Portal/pull/634)을 열고 전후 760px·390px 확대 비교를 제출했다.
+- [ ] Work·사용자 확인 대기. 확인 전 Ready·병합·나머지 9종 적용 금지.
 - 참고: main에는 이 ID의 별도 Codex 인계서가 없지만 READY 명세와 Work의 직접 배정이 있어 1단계 시안을 진행했다.
