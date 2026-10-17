@@ -1,4 +1,4 @@
-// Manual visual and browser contract check: node tests/manual/w20261017-008-wall-browser.mjs
+// Manual visual and browser contract check: node tests/manual/w20261017-009-led-browser.mjs
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
@@ -20,7 +20,7 @@ const server=http.createServer((request,response)=>{
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const chromePath=process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe';
 const debugPort=9510;
-const chrome=spawn(chromePath,['--headless','--disable-gpu','--hide-scrollbars','--no-first-run','--remote-allow-origins=*',`--remote-debugging-port=${debugPort}`,`--user-data-dir=${path.join(os.tmpdir(),`w008-wall-${process.pid}`)}`,'about:blank'],{windowsHide:true,stdio:'ignore'});
+const chrome=spawn(chromePath,['--headless','--disable-gpu','--hide-scrollbars','--no-first-run','--remote-allow-origins=*',`--remote-debugging-port=${debugPort}`,`--user-data-dir=${path.join(os.tmpdir(),`w009-led-${process.pid}`)}`,'about:blank'],{windowsHide:true,stdio:'ignore'});
 let socket;
 const pending=new Map();let sequence=0;
 try{
@@ -78,5 +78,5 @@ try{
     await new Promise(resolve=>setTimeout(resolve,150));
   }
   assert.equal(await evaluate("document.querySelector('#guide [data-field=\\\"inputMode\\\"]').value"),'topology','invalid query must leave default screen');
-  fs.writeFileSync(path.join(output,'measurements.json'),JSON.stringify(measures,null,2)+'\\n');
+  fs.writeFileSync(path.join(output,'measurements.json'),JSON.stringify(measures,null,2)+'\n');
 }finally{socket?.close();chrome.kill();server.close();}
