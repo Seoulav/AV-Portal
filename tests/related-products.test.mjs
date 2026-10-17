@@ -28,6 +28,7 @@ test('all published RTCOM related targets resolve to display names and Korean ta
   const products = new Map(index.products.map(product => [product.id, product]));
   const rawDirectory = 'beta/site/rtcom/raw/products';
   let count = 0;
+  const relationCounts = new Map();
 
   for (const file of fs.readdirSync(rawDirectory).filter(name => name.endsWith('.json'))) {
     const source = JSON.parse(fs.readFileSync(`${rawDirectory}/${file}`, 'utf8'));
@@ -35,11 +36,14 @@ test('all published RTCOM related targets resolve to display names and Korean ta
       const name = resolveRelatedProductName(related, [], index);
       assert.equal(name, products.get(related.target)?.model ?? products.get(related.target)?.productName, `${file} → ${related.target}`);
       assert.match(relationshipLabel(related.relation), /^[가-힣 ]+$/u, `${related.relation} label`);
+      relationCounts.set(related.relation, (relationCounts.get(related.relation) ?? 0) + 1);
       count += 1;
     }
   }
 
-  assert.equal(count, 43);
+  assert.equal(count, 50);
+  assert.deepEqual(Object.fromEntries(relationCounts), { PART_OF_SERIES: 23, WORKS_WITH: 27 });
+  assert.equal(resolveRelatedProductName({ target: 'xdm-mr4s' }, [], index), 'XDM-MR4S');
 });
 
 test('public detail requests the RTCOM name index from its deployed relative path', async () => {

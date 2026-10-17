@@ -720,15 +720,20 @@ Verification results (2026-10-17):
 
 ## W-20261017-012 — 관련 제품 카드 표시명·관계 꼬리표
 
-- 상태: IN_PROGRESS
+- 상태: REVIEW · Work 병합 승인(2026-10-17), 최신 통합 후 CI 대기
 - 명세: `Work/작업/W-20261017-012.md` (READY, 읽은 main SHA `6b0177cb2cb9c00cb3a5af76ac1b3bc73421b86e`)
 - 구현 브랜치: `codex/W-20261017-012-related-product-labels`; 별도 작업 폴더 `codex-b-w012`
 - 범위: 렌더링에서 catalog 및 RTCOM 공개 원본 인덱스로 관련 제품 모델명을 찾고, 찾지 못하면 내부 ID를 대문자로 표시. related 원본 JSON·관계 연결은 불변.
-- [x] 현행 관계 값 43행 전수 조사: `PART_OF_SERIES` 22건, `WORKS_WITH` 21건, 인덱스에 없는 대상 0건.
+- [x] 최초 관계 값 43행 전수 조사 후 최신 main(#632)에서 50행 재확인: `PART_OF_SERIES` 23건, `WORKS_WITH` 27건, 인덱스에 없는 대상 0건.
 - [x] 표시명 해석 및 한글 꼬리표 순수 함수 시험 작성, 기능 미구현에서 RED 확인.
 - [x] 공통 렌더러에서 카탈로그 표시명 우선, RTCOM 공개 인덱스 보조, 미일치 시 대문자 ID 대체를 구현.
 - [x] 관계표: `PART_OF_SERIES` → `시리즈 구성품`; `WORKS_WITH` → `함께 사용하는 제품`; 미등록 관계는 `관련 제품`으로 안전한 일반 표기.
-- [x] 760px·390px 관련 제품 캡처 6장 작성: XDM-CTR100, VDM Series, SPX-TX / SPX-RX. 현재 저장소에서 related 관계 43건은 RTCOM 자료에만 존재하므로 Analog Way·비RTCOM 제품 관계를 새로 만들지 않고 세 RTCOM 사례를 사용.
-- [x] 집중 시험 5/5, 전체 직렬 테스트 916건 중 915 통과·0 실패·기존 skip 1, 검색 인덱스 `--check`, `verify-pages`(289 카탈로그·286 상세·529 이미지·167 PDF), `git diff --check` 통과.
+- [x] 760px·390px 관련 제품 캡처 6장 작성: XDM-CTR100, VDM Series, SPX-TX / SPX-RX. 관계는 RTCOM 자료에만 있어 Analog Way·비RTCOM 제품 관계를 새로 만들지 않고 RTCOM 사례를 사용.
+- [x] 최초 집중 시험 5/5, 전체 직렬 테스트 916건 중 915 통과·0 실패·기존 skip 1, 검색 인덱스 `--check`, `verify-pages` 통과.
 - [x] 상세 자산은 `prototype/brc-am7`에서 생성해 source/generated parity 시험을 통과. 제품 JSON·related 원본·검색 인덱스는 변경하지 않음.
-- [x] Work 인계 기록 작성, Draft PR [#635](https://github.com/Seoulav/AV-Portal/pull/635) 제출, Builder CI run `39034041862` 전체 통과. Work 검토 대기(병합 금지).
+- [x] Draft PR [#635](https://github.com/Seoulav/AV-Portal/pull/635) 제출, Work 화면 검토 후 병합 승인.
+- [x] 최신 main `98557465` 통합(merge commit `e48baadd`); 충돌한 `verify-pages` 상세 파일 허용 목록은 `analogway-led-pixels.mjs`와 `related-products.mjs`를 함께 포함.
+- [x] 통합 뒤 상세 자산 20개, 검색 인덱스, 정적 카탈로그, 공개 스냅샷 재생성. `search-index --check`·`verify-pages`(289 카탈로그·286 상세·529 이미지·167 PDF)·`git diff --check` 통과.
+- [x] #632가 XDM-MR4S와 관련 관계 7건을 추가해 관계 시험 기대값을 50행(23 `PART_OF_SERIES`, 27 `WORKS_WITH`)으로 갱신하고 `XDM-MR4S` 표시명 확인 추가.
+- [x] 통합 후 전체 직렬 테스트 918건 중 917 통과·0 실패·기존 skip 1; 집중 관계 시험 5/5 통과.
+- [ ] 최신 통합 커밋 CI 초록 확인, PR Ready 전환 및 병합 후 Pages 공개 확인 대기.
