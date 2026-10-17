@@ -50,7 +50,7 @@ test('reference configurations use evaluator verdicts, including 4/6/16-panel bo
 });
 
 test('invalid tile dimensions and layers never call the evaluator', () => {
-  for (const request of [{columns:0,rows:2,layers:2},{columns:5,rows:5,layers:2},{columns:2.5,rows:2,layers:2},{columns:2,rows:2,layers:-1}]) {
+  for (const request of [{columns:0,rows:2,layers:2},{columns:7,rows:7,layers:2},{columns:2.5,rows:2,layers:2},{columns:2,rows:2,layers:-1}]) {
     let calls = 0;
     const prepared = prepareTileGuide(request, () => {calls++;return {};});
     assert.equal(prepared.status,'invalid');
@@ -65,5 +65,5 @@ test('shared guide tile mode bypasses undocumented-resolution lookup and retains
   assert.equal(prepared.tile.outputLinks,12);
   assert.deepEqual(possible(prepared.result),possible(calculateRecommendations(prepared.input)));
   assert.match(prepared.derivedScreens[0].label,/11520×4320@60/);
-  assert.match(buildGuideExportText(state,prepared),/믹싱 4K 레이어 2개 · 출력 그룹당/);
+  assert.match(buildGuideExportText(state,prepared),/믹싱 4K 레이어 2개 · 벽 전체 PIP 창/);
 });
