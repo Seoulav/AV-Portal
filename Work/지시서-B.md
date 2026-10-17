@@ -690,7 +690,7 @@
 
 ## W-20261017-002 2단계 — Analog Way 문서 연결·Pulse 충돌 병기
 
-- 상태: IN_PROGRESS
+- 상태: REVIEW · Draft PR #635 열림, Builder CI run `39034041862` 통과(검토용 head `1da444547c905f237ace10373e0ad6212182f09a`)
 - 명세: `Work/작업/W-20261017-002.md` (읽은 main SHA `08d255b7c42faf2f10ba74b2b37a38b453ea09ad`), 후속 범위 Work 지시(2026-10-17)
 - 구현 브랜치: `codex/W-20261017-002-analogway-fixes`, 별도 작업 폴더 `codex-b-group6`
 - 범위: RS1 공용 User Manual 및 QSG 문서 유형 정정, Aquilon 브로슈어 공식 URL과 해당 RS 모델 전용 QSG, RC400T QSG, Pulse 4K 스트리밍 충돌을 문구·근거에 병기. Eikos Mixer 표기는 매뉴얼 우선으로 유지. Port Map·레이어 수치·signalFlow 및 빈 자리표시자는 수정하지 않음.
@@ -731,4 +731,4 @@ Verification results (2026-10-17):
 - [x] 760px·390px 관련 제품 캡처 6장 작성: XDM-CTR100, VDM Series, SPX-TX / SPX-RX. 현재 저장소에서 related 관계 43건은 RTCOM 자료에만 존재하므로 Analog Way·비RTCOM 제품 관계를 새로 만들지 않고 세 RTCOM 사례를 사용.
 - [x] 집중 시험 5/5, 전체 직렬 테스트 916건 중 915 통과·0 실패·기존 skip 1, 검색 인덱스 `--check`, `verify-pages`(289 카탈로그·286 상세·529 이미지·167 PDF), `git diff --check` 통과.
 - [x] 상세 자산은 `prototype/brc-am7`에서 생성해 source/generated parity 시험을 통과. 제품 JSON·related 원본·검색 인덱스는 변경하지 않음.
-- [x] Work 인계 기록 작성. Draft PR 제출 후 필수 CI 결과와 Work 검토 대기(병합 금지).
+- [x] Work 인계 기록 작성, Draft PR [#635](https://github.com/Seoulav/AV-Portal/pull/635) 제출, Builder CI run `39034041862` 전체 통과. Work 검토 대기(병합 금지).
