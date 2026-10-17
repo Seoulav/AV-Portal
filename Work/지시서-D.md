@@ -371,3 +371,15 @@
 
 - PR CI: 문서 경로는 Builder/CPQ PR workflow의 paths 대상이 아니고 Pages는 main push에서만 실행됩니다. #606 체크·workflow run 0개, mergeStateStatus CLEAN. CI 통과로 표현하지 않습니다.
 - [x] 문서 PR 제출·최신main/변경범위/CI 적용 여부 확인 완료. Work에게 병합 검토 요청; 승인 전까지 REVIEW 유지.
+
+## W-20261017-013 RTCOM 예약 동기화 복구 — IN_PROGRESS (2026-10-17)
+
+- 명세: Work/작업/W-20261017-013.md READY. 읽은 main SHA: 19d637cde86d8515f20dd7c27d3482ded53a654d.
+- 브랜치: codex/W-20261017-013-rtcom-sync. 작업 위치: codex-d 전용 워크트리. 별도 Codex 인계 파일은 없으며 Work의 2026-10-17 직접 배정으로 착수.
+- 범위: XDM-MR4S 수신에 따른 시험 기대 목록/개수, RTCOM 동기화 산출물, 검색·읽기용 파생물. 원본/일반 제품 JSON·렌더러·Analog Way 페이지·가이드·builder/cpq 무변경.
+- 실패 run 38967102666 실제 확인: W-012 지도 검증 스냅샷에 rtcom-xdm-mr4s 누락; overview-fallback 및 rtcom-embed의 고정 개수 32도 실패. 실수신 기대는 accepted:true/errors:[]/crop:false.
+- [x] 최신 main·명세·실패 로그·관련 시험 확인.
+- [ ] 동기화 전 자기 변경 커밋·최신 main 통합, 원본 동기화 및 실패 재현.
+- [ ] 최소 시험 기대값 갱신, 파생 재생성, 전체 검사.
+- [ ] XDM-MR4S 카드·상세 화면 확인, Draft PR 및 Work 검토 요청.
+- [ ] Work 승인 뒤 병합·예약 workflow 수동 1회 초록 확인.
