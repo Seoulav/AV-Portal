@@ -739,3 +739,15 @@ Verification results (2026-10-17):
 - [x] 최신 통합 head `75325c707eb96a9258200742c721f2304ff6df06`의 Builder CI run `39035755579` 전체 통과(E2E 51), PR Ready 전환 및 #635 병합 완료.
 - [x] 병합 `feec78562184d8909abe15607ca63d75ee50ed1a`; Pages workflow run `39036025805` 성공.
 - [x] 배포된 `rtcom-xdm`, `rtcom-xdm-mr4s` 상세 URL·렌더러·관계 원본 7개가 모두 HTTP 200. 공개 resolver로 XDM-CTR100·XDM Series·XDM-MR4S 등 관련 모델명과 한글 꼬리표 해석 확인. 브라우저 미사용 환경이라 공개 확인은 HTTP·렌더러·공개 JSON 기준.
+
+## W-20261018-001 — Ultrix 한국어 브로슈어 값 확정
+
+- 명세: `Work/작업/W-20261018-001.md`, READY, 읽은 기준 `origin/main` `30d7a835efa099ee12d8d07b64b266e08a2e6945`.
+- 구현 브랜치: `codex/W-20261018-001-ultrix-values`, 세션 B 전용 체크아웃 `codex-b-w012`.
+- 승인: 사용자 결정 “브로슈어 값 채택”(2026-10-18). 범위는 FR2 UHD 게이트박스·UHD 입력 프레임 동기화, HDX-IO AUX C·D 기능만.
+- [x] 명세 및 W-20261016-004 근거표 대조, 대상 행과 기존 값 확인.
+- [x] 제품 회귀 시험 작성, 사양값·FOUND·이전 값 화면 노출 제거 기준에서 RED 확인.
+- [x] FR2·HDX-IO 지정 사양과 FR2 개요에 채택 값을 반영; 근거표에는 이전 값을 “이전 값(구판 추정)”으로 보존. W-001 역변환 함수를 추가하고 W-004 역사 검사에 연결.
+- [x] search-index·readable catalog·public snapshot 재생성; `--check`, verify-pages(289 카탈로그·286 상세·529 이미지·167 PDF), `git diff --check` 통과. 전체 직렬 테스트 927건: 926 통과·0 실패·기존 skip 1.
+- [x] 로컬 포털 캡처: FR2·HDX-IO 각각 1280px·390px 및 390px 전체 사양 펼침 캡처. 갤러리 `Work/기록/W-20261018-001-preview/index.html`.
+- [ ] Draft PR 제출 후 Work 검토 대기. 병합·배포는 Work의 별도 신호 전까지 보류.

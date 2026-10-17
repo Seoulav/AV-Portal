@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { beforeW16004Product, beforeW16004Raw, beforeW16004Uploads } from './w16004-history.mjs';
+import { beforeW20261018_001Product } from './w20261018-001-history.mjs';
 import { uploadedDocumentsFor, documentActionLabels } from '../beta/site/detail/pdf-documents.mjs';
 
 const root = new URL('../', import.meta.url);
@@ -15,7 +16,6 @@ const file = 'manuals/ross-ultrix-family-brochure-ko.pdf';
 const expectedSha = '0f772628d065bec59c6782acb0c939038445c98eda4f2abf8c57518213a6186a';
 const load = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const product = slug => load(`beta/site/detail/data/${slug}.json`);
-const spec = (slug, name) => product(slug).specifications.find(row => row.name === name);
 
 test('one unchanged brochure byte stream is linked to exactly nine Ultrix details', () => {
   const bytes = readFileSync(new URL(`beta/site/${file}`, root));
@@ -45,7 +45,8 @@ test('FR2 differences retain old and brochure numbers with conflict badges', () 
     ['최대 UHD 게이트박스 수', '12입력/12출력', '15입력/15출력'],
     ['최대 UHD 입력 프레임 동기화 수', '27', '51'],
   ]) {
-    const row = spec('ultrix-ns-fr2', name);
+    const historical = beforeW20261018_001Product(product('ultrix-ns-fr2'), 'ultrix-ns-fr2');
+    const row = historical.specifications.find(item => item.name === name);
     assert.equal(row.verification, 'CONFLICTED');
     assert.ok(row.value.includes(oldValue));
     assert.ok(row.value.includes(brochureValue));
@@ -55,12 +56,13 @@ test('FR2 differences retain old and brochure numbers with conflict badges', () 
 });
 
 test('HDX AUX C difference and Ultriscape 30RU extension stay source-specific', () => {
-  const aux = spec('ultrix-hdx-io', 'AUX C 포트 기능');
+  const historicalHdx = beforeW20261018_001Product(product('ultrix-hdx-io'), 'ultrix-hdx-io');
+  const aux = historicalHdx.specifications.find(item => item.name === 'AUX C 포트 기능');
   assert.equal(aux.verification, 'CONFLICTED');
   assert.match(aux.value, /Dante I\/O/);
   assert.match(aux.value, /Ultristream/);
   assert.match(aux.condition, /브로슈어 26쪽/);
-  const heads = spec('ultriscape', '30RU 최대 멀티뷰어 헤드 수');
+  const heads = product('ultriscape').specifications.find(row => row.name === '30RU 최대 멀티뷰어 헤드 수');
   assert.equal(heads.value, '96');
   assert.equal(heads.verification, 'FOUND');
   assert.equal(heads.source, 'B');
