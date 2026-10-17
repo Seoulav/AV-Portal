@@ -55,9 +55,9 @@ test('public pages display a version badge while detail assets retain their refr
   assert.doesNotMatch(detail, /data-system-version|SYSTEM v0\.1\.0|build local/);
   // The detail asset version advances when its presentation renderer changes.
   assert.match(detail, /styles\.css\?v=w20261016-019-layer-guide/);
-  assert.match(detail, /app\.js\?v=w20261017-005-simulator/);
+  assert.match(detail, /app\.js\?v=w20261017-012-related-labels/);
   assert.match(publicDetail, /styles\.css\?v=w20261016-019-layer-guide/);
-  assert.match(publicDetail, /app\.js\?v=w20261017-005-simulator/);
+  assert.match(publicDetail, /app\.js\?v=w20261017-012-related-labels/);
 });
 
 test('the five public Product Detail JSON Git blobs match their approved fixed hashes', () => {
