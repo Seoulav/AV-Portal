@@ -52,3 +52,16 @@ test('document collection keeps only published brochures and shared user manuals
   assert.equal(new Set(model.documents.map(item => item.url ?? item.file)).size, model.documents.length);
   assert.ok(model.documents.every(item => ['Brochure', 'User Manual'].includes(item.type) && (item.url || item.file)));
 });
+
+test('approved hub is published from the catalog and manufacturer entry without changing its data model', async () => {
+  const home = readFileSync(new URL('index.html', root), 'utf8');
+  const publicPage = readFileSync(new URL('analogway/index.html', root), 'utf8');
+  const publicApp = readFileSync(new URL('analogway/app.mjs', root), 'utf8');
+  const publicModel = await import('../beta/site/analogway/model.mjs');
+  assert.match(home, /href="analogway\/"[^>]*>Analog Way/);
+  assert.match(home, /id="manufacturer-section"[\s\S]*?href="analogway\/"/);
+  assert.match(publicPage, /Analog Way 제품을 한눈에/);
+  assert.doesNotMatch(publicPage, /검토용 시안|공개 메뉴 미연결/);
+  assert.match(publicApp, /const site = '\.\.\/'/);
+  assert.deepEqual(publicModel.buildHubModel(entries, products), buildHubModel(entries, products));
+});

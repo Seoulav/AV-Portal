@@ -8,7 +8,9 @@ import {spawn} from 'node:child_process';
 import {buildHubModel} from '../../Work/기록/W-20261017-004-preview/model.mjs';
 
 const root = process.cwd();
-const output = path.join(root, 'Work', '기록', 'W-20261017-004-preview');
+const publicMode = process.env.HUB_PUBLIC === '1';
+const output = path.join(root, 'Work', '기록', publicMode ? 'W-20261017-004-public' : 'W-20261017-004-preview');
+fs.mkdirSync(output, {recursive:true});
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'beta/site/catalog.json'), 'utf8'));
 const entries = catalog.filter(item => item.brand === 'Analog Way');
 const products = Object.fromEntries(entries.map(item => [item.slug, JSON.parse(fs.readFileSync(path.join(root, 'beta/site/detail/data', `${item.slug}.json`), 'utf8'))]));
@@ -58,7 +60,7 @@ try {
   const measures = [];
   for (const width of [1280, 760, 390]) {
     await cdp('Emulation.setDeviceMetricsOverride', {width, height:900, deviceScaleFactor:1, mobile:false});
-    await cdp('Page.navigate', {url:`http://127.0.0.1:${server.address().port}/Work/기록/W-20261017-004-preview/`});
+    await cdp('Page.navigate', {url:`http://127.0.0.1:${server.address().port}/${publicMode ? 'beta/site/analogway' : 'Work/기록/W-20261017-004-preview'}/`});
     let ready = false;
     for (let attempt = 0; attempt < 100; attempt++) {
       ready = await evaluate("!!document.querySelector('#load-error') && (document.documentElement.dataset.ready === 'true' || !document.querySelector('#load-error').hidden)");
@@ -96,6 +98,28 @@ try {
     console.log(`${width}px: ${state.rows.length} JSON-backed rows, ${state.cards} cards, ${state.height}px page, overflow 0`);
   }
   fs.writeFileSync(path.join(output, 'measurements.json'), JSON.stringify(measures, null, 2) + '\n');
+  if (publicMode) for (const width of [1280, 390]) {
+    await cdp('Emulation.setDeviceMetricsOverride', {width, height:900, deviceScaleFactor:1, mobile:false});
+    await cdp('Page.navigate', {url:`http://127.0.0.1:${server.address().port}/beta/site/`});
+    let linked = false;
+    for (let attempt = 0; attempt < 100; attempt++) {
+      linked = await evaluate("!!document.querySelector('.site-menu a[href=\"analogway/\"]') && !!document.querySelector('#manufacturer-section a[href=\"analogway/\"]')");
+      if (linked) break;
+      await new Promise(resolve => setTimeout(resolve, 150));
+    }
+    assert.ok(linked, `${width}px: home menu and manufacturer entry missing`);
+    assert.equal(await evaluate('document.documentElement.scrollWidth'), width, `${width}px home overflow`);
+    const screenshot = await cdp('Page.captureScreenshot', {format:'png', fromSurface:true});
+    fs.writeFileSync(path.join(output, `analogway-entry-${width}.png`), Buffer.from(screenshot.data, 'base64'));
+    await evaluate("document.querySelector('.site-menu a[href=\"analogway/\"]').click()");
+    let reached = false;
+    for (let attempt = 0; attempt < 100; attempt++) {
+      reached = await evaluate("location.pathname.endsWith('/beta/site/analogway/') && document.documentElement.dataset.ready === 'true'");
+      if (reached) break;
+      await new Promise(resolve => setTimeout(resolve, 150));
+    }
+    assert.ok(reached, `${width}px: menu navigation did not reach hub`);
+  }
 } finally {
   socket?.close();
   chrome.kill();

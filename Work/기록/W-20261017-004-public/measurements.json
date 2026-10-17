@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1280,
+    "height": 6284,
+    "scrollWidth": 1280,
+    "rows": 15,
+    "cards": 5,
+    "guide": true,
+    "standards": true,
+    "screenshot": "analogway-hub-1280.png"
+  },
+  {
+    "width": 760,
+    "height": 6750,
+    "scrollWidth": 760,
+    "rows": 15,
+    "cards": 5,
+    "guide": true,
+    "standards": true,
+    "screenshot": "analogway-hub-760.png"
+  },
+  {
+    "width": 390,
+    "height": 8932,
+    "scrollWidth": 390,
+    "rows": 15,
+    "cards": 5,
+    "guide": true,
+    "standards": true,
+    "screenshot": "analogway-hub-390.png"
+  }
+]

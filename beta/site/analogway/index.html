@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Analog Way 제품 안내 | AV Portal</title>
+  <link rel="stylesheet" href="../shared/pg.css">
+  <link rel="stylesheet" href="../detail/styles.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body class="pg-page aw-hub-page">
+  <div class="pg-orbs" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <div class="pg-wrap">
+    <header class="pg-topbar">
+      <a class="pg-brand" href="../"><span class="pg-swatch" aria-hidden="true">AV</span><span><strong>AV PORTAL</strong><small>Analog Way 제품 안내</small></span></a>
+    </header>
+    <main id="main">
+      <section class="aw-hero pg-card" aria-labelledby="page-title">
+        <p class="aw-kicker">VIDEO PROCESSING · ANALOG WAY</p>
+        <h1 id="page-title">Analog Way 제품을 한눈에</h1>
+        <p>Analog Way는 전문 AV용 영상 처리 장비를 설계·제조합니다. 라이브 행사와 고정 설치에서 여러 화면과 영상 레이어를 구성하는 제품을 시리즈별로 살펴보세요. <a href="https://www.analogway.com/about" target="_blank" rel="noopener noreferrer">제조사 소개 ↗</a></p>
+        <nav class="aw-jump" aria-label="페이지 내 이동"><a href="#series">시리즈</a><a href="#comparison">모델 비교</a><a href="#guide">설계 가이드</a><a href="#standards">레이어 기준</a><a href="#documents">문서</a></nav>
+      </section>
+      <section id="series" class="pg-card" aria-labelledby="series-title"><div class="aw-section-head"><span>01</span><div><h2 id="series-title">시리즈 선택</h2><p>공개 목록의 Analog Way 제품을 시리즈별로 모았습니다.</p></div></div><div id="series-cards" class="aw-series-grid"></div></section>
+      <section id="comparison" class="pg-card" aria-labelledby="comparison-title"><div class="aw-section-head"><span>02</span><div><h2 id="comparison-title">모델 비교</h2><p>수치는 각 제품의 현재 공개 JSON에서 읽습니다. 출력 커넥터와 실제 프로그램 출력을 구분합니다.</p></div></div><div id="comparison-tables"></div><p class="aw-table-note">Aquilon의 화면당 레이어는 VPU 1개 예시이며 화면의 절대 상한이 아닙니다. C 시리즈는 주문형(BTO) 최대 구성입니다. Alta·Midra의 화면당 수는 최대 화면 구성 기준이고 한 화면 집중 시 값도 함께 표시합니다.</p></section>
+      <section id="guide" class="pg-card" aria-labelledby="guide-title"><div class="aw-section-head"><span>03</span><div><h2 id="guide-title">화면·레이어 설계</h2><p>제품 상세에서 쓰는 동일한 설계 가이드를 불러옵니다.</p></div></div><div id="guide-card"></div></section>
+      <section id="standards" class="pg-card" aria-labelledby="standards-title"><div class="aw-section-head"><span>04</span><div><h2 id="standards-title">레이어 연출 기준</h2><p>공식 매뉴얼과 시뮬레이터 실측을 반영한 기존 기준 카드를 재사용합니다.</p></div></div><div id="standards-card"></div></section>
+      <section id="documents" class="pg-card" aria-labelledby="documents-title"><div class="aw-section-head"><span>05</span><div><h2 id="documents-title">문서 모음</h2><p>현재 제품 상세에 연결된 브로슈어와 공용 사용설명서만 표시합니다.</p></div></div><div id="document-list" class="aw-documents"></div></section>
+    </main>
+    <footer>제품별 구성·적용 조건은 각 상세와 제조사 원문을 확인해 주세요.</footer>
+  </div>
+  <div id="load-error" class="aw-error" role="alert" hidden></div>
+</body>
+</html>
