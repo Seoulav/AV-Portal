@@ -273,6 +273,12 @@ export function renderAnalogWayLayerGuide(currentSlug){
       rows.querySelector('.aw-wall-aux').replaceChildren();
       const tile=lastPrepared.tile;
       if(tile){
+        const addPip=rows.querySelector('[data-action="add-pip"]');
+        const removePip=rows.querySelector('[data-action="remove-pip"]');
+        const countInput=rows.querySelector('[data-field="layers"]');
+        countInput.max=String(tile.input.screens.length*8);
+        addPip.disabled=tile.layers>=Number(countInput.max);
+        removePip.disabled=tile.layers===0;
         grid.style.gridTemplateColumns=`repeat(${tile.columns}, minmax(0, 1fr))`;
         for(let index=0;index<tile.outputs;index++)grid.append(makeElement('span','',''));
         grid.setAttribute('aria-label',`${tile.columns}열 ${tile.rows}행 4K 패널`);
@@ -290,6 +296,12 @@ export function renderAnalogWayLayerGuide(currentSlug){
         rows.querySelector('.aw-wall-count').textContent=`4K PIP · 4K60 믹싱 ${tile.layers}개 · 벽 전체`;
         const aux=rows.querySelector('.aw-wall-aux');
         for(let index=0;index<Math.min(tile.input.auxOutputs,30);index++)aux.append(makeElement('span','',`AUX ${index+1}`));
+      }else{
+        wall.removeAttribute('aria-label');
+        wall.querySelector('.aw-wall-resolution').textContent='';
+        rows.querySelector('.aw-wall-count').textContent='입력값을 확인해 주세요';
+        rows.querySelector('[data-action="add-pip"]').disabled=true;
+        rows.querySelector('[data-action="remove-pip"]').disabled=Number(rows.querySelector('[data-field="layers"]').value)<=0;
       }
     }
     const formats=lastPrepared.derivedScreens.map((format,index)=>`화면 ${index+1}: ${format.label ?? '공식 자료 미확인'}`);
@@ -367,7 +379,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
         count.dispatchEvent(new Event('input',{bubbles:true}));
       });
       const hdLabel=makeElement('label','','HD(용량 1) 레이어 수');const hd=makeElement('input','');hd.type='number';hd.min='0';hd.max='8';hd.step='1';hd.value=String(screen.hdLayers??0);hd.dataset.field='hdLayers';hd.setAttribute('aria-label',`화면 ${index+1} HD 레이어 수`);hdLabel.append(hd);fieldset.append(hdLabel);
-      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K PIP 창 수 · 벽 전체':'4K60(용량 2) 레이어 수';count.max=tiles?'72':'8';count.setAttribute('aria-label',tiles?'4K PIP 창 수 · 벽 전체':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
+      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K PIP 창 수 · 벽 전체':'4K60(용량 2) 레이어 수';count.max=tiles?'72':'8';if(!tiles&&Number(count.value)>8)count.value='8';count.setAttribute('aria-label',tiles?'4K PIP 창 수 · 벽 전체':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
       mode.addEventListener('change',syncMode);syncMode();
       const remove=makeElement('button','aw-guide-remove-screen','화면 삭제');remove.type='button';remove.disabled=initial.length<=1;remove.addEventListener('click',()=>{const next=readScreenInputs(rows);next.splice(index,1);renderRows(next);update();});fieldset.append(remove);
       fieldset.addEventListener('input',update);fieldset.addEventListener('change',update);rows.append(fieldset);

@@ -66,6 +66,8 @@ try{
     assert.ok(ninth.unavailable.includes('Aquilon RS2'));
     await evaluate("document.querySelector('[data-action=\"remove-pip\"]').click()");
     assert.deepEqual((await evaluate(readState)).layers,8);
+    await evaluate(`(()=>{const count=document.querySelector('#guide [data-field="layers"]');count.value='16';count.dispatchEvent(new Event('input',{bubbles:true}));})()`);
+    assert.equal(await evaluate("document.querySelector('[data-action=\"add-pip\"]').disabled"),true,'16 is the two-group evaluator ceiling');
     await evaluate(`(()=>{const count=document.querySelector('#guide [data-field="layers"]');count.value='3';count.dispatchEvent(new Event('input',{bubbles:true}));const aux=document.querySelector('#aw-guide-aux');aux.value='2';aux.dispatchEvent(new Event('input',{bubbles:true}));})()`);
     const synced=await evaluate(readState);assert.equal(synced.windows,3);assert.equal(synced.aux,2);
     await evaluate("document.querySelector('.aw-tile-presets button:last-child').previousElementSibling.click()");
