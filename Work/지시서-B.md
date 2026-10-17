@@ -720,7 +720,7 @@ Verification results (2026-10-17):
 
 ## W-20261017-012 — 관련 제품 카드 표시명·관계 꼬리표
 
-- 상태: REVIEW · Work 병합 승인(2026-10-17), 최신 통합 후 CI 대기
+- 상태: MERGED · PR #635 · `feec78562184d8909abe15607ca63d75ee50ed1a`
 - 명세: `Work/작업/W-20261017-012.md` (READY, 읽은 main SHA `6b0177cb2cb9c00cb3a5af76ac1b3bc73421b86e`)
 - 구현 브랜치: `codex/W-20261017-012-related-product-labels`; 별도 작업 폴더 `codex-b-w012`
 - 범위: 렌더링에서 catalog 및 RTCOM 공개 원본 인덱스로 관련 제품 모델명을 찾고, 찾지 못하면 내부 ID를 대문자로 표시. related 원본 JSON·관계 연결은 불변.
@@ -736,4 +736,6 @@ Verification results (2026-10-17):
 - [x] 통합 뒤 상세 자산 20개, 검색 인덱스, 정적 카탈로그, 공개 스냅샷 재생성. `search-index --check`·`verify-pages`(289 카탈로그·286 상세·529 이미지·167 PDF)·`git diff --check` 통과.
 - [x] #632가 XDM-MR4S와 관련 관계 7건을 추가해 관계 시험 기대값을 50행(23 `PART_OF_SERIES`, 27 `WORKS_WITH`)으로 갱신하고 `XDM-MR4S` 표시명 확인 추가.
 - [x] 통합 후 전체 직렬 테스트 918건 중 917 통과·0 실패·기존 skip 1; 집중 관계 시험 5/5 통과.
-- [ ] 최신 통합 커밋 CI 초록 확인, PR Ready 전환 및 병합 후 Pages 공개 확인 대기.
+- [x] 최신 통합 head `75325c707eb96a9258200742c721f2304ff6df06`의 Builder CI run `39035755579` 전체 통과(E2E 51), PR Ready 전환 및 #635 병합 완료.
+- [x] 병합 `feec78562184d8909abe15607ca63d75ee50ed1a`; Pages workflow run `39036025805` 성공.
+- [x] 배포된 `rtcom-xdm`, `rtcom-xdm-mr4s` 상세 URL·렌더러·관계 원본 7개가 모두 HTTP 200. 공개 resolver로 XDM-CTR100·XDM Series·XDM-MR4S 등 관련 모델명과 한글 꼬리표 해석 확인. 브라우저 미사용 환경이라 공개 확인은 HTTP·렌더러·공개 JSON 기준.
