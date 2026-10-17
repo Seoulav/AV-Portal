@@ -1,5 +1,6 @@
 import {modelData, exampleConfigurations, guideEvidence} from './analogway-layer-guide-data.mjs';
 import {prepareGuideInput, buildGuideExportText} from './analogway-layer-guide-input.mjs';
+import {calculateTileLayerMaximums} from './analogway-tile-guide.mjs';
 export {modelData, exampleConfigurations};
 
 const RESOURCE_NOTES = {
@@ -172,7 +173,7 @@ function readScreenInputs(container){
   }));
 }
 
-function renderModelResult(result,currentSlug){
+function renderModelResult(result,currentSlug,tileMaximums){
   const possibleModels=result.models.filter(model=>model.possible).sort((a,b)=>Number(b.recommended)-Number(a.recommended));
   const unavailable=result.models.filter(model=>!model.possible);
   const groups=makeElement('div','aw-guide-result-groups');
@@ -187,6 +188,12 @@ function renderModelResult(result,currentSlug){
     if(model.slug===currentSlug)head.append(makeElement('span','aw-guide-current-badge','현재 제품'));
     card.append(head);
     card.append(makeElement('p',model.possible?'aw-guide-status is-possible':'aw-guide-status is-impossible',model.possible?'가능 · '+model.displayMode:'불가'));
+    const tileMaximum=model.possible?tileMaximums?.get(model.slug):null;
+    if(tileMaximum){
+      card.append(makeElement('p','aw-guide-tile-limit',`4K60 믹싱 최대 ${tileMaximum.mixing}개 · 분할 최대 ${tileMaximum.split}개`));
+      if(tileMaximum.splitConvertedBeyondEvaluator)card.append(makeElement('p','aw-guide-tile-limit-note','분할 수는 믹싱 1개 = 분할 2개 환산(그룹당 평가 입력 8개 초과).'));
+      if(tileMaximum.atInputCeiling)card.append(makeElement('p','aw-guide-tile-limit-note','믹싱은 그룹당 입력 상한 8개까지 평가한 값.'));
+    }
     if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','입출력 수: '+model.connectorBasis));
     if(model.reasons.length){
       const reasons=makeElement('ul','aw-guide-reasons');
@@ -280,10 +287,18 @@ export function renderAnalogWayLayerGuide(currentSlug){
       const tile=lastPrepared.tile;
       summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개 · 믹싱 레이어 ${tile.layers}개 · 출력 그룹당`));
       summary.append(makeElement('p','aw-guide-tile-caveat','겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.'));
+      summary.append(makeElement('p','aw-guide-tile-caveat','카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측).'));
+      if(tile.columns===4&&tile.rows===2){
+        const evidence=makeElement('p','aw-guide-tile-caveat','제조사 구성 예: Aquilon RS2 데이터시트 8쪽 · 8K 월 2개, 4K60 PIP 믹싱 8개, AUX 4개. ');
+        const link=makeElement('a','','RS2 공개 데이터시트 보기');
+        link.href='https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf';
+        link.target='_blank';link.rel='noopener noreferrer';evidence.append(link);summary.append(evidence);
+      }
     }
     const recommended=result.models.find(item=>item.recommended);
     summary.append(makeElement('p',recommended?'aw-guide-recommendation':'aw-guide-no-recommendation',recommended?`추천: ${recommended.name} · 요청한 구성이 확인된 한도 안에 들어갑니다.`:'요청한 구성을 지원하는 모델을 찾지 못했습니다.'));
-    results.replaceChildren(renderModelResult(result,currentSlug));
+    const tileMaximums=lastPrepared.tile?calculateTileLayerMaximums(lastPrepared.tile,calculateRecommendations):null;
+    results.replaceChildren(renderModelResult(result,currentSlug,tileMaximums));
   }
   function renderRows(initial){
     rows.replaceChildren();
