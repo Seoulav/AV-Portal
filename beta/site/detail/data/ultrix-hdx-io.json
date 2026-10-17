@@ -197,19 +197,19 @@
     {
       "group": "AUX",
       "name": "AUX C 포트 기능",
-      "value": "Dante I/O (라이선스 시, 기존) · Ultristream MV 출력 또는 Dante I/O (브로슈어)",
+      "value": "Ultristream MV 출력 또는 Dante I/O",
       "unit": "",
-      "condition": "기존 제품 사양은 AUX C를 Dante I/O로 표기; 한국어 번역 브로슈어 26쪽은 AUX C·D 모두 Ultristream MV 출력 또는 Dante I/O로 표기. 판본 차이 미확인.",
-      "source": "P, B",
-      "verification": "CONFLICTED"
+      "condition": "",
+      "source": "B",
+      "verification": "FOUND"
     },
     {
       "group": "AUX",
       "name": "AUX D 포트 기능",
-      "value": "Ultristream MV 출력 또는 Dante I/O (라이선스 시)",
+      "value": "Ultristream MV 출력 또는 Dante I/O",
       "unit": "",
       "condition": "",
-      "source": "P",
+      "source": "B",
       "verification": "FOUND"
     },
     {
@@ -329,7 +329,7 @@
     },
     {
       "code": "B",
-      "name": "사용자 제공 Ultrix 제품군 브로슈어(한국어 번역판)",
+      "name": "사용자 제공 Ultrix 한국어 브로슈어 + 사용자 확정 2026-10-18",
       "url": "",
       "scope": "26쪽 HDX-IO AUX C·D 커넥터 기능 대조"
     }

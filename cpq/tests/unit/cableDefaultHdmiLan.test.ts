@@ -144,8 +144,18 @@ describe('커넥터 행 2개 — 재산출 짝짓기 (독립 리뷰 지적)', ()
       [
         ...catalog().products,
         Object.assign(catalogProduct('CBL-0106', 'Audio Cable', 'YJ56878', '10M'), { options: { group: '1CH MIC CABLE' } }),
+        Object.assign(catalogProduct('CBL-0129', 'XLR 3p Connector', 'NC3FXX', '10EA'), { options: { group: '뉴트릭 커넥터' } }),
+        Object.assign(catalogProduct('CBL-0130', 'XLR 3p Connector', 'NC3MXX', '10EA'), { options: { group: '뉴트릭 커넥터' } }),
       ],
-      { 'CBL-0017': '30000', 'CBL-0090': '60000', 'CBL-0091': '50000', 'CBL-0101': '12000', 'CBL-0106': '20000' },
+      {
+        'CBL-0017': '30000',
+        'CBL-0090': '60000',
+        'CBL-0091': '50000',
+        'CBL-0101': '12000',
+        'CBL-0106': '20000',
+        'CBL-0129': '30000',
+        'CBL-0130': '30000',
+      },
     );
     const source = diagram(nodes(), [
       hdmi('h1'),
@@ -153,8 +163,13 @@ describe('커넥터 행 2개 — 재산출 짝짓기 (독립 리뷰 지적)', ()
       edge('a1', 'n1', 'n3', 'audio', { bomRows: [] }),
     ]);
     const imported = diagramToQuote(source, withMic, { header: header(), defaultSystemName: '회의실' }).document;
+    // LAN 전용 CBL-0091 + 마이크 XLR 쌍(CBL-0129·CBL-0130, B-20261018-01). 기본 RJ45 행은 없다.
     const connectorRows = imported.rows.filter((r) => r.type === 'item' && r.ruleInstanceId === 'diagram-connectors-v1');
-    expect(connectorRows).toHaveLength(2);
+    expect(connectorRows.map((r) => (r.type === 'item' ? r.sku : undefined))).toEqual([
+      'CBL-0091',
+      'CBL-0129',
+      'CBL-0130',
+    ]);
 
     const dedicated = connectorRows.find((r) => r.type === 'item' && r.sku === 'CBL-0091')!;
     const edited = { ...imported, rows: imported.rows.map((r) => (r.rowId === dedicated.rowId ? { ...r, remark: '현장 확인 메모' } : r)) };

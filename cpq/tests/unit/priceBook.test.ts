@@ -382,7 +382,7 @@ describe('빈 가격표 서식', () => {
     expect(defaults).toEqual(currentCableDefaults());
     expect(defaults).toContainEqual(['HDMI', 'CBL-0017', '', '']);
     expect(defaults).toContainEqual(['LAN', 'CBL-0090', '10', 'CBL-0091']);
-    expect(defaults).toContainEqual(['A.AUDIO', 'CBL-0106', '', '']);
+    expect(defaults).toContainEqual(['A.AUDIO', 'CBL-0106', '', 'CBL-0129·CBL-0130']);
   });
 
   it('그대로 다시 불러오면 아무 가격도 붙지 않는다 — 안내 행은 데이터로 읽지 않는다', () => {
