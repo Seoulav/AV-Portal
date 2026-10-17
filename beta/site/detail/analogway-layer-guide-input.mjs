@@ -57,6 +57,11 @@ export function buildGuideExportText(state, prepared) {
     const recommended = prepared.result.models.find(model => model.recommended);
     lines.push(recommended ? `추천 모델: ${recommended.name}` : '추천 모델: 없음');
     lines.push(`가능 모델: ${prepared.result.models.filter(model => model.possible).map(model => model.name).join(', ') || '없음'}`);
+    for (const model of prepared.result.models) {
+      lines.push(`${model.name}: ${model.possible ? '가능' : `불가 · ${model.reasons.join(' / ')}`}`);
+    }
+  } else if (prepared.status === 'calculated') {
+    lines.push(`입력 오류: ${prepared.result?.error ?? '입력값을 확인해 주세요.'}`);
   } else {
     lines.push(`판정: ${prepared.reason ?? '미확인'}`);
   }

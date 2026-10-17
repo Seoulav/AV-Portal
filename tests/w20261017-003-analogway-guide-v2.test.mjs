@@ -58,3 +58,11 @@ test('export includes entered configuration and explicitly preserves an unconfir
   assert.match(exported, /미확인/);
   assert.doesNotMatch(exported, /추천 모델:/);
 });
+
+test('export includes every model verdict and the reason when a model cannot support the configuration', () => {
+  const state=request([screen(7680,4320,60,4)]);
+  const exported=buildGuideExportText(state,prepareGuideInput(state,calculateRecommendations));
+  assert.match(exported,/Zenith 200: 가능/);
+  assert.match(exported,/Pulse 4K: 불가 ·/);
+  assert.equal(exported.split('\n').filter(line=>/^(Pulse 4K|Eikos 4K|Zenith |Aquilon )/.test(line)).length,15);
+});
