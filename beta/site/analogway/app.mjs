@@ -2,6 +2,8 @@ import {buildHubModel, assertHubParity, SERIES} from './model.mjs';
 import {buildAnalogWayLayerStandards, renderAnalogWayLayerStandards} from '../detail/analogway-layer-standards.mjs';
 import {renderAnalogWayLayerGuide, calculateRecommendations} from '../detail/analogway-layer-guide.mjs';
 import {prepareTileGuide, TILE_REFERENCE} from '../detail/analogway-tile-guide.mjs';
+import {parseLedWallQuery} from '../detail/analogway-led-pixels.mjs';
+import {viewerHrefFor} from '../pdfjs/web/viewer-link.mjs';
 
 const site = '../';
 const detailHref = slug => `${site}detail/?product=${encodeURIComponent(slug)}`;
@@ -128,11 +130,20 @@ function renderDocuments(documents, manifest) {
     copy.append(make('strong', '', document.title));
     const mirrored = (manifest.mirrors ?? []).find(entry => entry.url === document.url);
     const local = document.file ? `${site}${document.file}` : mirrored ? `${site}docs/${mirrored.file}` : null;
-    const link = make('a', 'pg-btn', local ? '보기 ↗' : '제조사에서 보기 ↗');
-    link.href = local ?? document.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    item.append(copy, link);
+    const viewer = local ? viewerHrefFor(local,location.href) : null;
+    const actions = make('div','aw-document-actions');
+    if(viewer){
+      const view=make('a','pg-btn','보기');view.href=viewer;view.target='_blank';view.rel='noopener noreferrer';
+      const upload=(manifest.uploads??[]).find(entry=>entry.file===document.file);
+      const download=make('a','pg-btn',upload?.locked===true?'암호 입력 후 다운로드':'다운로드');
+      download.href=upload?.locked===true?viewer:local;
+      if(upload?.locked!==true)download.download=local.split('/').at(-1);
+      actions.append(view,download);
+    }else{
+      const link=make('a','pg-btn','제조사에서 보기 ↗');
+      link.href=document.url;link.target='_blank';link.rel='noopener noreferrer';actions.append(link);
+    }
+    item.append(copy, actions);
     $('#document-list').append(item);
   }
 }
@@ -158,12 +169,14 @@ async function main() {
     aquilonC: {...products['aquilon-c'].layerPlan, models: own(SERIES[1].slugs)},
     video: {...products['zenith-100'].videoLayerPlan, models: own([...SERIES[2].slugs, ...SERIES[3].slugs])},
   });
-  const guide = renderAnalogWayLayerGuide('aquilon-rs1');
+  const ledWallLink=parseLedWallQuery(window.location.search);
+  const guide = renderAnalogWayLayerGuide('aquilon-rs1',ledWallLink);
   const standardCard = renderAnalogWayLayerStandards(standards, 'aquilon-rs1');
   if (!guide || !standardCard) throw new Error('기존 Analog Way 가이드 카드를 불러오지 못했습니다.');
   $('#guide-card').append(guide);
   $('#standards-card').append(standardCard);
   document.documentElement.dataset.ready = 'true';
+  if(ledWallLink)requestAnimationFrame(()=>$('#guide').scrollIntoView({block:'start'}));
 }
 
 main().catch(error => {

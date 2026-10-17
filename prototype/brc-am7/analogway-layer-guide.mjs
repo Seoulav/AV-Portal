@@ -230,7 +230,7 @@ function renderModelResult(result,currentSlug,tileMaximums){
   return groups;
 }
 
-export function renderAnalogWayLayerGuide(currentSlug){
+export function renderAnalogWayLayerGuide(currentSlug,initialLedWall=null){
   if(!modelData.some(item=>item.slug===currentSlug))return null;
   const section=makeElement('section','aw-layer-guide');
   section.id='analogway-layer-guide'; section.dataset.supplemental='';
@@ -318,6 +318,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
     if(!result.valid){summary.append(makeElement('p','aw-guide-error',result.error));results.replaceChildren();return;}
     if(lastPrepared.tile){
       const tile=lastPrepared.tile;
+      if(lastPrepared.ledWall){const wall=lastPrepared.ledWall;summary.append(makeElement('p','aw-guide-led-metrics',`실제 LED 벽 ${wall.width.toLocaleString()}×${wall.height.toLocaleString()}px · 60Hz 기준 → 덮는 4K60 타일 ${tile.columns}×${tile.rows}(${tile.outputs}개) · 합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}px`));}
       summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개 · 믹싱 PIP ${tile.layers}개 · 벽 전체`));
       summary.append(makeElement('p','aw-guide-tile-caveat','겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.'));
       summary.append(makeElement('p','aw-guide-tile-caveat','카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측).'));
@@ -339,7 +340,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
       const fieldset=makeElement('fieldset','aw-guide-screen-row');
       fieldset.append(makeElement('legend','',`화면 ${index+1}`));
       const modeLabel=makeElement('label','','입력 방식');const mode=makeElement('select','');mode.dataset.field='inputMode';
-      for(const [value,label] of [['topology','출력 구성'],['resolution','화면 해상도'],['tiles','4K 패널 가로×세로']]){const option=makeElement('option','',label);option.value=value;if(value==='tiles'&&initial.length>1)option.disabled=true;mode.append(option);}
+      for(const [value,label] of [['topology','출력 구성'],['resolution','화면 해상도'],['tiles','4K 패널 가로×세로'],['ledPixels','LED 벽 해상도(픽셀)']]){const option=makeElement('option','',label);option.value=value;if(['tiles','ledPixels'].includes(value)&&initial.length>1)option.disabled=true;mode.append(option);}
       mode.value=screen.inputMode??'topology';modeLabel.append(mode);fieldset.append(modeLabel);
       const layoutLabel=makeElement('label','','출력 구성'); const layout=makeElement('select',''); layout.dataset.field='layout'; layout.setAttribute('aria-label',`화면 ${index+1} 출력 구성`);
       for(const choice of inputTopologies){const option=makeElement('option','',choice.label);option.value=choice.value;option.dataset.outputs=choice.outputs;layout.append(option);}
@@ -351,8 +352,9 @@ export function renderAnalogWayLayerGuide(currentSlug){
       }
       fieldset.append(sizeGroup);
       const tileGroup=makeElement('div','aw-guide-tile-fields');
+      const tileDimensionLabels=[];
       for(const [field,label,value] of [['tileColumns','가로 판 수',screen.tileColumns??2],['tileRows','세로 판 수',screen.tileRows??2]]){
-        const fieldLabel=makeElement('label','',label);const input=makeElement('input','');input.type='number';input.min='1';input.max='6';input.step='1';input.value=String(value);input.dataset.field=field;fieldLabel.append(input);tileGroup.append(fieldLabel);
+        const fieldLabel=makeElement('label','',label);const input=makeElement('input','');input.type='number';input.min='1';input.max='6';input.step='1';input.value=String(value);input.dataset.field=field;fieldLabel.append(input);tileGroup.append(fieldLabel);tileDimensionLabels.push(fieldLabel);
       }
       const presets=makeElement('div','aw-tile-presets');presets.setAttribute('role','group');presets.setAttribute('aria-label','대표 4K 패널 구성');
       for(const [columns,rowsCount] of [[1,1],[2,1],[2,2],[3,2],[4,2],[6,2],[4,4]]){
@@ -373,8 +375,9 @@ export function renderAnalogWayLayerGuide(currentSlug){
       const sceneSource=makeElement('a','','공개 데이터시트 보기');
       sceneSource.href='https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf';
       sceneSource.target='_blank';sceneSource.rel='noopener noreferrer';sceneEvidence.append(sceneSource);wallVisual.append(sceneEvidence);
-      tileGroup.append(presets,wallVisual);fieldset.append(tileGroup);
-      const toggleFields=()=>{const resolution=mode.value==='resolution',tiles=mode.value==='tiles';layoutLabel.hidden=resolution||tiles;sizeGroup.hidden=!resolution;tileGroup.hidden=!tiles;};
+      const ledAssumption=makeElement('p','aw-guide-tile-caveat aw-led-pixel-assumption','겹침 없는 동일 4K60 출력 타일로 벽을 덮는 환산이며, 타일 경계가 벽보다 남을 수 있습니다. LED 컨트롤러(전송 장비) 구성은 별도입니다. 60Hz 기준입니다.');
+      tileGroup.append(presets,ledAssumption,wallVisual);fieldset.append(tileGroup);
+      const toggleFields=()=>{const resolution=mode.value==='resolution',tiles=mode.value==='tiles',led=mode.value==='ledPixels';layoutLabel.hidden=resolution||tiles||led;sizeGroup.hidden=!(resolution||led);sizeGroup.classList.toggle('is-led-pixels',led);sizeGroup.querySelector('[data-field="refresh"]').parentElement.hidden=led;tileGroup.hidden=!(tiles||led);for(const label of tileDimensionLabels)label.hidden=led;presets.hidden=led;ledAssumption.hidden=!led;};
       mode.addEventListener('change',toggleFields);toggleFields();
       const typeLabel=makeElement('label','','레이어 방식'); const type=makeElement('select','');type.dataset.field='layerType';type.setAttribute('aria-label',`화면 ${index+1} 레이어 방식`);
       for(const [value,label] of [['mixing','믹싱 · 부드러운 전환'],['split','분할 · 컷 전환']]){const option=makeElement('option','',label);option.value=value;type.append(option);}type.value=screen.layerType;typeLabel.append(type);fieldset.append(typeLabel);
@@ -384,14 +387,14 @@ export function renderAnalogWayLayerGuide(currentSlug){
         count.dispatchEvent(new Event('input',{bubbles:true}));
       });
       const hdLabel=makeElement('label','','HD(용량 1) 레이어 수');const hd=makeElement('input','');hd.type='number';hd.min='0';hd.max='8';hd.step='1';hd.value=String(screen.hdLayers??0);hd.dataset.field='hdLayers';hd.setAttribute('aria-label',`화면 ${index+1} HD 레이어 수`);hdLabel.append(hd);fieldset.append(hdLabel);
-      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K PIP 창 수 · 벽 전체':'4K60(용량 2) 레이어 수';count.max=tiles?'72':'8';if(!tiles&&Number(count.value)>8)count.value='8';count.setAttribute('aria-label',tiles?'4K PIP 창 수 · 벽 전체':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
+      const syncMode=()=>{toggleFields();const tiles=['tiles','ledPixels'].includes(mode.value);typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K PIP 창 수 · 벽 전체':'4K60(용량 2) 레이어 수';count.max=tiles?'72':'8';if(!tiles&&Number(count.value)>8)count.value='8';count.setAttribute('aria-label',tiles?'4K PIP 창 수 · 벽 전체':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
       mode.addEventListener('change',syncMode);syncMode();
       const remove=makeElement('button','aw-guide-remove-screen','화면 삭제');remove.type='button';remove.disabled=initial.length<=1;remove.addEventListener('click',()=>{const next=readScreenInputs(rows);next.splice(index,1);renderRows(next);update();});fieldset.append(remove);
       fieldset.addEventListener('input',update);fieldset.addEventListener('change',update);rows.append(fieldset);
     });
-    add.disabled=initial.length>=8||initial.some(screen=>screen.inputMode==='tiles');
+    add.disabled=initial.length>=8||initial.some(screen=>['tiles','ledPixels'].includes(screen.inputMode));
   }
-  renderRows([{outputs:1,layerType:'mixing',layers:1}]);
+  renderRows(initialLedWall?[{inputMode:'ledPixels',width:initialLedWall.width,height:initialLedWall.height,outputs:1,layerType:'mixing',layers:0}]:[{outputs:1,layerType:'mixing',layers:1}]);
   add.addEventListener('click',()=>{const next=readScreenInputs(rows);if(next.length<8)next.push({outputs:1,layerType:'mixing',layers:1});renderRows(next);update();});
   auxInput.addEventListener('input',update);sourceInput.addEventListener('input',update);
   copyButton.addEventListener('click',async()=>{
@@ -421,5 +424,10 @@ export function renderAnalogWayLayerGuide(currentSlug){
   for(const item of guideEvidence.simulators){const link=makeElement('a','aw-guide-simulator-link',item.label);link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';simulator.append(document.createTextNode(' '),link);}
   section.append(simulator,notes);
   update();
+  if(initialLedWall&&lastPrepared.tile){
+    const count=rows.querySelector('[data-field="layers"]');
+    count.value=String(initialLedWall.groupLayers*lastPrepared.tile.input.screens.length);
+    update();
+  }
   return section;
 }

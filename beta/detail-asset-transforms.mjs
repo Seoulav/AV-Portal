@@ -7,6 +7,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/front-connection-points-data.mjs', 'beta/site/detail/front-connection-points-data.mjs', 'copy'],
   ['prototype/brc-am7/analogway-layer-guide-data.mjs', 'beta/site/detail/analogway-layer-guide-data.mjs', 'copy'],
   ['prototype/brc-am7/analogway-layer-guide-input.mjs', 'beta/site/detail/analogway-layer-guide-input.mjs', 'copy'],
+  ['prototype/brc-am7/analogway-led-pixels.mjs', 'beta/site/detail/analogway-led-pixels.mjs', 'copy'],
   ['prototype/brc-am7/analogway-tile-guide.mjs', 'beta/site/detail/analogway-tile-guide.mjs', 'copy'],
   ['prototype/brc-am7/analogway-layer-guide.mjs', 'beta/site/detail/analogway-layer-guide.mjs', 'copy'],
   ['prototype/brc-am7/analogway-layer-standards.mjs', 'beta/site/detail/analogway-layer-standards.mjs', 'copy'],
@@ -15,6 +16,7 @@ export const detailAssetPairs = [
   ['prototype/brc-am7/app.js', 'beta/site/detail/app.js', 'app'],
   ['prototype/brc-am7/styles.css', 'beta/site/detail/styles.css', 'copy'],
   ['prototype/brc-am7/product-detail-model.mjs', 'beta/site/detail/product-detail-model.mjs', 'copy'],
+  ['prototype/brc-am7/related-products.mjs', 'beta/site/detail/related-products.mjs', 'copy'],
   ['prototype/brc-am7/pdf-documents.mjs', 'beta/site/detail/pdf-documents.mjs', 'pdf-documents'],
   ['beta/distributor-links.mjs', 'beta/site/shared/distributor-links.mjs', 'copy'],
   ['prototype/brc-am7/favicon.svg', 'beta/site/favicon.svg', 'copy']
@@ -68,6 +70,7 @@ export function transformDetailApp(source) {
     .replace("from '../../beta/site/detail/rtcom-embed.mjs?v=w20261013-002'", "from './rtcom-embed.mjs?v=w20261013-002'")
     .replace("`../../beta/site/rtcom/raw/products/${rtcomId}.json`", "`../rtcom/raw/products/${rtcomId}.json`")
     .replace("fetch('../../beta/site/catalog.json')", "fetch('../catalog.json')")
+    .replace("fetch('../../beta/site/rtcom/raw/index.json')", "fetch('../rtcom/raw/index.json')")
     .replace("brandListingHref(brand, '../../beta/site/')", "brandListingHref(brand)")
     .replace("const manifestPath = '../../beta/site/docs/manifest.json';", "const manifestPath = '../docs/manifest.json';")
     .replace('Product Detail 시안', 'Product Detail')
