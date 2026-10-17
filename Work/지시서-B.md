@@ -750,4 +750,4 @@ Verification results (2026-10-17):
 - [x] FR2·HDX-IO 지정 사양과 FR2 개요에 채택 값을 반영; 근거표에는 이전 값을 “이전 값(구판 추정)”으로 보존. W-001 역변환 함수를 추가하고 W-004 역사 검사에 연결.
 - [x] search-index·readable catalog·public snapshot 재생성; `--check`, verify-pages(289 카탈로그·286 상세·529 이미지·167 PDF), `git diff --check` 통과. 전체 직렬 테스트 927건: 926 통과·0 실패·기존 skip 1.
 - [x] 로컬 포털 캡처: FR2·HDX-IO 각각 1280px·390px 및 390px 전체 사양 펼침 캡처. 갤러리 `Work/기록/W-20261018-001-preview/index.html`.
-- [x] Draft PR [#644](https://github.com/Seoulav/AV-Portal/pull/644) 제출(HEAD `cdb087617543b4893b53ecc81813be30f683377d`). Builder CI run `39073187965` 결과 확인 대기; Work 검토 및 병합 신호 전까지 병합·배포 보류.
+- [x] Draft PR [#644](https://github.com/Seoulav/AV-Portal/pull/644) 제출(HEAD `cdb087617543b4893b53ecc81813be30f683377d`). Builder CI run `39073225924` 성공(Builder workflow 전체 초록, E2E 51; 검증 head `4f745dc14ae30dcc5f2b888d2368aeb4328d5029`). Work 검토 및 병합 신호 대기; 병합·배포 보류.
