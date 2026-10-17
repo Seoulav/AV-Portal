@@ -716,3 +716,4 @@ Verification results (2026-10-17):
 - 이전 PR head의 Builder CI run 38984410815는 성공했으나 main 통합 후 head가 바뀌었으므로 새 commit push 뒤 CI를 다시 확인한다.
 - 최신 main 통합 뒤 전체 직렬 테스트 node --test --test-concurrency=1 tests/*.test.mjs: 879건 중 878 통과, 0 실패, 기존 skip 1. verify-pages(289/286/529/167), search-index --check, readable-catalog --check, git diff --check 통과.
 - CI 재실행을 위한 최신 통합·재캡처 커밋을 준비 중. PR #610 이전 head CI 성공은 새 head에 승계되지 않으므로 새 run의 초록을 확인한 뒤 Work가 승인한 #610 우선 병합 절차로 진행한다.
+- 병합 직전 main이 PR #611의 0cc48f80으로 추가 이동해 통합했다(변경은 세션 C 기록·테스트, 제품 데이터 겹침 없음). detail assets 16종과 search-index·readable-catalog·snapshot을 다시 생성했다. 전체 직렬 테스트 879건 중 878 통과·0 실패·skip 1, verify-pages 및 두 산출물 --check, diff check 통과. 새 merge head CI를 다시 확인한다.
