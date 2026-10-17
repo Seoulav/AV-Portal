@@ -85,7 +85,7 @@ try{
     fs.writeFileSync(path.join(output,`wall-5x5-invalid-${width}.png`),Buffer.from(invalidShot.data,'base64'));
     await evaluate(`(()=>{for(const [field,value] of [['tileColumns','3'],['tileRows','5'],['layers','0']]){const input=document.querySelector('#guide [data-field="'+field+'"]');input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}})()`);
     const threeByFive=await evaluate(readState);
-    assert.match(threeByFive.limits['Aquilon Cmax'],/믹싱 최대 16개 · 분할 32개 환산\(동일 창 배분 직접 평가 불가\)/);
+    assert.match(threeByFive.limits['Aquilon Cmax'],/믹싱 최대 16개 · 분할 최대 32개/);
     assert.equal(threeByFive.overflow,0);
     const splitRect=await evaluate("(()=>{const r=document.querySelector('#guide').getBoundingClientRect();return{x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height}})()");
     const splitShot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...splitRect,scale:1}});

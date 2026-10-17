@@ -183,8 +183,8 @@
         "Aquilon C+"
       ],
       "limits": {
-        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)",
-        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)"
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 최대 32개",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 최대 32개"
       },
       "reason": "",
       "addDisabled": false,
@@ -376,8 +376,8 @@
         "Aquilon C+"
       ],
       "limits": {
-        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)",
-        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)"
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 최대 32개",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 최대 32개"
       },
       "reason": "",
       "addDisabled": false,

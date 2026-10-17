@@ -87,9 +87,13 @@ export function calculateTileLayerMaximums(tile, evaluator) {
     if (splitInputLayers > layerLimit) {
       maximum.splitDirectEvaluation = 'out-of-range';
     } else {
-      const splitTrial = prepareTileGuide({columns, rows, layers:splitInputLayers, auxOutputs, inputs4k, wallLayers:tile.wallLayers}, evaluator);
-      const splitResult = evaluator({...splitTrial.input,
-        screens:splitTrial.input.screens.map(screen => ({...screen, layerType:'split'}))});
+      // Split layers consume resources in pairs: distribute whole pairs, not odd layers.
+      const groupCount = tile.input.screens.length;
+      const pairsPerGroup = Math.floor(maximum.mixing / groupCount);
+      const extraPairs = maximum.mixing % groupCount;
+      const splitScreens = tile.input.screens.map((screen,index) => ({...screen,
+        layerType:'split',layers:2*(pairsPerGroup+(index<extraPairs?1:0))}));
+      const splitResult = evaluator({screens:splitScreens,auxOutputs,inputs4k});
       maximum.splitDirectEvaluation = splitResult.models.find(model => model.slug === slug)?.possible ? 'possible' : 'not-possible';
     }
     maximum.splitConvertedBeyondEvaluator = maximum.splitDirectEvaluation !== 'possible';

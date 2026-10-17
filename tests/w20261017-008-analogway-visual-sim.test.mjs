@@ -50,7 +50,7 @@ test('card maximum uses wall-wide windows and distinguishes a proven limit from 
     assert.equal(maximum?.mixing,expected,slug);
     assert.equal(maximum.atInputCeiling,false,slug);
     assert.match(formatTileLayerMaximum(maximum),/최대 16개/);
-    assert.equal(maximum.splitConvertedBeyondEvaluator,true,slug);
+    assert.equal(maximum.splitConvertedBeyondEvaluator,columns===6,slug);
     assert.equal(prepareTileGuide({columns,rows,layers:expected+1,wallLayers:true},calculateRecommendations)
       .result.models.find(model=>model.slug===slug).possible,false,slug);
   }
@@ -59,14 +59,19 @@ test('card maximum uses wall-wide windows and distinguishes a proven limit from 
   assert.equal(ceiling?.mixing,8);
   assert.equal(ceiling.atInputCeiling,true);
   assert.match(formatTileLayerMaximum(ceiling),/8개까지 확인/);
-  const splitTile=prepareTileGuide({columns:3,rows:5,layers:0,wallLayers:true},calculateRecommendations);
-  const splitMaximum=calculateTileLayerMaximums(splitTile,calculateRecommendations).get('aquilon-cmax');
-  assert.equal(splitMaximum.splitDirectEvaluation,'not-possible');
-  assert.match(formatTileLayerMaximum(splitMaximum),/분할 32개 환산\(동일 창 배분 직접 평가 불가\)/);
-  const directSplit=prepareTileGuide({columns:3,rows:5,layers:splitMaximum.split,wallLayers:true},calculateRecommendations);
-  const splitVerdict=calculateRecommendations({...directSplit.input,
-    screens:directSplit.input.screens.map(screen=>({...screen,layerType:'split'}))});
-  assert.equal(splitVerdict.models.find(model=>model.slug==='aquilon-cmax').possible,false);
+  for(const [columns,rows] of [[3,5],[5,3]]){
+    const splitTile=prepareTileGuide({columns,rows,layers:0,wallLayers:true},calculateRecommendations);
+    const maximums=calculateTileLayerMaximums(splitTile,calculateRecommendations);
+    for(const slug of ['aquilon-rs6','aquilon-cmax']){
+      const splitMaximum=maximums.get(slug);
+      assert.equal(splitMaximum.split,32,`${columns}×${rows} ${slug}`);
+      assert.equal(splitMaximum.splitDirectEvaluation,'possible',`${columns}×${rows} ${slug}`);
+      assert.match(formatTileLayerMaximum(splitMaximum),/분할 최대 32개/);
+    }
+    const splitVerdict=calculateRecommendations({...splitTile.input,
+      screens:splitTile.input.screens.map((screen,index)=>({...screen,layerType:'split',layers:index<4?6:4}))});
+    assert.equal(splitVerdict.models.find(model=>model.slug==='aquilon-cmax').possible,true);
+  }
 });
 
 test('nine output groups and invalid wall-window counts have precise reasons', () => {
