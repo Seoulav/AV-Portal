@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {buildAnalogWayLayerStandards, renderAnalogWayLayerStandards} from '../prototype/brc-am7/analogway-layer-standards.mjs';
@@ -115,17 +115,18 @@ test('the new standard card is mounted only for Analog Way details and keeps the
   assert.match(app, /const xdmCompare = element\('div', 'aquilon-layer-compare-card'\)/);
   assert.match(app, /const xdm = element\('article', 'video-layer-compare-card'\)/);
   assert.doesNotMatch(app, /aquilon-layer-intro|video-layer-intro|video-layer-explainer/);
-  const baseline = execFileSync('git', ['show', '598757af700c961a4caf0888a5f5ce3dcde79c08:prototype/brc-am7/app.js'], {encoding:'utf8'});
   const source = readFileSync(new URL('../prototype/brc-am7/app.js', import.meta.url), 'utf8');
   const block = (text, start, end) => text.slice(text.indexOf(start), text.indexOf(end, text.indexOf(start)) + end.length);
+  const sha256 = value => createHash('sha256').update(value).digest('hex');
+  // Approved W-003 baseline blocks from 598757af; fixed hashes work in shallow Pages checkouts.
   assert.equal(
-    block(source, "  const comparison = element('div', 'aquilon-layer-comparison');", '  section.append(comparison);'),
-    block(baseline, "  const comparison = element('div', 'aquilon-layer-comparison');", '  section.append(comparison);'),
+    sha256(block(source, "  const comparison = element('div', 'aquilon-layer-comparison');", '  section.append(comparison);')),
+    '2a8ee908de3290a7cd12ade61fbe484de431eab2aab80eeda09d886e24b51f58',
     'Aquilon XDM-WOS100 comparison remains byte-for-byte unchanged'
   );
   assert.equal(
-    block(source, "  const comparison = element('div', 'video-layer-comparison');", '  section.append(comparison);'),
-    block(baseline, "  const comparison = element('div', 'video-layer-comparison');", '  section.append(comparison);'),
+    sha256(block(source, "  const comparison = element('div', 'video-layer-comparison');", '  section.append(comparison);')),
+    'bd125b62dc121a4ca66bd90edfc6d6acfd33131295234d4e1b0d98d7ebc7c908',
     'Midra/Alta XDM comparison remains byte-for-byte unchanged'
   );
 });
