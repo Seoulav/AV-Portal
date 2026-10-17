@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef1f6; color: #1f2532; font-family: system-ui, sans-serif; }
+.viewer-home { max-width: 640px; margin: 10vh auto; padding: 24px; }
+.viewer-home h1 { font-size: 22px; }
+.viewer-home p { line-height: 1.6; }
+.viewer-home button { min-height: 44px; padding: 0 18px; border: 0; border-radius: 22px; background: #007aff; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+@media (max-width: 560px) { .viewer-home { margin: 24px auto; padding: 16px; } }
