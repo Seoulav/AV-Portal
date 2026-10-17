@@ -6,15 +6,20 @@ export const TILE_REFERENCE = Object.freeze([
 ]);
 export const TILE_LAYER_INPUT_MAX = 8;
 
-export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4k = 1}, evaluator) {
+export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4k = 1, wallLayers = false}, evaluator) {
   if (![columns,rows,layers,auxOutputs,inputs4k].every(Number.isInteger) ||
-      columns < 1 || columns > 4 || rows < 1 || rows > 4 ||
-      layers < 0 || layers > TILE_LAYER_INPUT_MAX || auxOutputs < 0 || inputs4k < 0) {
-    return {status:'invalid', reason:'가로·세로는 각각 1~4판, 믹싱 레이어는 0~8개의 정수로 입력해 주세요.'};
+      columns < 1 || columns > 6 || rows < 1 || rows > 6 ||
+      layers < 0 || (!wallLayers && layers > TILE_LAYER_INPUT_MAX) || auxOutputs < 0 || inputs4k < 0) {
+    return {status:'invalid', reason:'가로·세로는 각각 1~6판, 그룹당 믹싱 레이어는 0~8개의 정수로 입력해 주세요.'};
   }
   const screens = [];
   if (columns === 1 || rows === 1) {
-    screens.push({outputs:columns*rows,layerType:'mixing',layers});
+    let remaining = columns * rows;
+    while (remaining > 0) {
+      const outputs = Math.min(4, remaining);
+      screens.push({outputs,layerType:'mixing',layers});
+      remaining -= outputs;
+    }
   } else {
     for (let y = 0; y < rows; y += 2) {
       for (let x = 0; x < columns; x += 2) {
@@ -22,11 +27,19 @@ export function prepareTileGuide({columns, rows, layers, auxOutputs = 0, inputs4
       }
     }
   }
+  if (wallLayers && layers > screens.length * TILE_LAYER_INPUT_MAX) {
+    return {status:'invalid', reason:`벽 전체 PIP 창은 현재 출력 그룹 ${screens.length}개에서 ${screens.length*TILE_LAYER_INPUT_MAX}개까지 평가할 수 있습니다.`};
+  }
+  if (wallLayers) {
+    const perGroup = Math.floor(layers/screens.length);
+    const remainder = layers % screens.length;
+    screens.forEach((screen,index)=>{screen.layers=perGroup+(index<remainder?1:0);});
+  }
   const input = {screens,auxOutputs,inputs4k};
   const outputs = columns * rows;
   const outputLinks = outputs * 2;
   return {
-    status:'calculated', columns,rows,layers,
+    status:'calculated', columns,rows,layers,wallLayers,
     width:columns * 3840,height:rows * 2160,outputs,outputLinks,
     requiredVpu:Math.ceil(outputLinks / 8),
     input,result:evaluator(input),

@@ -1,0 +1,208 @@
+[
+  {
+    "width": 1280,
+    "fourByTwo": {
+      "layers": 8,
+      "windows": 8,
+      "aux": 0,
+      "cards": [
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon Cmini"
+      ],
+      "overflow": 0
+    },
+    "ninth": {
+      "layers": 9,
+      "windows": 9,
+      "aux": 0,
+      "cards": [
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon Cmini",
+        "Aquilon C"
+      ],
+      "overflow": 0
+    },
+    "synced": {
+      "layers": 3,
+      "windows": 3,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon Cmini"
+      ],
+      "overflow": 0
+    },
+    "sixByTwo": {
+      "layers": 3,
+      "windows": 3,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon Cmini",
+        "Aquilon C"
+      ],
+      "overflow": 0
+    }
+  },
+  {
+    "width": 390,
+    "fourByTwo": {
+      "layers": 8,
+      "windows": 8,
+      "aux": 0,
+      "cards": [
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon Cmini"
+      ],
+      "overflow": 0
+    },
+    "ninth": {
+      "layers": 9,
+      "windows": 9,
+      "aux": 0,
+      "cards": [
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon Cmini",
+        "Aquilon C"
+      ],
+      "overflow": 0
+    },
+    "synced": {
+      "layers": 3,
+      "windows": 3,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon Cmini"
+      ],
+      "overflow": 0
+    },
+    "sixByTwo": {
+      "layers": 3,
+      "windows": 3,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon RS6",
+        "Aquilon C+",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon Cmini",
+        "Aquilon C"
+      ],
+      "overflow": 0
+    }
+  }
+]

@@ -96,13 +96,14 @@ function renderTileReference() {
     if([empty,tile].some(item=>item.status!=='calculated'||!item.result.valid))throw new Error(`${columns}×${rows} 타일 계산 실패`);
     if(tile.result.models.some((item,index)=>item.possible!==empty.result.models[index].possible))
       throw new Error(`${columns}×${rows} 레이어 0개와 그룹당 믹싱 2개의 모델 판정이 다릅니다.`);
-    const alternate=columns*rows===12?prepareTileGuide({columns:rows,rows:columns,layers:2},calculateRecommendations):null;
-    if(alternate&&tile.result.models.some((item,index)=>item.possible!==alternate.result.models[index].possible))
-      throw new Error('12판 회전 구성의 모델 판정이 다릅니다.');
+    const alternates=columns*rows===12?[[rows,columns],[6,2]].map(([width,height])=>prepareTileGuide({columns:width,rows:height,layers:2},calculateRecommendations)):[];
+    if(alternates.some(alternate=>alternate.status!=='calculated'||!alternate.result.valid||
+      tile.result.models.some((item,index)=>item.possible!==alternate.result.models[index].possible)))
+      throw new Error('12판 구성별 모델 판정이 다릅니다.');
     const tr=make('tr');tr.dataset.tiles=`${columns}x${rows}`;tr.dataset.layers='0,2';
     const cell=(tag,text)=>tr.append(make(tag,'',text));
-    cell('th',`${tile.outputs}판 · ${columns}×${rows}${alternate?` / ${rows}×${columns}`:''}`);
-    cell('td',`${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60${alternate?` / ${alternate.width.toLocaleString()}×${alternate.height.toLocaleString()}@60`:''}`);
+    cell('th',`${tile.outputs}판 · ${[[columns,rows],...alternates.map(item=>[item.columns,item.rows])].map(([width,height])=>`${width}×${height}`).join(' / ')}`);
+    cell('td',[tile,...alternates].map(item=>`${item.width.toLocaleString()}×${item.height.toLocaleString()}@60`).join(' / '));
     cell('td',`4K60 출력 ${tile.outputs} · 링크 ${tile.outputLinks} · Aquilon VPU 최소 ${tile.requiredVpu}`);
     cell('td','레이어 0개 / 출력 그룹당 믹싱 2개');
     const models=make('td','aw-tile-models');

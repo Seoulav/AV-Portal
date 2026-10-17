@@ -265,14 +265,31 @@ export function renderAnalogWayLayerGuide(currentSlug){
   function update(){
     lastState=getState();lastPrepared=prepareGuideInput(lastState,calculateRecommendations);
     summary.replaceChildren();
-    const grid=rows.querySelector('.aw-tile-grid');
+    const wall=rows.querySelector('.aw-wall-stage');
+    const grid=wall?.querySelector('.aw-tile-grid');
     if(grid){
       grid.replaceChildren();
+      wall.querySelector('.aw-wall-pips').replaceChildren();
+      rows.querySelector('.aw-wall-aux').replaceChildren();
       const tile=lastPrepared.tile;
       if(tile){
         grid.style.gridTemplateColumns=`repeat(${tile.columns}, minmax(0, 1fr))`;
-        for(let index=0;index<tile.outputs;index++)grid.append(makeElement('span','',String(index+1)));
+        for(let index=0;index<tile.outputs;index++)grid.append(makeElement('span','',''));
         grid.setAttribute('aria-label',`${tile.columns}열 ${tile.rows}행 4K 패널`);
+        wall.setAttribute('aria-label',`${tile.columns}×${tile.rows} LED 벽 · 합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K PIP 창 ${tile.layers}개`);
+        wall.querySelector('.aw-wall-resolution').textContent=`${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60`;
+        const pips=wall.querySelector('.aw-wall-pips');
+        for(let index=0;index<Math.min(tile.layers,16);index++){
+          const pip=makeElement('span','aw-wall-pip',`PIP ${index+1}`);
+          pip.setAttribute('aria-label',`PIP ${index+1} · 4K60 믹싱`);
+          pip.style.left=`${11+(index%8)*8}%`;
+          pip.style.top=`${26+(index%8)*5+Math.floor(index/8)*19}%`;
+          pips.append(pip);
+        }
+        if(tile.layers>16)pips.append(makeElement('span','aw-wall-pip-overflow',`+${tile.layers-16}개`));
+        rows.querySelector('.aw-wall-count').textContent=`4K PIP · 4K60 믹싱 ${tile.layers}개 · 벽 전체`;
+        const aux=rows.querySelector('.aw-wall-aux');
+        for(let index=0;index<Math.min(tile.input.auxOutputs,30);index++)aux.append(makeElement('span','',`AUX ${index+1}`));
       }
     }
     const formats=lastPrepared.derivedScreens.map((format,index)=>`화면 ${index+1}: ${format.label ?? '공식 자료 미확인'}`);
@@ -284,7 +301,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
     if(!result.valid){summary.append(makeElement('p','aw-guide-error',result.error));results.replaceChildren();return;}
     if(lastPrepared.tile){
       const tile=lastPrepared.tile;
-      summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개 · 믹싱 레이어 ${tile.layers}개 · 출력 그룹당`));
+      summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개 · 믹싱 PIP ${tile.layers}개 · 벽 전체`));
       summary.append(makeElement('p','aw-guide-tile-caveat','겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.'));
       summary.append(makeElement('p','aw-guide-tile-caveat','카드 최대치는 벽 전체에서 동시에 쓰는 믹싱 수입니다. 배경 1장은 별도이며 처리 자원을 쓰지 않습니다. 분할 최대치는 믹싱 1개 = 분할 2개 환산입니다(매뉴얼 66쪽·시뮬레이터 실측).'));
       if(tile.columns===4&&tile.rows===2){
@@ -318,21 +335,39 @@ export function renderAnalogWayLayerGuide(currentSlug){
       fieldset.append(sizeGroup);
       const tileGroup=makeElement('div','aw-guide-tile-fields');
       for(const [field,label,value] of [['tileColumns','가로 판 수',screen.tileColumns??2],['tileRows','세로 판 수',screen.tileRows??2]]){
-        const fieldLabel=makeElement('label','',label);const input=makeElement('input','');input.type='number';input.min='1';input.max='4';input.step='1';input.value=String(value);input.dataset.field=field;fieldLabel.append(input);tileGroup.append(fieldLabel);
+        const fieldLabel=makeElement('label','',label);const input=makeElement('input','');input.type='number';input.min='1';input.max='6';input.step='1';input.value=String(value);input.dataset.field=field;fieldLabel.append(input);tileGroup.append(fieldLabel);
       }
       const presets=makeElement('div','aw-tile-presets');presets.setAttribute('role','group');presets.setAttribute('aria-label','대표 4K 패널 구성');
-      for(const [columns,rowsCount] of [[1,1],[2,1],[2,2],[3,2],[4,2],[4,4]]){
+      for(const [columns,rowsCount] of [[1,1],[2,1],[2,2],[3,2],[4,2],[6,2],[4,4]]){
         const button=makeElement('button','aw-guide-example',`${columns}×${rowsCount}`);button.type='button';
         button.addEventListener('click',()=>{tileGroup.querySelector('[data-field="tileColumns"]').value=String(columns);tileGroup.querySelector('[data-field="tileRows"]').value=String(rowsCount);update();});presets.append(button);
       }
-      tileGroup.append(presets,makeElement('div','aw-tile-grid'));fieldset.append(tileGroup);
+      const wallVisual=makeElement('div','aw-wall-visual');
+      const wall=makeElement('div','aw-wall-stage');wall.setAttribute('role','img');
+      wall.append(makeElement('div','aw-tile-grid'),makeElement('div','aw-wall-pips'));
+      wall.append(makeElement('span','aw-wall-background','Live background · 자원 미사용'),makeElement('span','aw-wall-resolution'));
+      const pipControls=makeElement('div','aw-wall-controls');
+      const pipRemove=makeElement('button','aw-guide-example','− 4K PIP 제거');pipRemove.type='button';pipRemove.dataset.action='remove-pip';
+      const pipAdd=makeElement('button','aw-guide-example','＋ 4K PIP 추가');pipAdd.type='button';pipAdd.dataset.action='add-pip';
+      pipControls.append(pipRemove,makeElement('span','aw-wall-count'),pipAdd);
+      wallVisual.append(wall,pipControls,makeElement('div','aw-wall-aux'));
+      wallVisual.append(makeElement('p','aw-guide-tile-caveat','PIP 창 위치는 연출 예시이며 자원 계산에는 영향을 주지 않습니다. AUX는 처리 자원을 쓰지 않습니다.'));
+      const sceneEvidence=makeElement('p','aw-guide-tile-caveat','구성도 표현 근거: Aquilon RS2 데이터시트 8쪽 · 8K60 LED 월 2개 + 월당 PIP 4K60 믹싱 4개 + AUX 4개. ');
+      const sceneSource=makeElement('a','','공개 데이터시트 보기');
+      sceneSource.href='https://dwn01.analogway.com/Site+Internet/Series/Aquilon/Products/Aquilon+RS2/Technical+Datasheet/Aquilon-RS2-datasheet-en-20260703.pdf';
+      sceneSource.target='_blank';sceneSource.rel='noopener noreferrer';sceneEvidence.append(sceneSource);wallVisual.append(sceneEvidence);
+      tileGroup.append(presets,wallVisual);fieldset.append(tileGroup);
       const toggleFields=()=>{const resolution=mode.value==='resolution',tiles=mode.value==='tiles';layoutLabel.hidden=resolution||tiles;sizeGroup.hidden=!resolution;tileGroup.hidden=!tiles;};
       mode.addEventListener('change',toggleFields);toggleFields();
       const typeLabel=makeElement('label','','레이어 방식'); const type=makeElement('select','');type.dataset.field='layerType';type.setAttribute('aria-label',`화면 ${index+1} 레이어 방식`);
       for(const [value,label] of [['mixing','믹싱 · 부드러운 전환'],['split','분할 · 컷 전환']]){const option=makeElement('option','',label);option.value=value;type.append(option);}type.value=screen.layerType;typeLabel.append(type);fieldset.append(typeLabel);
-      const countLabel=makeElement('label','','4K60(용량 2) 레이어 수');const count=makeElement('input','');count.type='number';count.min='0';count.max='8';count.step='1';count.value=String(screen.layers);count.dataset.field='layers';count.setAttribute('aria-label',`화면 ${index+1} 4K60 레이어 수`);countLabel.append(count);fieldset.append(countLabel);
+      const countLabel=makeElement('label','','4K60(용량 2) 레이어 수');const count=makeElement('input','');count.type='number';count.min='0';count.max='72';count.step='1';count.value=String(screen.layers);count.dataset.field='layers';count.setAttribute('aria-label',`화면 ${index+1} 4K60 레이어 수`);countLabel.append(count);fieldset.append(countLabel);
+      for(const [button,change] of [[pipAdd,1],[pipRemove,-1]])button.addEventListener('click',()=>{
+        count.value=String(Math.max(0,Math.min(72,Number(count.value)+change)));
+        count.dispatchEvent(new Event('input',{bubbles:true}));
+      });
       const hdLabel=makeElement('label','','HD(용량 1) 레이어 수');const hd=makeElement('input','');hd.type='number';hd.min='0';hd.max='8';hd.step='1';hd.value=String(screen.hdLayers??0);hd.dataset.field='hdLayers';hd.setAttribute('aria-label',`화면 ${index+1} HD 레이어 수`);hdLabel.append(hd);fieldset.append(hdLabel);
-      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K60(용량 2) 레이어 수 · 출력 그룹당':'4K60(용량 2) 레이어 수';count.setAttribute('aria-label',tiles?'4K60 레이어 수 · 출력 그룹당':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
+      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K PIP 창 수 · 벽 전체':'4K60(용량 2) 레이어 수';count.max=tiles?'72':'8';count.setAttribute('aria-label',tiles?'4K PIP 창 수 · 벽 전체':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
       mode.addEventListener('change',syncMode);syncMode();
       const remove=makeElement('button','aw-guide-remove-screen','화면 삭제');remove.type='button';remove.disabled=initial.length<=1;remove.addEventListener('click',()=>{const next=readScreenInputs(rows);next.splice(index,1);renderRows(next);update();});fieldset.append(remove);
       fieldset.addEventListener('input',update);fieldset.addEventListener('change',update);rows.append(fieldset);
