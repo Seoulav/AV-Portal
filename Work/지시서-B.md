@@ -710,3 +710,9 @@ Verification results (2026-10-17):
 - Before/after Playwright screenshots at 1280px and 390px for RS1, RS6, and RC400T are in Work/기록/W-20261017-002-preview/index.html.
 - Feature wording diff flags the authorized addition of 720p30/6 Mbps and source page numbers in Pulse feature 5; text ends as a noun phrase and retains both requested conditions.
 - Next: final diff review, commit, PR, CI, then wait for Work review before any merge.
+
+- PR #610 생성 뒤 세션 C PR #609가 main에 병합되어 최신 main 625f3f7을 통합했고 충돌은 없었다. detail assets 16종, search index, readable catalog, snapshot을 통합 이후 다시 생성했다.
+- 통합 후 전후 갤러리를 최신 main 기준으로 재캡처했다. RS1·RS6 문서 행은 3→4, RC400T는 1→2이며 1280px·390px 캡처 6장 모두 브라우저 오류 0건이다. 갤러리: Work/기록/W-20261017-002-preview/index.html.
+- 이전 PR head의 Builder CI run 38984410815는 성공했으나 main 통합 후 head가 바뀌었으므로 새 commit push 뒤 CI를 다시 확인한다.
+- 최신 main 통합 뒤 전체 직렬 테스트 node --test --test-concurrency=1 tests/*.test.mjs: 879건 중 878 통과, 0 실패, 기존 skip 1. verify-pages(289/286/529/167), search-index --check, readable-catalog --check, git diff --check 통과.
+- CI 재실행을 위한 최신 통합·재캡처 커밋을 준비 중. PR #610 이전 head CI 성공은 새 head에 승계되지 않으므로 새 run의 초록을 확인한 뒤 Work가 승인한 #610 우선 병합 절차로 진행한다.
