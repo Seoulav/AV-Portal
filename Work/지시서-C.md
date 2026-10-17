@@ -424,5 +424,6 @@
 - [x] 과거 포트맵 해시 검사 앞에 2단계만 되감는 함수를 연결. 9종의 변경 전 지도와 비지도 사실 해시를 fixture에 보존.
 - [x] 9종 760px·390px 좌·우 미리보기 생성·눈 확인. 문서 폭은 각각 760·390, 번호 수와 목록 수가 모두 일치. `portmap-audit` 29개 보조 신호를 실제 SVG 선 간격과 대조해 점검표에 기록.
 - [x] 전체 Node 시험 926건(925 pass·0 fail·기존 skip 1). `verify-pages` 289 목록·286 상세·529 이미지·167 PDF, 검색 인덱스 `--check` 통과. 최신 `origin/main`과 현재 작업 기준 SHA가 모두 `c983110ab5e42783dcf3d51307557aefd6252c9c`임을 확인하고 파생 파일을 재생성.
-- [ ] Draft PR·CI 확인.
+- [x] [Draft PR #639](https://github.com/Seoulav/AV-Portal/pull/639)을 열고 9종 390px 좌·우 미리보기를 PR 본문에 연결. Work 검토 전 Ready·병합 금지.
+- [ ] PR #639 Builder CI 확인. 처음 조회 시 `builder` pending(run `39042364495`).
 - [ ] Work의 390px 확대 검토와 병합 지시 후 Ready·병합·Pages·공개 9종 확인.
