@@ -386,7 +386,7 @@
 
 - W-003 2부 PR #612는 Work의 화면·코드 검토 승인 후 최신 main을 통합하고 파생물을 재생성했다. 전체 직렬 시험 887건(886 통과·기존 건너뜀 1), `verify-pages`, 검색 인덱스 검사, Builder CI를 통과했다.
 - PR #612 병합 SHA `13dbadb3d8064c2ccdf2948758678b0bbf9c11a0`; Pages run `39006252653` 성공, 공개 revision `13dbadb`. Aquilon RS2 공개 화면을 1280px·390px에서 확인했다. 두 폭에서 페이지 가로 넘침과 JS 오류가 없고, 7680×1080@60의 출력 4개 및 Aquilon HD 주의 문구가 보인다.
-- W-20261017-005 상태: REVIEW. 명세 `Work/작업/W-20261017-005.md`, 인계 `Work/기록/W-20261017-005-Codex-인계.md`, 실측 원본 `Work/기록/W-20261017-003-시뮬레이터실측.md`를 기준 main `13dbadb3d8064c2ccdf2948758678b0bbf9c11a0`에서 읽었다. 브랜치 `codex/W-20261017-005-aw-simulator`, 전용 워크트리 `codex-c-w005-aw-sim`.
+- W-20261017-005 상태: MERGED (PR #614 병합·Pages 공개 확인). 명세 `Work/작업/W-20261017-005.md`, 인계 `Work/기록/W-20261017-005-Codex-인계.md`, 실측 원본 `Work/기록/W-20261017-003-시뮬레이터실측.md`를 기준 main `13dbadb3d8064c2ccdf2948758678b0bbf9c11a0`에서 읽었다. 브랜치 `codex/W-20261017-005-aw-simulator`, 전용 워크트리 `codex-c-w005-aw-sim`.
 - [x] Aquilon 가이드 판정의 VPU 분산·장비 전체 자원 기준을 실측에 맞게 보정하고 회귀 시험을 갱신했다. RS1은 2×2 믹싱 6개 불가, RS2·C+는 가능하며 소스 링크 12개·출력 링크 8개·VPU 2개로 계산한다.
 - [x] 기준 문서와 공용 카드의 Aquilon 근거·미확인 문구를 실측 4건으로 갱신했다. Alta·Midra, 제품 JSON과 렌더 기능·스타일은 수정하지 않았다. 상세 JS import와 HTML script의 캐시 버전만 갱신했다.
 - [x] 15종 노출 회귀 시험 및 RS2·C+·Zenith 200 카드의 760px·390px 펼침 화면을 확인했다. 여섯 화면의 `scrollWidth`는 각 760·390이며 `outputs/w005-preview/`에 PNG와 측정값을 저장했다.
@@ -394,4 +394,5 @@
 - [x] Draft PR [#614](https://github.com/Seoulav/AV-Portal/pull/614)를 열고 실측 근거·검사·로컬 미리보기 경로를 본문에 적었다.
 - [x] PR #614 첫 필수 Builder CI run `39007709069` 통과. Work가 실측 수치·약 20만 건 판정 비교·760px/390px 화면을 독립 검증해 병합 차단 문제가 없다고 확인했다.
 - [x] Work의 Ready 전 보완 2건을 반영했다: 여러 화면 합산으로 출력 배치 VPU보다 더 많은 소스 VPU가 필요할 때도 실측 배지를 표시하고, 여러 화면 간 남는 소스 링크 공유는 미실측임을 기준 문서와 인계서에 기록했다. 새 회귀 시험을 포함한 전체 직렬 시험 891건(890 통과·0 실패·기존 건너뜀 1), Pages·검색 검사 통과.
-- [ ] 수정 head의 CI·최신 main 통합·파생 재생성 후 병합·Pages·공개 C+ 확인.
+- [x] 수정 head Builder CI [run 39008526741](https://github.com/Seoulav/AV-Portal/actions/runs/39008526741) 통과. 최신 main `13dbadb3`와 작업 브랜치의 차이 0, 작업 트리 깨끗함, 상세 자산·검색 인덱스·스냅샷·읽기용 카탈로그 재생성, `git diff --check origin/main...HEAD` 통과를 확인하고 PR #614를 병합했다. 병합 SHA `481765446c5b8cf692402e42aa9f670650def7e8`.
+- [x] Pages [run 39008781631](https://github.com/Seoulav/AV-Portal/actions/runs/39008781631) 성공, 공개 `version.json` revision `4817654`. [Aquilon C+ 공개 상세](https://seoulav.github.io/AV-Portal/detail/?product=aquilon-cplus)를 1280px·390px에서 확인했다. 두 폭 모두 실측 출처·용량 4 믹싱 6개 APPLY·Region 24/12 문구가 보이고 `scrollWidth`가 창 너비와 일치한다. 공개 캡처는 로컬 `%TEMP%/w005-public-check/aquilon-cplus-{1280,390}.png`에 있다.
