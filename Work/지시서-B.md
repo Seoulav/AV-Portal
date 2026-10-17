@@ -717,3 +717,18 @@ Verification results (2026-10-17):
 - 최신 main 통합 뒤 전체 직렬 테스트 node --test --test-concurrency=1 tests/*.test.mjs: 879건 중 878 통과, 0 실패, 기존 skip 1. verify-pages(289/286/529/167), search-index --check, readable-catalog --check, git diff --check 통과.
 - CI 재실행을 위한 최신 통합·재캡처 커밋을 준비 중. PR #610 이전 head CI 성공은 새 head에 승계되지 않으므로 새 run의 초록을 확인한 뒤 Work가 승인한 #610 우선 병합 절차로 진행한다.
 - 병합 직전 main이 PR #611의 0cc48f80으로 추가 이동해 통합했다(변경은 세션 C 기록·테스트, 제품 데이터 겹침 없음). detail assets 16종과 search-index·readable-catalog·snapshot을 다시 생성했다. 전체 직렬 테스트 879건 중 878 통과·0 실패·skip 1, verify-pages 및 두 산출물 --check, diff check 통과. 새 merge head CI를 다시 확인한다.
+
+## W-20261017-012 — 관련 제품 카드 표시명·관계 꼬리표
+
+- 상태: IN_PROGRESS
+- 명세: `Work/작업/W-20261017-012.md` (READY, 읽은 main SHA `6b0177cb2cb9c00cb3a5af76ac1b3bc73421b86e`)
+- 구현 브랜치: `codex/W-20261017-012-related-product-labels`; 별도 작업 폴더 `codex-b-w012`
+- 범위: 렌더링에서 catalog 및 RTCOM 공개 원본 인덱스로 관련 제품 모델명을 찾고, 찾지 못하면 내부 ID를 대문자로 표시. related 원본 JSON·관계 연결은 불변.
+- [x] 현행 관계 값 43행 전수 조사: `PART_OF_SERIES` 22건, `WORKS_WITH` 21건, 인덱스에 없는 대상 0건.
+- [x] 표시명 해석 및 한글 꼬리표 순수 함수 시험 작성, 기능 미구현에서 RED 확인.
+- [x] 공통 렌더러에서 카탈로그 표시명 우선, RTCOM 공개 인덱스 보조, 미일치 시 대문자 ID 대체를 구현.
+- [x] 관계표: `PART_OF_SERIES` → `시리즈 구성품`; `WORKS_WITH` → `함께 사용하는 제품`; 미등록 관계는 `관련 제품`으로 안전한 일반 표기.
+- [x] 760px·390px 관련 제품 캡처 6장 작성: XDM-CTR100, VDM Series, SPX-TX / SPX-RX. 현재 저장소에서 related 관계 43건은 RTCOM 자료에만 존재하므로 Analog Way·비RTCOM 제품 관계를 새로 만들지 않고 세 RTCOM 사례를 사용.
+- [x] 집중 시험 5/5, 전체 직렬 테스트 916건 중 915 통과·0 실패·기존 skip 1, 검색 인덱스 `--check`, `verify-pages`(289 카탈로그·286 상세·529 이미지·167 PDF), `git diff --check` 통과.
+- [x] 상세 자산은 `prototype/brc-am7`에서 생성해 source/generated parity 시험을 통과. 제품 JSON·related 원본·검색 인덱스는 변경하지 않음.
+- [x] Work 인계 기록 작성. Draft PR 제출 후 필수 CI 결과와 Work 검토 대기(병합 금지).
