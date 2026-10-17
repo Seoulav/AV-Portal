@@ -2,10 +2,11 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import{createHash}from'node:crypto';
 import{portMapSegments}from'./portmap-segment-audit.mjs';
 import{beforeW20261017_002Product}from'./w20261017-002-history.mjs';
+import{beforeW20261017_011Stage1Product}from'./w20261017-011-stage1-history.mjs';
 import{portMapGeometry}from'../beta/site/detail/detail-enhancement-view.mjs';
 import{enhancementErrors}from'../beta/site/detail/detail-enhancements.mjs';
 const fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/w015-closeout-before.json',import.meta.url)));
-const read=s=>beforeW20261017_002Product(JSON.parse(fs.readFileSync(new URL('../beta/site/detail/data/'+s+'.json',import.meta.url))),s);
+const read=s=>beforeW20261017_002Product(beforeW20261017_011Stage1Product(JSON.parse(fs.readFileSync(new URL('../beta/site/detail/data/'+s+'.json',import.meta.url))),s),s);
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const allowed=s=>s==='brc-am7'?[1,7]:s==='srg-a40'?[4,5]:s==='aquilon-rsalpha'?[5,6,7,8]:[7,8,9,10];
 const withoutCoordinates=i=>Object.fromEntries(Object.entries(i).filter(([k])=>!['x','x1','x2','y','y1','y2','via','labelX'].includes(k)));

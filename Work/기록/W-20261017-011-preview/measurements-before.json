@@ -1,0 +1,74 @@
+[
+  {
+    "width": 760,
+    "scrollWidth": 760,
+    "photoScrollWidth": 648,
+    "photoClientWidth": 648,
+    "height": 312,
+    "markerCount": 10,
+    "slug": "aquilon-rs2",
+    "stage": "before",
+    "edge": "left",
+    "filename": "aquilon-rs2-before-760-left.png"
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "photoScrollWidth": 560,
+    "photoClientWidth": 298,
+    "height": 273,
+    "markerCount": 10,
+    "slug": "aquilon-rs2",
+    "stage": "before",
+    "edge": "left",
+    "filename": "aquilon-rs2-before-390-left.png"
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "photoScrollWidth": 560,
+    "photoClientWidth": 298,
+    "height": 273,
+    "markerCount": 10,
+    "slug": "aquilon-rs2",
+    "stage": "before",
+    "edge": "right",
+    "filename": "aquilon-rs2-before-390-right.png"
+  },
+  {
+    "width": 760,
+    "scrollWidth": 760,
+    "photoScrollWidth": 648,
+    "photoClientWidth": 648,
+    "height": 384,
+    "markerCount": 12,
+    "slug": "aquilon-cplus",
+    "stage": "before",
+    "edge": "left",
+    "filename": "aquilon-cplus-before-760-left.png"
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "photoScrollWidth": 560,
+    "photoClientWidth": 298,
+    "height": 335,
+    "markerCount": 12,
+    "slug": "aquilon-cplus",
+    "stage": "before",
+    "edge": "left",
+    "filename": "aquilon-cplus-before-390-left.png"
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "photoScrollWidth": 560,
+    "photoClientWidth": 298,
+    "height": 335,
+    "markerCount": 12,
+    "slug": "aquilon-cplus",
+    "stage": "before",
+    "edge": "right",
+    "filename": "aquilon-cplus-before-390-right.png"
+  }
+]

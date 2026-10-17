@@ -396,3 +396,16 @@
 - [x] Work의 Ready 전 보완 2건을 반영했다: 여러 화면 합산으로 출력 배치 VPU보다 더 많은 소스 VPU가 필요할 때도 실측 배지를 표시하고, 여러 화면 간 남는 소스 링크 공유는 미실측임을 기준 문서와 인계서에 기록했다. 새 회귀 시험을 포함한 전체 직렬 시험 891건(890 통과·0 실패·기존 건너뜀 1), Pages·검색 검사 통과.
 - [x] 수정 head Builder CI [run 39008526741](https://github.com/Seoulav/AV-Portal/actions/runs/39008526741) 통과. 최신 main `13dbadb3`와 작업 브랜치의 차이 0, 작업 트리 깨끗함, 상세 자산·검색 인덱스·스냅샷·읽기용 카탈로그 재생성, `git diff --check origin/main...HEAD` 통과를 확인하고 PR #614를 병합했다. 병합 SHA `481765446c5b8cf692402e42aa9f670650def7e8`.
 - [x] Pages [run 39008781631](https://github.com/Seoulav/AV-Portal/actions/runs/39008781631) 성공, 공개 `version.json` revision `4817654`. [Aquilon C+ 공개 상세](https://seoulav.github.io/AV-Portal/detail/?product=aquilon-cplus)를 1280px·390px에서 확인했다. 두 폭 모두 실측 출처·용량 4 믹싱 6개 APPLY·Region 24/12 문구가 보이고 `scrollWidth`가 창 너비와 일치한다. 공개 캡처는 로컬 `%TEMP%/w005-public-check/aquilon-cplus-{1280,390}.png`에 있다.
+
+## W-20261017-011 1단계 — Aquilon 슬롯 중심 Rear 시안 (2026-10-17)
+
+- 상태: REVIEW (RS2·C+ 두 종의 Draft PR 시안). Work·사용자 확인 전 병합 및 나머지 9종 적용 보류.
+- 명세: `Work/작업/W-20261017-011.md`, 읽은 기준 main `23bc6b289eef66020e2397015e398075e052547c`.
+- 브랜치·워크트리: `codex/W-20261017-011-aquilon-slots`, `../codex-c-w011-aquilon-slots`.
+- [x] RS2·C+ Rear 원본 사진과 제조사 제품 페이지를 대조하여 슬롯별 카드 예시, 최하단 덮개, 고정부 위치를 확인했다.
+- [x] RS2 8슬롯+고정부 8개, C+ 11슬롯+고정부 8개를 슬롯 우선 번호로 재배치했다. 사진·io·사양·렌더러·다른 9종은 수정하지 않았다.
+- [x] 과거 지도 해시를 좁은 되감기 함수로 연결하고, 기존 W-014·W-015 역사적 시험의 대상 지도를 먼저 되감았다.
+- [x] `portmap-audit` 시트와 760px·390px 전후·좌우 확대 캡처를 `Work/기록/W-20261017-011-preview/`에 저장했다. 브라우저 scrollWidth 760·390, 사진 영역만 가로 이동. 번호별 점검은 `Work/기록/W-20261017-011-점검표.md`.
+- [x] 전체 직렬 Node 시험 913건: 912 pass, 0 fail, 기존 skip 1. `node beta/verify-pages.mjs`: 289 장비·286 상세·529 이미지·167 업로드. `node beta/build-search-index.mjs --check`: 통과. `git diff --check`: 통과.
+- [ ] Draft PR을 열고 Work·사용자에게 시안 비교를 제출한다. 확인 전 Ready·병합·나머지 9종 적용 금지.
+- 참고: main에는 이 ID의 별도 Codex 인계서가 없지만 READY 명세와 Work의 직접 배정이 있어 1단계 시안을 진행했다.

@@ -5,6 +5,7 @@ import { prepareEnhancements, enhancementErrors } from '../beta/site/detail/deta
 import { renderPortMapCards as renderBeta } from '../beta/site/detail/detail-enhancement-view.mjs';
 import { renderPortMapCards as renderPrototype } from '../prototype/brc-am7/detail-enhancement-view.mjs';
 import { beforeW20261016_015MidraProduct } from './w20261016-015-midra-zenith-history.mjs';
+import { beforeW20261017_011Stage1Product } from './w20261017-011-stage1-history.mjs';
 
 class MockNode {
   constructor(tag, text = '') { this.tag = tag; this.className = ''; this.children = []; this._text = text; }
@@ -105,7 +106,7 @@ test('the seven approved Aquilon RS maps use shared card numbers and short photo
   const root = new URL('../beta/site/detail/data/', import.meta.url);
   const ids = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6'];
   for (const id of ids) {
-    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    const product = beforeW20261017_011Stage1Product(JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8')), id);
     assert.deepEqual(enhancementErrors(product), [], id);
     const map = product.portMap, width = map.measuredImage.width;
     const groups = new Map();
@@ -145,7 +146,8 @@ test('the seven approved Aquilon RS marker counts match each layout while retain
     'aquilon-rs4': 10, 'aquilon-rs5': 10, 'aquilon-rs6': 10
   };
   for (const [id, afterCount] of Object.entries(expected)) {
-    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    // W-011 stages a new slot map for RS2; this W-014 assertion retains its historical baseline.
+    const product = beforeW20261017_011Stage1Product(JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8')), id);
     assert.equal(product.portMap.items.length, afterCount, `${id}: revised marker-circle count`);
     assert.deepEqual([...new Set(product.portMap.items.map(item => item.n))].sort((a, b) => a - b),
       [...new Set(before[id].items.map(item => item.n))].sort((a, b) => a - b), `${id}: Port Map number set`);
@@ -157,7 +159,7 @@ test('Aquilon RS card maps use one grouped edge bracket per card type with card 
   const root = new URL('../beta/site/detail/data/', import.meta.url);
   const ids = ['aquilon-rsalpha', 'aquilon-rs1', 'aquilon-rs2', 'aquilon-rs3', 'aquilon-rs4', 'aquilon-rs5', 'aquilon-rs6'];
   for (const id of ids) {
-    const product = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
+    const product = beforeW20261017_011Stage1Product(JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8')), id);
     const cards = product.portMap.items.filter(item => /입력 카드|출력 카드/.test(item.label));
     for (const label of ['HDMI 입력 카드', 'HDMI 출력 카드', 'DisplayPort 입력 카드', 'SDI 입력 카드']) {
       const group = cards.filter(item => item.label === label);
