@@ -4,11 +4,11 @@
     "indexUrl": "https://seoulav.github.io/rtcom-configurator/data/products/index.json",
     "sourceRoot": "https://seoulav.github.io/rtcom-configurator/",
     "schema": "rtcom.products.v1",
-    "sourceProductCount": 32,
-    "publishedProductCount": 32,
+    "sourceProductCount": 33,
+    "publishedProductCount": 33,
     "index": {
-      "sha256": "2795b2d1ff530085b83acc42b0596d20f7dcbf91cfcb38b5225cab30986d8faa",
-      "bytes": 21040
+      "sha256": "4ae8447050f756006627f071989ec8517b38ff40692cf353e2294a56a7c7751c",
+      "bytes": 21667
     }
   },
   "excluded": [],
@@ -40,6 +40,7 @@
     "xdm-ctr100",
     "xdm-ctr100-pse",
     "xdm-ft101-fr101",
+    "xdm-mr4s",
     "xdm-psu",
     "ahoc",
     "hoc-ux",
@@ -423,6 +424,14 @@
       "sha256": "2705ea2b26a3807e09226f2b3847a48ec8c6eecf9e2032fe2750a700c3def767",
       "bytes": 63472
     },
+    "images/xdm-mr4s-front.webp": {
+      "sha256": "6669457b2997e541f1b23b9629ab5eba6e8e7469b10562457e762aba5e5b3f53",
+      "bytes": 17352
+    },
+    "images/xdm-mr4s-rear.webp": {
+      "sha256": "96cfbcca736b0808c36f13e75a1b6df75edcda6f819b64720bf711d1b91087df",
+      "bytes": 48936
+    },
     "images/xdm-psu-diagram.webp": {
       "sha256": "911cc627f6750229c04c67267a129a586df7edbca87b426d032b4a8b90d8a340",
       "bytes": 36588
@@ -448,8 +457,8 @@
       "bytes": 29644
     },
     "raw/index.json": {
-      "sha256": "2795b2d1ff530085b83acc42b0596d20f7dcbf91cfcb38b5225cab30986d8faa",
-      "bytes": 21040
+      "sha256": "4ae8447050f756006627f071989ec8517b38ff40692cf353e2294a56a7c7751c",
+      "bytes": 21667
     },
     "raw/products/ahoc.json": {
       "sha256": "fb51903c562c848fc2b74be35624982c56156192a45812f45a52eb504466c79a",
@@ -468,8 +477,8 @@
       "bytes": 12530
     },
     "raw/products/ft101-u-fr101-u.json": {
-      "sha256": "81faafbc1250ef350ce4b036badd3217ab12328ad66a447edfc1353500d2e196",
-      "bytes": 14792
+      "sha256": "5fc0e4b0b1e1ef6155c1ac9a3ac8f9ecb7d3ebf2218a6948a2035fcc8190a04b",
+      "bytes": 15748
     },
     "raw/products/ft103-u-h-fr103-u.json": {
       "sha256": "f225db45e0d62709548a70494dfa49cb00827124c8623927ee91d36f3f9bf6de",
@@ -500,12 +509,12 @@
       "bytes": 8948
     },
     "raw/products/hds-21u.json": {
-      "sha256": "c152e3c9c51b2b46b46560994d927d4d732131ed7017521c6e7ed06788f01765",
-      "bytes": 15166
+      "sha256": "53dbe0d11f8ab8a6c8f8508da1fc4fca1f3eb2315512e9a4e1a9097d88254ba0",
+      "bytes": 15849
     },
     "raw/products/hds-42mu.json": {
-      "sha256": "2eff5c169508b512d512beaf3ad0dbc806b9a1c500f808d443cc2d5805dff180",
-      "bytes": 15796
+      "sha256": "02bc95766b41aa6543a0240d3f73c750a4642c4d37cce4ff0729fdc72c1479fc",
+      "bytes": 16454
     },
     "raw/products/hoc-ux.json": {
       "sha256": "a40aa0958ea0e713930fc5b8044ea3355eb7b9395ce14c37de30e1ed4748194a",
@@ -516,8 +525,8 @@
       "bytes": 6595
     },
     "raw/products/mr-4s.json": {
-      "sha256": "914495b6279d4e33590e58016aec6b2ea5de66ac0115d8a369d61f080ba4f8a4",
-      "bytes": 8281
+      "sha256": "e432bdbad4056462d64910d8465aaf7c340dc6b7f5b222ed5056642ac34bb171",
+      "bytes": 9232
     },
     "raw/products/obhd-2c.json": {
       "sha256": "201f1574d4dcac0d4696236c0e95169b3e4970520196395f3cab2b73b1900819",
@@ -528,12 +537,12 @@
       "bytes": 16597
     },
     "raw/products/qms-44ux.json": {
-      "sha256": "59a3f1e5a4634b2ff34f88ec5cd47f192ef1d2654edede05f30ad6d5731c92ea",
-      "bytes": 11031
+      "sha256": "4fbd1cce2f3037054868b96a6f890c2184710f78a62e968f418ac99eac08f2c5",
+      "bytes": 23439
     },
     "raw/products/qms-88ux.json": {
-      "sha256": "7b73fed37c932b70cdda23a93452265a9c98d3c049f44abedee9da0d2019cabd",
-      "bytes": 15063
+      "sha256": "3e5decc395d07cd1b2c402f71575d546dd54aa14acb1ec76ec9c0369fb8fe2d6",
+      "bytes": 33866
     },
     "raw/products/spx-r6.json": {
       "sha256": "7414d4213f68177abc1a471c3106fd6f973f93a4d953b3e21c8e1449a03fa66a",
@@ -544,16 +553,16 @@
       "bytes": 17445
     },
     "raw/products/spx.json": {
-      "sha256": "ca83ee8798760dc4650619290f206356a5230277d95b87ff274a49bd5e3fcb68",
-      "bytes": 18499
+      "sha256": "949e051fa354055e7b0853e1e71461773797d72ec910b981274012ad7a8ed6c6",
+      "bytes": 54411
     },
     "raw/products/umc.json": {
       "sha256": "6c6dc114006dcbbb64a2b999a5620b8d22a55714efe60e4bf78104f206a5857c",
       "bytes": 6441
     },
     "raw/products/vdm.json": {
-      "sha256": "d1b4cab1eebe9d321200d9c936a7c3f3a7441770ed08e22102e5c6091666363d",
-      "bytes": 30759
+      "sha256": "aace967f581db266ea16c9d0d26b0997d2c8ea88687fb6e91aabb7b4b1cb2253",
+      "bytes": 59137
     },
     "raw/products/xdm-ct103-cr103.json": {
       "sha256": "2a48b8a40b9aae9981aeeeea2f3da88724cc7827ed2a7de34a4989395ca873bf",
@@ -564,20 +573,24 @@
       "bytes": 15348
     },
     "raw/products/xdm-ctr100.json": {
-      "sha256": "6dc91962aad85712b1e6ffafe6e7c4e90766a4685678ea757653bd97464b7b12",
-      "bytes": 15254
+      "sha256": "582ffbc29ff5101f9d708d17f5ea63cf6b0bc70fe9dad15b94342962931b369e",
+      "bytes": 15389
     },
     "raw/products/xdm-ft101-fr101.json": {
-      "sha256": "3c16d9f7aae79b2e809f10363591bf64b86b1b00630417b15cb663ca01d89f14",
-      "bytes": 20790
+      "sha256": "92bee16d46e8abe76b6b4047bc69380e612557714d58d81faaec8820c81ec8d1",
+      "bytes": 20925
+    },
+    "raw/products/xdm-mr4s.json": {
+      "sha256": "9c3303c0de0262b4f16b38d249320d5ba7bdf8671b797368bb08ea72329dec04",
+      "bytes": 9352
     },
     "raw/products/xdm-psu.json": {
       "sha256": "91415e9a7af9f052ac37861a472b1fa921fa293dcbf7373fd3bc4ec2f6ba41cb",
       "bytes": 10851
     },
     "raw/products/xdm.json": {
-      "sha256": "7413865368bbf720135f300e4d54525e1c3d18ea9e11c7cf9c76e79b8e683be9",
-      "bytes": 34313
+      "sha256": "009062aa87aa85a0af1d8b95bfb5ae300d236850e4a886088fd09540cab2988a",
+      "bytes": 56017
     }
   }
 }

@@ -12,7 +12,7 @@ test('RTCOM embed accepts only a registered-looking product ID and keeps the ori
 test('all published RTCOM copies retain an original product-view target', () => {
   const root = new URL('../beta/site/rtcom/raw/products/', import.meta.url);
   const ids = readdirSync(root).filter(file => file.endsWith('.json')).map(file => file.slice(0, -5));
-  assert.equal(ids.length, 32);
+  assert.equal(ids.length, 33);
   for (const id of ids) {
     const raw = JSON.parse(readFileSync(new URL(`${id}.json`, root), 'utf8'));
     assert.equal(raw.id, id);
