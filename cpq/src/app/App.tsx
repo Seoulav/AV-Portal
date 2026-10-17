@@ -15,6 +15,7 @@ import { loadResources, type ResourcesResult } from './resources';
 import { useWorkspace, exportGate, type LoadedDocument } from './workspace';
 import { DiagramInput } from '../features/entry/DiagramInput';
 import { ProductPicker } from '../features/entry/ProductPicker';
+import { RoomTemplatePicker } from '../features/entry/RoomTemplatePicker';
 import { ReferenceDocs } from '../features/entry/ReferenceDocs';
 import { CoverSheet } from '../features/worksheet/CoverSheet';
 import { QuoteSheet } from '../features/worksheet/QuoteSheet';
@@ -84,7 +85,7 @@ const OUTPUT_GRADES: ReadonlyArray<{ value: OutputGrade; label: string }> = [
   { value: '2', label: '2 고객용' },
 ];
 
-type EntryView = 'diagram' | 'picker' | null;
+type EntryView = 'diagram' | 'picker' | 'rooms' | null;
 
 export function App() {
   return <QuoteDrafts><QuoteWorkspace /></QuoteDrafts>;
@@ -492,6 +493,15 @@ function QuoteWorkspace() {
             >
               품목 직접 선택
             </button>
+            {/* 회의실 타입 템플릿(B-20261016-07 2단계) — 자료가 없으면 입구를 끈다. */}
+            <button
+              type="button"
+              className="q-button"
+              disabled={resources?.roomTemplates === undefined}
+              onClick={() => setEntry('rooms')}
+            >
+              회의실 타입으로 시작
+            </button>
             </div>
             <div className="q-edit-tools" role="group" aria-label="편집">
             <button type="button" className="q-button" onClick={workspace.undo} disabled={!workspace.canUndo}>
@@ -574,6 +584,12 @@ function QuoteWorkspace() {
               </button>
             </p>
           )}
+          {resources?.roomTemplatesError !== undefined && (
+            // 템플릿 파일이 있는데 깨졌다 — 조용히 입구만 끄지 않고 사유를 보여준다.
+            <p role="alert" className="q-notice q-notice-error">
+              회의실 타입 입구를 켤 수 없습니다 — {resources.roomTemplatesError}
+            </p>
+          )}
           {workspace.laborMemoryError !== undefined && (
             // 저장 실패를 조용히 성공처럼 보이지 않는다(B-20261016-05 독립 검토 지적).
             <p role="alert" className="q-notice q-notice-error">
@@ -634,6 +650,14 @@ function QuoteWorkspace() {
                 ) : (
                   <ProductPicker catalog={resources.catalog} onLoaded={handleLoaded} />
                 ))}
+              {entry === 'rooms' && resources.roomTemplates !== undefined && (
+                <RoomTemplatePicker
+                  templates={resources.roomTemplates}
+                  catalog={resources.catalog}
+                  onLoaded={handleLoaded}
+                  onClose={() => setEntry(null)}
+                />
+              )}
 
               {entry === null && status.kind === 'empty' && (
                 <div className="q-start-intro">

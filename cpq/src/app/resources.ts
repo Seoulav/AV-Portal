@@ -15,6 +15,7 @@
 import { buildLaborReference, loadCatalog, type Catalog } from '../data/catalog/load';
 import { skuMigrationFileSchema } from '../data/catalog/schema';
 import type { SkuMigrationTable } from '../data/catalog/skuMigration';
+import { roomTemplatesFileSchema, type RoomTemplatesFile } from '../import/room/templates';
 import {
   GUIDE_IDS,
   readGuideTemplate,
@@ -51,6 +52,18 @@ export interface Resources {
    * — 조용히 엉뚱한 제품으로 바뀌는 것보다 낫다.
    */
   skuMigration?: SkuMigrationTable;
+  /**
+   * 회의실 타입 템플릿 (B-20261016-07 2단계). **없어도 견적은 만들 수 있다**
+   * — '회의실 타입으로 시작' 입구만 꺼진다. 깨진 파일은 조용히 무시하지
+   * 않고 사유를 보여준다(SKU 대응표와 같은 원칙).
+   */
+  roomTemplates?: RoomTemplatesFile;
+  /**
+   * 템플릿 파일이 **있는데 읽지 못한** 사유. 전체 `reasons`는 성공 경로에서
+   * 버려지므로(독립 리뷰 지적 2026-10-18), 입구 옆에 보여줄 수 있게 따로 담는다.
+   * 파일이 아예 없는 것(404)은 사유가 아니다 — 입구만 꺼진다.
+   */
+  roomTemplatesError?: string;
 }
 
 export type ResourcesResult = { kind: 'ready'; resources: Resources } | { kind: 'error'; reasons: string[] };
@@ -169,6 +182,21 @@ export async function loadResources(options: LoadResourcesOptions = {}): Promise
     // 네트워크 오류도 "대응표 없음"으로 본다. 이 파일은 필수가 아니다.
   }
 
+  // 회의실 타입 템플릿 — 없는 것도 동작하는 상태다(입구만 꺼진다). 깨진
+  // 파일은 사유를 `roomTemplatesError`로 남겨 입구 옆에 보여준다.
+  let roomTemplates: RoomTemplatesFile | undefined;
+  let roomTemplatesError: string | undefined;
+  try {
+    const res = await get(`${base}data/approved/room-templates.json`);
+    if (res.ok) {
+      const parsed = roomTemplatesFileSchema.safeParse(await res.json());
+      if (parsed.success) roomTemplates = parsed.data;
+      else roomTemplatesError = '회의실 템플릿(room-templates.json)의 형식이 맞지 않습니다 — 템플릿 없이 진행합니다.';
+    }
+  } catch {
+    // 네트워크 오류도 "템플릿 없음"으로 본다. 이 파일은 필수가 아니다.
+  }
+
   const guidesReady = GUIDE_IDS.every((id) => guides[id] !== undefined);
 
   if (catalog === undefined || laborBasisRaw === undefined || manifest === undefined || !guidesReady) {
@@ -182,6 +210,8 @@ export async function loadResources(options: LoadResourcesOptions = {}): Promise
       laborBasisRaw,
       guides: guides as GuideTemplateSet,
       ...(skuMigration === undefined ? {} : { skuMigration }),
+      ...(roomTemplates === undefined ? {} : { roomTemplates }),
+      ...(roomTemplatesError === undefined ? {} : { roomTemplatesError }),
     },
   };
 }

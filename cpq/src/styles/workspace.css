@@ -304,6 +304,25 @@
 
 .q-picker-matches .q-button { flex-shrink: 0; }
 .q-picker-matches .q-candidate-name { overflow-wrap: anywhere; }
+/* 회의실 타입으로 시작 (B-20261016-07 2단계) — 타입 그룹 아래 변형 라디오 목록. */
+.q-room-variants {
+  list-style: none;
+  margin: 8px 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+.q-room-variant {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--q-line);
+  border-radius: var(--q-r-chip);
+}
+.q-room-picker h4 { margin: 14px 0 4px; }
+.q-room-picker-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
 .q-picker-target { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
 .q-picker-target select { max-width: 100%; padding: 6px 8px; }
 .q-product-picker > input,

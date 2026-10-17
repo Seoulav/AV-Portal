@@ -22,7 +22,7 @@ const SOURCE_DIR = 'data/approved';
 const URL_PREFIX = '/data/approved/';
 
 /** 배포에서 빼도 되는 파일. 없어도 빌드가 실패하지 않는다 (결정 D3). */
-const OPTIONAL = new Set(['prices.json']);
+const OPTIONAL = new Set(['prices.json', 'room-templates.json']);
 
 /** 반드시 있어야 하는 파일. 없으면 빌드를 멈춘다. */
 const REQUIRED = ['products.json', 'labor-items.json', 'wage-table.json', 'labor-mappings.json'];
