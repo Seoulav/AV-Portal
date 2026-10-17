@@ -48,3 +48,14 @@ test('maximum helper does not add Alta or Midra limits', () => {
   assert.equal(maximums.has('eikos-4k'), false);
   assert.equal(maximums.has('zenith-200'), false);
 });
+
+test('maximum helper actually re-evaluates every supported layer input with unchanged wall conditions', () => {
+  const tile = prepareTileGuide({columns: 4, rows: 2, layers: 3, auxOutputs: 2, inputs4k: 4}, calculateRecommendations);
+  const calls = [];
+  calculateTileLayerMaximums(tile, input => {
+    calls.push({layers: input.screens.map(screen => screen.layers), auxOutputs: input.auxOutputs, inputs4k: input.inputs4k});
+    return calculateRecommendations(input);
+  });
+  assert.deepEqual(calls.map(call => call.layers), Array.from({length: 9}, (_, layers) => [layers, layers]));
+  assert.ok(calls.every(call => call.auxOutputs === 2 && call.inputs4k === 4));
+});
