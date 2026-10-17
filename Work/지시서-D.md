@@ -393,3 +393,14 @@
 - 상태 REVIEW: Draft PR 제출 후 Work 확인 대기. 병합·수동 동기화·다음 예약 성공은 아직 미완료.
 
 - Draft PR [#632](https://github.com/Seoulav/AV-Portal/pull/632) 제출. Work 병합 검토 요청. 승인 뒤 수동 sync-rtcom workflow 실행 예정.
+
+## W-20261017-013 RTCOM 동기화 복구 — 병합·배포·수동 확인 완료 (2026-10-17)
+
+- Work가 PR #632 범위와 XDM-MR4S 390px 화면을 직접 확인하고 병합 승인. 관련 제품 소문자 표기는 세션 B의 W-20261017-012 범위이므로 유지.
+- [Builder CI 39033178261](https://github.com/Seoulav/AV-Portal/actions/runs/39033178261) SUCCESS, 최신 origin/main 19d637cd 재확인 뒤 Ready 전환·병합.
+- [PR #632](https://github.com/Seoulav/AV-Portal/pull/632) MERGED: **7534846eb1b572f4d853982ec88b69592d78959d**, 2026-10-17T12:39:45Z.
+- [Pages 39033410896](https://github.com/Seoulav/AV-Portal/actions/runs/39033410896) SUCCESS. 공개 XDM-MR4S 목록 카드·상세 Front/Rear를 1280px·390px에서 확인. 카드 이미지·상세 정상, 포털 지도/목록 각 5개, 깨진 이미지 0·페이지 가로 넘침 0. 공개 JSON·사진 2장 HTTP200 및 병합본 SHA 일치.
+- 공개 화면·측정·파일 대조: outputs/w20261017-013/public/ (로컬 Git 제외). 공개 링크: https://seoulav.github.io/AV-Portal/detail/index.html?product=rtcom-xdm-mr4s
+- [수동 RTCOM 동기화 39033654957](https://github.com/Seoulav/AV-Portal/actions/runs/39033654957) SUCCESS, workflow_dispatch **1회** 실행, 완료 2026-10-17T12:44:14Z. changed:false / sourceCount:33 / publishedCount:33 / failures:0. 수신·파생 재생성 성공. 원본 변화가 없어 Validate synchronized snapshot 및 Open and merge validated change는 설계대로 skipped(통과로 표기하지 않음). 전체 시험은 병합 전 로컬 910pass/0fail/skip1 및 Pages에서 확인.
+- [x] 구현·Work 승인·CI·병합·Pages·공개 확인·수동 예약 workflow 확인 완료.
+- 다음 자동 예약 실행은 아직 발생하지 않았으므로 성공을 미리 확정하지 않는다. 예약 정의는 그대로 유지(cron 17 18 * * *, 한국시간 03:17 예정). 새 배정 대기.
