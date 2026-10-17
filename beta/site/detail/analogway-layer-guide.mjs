@@ -278,7 +278,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
     if(!result.valid){summary.append(makeElement('p','aw-guide-error',result.error));results.replaceChildren();return;}
     if(lastPrepared.tile){
       const tile=lastPrepared.tile;
-      summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개`));
+      summary.append(makeElement('p','aw-guide-tile-metrics',`합성 ${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60 · 4K60 출력 ${tile.outputs}개 · 출력 링크 ${tile.outputLinks}개 · 출력 링크 기준 Aquilon VPU 최소 ${tile.requiredVpu}개 · 믹싱 레이어 ${tile.layers}개 · 출력 그룹당`));
       summary.append(makeElement('p','aw-guide-tile-caveat','겹침 없는 동일 4K60 타일을 출력 4개 이하 그룹으로 나눈 자원 조견입니다. 한 화면으로 이어지는 구성은 제조사 시뮬레이터에서 확인하세요.'));
     }
     const recommended=result.models.find(item=>item.recommended);
@@ -318,7 +318,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
       for(const [value,label] of [['mixing','믹싱 · 부드러운 전환'],['split','분할 · 컷 전환']]){const option=makeElement('option','',label);option.value=value;type.append(option);}type.value=screen.layerType;typeLabel.append(type);fieldset.append(typeLabel);
       const countLabel=makeElement('label','','4K60(용량 2) 레이어 수');const count=makeElement('input','');count.type='number';count.min='0';count.max='8';count.step='1';count.value=String(screen.layers);count.dataset.field='layers';count.setAttribute('aria-label',`화면 ${index+1} 4K60 레이어 수`);countLabel.append(count);fieldset.append(countLabel);
       const hdLabel=makeElement('label','','HD(용량 1) 레이어 수');const hd=makeElement('input','');hd.type='number';hd.min='0';hd.max='8';hd.step='1';hd.value=String(screen.hdLayers??0);hd.dataset.field='hdLayers';hd.setAttribute('aria-label',`화면 ${index+1} HD 레이어 수`);hdLabel.append(hd);fieldset.append(hdLabel);
-      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
+      const syncMode=()=>{toggleFields();const tiles=mode.value==='tiles';typeLabel.hidden=tiles;hdLabel.hidden=tiles;countLabel.firstChild.textContent=tiles?'4K60(용량 2) 레이어 수 · 출력 그룹당':'4K60(용량 2) 레이어 수';count.setAttribute('aria-label',tiles?'4K60 레이어 수 · 출력 그룹당':`화면 ${index+1} 4K60 레이어 수`);if(tiles){type.value='mixing';hd.value='0';}add.disabled=tiles||initial.length>=8;};
       mode.addEventListener('change',syncMode);syncMode();
       const remove=makeElement('button','aw-guide-remove-screen','화면 삭제');remove.type='button';remove.disabled=initial.length<=1;remove.addEventListener('click',()=>{const next=readScreenInputs(rows);next.splice(index,1);renderRows(next);update();});fieldset.append(remove);
       fieldset.addEventListener('input',update);fieldset.addEventListener('change',update);rows.append(fieldset);

@@ -91,29 +91,30 @@ function renderTileReference() {
   const thead=make('thead');thead.append(head);table.append(thead);
   const body=make('tbody');
   for(const [columns,rows] of TILE_REFERENCE){
-    for(const layers of [0,2]){
-      const tile=prepareTileGuide({columns,rows,layers},calculateRecommendations);
-      if(tile.status!=='calculated'||!tile.result.valid)throw new Error(`${columns}×${rows} 타일 계산 실패`);
-      const alternate=columns*rows===12?prepareTileGuide({columns:rows,rows:columns,layers},calculateRecommendations):null;
-      if(alternate&&tile.result.models.some((item,index)=>item.possible!==alternate.result.models[index].possible))
-        throw new Error('12판 회전 구성의 모델 판정이 다릅니다.');
-      const tr=make('tr');tr.dataset.tiles=`${columns}x${rows}`;tr.dataset.layers=String(layers);
-      const cell=(tag,text)=>tr.append(make(tag,'',text));
-      cell('th',`${tile.outputs}판 · ${columns}×${rows}${alternate?` / ${rows}×${columns}`:''}`);
-      cell('td',`${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60${alternate?` / ${alternate.width.toLocaleString()}×${alternate.height.toLocaleString()}@60`:''}`);
-      cell('td',`4K60 출력 ${tile.outputs} · 링크 ${tile.outputLinks} · Aquilon VPU 최소 ${tile.requiredVpu}`);
-      cell('td',layers===0?'레이어 0개':'믹싱 2개/출력 그룹');
-      const models=make('td','aw-tile-models');
-      for(const series of SERIES.filter(item=>item.id!=='controller')){
-        const matching=tile.result.models.filter(item=>item.possible&&series.slugs.includes(item.slug));
-        if(!matching.length)continue;
-        const group=make('div','aw-tile-model-group');group.append(make('strong','',`${series.title}: `));
-        for(const item of matching){const link=make('a','',item.name);link.href=detailHref(item.slug);group.append(link);}
-        models.append(group);
-      }
-      if(!models.childElementCount)models.textContent='해당 없음';
-      tr.append(models);body.append(tr);
+    const empty=prepareTileGuide({columns,rows,layers:0},calculateRecommendations);
+    const tile=prepareTileGuide({columns,rows,layers:2},calculateRecommendations);
+    if([empty,tile].some(item=>item.status!=='calculated'||!item.result.valid))throw new Error(`${columns}×${rows} 타일 계산 실패`);
+    if(tile.result.models.some((item,index)=>item.possible!==empty.result.models[index].possible))
+      throw new Error(`${columns}×${rows} 레이어 0개와 그룹당 믹싱 2개의 모델 판정이 다릅니다.`);
+    const alternate=columns*rows===12?prepareTileGuide({columns:rows,rows:columns,layers:2},calculateRecommendations):null;
+    if(alternate&&tile.result.models.some((item,index)=>item.possible!==alternate.result.models[index].possible))
+      throw new Error('12판 회전 구성의 모델 판정이 다릅니다.');
+    const tr=make('tr');tr.dataset.tiles=`${columns}x${rows}`;tr.dataset.layers='0,2';
+    const cell=(tag,text)=>tr.append(make(tag,'',text));
+    cell('th',`${tile.outputs}판 · ${columns}×${rows}${alternate?` / ${rows}×${columns}`:''}`);
+    cell('td',`${tile.width.toLocaleString()}×${tile.height.toLocaleString()}@60${alternate?` / ${alternate.width.toLocaleString()}×${alternate.height.toLocaleString()}@60`:''}`);
+    cell('td',`4K60 출력 ${tile.outputs} · 링크 ${tile.outputLinks} · Aquilon VPU 최소 ${tile.requiredVpu}`);
+    cell('td','레이어 0개 / 출력 그룹당 믹싱 2개');
+    const models=make('td','aw-tile-models');
+    for(const series of SERIES.filter(item=>item.id!=='controller')){
+      const matching=tile.result.models.filter(item=>item.possible&&series.slugs.includes(item.slug));
+      if(!matching.length)continue;
+      const group=make('div','aw-tile-model-group');group.append(make('strong','',`${series.title}: `));
+      for(const item of matching){const link=make('a','',item.name);link.href=detailHref(item.slug);group.append(link);}
+      models.append(group);
     }
+    if(!models.childElementCount)models.textContent='해당 없음';
+    tr.append(models);body.append(tr);
   }
   table.append(body);scroll.append(table);$('#tile-reference-table').append(scroll);
 }

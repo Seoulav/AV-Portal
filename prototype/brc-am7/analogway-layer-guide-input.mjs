@@ -69,7 +69,7 @@ export function buildGuideExportText(state, prepared) {
     const format = prepared.derivedScreens[index];
     const hdLayers = Number(screen.hdLayers);
     const hdLabel = Number.isInteger(hdLayers) && hdLayers >= 0 ? `HD 레이어 ${hdLayers}개` : 'HD 레이어 입력 오류';
-    lines.push(`화면 ${index + 1}: ${format?.label ?? '미확인'} · ${screen.inputMode === 'tiles' ? '믹싱' : screen.layerType === 'split' ? '분할' : '믹싱'} 4K 레이어 ${screen.layers}개 · ${hdLabel}`);
+    lines.push(`화면 ${index + 1}: ${format?.label ?? '미확인'} · ${screen.inputMode === 'tiles' ? '믹싱' : screen.layerType === 'split' ? '분할' : '믹싱'} 4K 레이어 ${screen.layers}개${screen.inputMode === 'tiles' ? ' · 출력 그룹당' : ''} · ${hdLabel}`);
   });
   lines.push(`보조 출력 ${state.auxOutputs}개 · 4K 입력 소스 ${state.inputs4k}개`);
   if (prepared.status === 'calculated' && prepared.result?.valid) {

@@ -58,10 +58,13 @@ try{
     assert.ok(ready,`${width}px page unavailable`);
     assert.equal(await evaluate("document.querySelector('#load-error').hidden"),true,`${width}px load error`);
     assert.equal(await evaluate('document.documentElement.scrollWidth'),width,`${width}px page overflow`);
-    assert.equal(await evaluate("document.querySelectorAll('#tile-reference-table tbody tr').length"),18);
+    assert.equal(await evaluate("document.querySelectorAll('#tile-reference-table tbody tr').length"),9);
+    assert.match(await evaluate("document.querySelector('#tile-reference .aw-table-note').textContent"),/그룹당 믹싱 4개까지/);
     await evaluate(`(()=>{const mode=document.querySelector('#guide [data-field="inputMode"]');mode.value='tiles';mode.dispatchEvent(new Event('change',{bubbles:true}));const col=document.querySelector('#guide [data-field="tileColumns"]');col.value='3';col.dispatchEvent(new Event('input',{bubbles:true}));const row=document.querySelector('#guide [data-field="tileRows"]');row.value='2';row.dispatchEvent(new Event('input',{bubbles:true}));const layers=document.querySelector('#guide [data-field="layers"]');layers.value='2';layers.dispatchEvent(new Event('input',{bubbles:true}));})()`);
     const state=await evaluate(`(()=>({metrics:document.querySelector('.aw-guide-tile-metrics')?.textContent,grid:document.querySelectorAll('.aw-tile-grid span').length,possible:[...document.querySelectorAll('.aw-guide-possible-models .aw-guide-model h4')].map(node=>node.textContent),scrollWidth:document.documentElement.scrollWidth}))()`);
     assert.match(state.metrics,/11,520×4,320@60.*출력 6개.*링크 12개.*VPU 최소 2개/);
+    assert.match(state.metrics,/믹싱 레이어 2개 · 출력 그룹당/);
+    assert.match(await evaluate("document.querySelector('#guide [data-field=\"layers\"]').parentElement.textContent"),/4K60\(용량 2\) 레이어 수 · 출력 그룹당/);
     assert.equal(state.grid,6);
     assert.equal(state.possible.length,8);
     assert.equal(state.scrollWidth,width);
@@ -84,7 +87,7 @@ try{
       fs.writeFileSync(path.join(output,'guide-390-4x4.png'),Buffer.from(screenshot.data,'base64'));
     }
     measures.push({width,...state});
-    console.log(`${width}px: 18 reference rows, ${state.possible.length} possible models, overflow 0`);
+    console.log(`${width}px: 9 reference rows, ${state.possible.length} possible models, overflow 0`);
   }
   await cdp('Page.navigate',{url:`http://127.0.0.1:${server.address().port}/beta/site/detail/?product=aquilon-rs2`});
   let detailReady=false;

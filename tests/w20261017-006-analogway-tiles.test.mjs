@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {calculateRecommendations} from '../beta/site/detail/analogway-layer-guide.mjs';
 import {prepareTileGuide, TILE_REFERENCE} from '../beta/site/detail/analogway-tile-guide.mjs';
-import {prepareGuideInput} from '../beta/site/detail/analogway-layer-guide-input.mjs';
+import {prepareGuideInput, buildGuideExportText} from '../beta/site/detail/analogway-layer-guide-input.mjs';
 
 const possible = result => result.models.filter(model => model.possible).map(model => model.slug);
 
@@ -27,13 +27,24 @@ test('reference configurations use evaluator verdicts, including 4/6/16-panel bo
       assert.equal(prepared.result.pgmOutputs, columns * rows);
       assert.ok(prepared.input.screens.every(screen => screen.outputs <= 4));
     }
+    assert.deepEqual(possible(prepareTileGuide({columns,rows,layers:0},calculateRecommendations).result),
+      possible(prepareTileGuide({columns,rows,layers:2},calculateRecommendations).result), `${columns}×${rows} combined reference row`);
   }
   const four = possible(prepareTileGuide({columns:2,rows:2,layers:2},calculateRecommendations).result);
   assert.ok(four.includes('zenith-200'));
+  assert.ok(!four.includes('zenith-100'));
   assert.equal(four.filter(slug => slug.startsWith('aquilon-')).length, 11);
   assert.ok(possible(prepareTileGuide({columns:3,rows:1,layers:2},calculateRecommendations).result).includes('zenith-100'));
   const sixteen = possible(prepareTileGuide({columns:4,rows:4,layers:2},calculateRecommendations).result);
   assert.deepEqual(sixteen,['aquilon-rs6','aquilon-cmax']);
+  assert.deepEqual(possible(prepareTileGuide({columns:3,rows:3,layers:2},calculateRecommendations).result),
+    ['aquilon-rs4','aquilon-rs5','aquilon-rs6','aquilon-cplus','aquilon-cmax']);
+  const two = possible(prepareTileGuide({columns:2,rows:1,layers:2},calculateRecommendations).result);
+  assert.ok(two.includes('eikos-4k'));
+  assert.ok(!two.includes('pulse-4k'));
+  const fourAtFive = possible(prepareTileGuide({columns:2,rows:2,layers:5},calculateRecommendations).result);
+  for (const slug of ['aquilon-rsalpha','aquilon-rs1','aquilon-cmini']) assert.ok(!fourAtFive.includes(slug));
+  assert.deepEqual(fourAtFive,['aquilon-rs2','aquilon-rs3','aquilon-rs4','aquilon-rs5','aquilon-rs6','aquilon-c','aquilon-cplus','aquilon-cmax']);
   assert.deepEqual(possible(prepareTileGuide({columns:3,rows:4,layers:2},calculateRecommendations).result),
     possible(prepareTileGuide({columns:4,rows:3,layers:2},calculateRecommendations).result));
 });
@@ -54,4 +65,5 @@ test('shared guide tile mode bypasses undocumented-resolution lookup and retains
   assert.equal(prepared.tile.outputLinks,12);
   assert.deepEqual(possible(prepared.result),possible(calculateRecommendations(prepared.input)));
   assert.match(prepared.derivedScreens[0].label,/11520×4320@60/);
+  assert.match(buildGuideExportText(state,prepared),/믹싱 4K 레이어 2개 · 출력 그룹당/);
 });
