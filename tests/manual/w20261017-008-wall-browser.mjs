@@ -51,7 +51,7 @@ try{
     assert.equal(await evaluate("document.querySelector('#load-error').hidden"),true);
     assert.equal(await evaluate("document.querySelectorAll('.aw-guide-tile-limit').length"),0,'ordinary input mode must remain unchanged');
     await evaluate(`(()=>{const mode=document.querySelector('#guide [data-field="inputMode"]');mode.value='tiles';mode.dispatchEvent(new Event('change',{bubbles:true}));for(const [field,value] of [['tileColumns','4'],['tileRows','2'],['layers','8']]){const input=document.querySelector('#guide [data-field="'+field+'"]');input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}})()`);
-    const readState=`(()=>({layers:Number(document.querySelector('#guide [data-field="layers"]').value),windows:document.querySelectorAll('.aw-wall-pip').length,aux:document.querySelectorAll('.aw-wall-aux span').length,cards:[...document.querySelectorAll('.aw-guide-possible-models .aw-guide-model')].map(card=>card.querySelector('h4').textContent),unavailable:[...document.querySelectorAll('.aw-guide-unavailable .aw-guide-model')].map(card=>card.querySelector('h4').textContent),overflow:document.documentElement.scrollWidth-innerWidth}))()`;
+    const readState=`(()=>({layers:Number(document.querySelector('#guide [data-field="layers"]').value),windows:document.querySelectorAll('.aw-wall-pip').length,aux:document.querySelectorAll('.aw-wall-aux span').length,cards:[...document.querySelectorAll('.aw-guide-possible-models .aw-guide-model')].map(card=>card.querySelector('h4').textContent),unavailable:[...document.querySelectorAll('.aw-guide-unavailable .aw-guide-model')].map(card=>card.querySelector('h4').textContent),limits:Object.fromEntries([...document.querySelectorAll('.aw-guide-model')].filter(card=>card.querySelector('.aw-guide-tile-limit')).map(card=>[card.querySelector('h4').textContent,card.querySelector('.aw-guide-tile-limit').textContent])),reason:document.querySelector('.aw-guide-unconfirmed')?.textContent??'',addDisabled:document.querySelector('[data-action="add-pip"]').disabled,inputMax:Number(document.querySelector('#guide [data-field="layers"]').max),overflow:document.documentElement.scrollWidth-innerWidth}))()`;
     const state=await evaluate(readState);
     assert.equal(state.layers,8);assert.equal(state.windows,8);
     assert.ok(state.cards.includes('Aquilon RS2'));
@@ -73,11 +73,25 @@ try{
     await evaluate("document.querySelector('.aw-tile-presets button:last-child').previousElementSibling.click()");
     const wide=await evaluate(readState);
     assert.equal(wide.overflow,0);assert.ok(wide.cards.includes('Aquilon RS4'));
+    assert.match(wide.limits['Aquilon RS6'],/믹싱 최대 16개/);
     const wideRect=await evaluate("(()=>{const r=document.querySelector('#guide').getBoundingClientRect();return{x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height}})()");
     const wideShot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...wideRect,scale:1}});
     fs.writeFileSync(path.join(output,`wall-6x2-${width}.png`),Buffer.from(wideShot.data,'base64'));
-    measures.push({width,fourByTwo:state,ninth,synced,sixByTwo:wide});
-    console.log(`${width}px: PIP count, RS2 8→9 transition, AUX, 6×2, overflow 0`);
+    await evaluate(`(()=>{for(const [field,value] of [['tileColumns','5'],['tileRows','5'],['layers','0']]){const input=document.querySelector('#guide [data-field="'+field+'"]');input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}})()`);
+    const nineGroups=await evaluate(readState);
+    assert.match(nineGroups.reason,/출력 그룹 9개가 평가 가능한 화면 수 한도 8개를 넘습니다/);
+    assert.equal(nineGroups.addDisabled,true);assert.equal(nineGroups.inputMax,0);
+    const invalidShot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...wideRect,scale:1}});
+    fs.writeFileSync(path.join(output,`wall-5x5-invalid-${width}.png`),Buffer.from(invalidShot.data,'base64'));
+    await evaluate(`(()=>{for(const [field,value] of [['tileColumns','3'],['tileRows','5'],['layers','0']]){const input=document.querySelector('#guide [data-field="'+field+'"]');input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}})()`);
+    const threeByFive=await evaluate(readState);
+    assert.match(threeByFive.limits['Aquilon Cmax'],/믹싱 최대 16개 · 분할 32개 환산\(동일 창 배분 직접 평가 불가\)/);
+    assert.equal(threeByFive.overflow,0);
+    const splitRect=await evaluate("(()=>{const r=document.querySelector('#guide').getBoundingClientRect();return{x:r.x+scrollX,y:r.y+scrollY,width:r.width,height:r.height}})()");
+    const splitShot=await cdp('Page.captureScreenshot',{format:'png',captureBeyondViewport:true,fromSurface:true,clip:{...splitRect,scale:1}});
+    fs.writeFileSync(path.join(output,`wall-3x5-split-${width}.png`),Buffer.from(splitShot.data,'base64'));
+    measures.push({width,fourByTwo:state,ninth,synced,sixByTwo:wide,nineGroups,threeByFive});
+    console.log(`${width}px: PIP count, RS2 8→9 transition, 6×2 RS6=16, 9-group reason, overflow 0`);
   }
   fs.writeFileSync(path.join(output,'measurements.json'),JSON.stringify(measures,null,2)+'\n');
 }finally{socket?.close();chrome.kill();server.close();}

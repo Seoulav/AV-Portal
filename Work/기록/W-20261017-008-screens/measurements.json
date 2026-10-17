@@ -24,6 +24,19 @@
         "Aquilon RS1",
         "Aquilon Cmini"
       ],
+      "limits": {
+        "Aquilon RS2": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS3": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "ninth": {
@@ -49,6 +62,16 @@
         "Aquilon Cmini",
         "Aquilon C"
       ],
+      "limits": {
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "synced": {
@@ -74,6 +97,19 @@
         "Aquilon RS1",
         "Aquilon Cmini"
       ],
+      "limits": {
+        "Aquilon RS2": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS3": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "sixByTwo": {
@@ -99,6 +135,60 @@
         "Aquilon Cmini",
         "Aquilon C"
       ],
+      "limits": {
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 최대 32개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 최대 32개"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 24,
+      "overflow": 0
+    },
+    "nineGroups": {
+      "layers": 0,
+      "windows": 0,
+      "aux": 0,
+      "cards": [],
+      "unavailable": [],
+      "limits": {},
+      "reason": "출력 그룹 9개가 평가 가능한 화면 수 한도 8개를 넘습니다.",
+      "addDisabled": true,
+      "inputMax": 0,
+      "overflow": 0
+    },
+    "threeByFive": {
+      "layers": 0,
+      "windows": 0,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS6",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon Cmini",
+        "Aquilon C",
+        "Aquilon C+"
+      ],
+      "limits": {
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 48,
       "overflow": 0
     }
   },
@@ -127,6 +217,19 @@
         "Aquilon RS1",
         "Aquilon Cmini"
       ],
+      "limits": {
+        "Aquilon RS2": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS3": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "ninth": {
@@ -152,6 +255,16 @@
         "Aquilon Cmini",
         "Aquilon C"
       ],
+      "limits": {
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "synced": {
@@ -177,6 +290,19 @@
         "Aquilon RS1",
         "Aquilon Cmini"
       ],
+      "limits": {
+        "Aquilon RS2": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS3": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다",
+        "Aquilon C": "4K60 믹싱 최대 8개 · 분할 최대 16개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 16개까지 확인(평가 입력 상한) · 분할 32개까지 확인 — 실제 한도는 이보다 클 수 있습니다"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 16,
       "overflow": 0
     },
     "sixByTwo": {
@@ -202,6 +328,60 @@
         "Aquilon Cmini",
         "Aquilon C"
       ],
+      "limits": {
+        "Aquilon RS4": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS5": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 최대 32개",
+        "Aquilon C+": "4K60 믹싱 최대 12개 · 분할 최대 24개",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 최대 32개"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 24,
+      "overflow": 0
+    },
+    "nineGroups": {
+      "layers": 0,
+      "windows": 0,
+      "aux": 0,
+      "cards": [],
+      "unavailable": [],
+      "limits": {},
+      "reason": "출력 그룹 9개가 평가 가능한 화면 수 한도 8개를 넘습니다.",
+      "addDisabled": true,
+      "inputMax": 0,
+      "overflow": 0
+    },
+    "threeByFive": {
+      "layers": 0,
+      "windows": 0,
+      "aux": 2,
+      "cards": [
+        "Aquilon RS6",
+        "Aquilon Cmax"
+      ],
+      "unavailable": [
+        "Pulse 4K",
+        "Eikos 4K",
+        "Zenith 100",
+        "Zenith 200",
+        "Aquilon RS alpha",
+        "Aquilon RS1",
+        "Aquilon RS2",
+        "Aquilon RS3",
+        "Aquilon RS4",
+        "Aquilon RS5",
+        "Aquilon Cmini",
+        "Aquilon C",
+        "Aquilon C+"
+      ],
+      "limits": {
+        "Aquilon RS6": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)",
+        "Aquilon Cmax": "4K60 믹싱 최대 16개 · 분할 32개 환산(동일 창 배분 직접 평가 불가)"
+      },
+      "reason": "",
+      "addDisabled": false,
+      "inputMax": 48,
       "overflow": 0
     }
   }

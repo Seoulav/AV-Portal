@@ -191,7 +191,11 @@ function renderModelResult(result,currentSlug,tileMaximums){
     const tileMaximum=model.possible?tileMaximums?.get(model.slug):null;
     if(tileMaximum){
       card.append(makeElement('p','aw-guide-tile-limit',formatTileLayerMaximum(tileMaximum)));
-      if(tileMaximum.splitConvertedBeyondEvaluator)card.append(makeElement('p','aw-guide-tile-limit-note','분할 수는 믹싱 1개 = 분할 2개 환산(그룹당 평가 입력 8개 초과).'));
+      if(tileMaximum.splitConvertedBeyondEvaluator)card.append(makeElement('p','aw-guide-tile-limit-note',tileMaximum.splitDirectEvaluation==='not-possible'
+        ? '분할 수는 믹싱 1개 = 분할 2개 환산치이며, 이 벽 구성의 직접 평가에서는 가능 판정을 받지 못했습니다.'
+        : tileMaximum.wallLayers
+          ? '분할 수는 믹싱 1개 = 분할 2개 환산(벽 전체 PIP 창 평가 입력 상한 초과).'
+          : '분할 수는 믹싱 1개 = 분할 2개 환산(그룹당 평가 입력 8개 초과).'));
     }
     if(model.connectorBasis)card.append(makeElement('p','aw-guide-model-note','입출력 수: '+model.connectorBasis));
     if(model.reasons.length){
@@ -288,7 +292,7 @@ export function renderAnalogWayLayerGuide(currentSlug){
         for(let index=0;index<Math.min(tile.layers,16);index++){
           const pip=makeElement('span','aw-wall-pip',`PIP ${index+1}`);
           pip.setAttribute('aria-label',`PIP ${index+1} · 4K60 믹싱`);
-          pip.style.left=`${11+(index%8)*8}%`;
+          pip.style.left=`${5+(index%8)*11.5}%`;
           pip.style.top=`${26+(index%8)*5+Math.floor(index/8)*19}%`;
           pips.append(pip);
         }
@@ -299,7 +303,8 @@ export function renderAnalogWayLayerGuide(currentSlug){
       }else{
         wall.removeAttribute('aria-label');
         wall.querySelector('.aw-wall-resolution').textContent='';
-        rows.querySelector('.aw-wall-count').textContent='입력값을 확인해 주세요';
+        rows.querySelector('.aw-wall-count').textContent=lastPrepared.reason ?? '입력값을 확인해 주세요';
+        rows.querySelector('[data-field="layers"]').max='0';
         rows.querySelector('[data-action="add-pip"]').disabled=true;
         rows.querySelector('[data-action="remove-pip"]').disabled=Number(rows.querySelector('[data-field="layers"]').value)<=0;
       }
